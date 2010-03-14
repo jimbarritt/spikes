@@ -5,7 +5,9 @@
 	
 	<target name="info">
 		<echo message="Hello build world!" />
-		<echo message="base.dir : ${base.dir}" />
+		<echo message="ant.home    : ${ant.home}" />
+		<echo message="ant.version : ${ant.version}" />		
+		<echo message="base.dir    : ${base.dir}" />
 	</target>
 	
 	<target name="fail">

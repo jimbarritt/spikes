@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="build.main">
+	
+	<property name="base.dir" value="${basedir}" />
+	
+	<target name="info">
+		<echo message="Hello build world!" />
+		<echo message="base.dir : ${base.dir}" />
+	</target>
+	
+	<target name="fail">
+		<fail>Oops, there was a problem!</fail>
+	</target>
+	
+</project>

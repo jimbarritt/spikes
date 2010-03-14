@@ -1,0 +1,38 @@
+#!/bin/bash
+#May need to chmod +x to this script
+
+ANT_COMMAND=$1
+if [ -z $ANT_COMMAND]; then
+	ANT_COMMAND="info"
+fi
+
+SCRIPT_RELATIVE_DIR=`dirname $0`
+SCRIPT_DIR=`cd $SCRIPT_RELATIVE_DIR;pwd`
+BUILD_DIR=`pwd`
+
+echo -e "-------------------------------------------------------------"
+echo -e "\nWelcome to the ant spike!\n"
+echo -e "-------------------------------------------------------------"
+
+echo -e "Build dir : [$BUILD_DIR] \n"
+echo -e "The go script lives here...\n"
+echo -e "Relative to build dir : [$SCRIPT_RELATIVE_DIR]"
+echo -e "Fully qualified       : [$SCRIPT_DIR]\n"
+
+
+ANT_COMMAND="ant -f $SCRIPT_DIR/scripts/build.xml -Dbasedir=$BUILD_DIR $ANT_COMMAND"
+
+echo -e "Invoking ant using:\n\n$ANT_COMMAND\n"
+
+echo -e "-------------------------------------------------------------"
+echo -e "Ant output start"
+echo -e "-------------------------------------------------------------\n"
+$ANT_COMMAND
+ANT_EXIT_CODE=$?
+echo -e "\n-------------------------------------------------------------"
+echo -e "Ant output end\n"
+echo -e "Ant exited with code [$ANT_EXIT_CODE]"
+echo -e "-------------------------------------------------------------\n"
+
+
+exit $ANT_EXIT_CODE

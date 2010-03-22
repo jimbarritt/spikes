@@ -1,12 +1,11 @@
 package org.jimbarritt.spikes.rest.logging;
 
-import org.apache.log4j.*;
 import org.apache.commons.io.*;
 
 import javax.servlet.http.*;
 import java.io.*;
-import java.util.*;
 import java.lang.reflect.*;
+import java.util.*;
 
 public class HttpServletRequestFormat {
 
@@ -36,7 +35,7 @@ public class HttpServletRequestFormat {
             sb.append(INDENT).append(padRight(name, 20)).append(" : ").append(httpServletRequest.getAttribute(name)).append("\n");
         }
 
-        if ("application/x-www-form-urlencoded" != httpServletRequest.getContentType()) {
+        if (!"application/x-www-form-urlencoded".equals(httpServletRequest.getContentType())) {
             String requestBody = IOUtils.toString(httpServletRequest.getInputStream(), "UTF-8");
             sb.append("\nBody:\n------BEGIN BODY------\n[").append(requestBody).append("]\n------END BODY------\n");
         }
@@ -64,7 +63,7 @@ public class HttpServletRequestFormat {
             for (Method getter : getters) {
                 if (!ignoreMethods.contains(getter.getName())) {
                     String formattedName = formatMethodName(getter.getName());
-                    Object value = getter.invoke(instance);
+                    String value = formatValue(getter.invoke(instance));
                     sb.append(indent).append(padRight(formattedName, 20)).append(" : ").append(value).append("\n");
                 }
             }
@@ -73,12 +72,43 @@ public class HttpServletRequestFormat {
         }
     }
 
+    private static String formatValue(Object value) {
+        if (value instanceof Enumeration) {
+            return formatValues((Enumeration) value);
+        }
+        if (value instanceof Map) {
+            return formatValues((Map) value);
+        }
+        if (value instanceof String[]) {
+            return formatValues((String[]) value);
+        }
+        return value == null ? "" : value.toString();
+    }
+
     private static String formatValues(String[] stringArray) {
         StringBuilder sb = new StringBuilder();
         for (String element : stringArray) {
             sb.append(element).append(", ");
         }
-        return sb.substring(0, sb.length() - 2);
+        return sb.length() > 0 ? sb.substring(0, sb.length() - 2) : "";
+    }
+
+    private static String formatValues(Map map) {
+        StringBuilder sb = new StringBuilder();
+        for (Object entryObject : map.entrySet()) {
+            Map.Entry entry = (Map.Entry) entryObject;
+            sb.append(entry.getKey()).append("=").append(formatValue(entry.getValue())).append(", ");
+        }
+        return sb.length() > 0 ? "{" + sb.substring(0, sb.length() - 2) + "}" : "{}";
+    }
+
+    private static String formatValues(Enumeration enumeration) {
+        StringBuilder sb = new StringBuilder();
+        while (enumeration.hasMoreElements()) {
+            Object element = enumeration.nextElement();
+            sb.append(element.toString()).append(", ");
+        }
+        return sb.length() > 0 ? sb.substring(0, sb.length() - 2) : "[]";
     }
 
     private static String padRight(String text, int padLength) {

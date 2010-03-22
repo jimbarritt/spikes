@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+    <context-param>
+        <param-name>log4jConfigPath</param-name>
+        <param-value>logging/log4j.xml</param-value>
+    </context-param>
+    <context-param>
+        <param-name>log4j.refresh.interval.ms</param-name>
+        <param-value>10000</param-value>
+    </context-param>
+
+    <listener>
+        <listener-class>org.jimbarritt.spikes.rest.logging.Log4jServletContextListener</listener-class>
+    </listener>
+
+    <servlet>
+        <servlet-name>stub-controller</servlet-name>
+        <servlet-class>org.jimbarritt.spikes.rest.HtmlFormController</servlet-class>
+        <load-on-startup>2</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>stub-controller</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
+</web-app>

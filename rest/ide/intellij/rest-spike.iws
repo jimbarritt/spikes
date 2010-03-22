@@ -102,7 +102,7 @@
       <file leaf-file-name="HttpServletRequestFormat.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file:///Users/jim/work/code/github/spikes/rest/src/main/java/org/jimbarritt/spikes/rest/logging/HttpServletRequestFormat.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="64" selection-start="597" selection-end="597" vertical-scroll-proportion="0.36239317">
+            <state line="19" column="66" selection-start="629" selection-end="629" vertical-scroll-proportion="0.3982906">
               <folding />
             </state>
           </provider>
@@ -690,7 +690,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="874" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" />
       <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18589744" sideWeight="0.5" order="8" side_tool="false" />
@@ -710,7 +710,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" />
       <window_info id="Metrics" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.8051282" order="0" side_tool="false" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.8051282" order="0" side_tool="false" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" />
       <window_info id="Web Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="16" side_tool="false" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" />
@@ -804,7 +804,7 @@
     </entry>
     <entry file="file:///Users/jim/work/code/github/spikes/rest/src/main/java/org/jimbarritt/spikes/rest/logging/HttpServletRequestFormat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="64" selection-start="597" selection-end="597" vertical-scroll-proportion="0.36239317">
+        <state line="19" column="66" selection-start="629" selection-end="629" vertical-scroll-proportion="0.3982906">
           <folding />
         </state>
       </provider>

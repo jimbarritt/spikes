@@ -23,6 +23,8 @@ public class HtmlFormController extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    
+        response.setStatus(400);
+        response.getWriter().write("<h1>You failed validation</h1>");
+        response.getWriter().flush();
     }
 }

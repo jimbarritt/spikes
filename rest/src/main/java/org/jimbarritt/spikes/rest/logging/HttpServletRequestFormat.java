@@ -1,6 +1,7 @@
 package org.jimbarritt.spikes.rest.logging;
 
 import org.apache.commons.io.*;
+import static org.jimbarritt.spikes.rest.collection.CollectionTransformation.*;
 
 import javax.servlet.http.*;
 import java.io.*;
@@ -9,12 +10,12 @@ import java.util.*;
 
 public class HttpServletRequestFormat {
 
+    private static final String INDENT = "    ";
+
     public String toString(HttpServletRequest httpServletRequest) throws IOException {
         StringBuilder sb = new StringBuilder();
 
-        final String INDENT = "    ";
-
-        sb.append("\n\nHttpServletRequest Received @ [").append(httpServletRequest.getRequestURL()).append("]:\n");
+        sb.append("\n\nHttpServletRequest Received [").append(httpServletRequest.getMethod()).append(" : ").append(httpServletRequest.getRequestURL()).append("]\n");
         printGetters(httpServletRequest, sb, INDENT, asHashSet("getReader", "getInputStream"));
 
         List<String> headerNames = asList(httpServletRequest.getHeaderNames());
@@ -43,20 +44,6 @@ public class HttpServletRequestFormat {
         return sb.toString();
     }
 
-    @SuppressWarnings("unchecked")
-    private static <T> List<T> asList(Enumeration enumeration) {
-        List<T> list = new ArrayList<T>();
-
-        while (enumeration.hasMoreElements()) {
-            list.add((T) enumeration.nextElement());
-        }
-        return list;
-    }
-
-    private static <T> Set<T> asHashSet(T... elements) {
-        return new HashSet<T>(Arrays.<T>asList(elements));
-    }
-
     private static void printGetters(Object instance, StringBuilder sb, String indent, Set<String> ignoreMethods) {
         List<Method> getters = allGettersFor(instance.getClass());
         try {
@@ -82,7 +69,27 @@ public class HttpServletRequestFormat {
         if (value instanceof String[]) {
             return formatValues((String[]) value);
         }
+        if (value instanceof Cookie[]) {
+            return formatValues((Cookie[]) value);
+        }
         return value == null ? "" : value.toString();
+    }
+
+    private static String formatValues(Cookie[] stringArray) {
+        StringBuilder sb = new StringBuilder();
+        for (Cookie cookie : stringArray) {
+            sb.append("Cookie: [");
+            sb.append("domain=").append(cookie.getDomain()).append(", ");
+            sb.append("name=").append(cookie.getName()).append(", ");
+            sb.append("value=").append(cookie.getValue()).append(", ");
+            sb.append("maxAge=").append(cookie.getMaxAge()).append(", ");
+            sb.append("path=").append(cookie.getPath()).append(", ");
+            sb.append("comment=").append(cookie.getComment()).append(", ");
+            sb.append("secure=").append(cookie.getSecure()).append(", ");
+            sb.append("version=").append(cookie.getVersion()).append("]");
+            sb.append("\n").append(INDENT).append(padRight("", 23));
+        }
+        return sb.length() > 0 ? sb.substring(0, sb.length() - (24+INDENT.length())) : "";
     }
 
     private static String formatValues(String[] stringArray) {

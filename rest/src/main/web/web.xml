@@ -19,12 +19,23 @@
     </listener>
 
     <servlet>
-        <servlet-name>stub-controller</servlet-name>
-        <servlet-class>org.jimbarritt.spikes.rest.HtmlFormController</servlet-class>
-        <load-on-startup>2</load-on-startup>
+        <servlet-name>echo-request</servlet-name>
+        <servlet-class>org.jimbarritt.spikes.rest.EchoRequestServlet</servlet-class>
     </servlet>
+
+    <servlet>
+        <servlet-name>rest-spike-controller</servlet-name>
+        <servlet-class>org.jimbarritt.spikes.rest.RestSpikeController</servlet-class>
+    </servlet>
+
     <servlet-mapping>
-        <servlet-name>stub-controller</servlet-name>
+        <servlet-name>echo-request</servlet-name>
+        <url-pattern>/echo-request</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>rest-spike-controller</servlet-name>
         <url-pattern>/*</url-pattern>
     </servlet-mapping>
+        
 </web-app>

@@ -309,11 +309,15 @@
   <component name="SvnBranchConfigurationManager">
     <option name="mySupportsUserInfoFilter" value="true" />
   </component>
+  <component name="TestDoxConfiguration">
+    <option name="createTestIfMissing" value="true" />
+    <option name="deletePackageOccurrences" value="true" />
+  </component>
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
   </component>
   <component name="com.sixrr.metrics.MetricsReloaded">
-    <option name="selectedProfile" value="Default" />
+    <option name="selectedProfile" value="Lines of code metrics" />
     <option name="autoscroll" value="false" />
     <option name="calculateMetrics" value="true" />
     <option name="includeTestClasses" value="false" />

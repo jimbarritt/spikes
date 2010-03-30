@@ -9,11 +9,9 @@
         </layout>
     </appender>
 
-
     <category name="org.apache.commons">
         <priority value="warn"/>
     </category>
-
 
     <root>
         <priority value="debug"/>

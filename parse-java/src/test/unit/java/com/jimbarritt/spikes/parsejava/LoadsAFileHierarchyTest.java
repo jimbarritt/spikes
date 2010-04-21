@@ -11,8 +11,11 @@ public class LoadsAFileHierarchyTest {
     @Test
     public void loadsUpASetOfDirectories() throws Exception {
         File testDir = new File(findTempDir(), "parse-java-field-test");
-
-        FileTreeGenerator generator = new FileTreeGenerator(testDir, 2, 2, 2);
+        if (testDir.exists()) {
+            testDir.delete();
+        }
+        testDir.mkdirs();
+        FileTreeGenerator generator = new FileTreeGenerator(testDir, 3, 3, 10, "java");
 
         generator.generateTree();        
 
@@ -24,25 +27,27 @@ public class LoadsAFileHierarchyTest {
         private final int depthOfTree;
         private final int maxDirectories;
         private final int maxFiles;
+        private final String fileType;
         private final File rootDir;
 
-        public FileTreeGenerator(File rootDir, int depthOfTree, int maxDirectories, int maxFiles) {
+        public FileTreeGenerator(File rootDir, int depthOfTree, int maxDirectories, int maxFiles, String fileType) {
             this.rootDir = rootDir;
             this.depthOfTree = depthOfTree;
             this.maxDirectories = maxDirectories;
             this.maxFiles = maxFiles;
+            this.fileType = fileType;
             log.info("Initialised a file generator in [" + rootDir.getAbsolutePath() + "]");
         }
 
         public void generateTree() throws IOException {
-            generateDirectories(rootDir, 0);
+            generateDirectories(rootDir, 1);
         }
 
         private void generateDirectories(File parent, int currentDepth) throws IOException {
             if (currentDepth > depthOfTree) {
                 return;
             }
-            for (int iDir=0;iDir<maxDirectories;++iDir) {
+            for (int iDir=1;iDir<=maxDirectories;++iDir) {
                 File directory = createDirectory(parent, iDir, currentDepth);
                 createFilesInDirectory(directory, currentDepth);
                 generateDirectories(directory, currentDepth+1);
@@ -56,8 +61,8 @@ public class LoadsAFileHierarchyTest {
         }
 
         private void createFilesInDirectory(File directory, int currentDepth) throws IOException {
-            for (int iFile=0;iFile<maxFiles;++iFile) {
-                File file = new File(directory, currentDepth + "-file.txt");
+            for (int iFile=1;iFile<=maxFiles;++iFile) {
+                File file = new File(directory, currentDepth + "-" + iFile + "-file." + fileType);
                 file.createNewFile();
             }
         }

@@ -5,8 +5,9 @@ import org.junit.*;
 
 import java.io.*;
 
-public class LoadsAFileHierarchyTest {
+public class ScansAFileHierarchyTest {
 
+    private static final Logger log = Logger.getLogger(ScansAFileHierarchyTest.class);
 
     @Test
     public void loadsUpASetOfDirectories() throws Exception {
@@ -16,13 +17,20 @@ public class LoadsAFileHierarchyTest {
         }
         testDir.mkdirs();
         FileTreeGenerator generator = new FileTreeGenerator(testDir, 3, 3, 10, "java");
+        generator.generateTree();
 
-        generator.generateTree();        
+        FileScanner fileScanner = new FileScanner(testDir, "java");
+        fileScanner.scan(new FileScanningAction() {
+            @Override
+            public void scanFile(File file) {
+                log.info(file.getAbsolutePath());
+            }
+        });
 
     }
 
     private static class FileTreeGenerator {
-        private static final Logger log = Logger.getLogger(LoadsAFileHierarchyTest.class);
+        private static final Logger log = Logger.getLogger(ScansAFileHierarchyTest.class);
 
         private final int depthOfTree;
         private final int maxDirectories;
@@ -71,8 +79,7 @@ public class LoadsAFileHierarchyTest {
     private static File findTempDir() throws IOException {
         File tempFile = File.createTempFile("foo", "bar");
         tempFile.deleteOnExit();
-        File tempDir = tempFile.getParentFile();
-        return tempDir;
+        return tempFile.getParentFile();
     }
 
 }

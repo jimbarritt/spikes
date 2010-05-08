@@ -5,9 +5,9 @@ import org.junit.*;
 
 import java.io.*;
 
-public class ScansAFileHierarchyTest {
+public class ScansAFileHierarchyIntegrationTest {
 
-    private static final Logger log = Logger.getLogger(ScansAFileHierarchyTest.class);
+    private static final Logger log = Logger.getLogger(ScansAFileHierarchyIntegrationTest.class);
 
     @Test
     public void loadsUpASetOfDirectories() throws Exception {
@@ -30,7 +30,7 @@ public class ScansAFileHierarchyTest {
     }
 
     private static class FileTreeGenerator {
-        private static final Logger log = Logger.getLogger(ScansAFileHierarchyTest.class);
+        private static final Logger log = Logger.getLogger(ScansAFileHierarchyIntegrationTest.class);
 
         private final int depthOfTree;
         private final int maxDirectories;

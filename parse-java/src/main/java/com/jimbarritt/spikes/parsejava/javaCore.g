@@ -3,6 +3,10 @@ options {
     language=Java;  
 }
 
+sourceFile 
+	: packageDeclaration importDelcaration*	classDeclaration*
+	;
+
 packageDeclaration 
 	: 'package' (IDENTIFIER '.'?)+  ';' 
 	;
@@ -12,7 +16,7 @@ importDelcaration
         ;
         
 classDeclaration 
-	: modifier* 'class' IDENTIFIER '{' (codeBlock) '}'	
+	: modifier* 'class' IDENTIFIER '{' (modifier | parameterBlock | codeBlock | .)* '}'	
 	;
 
 modifier
@@ -21,6 +25,9 @@ modifier
 
 codeBlock 
 	: '{' .* '}'
+	;
+parameterBlock 
+	: '(' .* ')'	
 	;
 
 STATEMENT_TERMINATOR : ';';

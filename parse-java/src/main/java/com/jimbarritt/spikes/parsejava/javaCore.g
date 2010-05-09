@@ -4,7 +4,7 @@ options {
 }
 
 sourceFile 
-	: packageDeclaration importDelcaration*	classDeclaration*
+	: packageDeclaration importDelcaration*	classDeclaration+
 	;
 
 packageDeclaration 

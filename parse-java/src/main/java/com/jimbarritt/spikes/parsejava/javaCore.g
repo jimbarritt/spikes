@@ -4,16 +4,27 @@ options {
 }
 
 packageDeclaration 
-	: 'package' (PACKAGE_NAME '.'?)+  ';' 
+	: 'package' (IDENTIFIER '.'?)+  ';' 
 	;
 	
 importDelcaration
-        : 'import' ? (PACKAGE_NAME '.')+ ('*'|IDENTIFIER) ';'
-        ;	
+        : 'import' ? (IDENTIFIER '.')+ ('*'|IDENTIFIER) ';'
+        ;
+        
+classDeclaration 
+	: modifier* 'class' IDENTIFIER '{' (codeBlock) '}'	
+	;
+
+modifier
+	: ('public' | 'private' | 'protected' | 'static' | 'final')  
+	;
+
+codeBlock 
+	: '{' .* '}'
+	;
 
 STATEMENT_TERMINATOR : ';';
 NUMBER : '0'..'9'+ ;
-PACKAGE_NAME : ('a'..'z'|'_') ('a'..'z'|'0'..'9'|'_')* ;
 IDENTIFIER :	('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')* ;
 WS  : (' '|'\r'|'\t'|'\u000C'|'\n') {$channel=HIDDEN;};
 COMMENT : '/*' .* '*/' {$channel=HIDDEN;};

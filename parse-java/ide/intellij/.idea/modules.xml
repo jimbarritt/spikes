@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../../../../external/checkstyle-src-5.1/checkstyle-src-5.1.iml" filepath="$PROJECT_DIR$/../../../../../external/checkstyle-src-5.1/checkstyle-src-5.1.iml" />
       <module fileurl="file://$PROJECT_DIR$/parse-java-spike/parse-java-spike.iml" filepath="$PROJECT_DIR$/parse-java-spike/parse-java-spike.iml" />
     </modules>
   </component>

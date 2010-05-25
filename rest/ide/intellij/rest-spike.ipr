@@ -344,6 +344,14 @@
         <root url="file:///Users/jim/work/code/external/apache/commons-io-1.4/src/java" />
       </SOURCES>
     </library>
+    <library name="vraptor">
+      <CLASSES>
+        <root url="jar:///Users/jim/work/code/github/spikes/rest/lib/vraptor-3.1.1.jar!/" />
+        <root url="jar:///Users/jim/work/code/github/spikes/rest/lib/xstream-1.3.1.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
   </component>
 </project>
 

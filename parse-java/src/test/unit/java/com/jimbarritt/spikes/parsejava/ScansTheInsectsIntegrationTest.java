@@ -17,7 +17,7 @@ public class ScansTheInsectsIntegrationTest {
         FileCounter fileCounter = new FileCounter();
         scanner.scan(fileCounter);
 
-        assertThat(fileCounter.fileCount(), is(7L));
+        assertThat(fileCounter.fileCount(), is(10L));
     }
 
     private static final class FileCounter implements FileScanningAction {

@@ -1,0 +1,9 @@
+First get the WebTools plugin:
+
+WebTools - http://download.eclipse.org/webtools/updates
+
+Then also see http://wiki.eclipse.org/ATF/Installing
+
+You need to follow these instructions.
+
+This should give JScript debugging.

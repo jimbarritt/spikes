@@ -15,7 +15,7 @@ public class ClassNameFilterTest {
      */
     @Test
     public void playWithRegex() {
-        String expression = "^((?!Integration).)*Test";
+        String expression = "(.(?!Integration))*Test";
         Pattern pattern = Pattern.compile(expression);
 
         assertThat(pattern.matcher("SomeUnitTest").matches(), is(true));

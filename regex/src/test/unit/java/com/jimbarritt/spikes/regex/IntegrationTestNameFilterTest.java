@@ -7,7 +7,7 @@ import java.util.regex.*;
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
 
-public class ClassNameFilterTest {
+public class IntegrationTestNameFilterTest {
 
     /**
      * <a href="http://stackoverflow.com/questions/406230/regular-expression-to-match-string-not-containing-a-word">See

@@ -14,7 +14,7 @@ public class IntegrationTestNameFilterTest {
      * this doc on Stack Overflow</a>
      */
     @Test
-    public void playWithRegex() {
+    public void matchesUnitTestsButNotIntegrationTests() {
         String expression = "(.(?!Integration))*Test";
         Pattern pattern = Pattern.compile(expression);
 

@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="16f113ca-cbdf-4342-978d-698e8ddceb3f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/regex-spike.ipr" afterPath="$PROJECT_DIR$/regex-spike.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/regex-spike.iws" afterPath="$PROJECT_DIR$/regex-spike.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/ClassNameFilterTest.java" afterPath="$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/ClassNameFilterTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/IntegrationTestNameFilterTest.java" afterPath="$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/IntegrationTestNameFilterTest.java" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="$USER_HOME_GRAILS$/" />
@@ -109,10 +108,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClassNameFilterTest.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/ClassNameFilterTest.java">
+      <file leaf-file-name="IntegrationTestNameFilterTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/IntegrationTestNameFilterTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="54" selection-start="426" selection-end="472" vertical-scroll-proportion="0.3423913">
+            <state line="16" column="54" selection-start="448" selection-end="448" vertical-scroll-proportion="0.3138587">
               <folding />
             </state>
           </provider>
@@ -140,6 +139,7 @@
         <option value="$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/ClassnameFilterTest2.java" />
         <option value="$PROJECT_DIR$/../../src/main/java/com/jimbarritt/spikes/regex/ClassNameFilter.java" />
         <option value="$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/ClassNameFilterTest.java" />
+        <option value="$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/IntegrationTestNameFilterTest.java" />
       </list>
     </option>
   </component>
@@ -499,8 +499,8 @@
     <option name="referencePos" value="0" />
     <option name="showLabels" value="true" />
   </component>
-  <component name="RunManager" selected="JUnit.ClassNameFilterTest.playWithRegex">
-    <configuration default="false" name="ClassNameFilterTest.playWithRegex" type="JUnit" factoryName="JUnit" temporary="true">
+  <component name="RunManager" selected="JUnit.IntegrationTestNameFilterTest.playWithRegex">
+    <configuration default="false" name="IntegrationTestNameFilterTest.playWithRegex" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="true" merge="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.jimbarritt.spikes.regex.*" />
@@ -511,7 +511,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="PACKAGE_NAME" value="com.jimbarritt.spikes.regex" />
-      <option name="MAIN_CLASS_NAME" value="com.jimbarritt.spikes.regex.ClassNameFilterTest" />
+      <option name="MAIN_CLASS_NAME" value="com.jimbarritt.spikes.regex.IntegrationTestNameFilterTest" />
       <option name="METHOD_NAME" value="playWithRegex" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-Dlog4j.configuration=logging/log4j.xml" />
@@ -527,7 +527,7 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="ClassNameFilterTest.filtersOutClassesCalledIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true">
+    <configuration default="false" name="IntegrationTestNameFilterTest.filtersOutClassesCalledIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="true" merge="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.jimbarritt.spikes.regex.*" />
@@ -538,7 +538,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="PACKAGE_NAME" value="com.jimbarritt.spikes.regex" />
-      <option name="MAIN_CLASS_NAME" value="com.jimbarritt.spikes.regex.ClassNameFilterTest" />
+      <option name="MAIN_CLASS_NAME" value="com.jimbarritt.spikes.regex.IntegrationTestNameFilterTest" />
       <option name="METHOD_NAME" value="filtersOutClassesCalledIntegrationTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-Dlog4j.configuration=logging/log4j.xml" />
@@ -729,6 +729,7 @@
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32820514" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Fireworks" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -744,7 +745,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Network Tools" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Web Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -763,7 +763,7 @@
     <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a test for not matching a word" />
+    <option name="LAST_COMMIT_MESSAGE" value="Renamed to be more explanatory" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -781,6 +781,7 @@
     <MESSAGE value="added test for url matcher" />
     <MESSAGE value="Expanded UrlSPlitter" />
     <MESSAGE value="Added a test for not matching a word" />
+    <MESSAGE value="Renamed to be more explanatory" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -810,9 +811,9 @@
         <state line="23" column="8" selection-start="636" selection-end="636" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/ClassNameFilterTest.java">
+    <entry file="file://$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/IntegrationTestNameFilterTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="54" selection-start="426" selection-end="472" vertical-scroll-proportion="0.3423913">
+        <state line="16" column="54" selection-start="448" selection-end="448" vertical-scroll-proportion="0.3138587">
           <folding />
         </state>
       </provider>

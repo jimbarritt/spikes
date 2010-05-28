@@ -45,6 +45,17 @@
     <option name="MAXIMUM_HEAP_SIZE" value="128" />
   </component>
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" />
+  <component name="FireworksProject">
+    <option name="expectedTestCaseNameRegex" />
+    <option name="maxMemory" />
+    <option name="maxSize" value="5" />
+    <option name="enable" value="true" />
+    <option name="enableAutoTask" value="false" />
+    <option name="autoRunTestsDelayTime" value="1000" />
+    <option name="jvmArgs" />
+    <option name="clearLogConsole" value="true" />
+    <option name="autoShowErrorsInEditorAfterCompile" value="true" />
+  </component>
   <component name="IdProvider" IDEtalkID="49EDDCEF47148EC936DF1C3AD046E170" />
   <component name="InspectionProjectProfileManager">
     <profiles>
@@ -266,6 +277,13 @@
   </component>
   <component name="ProjectDetails">
     <option name="projectName" value="regex-spike" />
+  </component>
+  <component name="ProjectDictionaryState">
+    <dictionary name="jim">
+      <words>
+        <w>classname</w>
+      </words>
+    </dictionary>
   </component>
   <component name="ProjectKey">
     <option name="state" value="project://default" />

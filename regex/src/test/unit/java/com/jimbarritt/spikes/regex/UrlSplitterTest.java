@@ -21,7 +21,7 @@ public class UrlSplitterTest {
     @Test
     public void splitsUrlWithServerAndPath() {
         Matcher matcher = pattern.matcher("http://www.google.com/some/path/to/file.css");
-
+        
         printMatcher(matcher);
         assertThat(matcher.matches(), is(true));
         assertThat(matcher.group(1), is("http://www.google.com"));

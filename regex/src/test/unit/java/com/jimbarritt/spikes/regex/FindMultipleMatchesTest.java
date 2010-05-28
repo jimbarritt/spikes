@@ -12,7 +12,7 @@ public class FindMultipleMatchesTest {
     @Test
     public void findsMultipleGroups() {
         Pattern pattern = Pattern.compile("\\w* ");
-
+        
         Matcher matcher = pattern.matcher("this is a sentance");
         log.info("GroupCount: " + matcher.groupCount());
         while (matcher.find()) {

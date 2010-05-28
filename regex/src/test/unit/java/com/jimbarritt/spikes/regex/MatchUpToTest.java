@@ -11,7 +11,7 @@ public class MatchUpToTest {
     @Test
     public void matchesUpToAPoint() {
         String regex = "(.*)(\\..*)";
-
+        
         Pattern pattern = Pattern.compile(regex);
 
         Matcher matcher = pattern.matcher("some/path/to/file.css");

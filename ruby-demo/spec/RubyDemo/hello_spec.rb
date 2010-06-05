@@ -1,7 +1,8 @@
 require "spec"
 require "RubyDemo/hello"
 
-describe Says Hello do
+
+describe RubyDemo::Hello do
 
   # Called before each example.
   before(:each) do
@@ -14,6 +15,8 @@ describe Says Hello do
   end
 
   it "should say hello" do
-    true.should == false
+    hello = RubyDemo::Hello.new
+    hello.speak.should == true
   end
 end
+

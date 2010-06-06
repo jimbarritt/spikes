@@ -42,7 +42,11 @@
           <root url="jar://$MODULE_DIR$/../../lib/commons-codec-1.4.jar!/" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../../lib-src/selenium-java-src-2.0a4.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib-src/htmlunit-2.7-src.zip!/htmlunit-2.7/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../../lib-src/htmlunit-2.7-src.zip!/htmlunit-2.7/src/main/java" />
+        </SOURCES>
       </library>
     </orderEntry>
   </component>

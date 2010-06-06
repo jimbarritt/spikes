@@ -14,6 +14,17 @@
   <component name="EntryPointsManager">
     <entry_points version="2.0" />
   </component>
+  <component name="FireworksProject">
+    <option name="expectedTestCaseNameRegex" />
+    <option name="maxMemory" />
+    <option name="maxSize" value="5" />
+    <option name="enable" value="true" />
+    <option name="enableAutoTask" value="true" />
+    <option name="autoRunTestsDelayTime" value="1000" />
+    <option name="jvmArgs" />
+    <option name="clearLogConsole" value="true" />
+    <option name="autoShowErrorsInEditorAfterCompile" value="true" />
+  </component>
   <component name="IdProvider" IDEtalkID="49EDDCEF47148EC936DF1C3AD046E170" />
   <component name="JavadocGenerationManager">
     <option name="OUTPUT_DIRECTORY" />
@@ -156,7 +167,7 @@
   <component name="ProjectKey">
     <option name="state" value="project://default" />
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_5" assert-keyword="true" jdk-15="true" project-jdk-name="1.6" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" assert-keyword="true" jdk-15="true" project-jdk-name="1.6" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="ResourceManagerContainer">

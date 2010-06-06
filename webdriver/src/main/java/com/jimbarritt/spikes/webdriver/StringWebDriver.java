@@ -15,7 +15,7 @@ public class StringWebDriver {
     private boolean useFirefox;
 
     public StringWebDriver() {
-        useFirefox = true;                
+        useFirefox = false;                
     }
 
       public WebDriver initialiseWith(String html) throws IOException {

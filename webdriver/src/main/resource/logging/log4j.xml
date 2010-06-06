@@ -4,8 +4,7 @@
 
     <appender name="ConsoleAppender" class="org.apache.log4j.ConsoleAppender">
         <layout class="org.apache.log4j.PatternLayout">
-            <!-- %d{hh:mm:ss}  [%t] -->
-            <param name="ConversionPattern" value="%p : [%c{1}] %m%n"/>
+            <param name="ConversionPattern" value="%-7p : [%-40c{3}] %m%n"/>
         </layout>
     </appender>
 
@@ -13,8 +12,25 @@
         <priority value="warn"/>
     </category>
 
+    <category name="org.selenium">
+        <priority value="warn"/>
+    </category>
+
+    <category name="com.gargoylesoftware">
+        <priority value="warn"/>
+    </category>
+
+    <category name="httpclient.wire.content">
+        <priority value="warn"/>
+    </category>
+
+    <!-- Turn this on if you want to debug what is coming back from HttpClient -->
+    <category name="httpclient.wire.header">
+        <priority value="warn"/>
+    </category>
+
     <root>
-        <priority value="info"/>
+        <priority value="debug"/>
         <appender-ref ref="ConsoleAppender"/>
     </root>
 

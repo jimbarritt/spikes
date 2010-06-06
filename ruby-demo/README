@@ -1,0 +1,7 @@
+A spike which demonstrates some environmental and language features in ruby.
+
+You need the following gems installed:
+
+gem install gherkin
+sudo gem install cucumber
+gem install rspec

@@ -3,10 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="632dd68b-b9a4-48b9-a54d-71ad710de2f3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ruby-demo.iml" afterPath="$PROJECT_DIR$/ruby-demo.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../test_unit/rubydemo/hello_test.rb" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../lib/rubydemo/hello.rb" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../test_cucumber/features/step_definitions/hello_steps.rb" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../spec/RubyDemo/hello_test.rb" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../test_cucumber/features/speaks.feature" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../spec/rubydemo/hello_spec.rb" afterPath="$PROJECT_DIR$/../../../spec/rubydemo/hello_spec.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../lib/rubydemo/hello.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../../../spec/rubydemo/hello_spec.rb" afterPath="$PROJECT_DIR$/../../../test_spec/rubydemo/hello_spec.rb" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../spec/RubyDemo/hello_spec.rb" afterPath="" />
     </list>
     <ignored path="$USER_HOME_GRIFFON$/" />
     <ignored path="$USER_HOME_GRAILS$/" />
@@ -83,10 +86,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hello_test.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="hello_test.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../test_unit/rubydemo/hello_test.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="18" selection-start="156" selection-end="156" vertical-scroll-proportion="0.30184805">
+            <state line="12" column="0" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="speaks.feature" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../test_cucumber/features/speaks.feature">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="23" selection-start="191" selection-end="191" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hello_steps.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../../test_cucumber/features/step_definitions/hello_steps.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="2" selection-start="218" selection-end="218" vertical-scroll-proportion="0.5174538">
               <folding />
             </state>
           </provider>
@@ -101,17 +122,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="background.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../../../../../../.gem/ruby/1.8/gems/cucumber-0.7.3/lib/cucumber/ast/background.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="hello_spec.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../spec/rubydemo/hello_spec.rb">
+        <entry file="file://$PROJECT_DIR$/../../../test_spec/rubydemo/hello_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="13" column="20" selection-start="211" selection-end="211" vertical-scroll-proportion="0.0">
               <folding />
@@ -141,6 +153,8 @@
         <option value="$PROJECT_DIR$/../../../lib/test_john.rb" />
         <option value="$PROJECT_DIR$/../../../test_unit/rubydemo/hello_test.rb" />
         <option value="$PROJECT_DIR$/../../../lib/rubydemo/hello.rb" />
+        <option value="$PROJECT_DIR$/../../../test_cucumber/features/speaks.feature" />
+        <option value="$PROJECT_DIR$/../../../test_cucumber/features/step_definitions/hello_steps.rb" />
       </list>
     </option>
   </component>
@@ -216,11 +230,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="spec" />
+              <option name="myItemId" value="test_spec" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="rubydemo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ruby-demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ruby-demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test_cucumber" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -277,7 +305,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="RubyDemo" />
+              <option name="myItemId" value="rubydemo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -633,7 +661,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="874" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -653,7 +681,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17757009" sideWeight="0.6615385" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17757009" sideWeight="0.6615385" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32948717" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -676,7 +704,7 @@
     <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added cucumber gems" />
+    <option name="LAST_COMMIT_MESSAGE" value="Got the path loaded up ok in intellij" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -694,6 +722,7 @@
     <MESSAGE value="renamed methods to be lower case" />
     <MESSAGE value="Trying to get unit tests to work" />
     <MESSAGE value="Added cucumber gems" />
+    <MESSAGE value="Got the path loaded up ok in intellij" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -710,7 +739,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../spec/rubydemo/hello_spec.rb">
+    <entry file="file://$PROJECT_DIR$/../../../test_spec/rubydemo/hello_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="20" selection-start="211" selection-end="211" vertical-scroll-proportion="0.0">
           <folding />
@@ -733,7 +762,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../test_unit/rubydemo/hello_test.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="18" selection-start="156" selection-end="156" vertical-scroll-proportion="0.30184805">
+        <state line="12" column="0" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../test_cucumber/features/speaks.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="23" selection-start="191" selection-end="191" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../test_cucumber/features/step_definitions/hello_steps.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="2" selection-start="218" selection-end="218" vertical-scroll-proportion="0.5174538">
           <folding />
         </state>
       </provider>

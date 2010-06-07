@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="632dd68b-b9a4-48b9-a54d-71ad710de2f3" name="Default" comment="Added README to say which gems you need">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../../../lib/RubyDemo/hello.rb" afterPath="$PROJECT_DIR$/../../../lib/RubyDemo3/hello.rb" />
+    <list default="true" readonly="true" id="632dd68b-b9a4-48b9-a54d-71ad710de2f3" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../../../lib/RubyDemo3/hello.rb" afterPath="$PROJECT_DIR$/../../../lib/rubydemo/hello.rb" />
     </list>
     <ignored path="$USER_HOME_GRAILS$/" />
     <ignored path="$USER_HOME_GRIFFON$/" />
@@ -764,7 +763,7 @@
     <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added README to say which gems you need" />
+    <option name="LAST_COMMIT_MESSAGE" value="Having problems with loosing hello.rb prob because of naming with lower upper case" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -787,6 +786,7 @@
     <MESSAGE value="Finished cucumber test but it doesnt want to load up dependant files" />
     <MESSAGE value="Worked out what issue was - needed to rename directory to lower case. Now Cuke tests work!" />
     <MESSAGE value="Added README to say which gems you need" />
+    <MESSAGE value="Having problems with loosing hello.rb prob because of naming with lower upper case" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />

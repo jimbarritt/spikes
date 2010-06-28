@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="16f113ca-cbdf-4342-978d-698e8ddceb3f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/regex-spike.iws" afterPath="$PROJECT_DIR$/regex-spike.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/IntegrationTestNameFilterTest.java" afterPath="$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/IntegrationTestNameFilterTest.java" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="$USER_HOME_GRAILS$/" />
@@ -111,7 +110,7 @@
       <file leaf-file-name="IntegrationTestNameFilterTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/IntegrationTestNameFilterTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="54" selection-start="448" selection-end="448" vertical-scroll-proportion="0.3138587">
+            <state line="17" column="52" selection-start="482" selection-end="505" vertical-scroll-proportion="0.3423913">
               <folding />
             </state>
           </provider>
@@ -763,7 +762,7 @@
     <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Renamed to be more explanatory" />
+    <option name="LAST_COMMIT_MESSAGE" value="Renamed test method" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -782,6 +781,7 @@
     <MESSAGE value="Expanded UrlSPlitter" />
     <MESSAGE value="Added a test for not matching a word" />
     <MESSAGE value="Renamed to be more explanatory" />
+    <MESSAGE value="Renamed test method" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -813,7 +813,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/IntegrationTestNameFilterTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="54" selection-start="448" selection-end="448" vertical-scroll-proportion="0.3138587">
+        <state line="17" column="52" selection-start="482" selection-end="505" vertical-scroll-proportion="0.3423913">
           <folding />
         </state>
       </provider>

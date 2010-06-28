@@ -11,6 +11,17 @@
   <component name="DependencyValidationManager">
     <option name="SKIP_IMPORT_STATEMENTS" value="false" />
   </component>
+  <component name="FireworksProject">
+    <option name="expectedTestCaseNameRegex" />
+    <option name="maxMemory" />
+    <option name="maxSize" value="5" />
+    <option name="enable" value="true" />
+    <option name="enableAutoTask" value="true" />
+    <option name="autoRunTestsDelayTime" value="1000" />
+    <option name="jvmArgs" />
+    <option name="clearLogConsole" value="true" />
+    <option name="autoShowErrorsInEditorAfterCompile" value="true" />
+  </component>
   <component name="IdProvider" IDEtalkID="49EDDCEF47148EC936DF1C3AD046E170" />
   <component name="JavadocGenerationManager">
     <option name="OUTPUT_DIRECTORY" />

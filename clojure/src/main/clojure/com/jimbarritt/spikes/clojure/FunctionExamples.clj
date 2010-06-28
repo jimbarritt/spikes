@@ -1,4 +1,4 @@
-(ns com.jimbarritt.spikes.FunctionExamples)
+(ns com.jimbarritt.spikes.clojure.FunctionExamples)
 
 (println "Test clojure application:")
 

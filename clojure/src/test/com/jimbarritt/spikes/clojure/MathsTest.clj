@@ -1,12 +1,9 @@
-(ns com.jimbarritt.spikes.MathsTest
+(ns com.jimbarritt.spikes.clojure.MathsTest
   (:use clojure.test)
-  (:use com.jimbarritt.spikes.Maths))
-
-(println (format "The result is %d" (addTwoNumbers 2 3)))
-
+  (:use com.jimbarritt.spikes.clojure.Maths))
 
 (deftest test-addition
-(is (= 3 (+ 3 2))))
+ (is (= 3 (+ 3 2))))
 
 (deftest addTwoNumbersTest
   (is (= 4 (addTwoNumbers 2 2)))

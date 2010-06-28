@@ -1,4 +1,4 @@
-(ns com.jimbarritt.spikes.StringManipulation)
+(ns com.jimbarritt.spikes.clojure.StringManipulation)
 
 (def someString "\nhello")
 (println someString)

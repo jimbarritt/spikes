@@ -1,4 +1,4 @@
-(ns com.jimbarritt.spikes.JFrameExample
+(ns com.jimbarritt.spikes.clojure.JFrameExample
   (:require [clojure.contrib.str-utils :as su])
   (:use [clojure.contrib.math :only (gcd, sqrt)])
   (:import (java.text NumberFormat) (javax.swing JFrame JLabel)))

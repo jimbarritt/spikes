@@ -3,6 +3,7 @@
   (:use [clojure.contrib.math :only (gcd, sqrt)])
   (:import (java.text NumberFormat) (javax.swing JFrame JLabel)))
 
+(println (loaded-libs))
 (println (su/str-join "$" [1 2 3])) ; -> 1$2$3
 (println (gcd 27 72)) ; -> 9
 (println (sqrt 5)) ; -> 2.236

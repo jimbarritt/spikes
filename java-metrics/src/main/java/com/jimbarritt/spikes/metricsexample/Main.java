@@ -12,6 +12,6 @@ public class Main {
     }
 
     private void runSimulation() {
-        log.info("Welcome to the Beehive simulator. Its a simple app that is used to test the code metrics of various tools");
+        log.info("Welcome to the BeehiveTest simulator. Its a simple app that is used to test the code metrics of various tools");
     }
 }

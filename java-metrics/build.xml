@@ -34,8 +34,9 @@
 
     <property name="target.reports.dir" value="${target.dir}/reports"/>
     <property name="target.reports.test.dir" value="${target.reports.dir}/test"/>
-    <property name="target.reports.test.unit.xml.dir" value="${target.reports.test.dir}/xml"/>
-    <property name="target.reports.test.unit.html.dir" value="${target.reports.test.dir}/html"/>
+    <property name="target.reports.test.unit.dir" value="${target.reports.test.dir}/unit"/>
+    <property name="target.reports.test.unit.xml.dir" value="${target.reports.test.unit.dir}/xml"/>
+    <property name="target.reports.test.unit.html.dir" value="${target.reports.test.unit.dir}/html"/>
 
     <property name="target.reports.coverage.dir" value="${target.reports.dir}/coverage"/>
     <property name="target.reports.coverage.cobertura.dir" value="${target.reports.coverage.dir}/cobertura"/>
@@ -150,7 +151,9 @@
                 <include name="*.xml"/>
             </fileset>
             <report format="frames"
-                    todir="${target.reports.test.unit.html.dir}"/>
+                    todir="${target.reports.test.unit.html.dir}">
+                <param name="TITLE" expression="The results of the unit tests" />
+            </report>
         </junitreport>
     </target>
 

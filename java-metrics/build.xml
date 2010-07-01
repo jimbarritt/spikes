@@ -36,12 +36,15 @@
 
     <property name="target.metrics.dir" value="${target.dir}/metrics"/>
     <property name="target.metrics.coverage.dir" value="${target.metrics.dir}/coverage"/>
+
     <property name="target.metrics.coverage.cobertura.dir" value="${target.metrics.coverage.dir}/cobertura"/>
+    <property name="target.metrics.coverage.cobertura.datafile" value="${target.metrics.coverage.cobertura.dir}/cobertura.ser"/>
     <property name="target.metrics.coverage.cobertura.instrumented.dir" value="${target.metrics.coverage.cobertura.dir}/instrumented"/>
     <property name="target.metrics.coverage.cobertura.coverage.dir" value="${target.metrics.coverage.cobertura.dir}/coverage"/>
     <property name="target.metrics.coverage.cobertura.coverage.xml.dir" value="${target.metrics.coverage.cobertura.coverage.dir}/xml"/>
     <property name="target.metrics.coverage.cobertura.coverage.summary.dir" value="${target.metrics.coverage.cobertura.coverage.dir}/summary"/>
     <property name="target.metrics.coverage.cobertura.coverage.html.dir" value="${target.metrics.coverage.cobertura.coverage.dir}/html"/>
+
     <property name="target.metrics.coverage.cobertura.reports.dir" value="${target.metrics.coverage.cobertura.dir}/reports"/>
 
 
@@ -96,8 +99,8 @@
                                      compile:test,
                                      test:unit,
                                      cobertura:check,
-                                     test:report,
-                                     cobertura:report"
+                                     report:test,
+                                     report:cobertura"
             description="Compile, instrument production classes, run the tests and generate coverage reports."/>
 
     <target name="compile"
@@ -126,24 +129,12 @@
 		</javac>
     </target>
 
-	<target name="cobertura:instrument">
-        <echo message="Instrumenting classes in ${target.compilation.production.dir}" />
-		<cobertura-instrument todir="${target.metrics.coverage.cobertura.instrumented.dir}">
-
-			<ignore regex="org.apache.log4j.*" />
-
-			<fileset dir="${target.compilation.production.dir}">
-				<include name="**/*.class" />
-			</fileset>
-		</cobertura-instrument>
-	</target>
-
 	<target name="test:unit">
 		<junit printsummary="on">
 			<classpath refid="test.execute.classpath" />
 
-            <sysproperty key="net.sourceforge.cobertura.datafile"
-		                 file="${target.metrics.coverage.cobertura.dir}/cobertura.ser" />
+              <sysproperty key="net.sourceforge.cobertura.datafile"
+		                 file="${target.metrics.coverage.cobertura.datafile}" />
 
 			<formatter type="xml" />
 
@@ -157,7 +148,7 @@
 		</junit>		
 	</target>
 
-    <target name="test:report">
+    <target name="report:test">
 		<junitreport todir="${target.test.reports.html.dir}">
 			<fileset dir="${target.test.reports.xml.dir}">
 				<include name="*.xml" />
@@ -169,24 +160,49 @@
        
 
 	<target name="cobertura:check">
-		<cobertura-check branchrate="34" totallinerate="100" />
+		<cobertura-check branchrate="34"
+                         datafile="${target.metrics.coverage.cobertura.datafile}"
+                         totallinerate="100" />
 	</target>
 
-	<target name="cobertura:report">
-		<cobertura-report srcdir="${src.main.java.dir}" destdir="${target.metrics.coverage.cobertura.coverage.xml.dir}" format="xml" />
-	</target>
+    <target name="cobertura:instrument">
+        <echo message="Instrumenting classes in ${target.compilation.production.dir}" />
+		<cobertura-instrument todir="${target.metrics.coverage.cobertura.instrumented.dir}"
+                              datafile="${target.metrics.coverage.cobertura.datafile}">
 
-	<target name="summary-coverage-report">
-		<cobertura-report srcdir="${src.main.java.dir}" destdir="${target.metrics.coverage.cobertura.coverage.summary.dir}" format="summaryXml" />
-	</target>
+			<ignore regex="org.apache.log4j.*" />
 
-	<target name="alternate-coverage-report">
-		<cobertura-report destdir="${target.metrics.coverage.cobertura.coverage.html.dir}">
-			<fileset dir="${src.main.java.dir}">
-				<include name="**/*.java"/>
+			<fileset dir="${target.compilation.production.dir}">
+				<include name="**/*.class" />
 			</fileset>
-		</cobertura-report>
+		</cobertura-instrument>
 	</target>
+
+	<target name="report:cobertura"
+            depends="report:cobertura-xml, report:cobertura-xml-summary, report:cobertura-html"/>		    	
+
+    <target name="report:cobertura-xml">
+		<cobertura-report srcdir="${src.main.java.dir}"
+                          datafile="${target.metrics.coverage.cobertura.datafile}"
+                          format="xml"
+                          destdir="${target.metrics.coverage.cobertura.coverage.xml.dir}"  />
+	</target>
+
+    <target name="report:cobertura-html">
+		<cobertura-report srcdir="${src.main.java.dir}"
+                          datafile="${target.metrics.coverage.cobertura.datafile}"
+                          format="html"
+                          destdir="${target.metrics.coverage.cobertura.coverage.html.dir}" />
+	</target>
+
+    <target name="report:cobertura-xml-summary">
+		<cobertura-report srcdir="${src.main.java.dir}"
+                          datafile="${target.metrics.coverage.cobertura.datafile}"
+                          format="summaryXml"
+                          destdir="${target.metrics.coverage.cobertura.coverage.summary.dir}" />
+	</target>
+
+
 
 	<target name="clean" description="Remove all files created by the build/test process.">
 		<delete dir="${target.dir}" />

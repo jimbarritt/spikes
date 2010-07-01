@@ -30,8 +30,7 @@
     <property name="target.compilation.production.dir" value="${target.compilation.dir}/production"/>
     <property name="target.compilation.test.dir" value="${target.compilation.dir}/test"/>
     <property name="target.compilation.instrumented.dir" value="${target.compilation.dir}/instrumented"/>
-    <property name="target.compilation.instrumented.cobertura.dir"
-              value="${target.compilation.instrumented.cobertura.dir}/cobertura"/>
+    <property name="target.compilation.instrumented.cobertura.dir" value="${target.compilation.instrumented.dir}/cobertura"/>
 
     <property name="target.reports.dir" value="${target.dir}/reports"/>
     <property name="target.reports.test.dir" value="${target.reports.dir}/test"/>

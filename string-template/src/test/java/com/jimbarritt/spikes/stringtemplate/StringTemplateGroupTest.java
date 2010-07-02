@@ -9,6 +9,7 @@ import java.io.*;
 import static org.hamcrest.core.Is.*;
 import static org.hamcrest.core.IsNull.*;
 import static org.junit.Assert.*;
+import static org.junit.matchers.JUnitMatchers.containsString;
 
 public class StringTemplateGroupTest {
 
@@ -36,6 +37,7 @@ public class StringTemplateGroupTest {
 
         String result = new StringTemplateRenderer().render(usesSimpleGroupTemplate);
         log.info("Result:\n" + result);
+        assertThat(result, containsString("nestedInput = jim"));
     }
 
     @Test

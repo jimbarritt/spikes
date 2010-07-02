@@ -14,8 +14,8 @@ import static org.junit.Assert.assertThat;
 import static org.junit.matchers.JUnitMatchers.containsString;
 
 
-public class StringTemplateTest {
-	private static final Logger log = Logger.getLogger(StringTemplateTest.class);
+public class StringTemplateBasicsTest {
+	private static final Logger log = Logger.getLogger(StringTemplateBasicsTest.class);
 
     private static final String TEST_TEMPLATES_SOLAR_SYSTEM_ST = "logging/log4j.xml";
 
@@ -34,7 +34,7 @@ public class StringTemplateTest {
 
 	@Test
 	public void checksClasspathForTemplateDefinition() {
-        String resourcePath = "logging/log4j.xml";
+        String resourcePath = "st/formatting/lineBreak.st";
         log.info("Looking for " + resourcePath);
 
         URL resourceUrl = this.getClass().getClassLoader().getResource(resourcePath);
@@ -44,9 +44,7 @@ public class StringTemplateTest {
 	@Test
 	public void loadsATemplateFromTheClasspath() throws IOException {
 		StringTemplateGroup group = new StringTemplateGroup("testClasspathTemplateGroup");
-
-
-		StringTemplate template = group.getInstanceOf("st/solarsystem/solarsystem");
+		StringTemplate template = group.getInstanceOf("st/solarsystem/listofplanets");
 		assertThat("Should be able to get the template definition.", template, is(notNullValue()));
 	}
 
@@ -54,7 +52,7 @@ public class StringTemplateTest {
 	@Test
 	public void rendersAComplexTemplate() throws IOException {
 		StringTemplateGroup group = new StringTemplateGroup("complexTemplateGroup");
-		StringTemplate complexTemplate = group.getInstanceOf("st/solarsystem/solarsystem");
+		StringTemplate complexTemplate = group.getInstanceOf("st/solarsystem/listofplanets");
 		TheSolarSystem solarSystem = new TheSolarSystem();
 		solarSystem.setDescription("This is a description of the solar system");
 		complexTemplate.setAttribute("theSolarSystem", solarSystem);
@@ -63,7 +61,7 @@ public class StringTemplateTest {
 		log.info("Rendered as:\n[" + renderedString + "]");
 		assertThat(renderedString, containsString("The solar system is made up of " + solarSystem.getPlanets().size() + " planets"));
 
-		assertThat(renderedString, containsString("This is a description of the solar system<br/>"));
+		assertThat(renderedString, containsString("This is a description of the solar system"));
 
 	}
 }

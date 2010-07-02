@@ -8,7 +8,7 @@ public class Planet {
 		this.name = name;
 	}
 
-	public String getName() {
+	public String toString() {
 		return name;
 	}
 

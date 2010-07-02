@@ -178,7 +178,7 @@
     </target>
 
     <target  name="report"
-             depends="report:test, report:cobertura"
+             depends="report:test, report:cobertura, report:cloc"
              description="Generates reports for tests and any other processes">
         
         <echo message="Reports @" />
@@ -197,6 +197,9 @@
                           datafile="${target.reports.coverage.cobertura.datafile}"
                           format="xml"
                           destdir="${target.reports.coverage.cobertura.xml.dir}"/>
+    </target>
+
+    <target name="report:cloc">
     </target>
 
     <target name="report:cobertura-html">

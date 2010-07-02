@@ -3,7 +3,7 @@ package com.jimbarritt.spikes.stringtemplate.io;
 import java.io.*;
 
 public class NullReader extends SafeReader {
-    public static Reader nullReader() {
+    public static SafeReader nullSafeReader() {
         return new NullReader();
     }
 

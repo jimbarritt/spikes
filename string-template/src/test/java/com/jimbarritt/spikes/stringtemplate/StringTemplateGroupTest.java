@@ -10,7 +10,7 @@ public class StringTemplateGroupTest {
 
     @Test
     public void loadAStringTemplateGroup() throws Exception {
-        StringTemplateGroup group = new StringTemplateLoader().loadGroup("st/solarsystem/simpleGroup.stg");
+        StringTemplateGroup group = new StringTemplateClasspathLoader().loadGroup("st/solarsystem/simpleGroup.stg");
         StringTemplate template = group.getInstanceOf("outerTemplate");
         template.setAttribute("input", "Hello World");
 

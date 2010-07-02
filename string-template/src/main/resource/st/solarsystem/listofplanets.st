@@ -5,4 +5,3 @@ $theSolarSystem.description$
 $theSolarSystem.planets:st/formatting/lineBreak()$
 
 
-

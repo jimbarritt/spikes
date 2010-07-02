@@ -1,4 +1,4 @@
-package com.jimbarritt.spikes.stringtemplate;
+package com.jimbarritt.spikes.stringtemplate.io;
 
 import java.io.*;
 

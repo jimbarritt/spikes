@@ -1,36 +1,30 @@
 package com.jimbarritt.spikes.stringtemplate;
 
+import com.jimbarritt.spikes.stringtemplate.io.*;
 import org.antlr.stringtemplate.*;
 import org.antlr.stringtemplate.language.*;
 
 import java.io.*;
 import java.net.*;
 
-import static com.jimbarritt.spikes.stringtemplate.io.NullReader.nullReader;
+import static com.jimbarritt.spikes.stringtemplate.io.NullReader.nullSafeReader;
 
-public class StringTemplateLoader {
+public class StringTemplateClasspathLoader {
     public StringTemplateGroup loadGroup(String groupPath) {
-        Reader in = nullReader();
+        SafeReader safeReader = nullSafeReader();
         try {
             URL groupUrl = Thread.currentThread().getContextClassLoader().getResource(groupPath);
             if (groupUrl == null) {
                 throw new StringTemplateException("Could not load resource from classpath: " + groupPath);
             }
-            in = new InputStreamReader(groupUrl.openStream());
-            return new StringTemplateGroup(groupPath, DefaultTemplateLexer.class);
+            safeReader = new SafeReader(new InputStreamReader(groupUrl.openStream()));
+            return new StringTemplateGroup(safeReader, DefaultTemplateLexer.class);
         } catch (Exception e) {
             throw new StringTemplateException("Could not load template", e);
         } finally {
-            tryToClose(in);
+            safeReader.tryToClose();
         }
 
     }
 
-    private static void tryToClose(Reader in) {
-        try {
-            in.close();
-        }  catch (IOException e) {
-            throw new StringTemplateException("Could not close reader.", e);
-        }
-    }
 }

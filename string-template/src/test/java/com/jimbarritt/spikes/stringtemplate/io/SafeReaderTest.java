@@ -1,8 +1,6 @@
 package com.jimbarritt.spikes.stringtemplate.io;
 
-import com.jimbarritt.spikes.stringtemplate.*;
 import org.apache.log4j.*;
-import org.hamcrest.core.*;
 import org.junit.*;
 
 import java.io.*;

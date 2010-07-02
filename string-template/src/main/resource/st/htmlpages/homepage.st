@@ -6,7 +6,7 @@
 
 <body>
     <div id="content">
-        $define.component$
+        $define.textComponent$
     </div>
 
 </body>

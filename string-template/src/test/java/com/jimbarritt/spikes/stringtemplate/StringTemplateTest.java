@@ -15,9 +15,9 @@ import static org.junit.matchers.JUnitMatchers.containsString;
 
 
 public class StringTemplateTest {
-	private static final Logger LOG = Logger.getLogger(StringTemplateTest.class);
+	private static final Logger log = Logger.getLogger(StringTemplateTest.class);
 
-	private static final String TEST_TEMPLATES_SOLAR_SYSTEM = "testTemplates/solarSystem";
+    private static final String TEST_TEMPLATES_SOLAR_SYSTEM_ST = "logging/log4j.xml";
 
 
 	@Test
@@ -34,8 +34,11 @@ public class StringTemplateTest {
 
 	@Test
 	public void checksClasspathForTemplateDefinition() {
-		URL resourceUrl = this.getClass().getClassLoader().getResource(TEST_TEMPLATES_SOLAR_SYSTEM + ".st");
-		assertThat("File should be on the classpath.", resourceUrl, is(notNullValue()));
+        String resourcePath = "logging/log4j.xml";
+        log.info("Looking for " + resourcePath);
+
+        URL resourceUrl = this.getClass().getClassLoader().getResource(resourcePath);
+		assertThat("Resource [" + resourcePath + "] should be on the classpath.", resourceUrl, is(notNullValue()));
 	}
 
 	@Test
@@ -43,7 +46,7 @@ public class StringTemplateTest {
 		StringTemplateGroup group = new StringTemplateGroup("testClasspathTemplateGroup");
 
 
-		StringTemplate template = group.getInstanceOf(TEST_TEMPLATES_SOLAR_SYSTEM);
+		StringTemplate template = group.getInstanceOf("st/solarsystem/solarsystem");
 		assertThat("Should be able to get the template definition.", template, is(notNullValue()));
 	}
 
@@ -51,13 +54,13 @@ public class StringTemplateTest {
 	@Test
 	public void rendersAComplexTemplate() throws IOException {
 		StringTemplateGroup group = new StringTemplateGroup("complexTemplateGroup");
-		StringTemplate complexTemplate = group.getInstanceOf(TEST_TEMPLATES_SOLAR_SYSTEM);
+		StringTemplate complexTemplate = group.getInstanceOf("st/solarsystem/solarsystem");
 		TheSolarSystem solarSystem = new TheSolarSystem();
 		solarSystem.setDescription("This is a description of the solar system");
 		complexTemplate.setAttribute("theSolarSystem", solarSystem);
 		String renderedString = new StringTemplateRenderer().render(complexTemplate);
 
-		LOG.info("Rendered as:\n[" + renderedString + "]");
+		log.info("Rendered as:\n[" + renderedString + "]");
 		assertThat(renderedString, containsString("The solar system is made up of " + solarSystem.getPlanets().size() + " planets"));
 
 		assertThat(renderedString, containsString("This is a description of the solar system<br/>"));

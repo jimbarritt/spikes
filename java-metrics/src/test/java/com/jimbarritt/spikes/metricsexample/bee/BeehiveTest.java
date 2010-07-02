@@ -9,9 +9,8 @@ public class BeehiveTest {
 
     @Test
     public void beesCanEnterTheHive() {
-        Beehive beehive = new Beehive();
-
         Bee bee = new Bee();
+        Beehive beehive = new Beehive();
 
         beehive.enter(bee);
 

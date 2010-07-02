@@ -5,19 +5,24 @@ import org.apache.log4j.*;
 import org.junit.*;
 
 import java.io.*;
+import java.util.*;
 
+import static com.jimbarritt.spikes.stringtemplate.StringTemplateLoader.mergeGroups;
 import static org.hamcrest.core.Is.*;
 import static org.hamcrest.core.IsNull.*;
 import static org.junit.Assert.*;
-import static org.junit.matchers.JUnitMatchers.containsString;
+import static org.junit.matchers.JUnitMatchers.*;
 
+/**
+ * http://www.antlr.org/wiki/display/ST/Group+Files
+ */
 public class StringTemplateGroupTest {
 
     private static final Logger log = Logger.getLogger(StringTemplateGroupTest.class);
 
     @Test
     public void loadAStringTemplateGroup() throws Exception {
-        StringTemplateGroup group = new StringTemplateClasspathLoader().loadGroupFromFile("st/solarsystem/simpleGroup.stg");
+        StringTemplateGroup group = new StringTemplateLoader().loadGroupFromClasspath("st/solarsystem/simpleGroup.stg");
         StringTemplate template = group.getInstanceOf("outerTemplate");
         template.setAttribute("input", "Hello World");
 
@@ -28,8 +33,8 @@ public class StringTemplateGroupTest {
 
     @Test
     public void loadsTemplatesFromAHierarchyOfGroups() {
-        StringTemplateGroup csvGroup = new StringTemplateClasspathLoader().loadGroupFromFile("st/formatting/csv.stg");
-        StringTemplateGroup utilityGroup = new StringTemplateClasspathLoader().loadGroupFromFile("st/solarsystem/simpleGroup.stg");
+        StringTemplateGroup csvGroup = new StringTemplateLoader().loadGroupFromClasspath("st/formatting/csv.stg");
+        StringTemplateGroup utilityGroup = new StringTemplateLoader().loadGroupFromClasspath("st/solarsystem/simpleGroup.stg");
         StringTemplateGroup coreTemplateGroup = new StringTemplateGroup("coreTemplates", getStringTemplateRootDir());
 
         utilityGroup.setSuperGroup(csvGroup);
@@ -42,6 +47,35 @@ public class StringTemplateGroupTest {
         log.info("Result:\n" + result);
         assertThat(result, containsString("nestedInput = jim"));
         assertThat(result, containsString("CSVROW: jim"));
+    }
+
+    @Test
+    @SuppressWarnings("unchecked")
+    public void combinesTemplatesFromMultipleGroups() {
+        StringTemplateLoader templateLoader = new StringTemplateLoader();
+        StringTemplateGroup csvGroup = templateLoader.loadGroupFromClasspath("st/formatting/csv.stg");
+        StringTemplateGroup utilityGroup = templateLoader.loadGroupFromClasspath("st/solarsystem/simpleGroup.stg");
+
+        StringTemplateGroup coreTemplateGroup = templateLoader.loadGroupFromRootDir(getStringTemplateRootDir());
+
+        mergeGroups(csvGroup, coreTemplateGroup);
+        mergeGroups(utilityGroup, coreTemplateGroup);
+
+        StringTemplate usesSimpleGroupTemplate = coreTemplateGroup.getInstanceOf("st/solarsystem/usesSimpleGroupTemplate");
+        usesSimpleGroupTemplate.setAttribute("input", "jim");
+
+        String result = new StringTemplateRenderer().render(usesSimpleGroupTemplate);
+        log.info("Result:\n" + result);
+
+        Set<String> templateNames = (Set<String>) coreTemplateGroup.getTemplateNames();
+        for (String templateName : templateNames) {
+            log.debug("template: " + templateName);
+        }
+
+
+        assertThat(result, containsString("nestedInput = jim"));
+        assertThat(result, containsString("CSVROW: jim"));
+
     }
 
     @Test

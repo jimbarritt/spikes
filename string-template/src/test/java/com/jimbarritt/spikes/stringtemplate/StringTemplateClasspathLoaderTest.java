@@ -6,7 +6,7 @@ public class StringTemplateClasspathLoaderTest {
 
     @Test(expected = StringTemplateException.class)
     public void failsIfResourceDoesNotExist() {
-        StringTemplateClasspathLoader loader = new StringTemplateClasspathLoader();
-        loader.loadGroupFromFile("foobar");
+        StringTemplateLoader loader = new StringTemplateLoader();
+        loader.loadGroupFromClasspath("foobar");
     }
 }

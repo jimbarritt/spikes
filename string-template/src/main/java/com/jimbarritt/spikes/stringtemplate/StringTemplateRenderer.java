@@ -1,13 +1,8 @@
 package com.jimbarritt.spikes.stringtemplate;
 
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.io.Writer;
+import org.antlr.stringtemplate.*;
 
-import org.antlr.stringtemplate.NoIndentWriter;
-import org.antlr.stringtemplate.StringTemplate;
-import org.antlr.stringtemplate.StringTemplateWriter;
+import java.io.*;
 
 public class StringTemplateRenderer {
 
@@ -23,7 +18,7 @@ public class StringTemplateRenderer {
             } finally {
                 writer.close();
             }
-        } catch (IOException e) {
+        } catch (Exception e) {
             throw new StringTemplateRenderingException("Failed to render template [" + template.getName() + "] (See cause for details)", e);
         }
     }

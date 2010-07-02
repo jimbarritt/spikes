@@ -15,10 +15,7 @@ import static org.junit.matchers.JUnitMatchers.containsString;
 
 
 public class StringTemplateBasicsTest {
-	private static final Logger log = Logger.getLogger(StringTemplateBasicsTest.class);
-
-    private static final String TEST_TEMPLATES_SOLAR_SYSTEM_ST = "logging/log4j.xml";
-
+	private static final Logger log = Logger.getLogger(StringTemplateBasicsTest.class);    
 
 	@Test
 	public void rendersASimpleTemplate() throws IOException {
@@ -64,4 +61,5 @@ public class StringTemplateBasicsTest {
 		assertThat(renderedString, containsString("This is a description of the solar system"));
 
 	}
+  
 }

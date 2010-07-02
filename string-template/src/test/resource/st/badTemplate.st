@@ -1,0 +1,1 @@
+This is a $bad:someTemplateThatDoesntExist()$ template!

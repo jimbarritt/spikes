@@ -2,8 +2,8 @@ group csv;
 /**
  * Creates a single row of comma separated values
  */
-toCSVRow(planet) ::= <<
+toCSVRow(object) ::= <<
 
-$planet$
+CSVROW: $object$
 
 >>

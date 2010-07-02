@@ -5,3 +5,5 @@
 
 
 $input:outerTemplate()$
+
+$input:toCSVRow()$

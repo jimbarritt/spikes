@@ -27,9 +27,12 @@ public class StringTemplateGroupTest {
     }
 
     @Test
-    public void loadsTemplatesFromAUnionOfTwoGroups() {
+    public void loadsTemplatesFromAHierarchyOfGroups() {
+        StringTemplateGroup csvGroup = new StringTemplateClasspathLoader().loadGroupFromFile("st/formatting/csv.stg");
         StringTemplateGroup utilityGroup = new StringTemplateClasspathLoader().loadGroupFromFile("st/solarsystem/simpleGroup.stg");
         StringTemplateGroup coreTemplateGroup = new StringTemplateGroup("coreTemplates", getStringTemplateRootDir());
+
+        utilityGroup.setSuperGroup(csvGroup);
         coreTemplateGroup.setSuperGroup(utilityGroup);
 
         StringTemplate usesSimpleGroupTemplate = coreTemplateGroup.getInstanceOf("st/solarsystem/usesSimpleGroupTemplate");
@@ -38,6 +41,7 @@ public class StringTemplateGroupTest {
         String result = new StringTemplateRenderer().render(usesSimpleGroupTemplate);
         log.info("Result:\n" + result);
         assertThat(result, containsString("nestedInput = jim"));
+        assertThat(result, containsString("CSVROW: jim"));
     }
 
     @Test

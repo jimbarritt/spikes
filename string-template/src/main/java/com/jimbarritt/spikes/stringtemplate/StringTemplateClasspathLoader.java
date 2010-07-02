@@ -8,12 +8,13 @@ import java.io.*;
 import java.net.*;
 
 import static com.jimbarritt.spikes.stringtemplate.io.NullReader.nullSafeReader;
+import static java.lang.Thread.currentThread;
 
 public class StringTemplateClasspathLoader {
-    public StringTemplateGroup loadGroup(String groupPath) {
+    public StringTemplateGroup loadGroupFromFile(String groupPath) {
         SafeReader safeReader = nullSafeReader();
         try {
-            URL groupUrl = Thread.currentThread().getContextClassLoader().getResource(groupPath);
+            URL groupUrl = currentThread().getContextClassLoader().getResource(groupPath);
             if (groupUrl == null) {
                 throw new StringTemplateException("Could not load resource from classpath: " + groupPath);
             }

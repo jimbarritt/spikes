@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="fdbe9c65-e5d1-458f-80c4-c1a9e25c6630" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/io/NullReader.java" afterPath="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/io/NullReader.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/RuntimeIOException.java" afterPath="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/io/RuntimeIOException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/io/SafeReader.java" afterPath="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/io/SafeReader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/io/SafeReaderTest.java" afterPath="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/io/SafeReaderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/main/resource/st/solarsystem/listofplanets.st" afterPath="$PROJECT_DIR$/../../../src/main/resource/st/solarsystem/listofplanets.st" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/StringTemplateClasspathLoaderTest.java" afterPath="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/StringTemplateClasspathLoaderTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/StringTemplateGroupTest.java" afterPath="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/StringTemplateGroupTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/StringTemplateLoader.java" afterPath="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/StringTemplateClasspathLoader.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/StringTemplateClasspathLoaderTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../src/main/resource/st/solarsystem/usesSimpleGroupTemplate.st" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/StringTemplateClasspathLoader.java" afterPath="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/StringTemplateClasspathLoader.java" />
     </list>
     <ignored path="$USER_HOME_GRAILS$/" />
     <ignored path="$USER_HOME_GRIFFON$/" />
@@ -30,7 +26,7 @@
     <option name="showMethodBody" value="true" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/string-template$Run_All_Tests.ic" NAME="Run All Tests Coverage Results" MODIFIED="1278084566704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/string-template$Run_All_Tests.ic" NAME="Run All Tests Coverage Results" MODIFIED="1278086282814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.jimbarritt.spikes.stringtemplate.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/string-template$StringTemplateGroupTest.ic" NAME="StringTemplateGroupTest Coverage Results" MODIFIED="1278084144679" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
@@ -104,19 +100,10 @@
       <file leaf-file-name="StringTemplateClasspathLoader.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/StringTemplateClasspathLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="13" selection-start="310" selection-end="310" vertical-scroll-proportion="0.0">
+            <state line="29" column="0" selection-start="1123" selection-end="1123" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RuntimeIOException.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/io/RuntimeIOException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="13" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -130,19 +117,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StringTemplateClasspathLoaderTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="StringTemplateClasspathLoaderTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/StringTemplateClasspathLoaderTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="51" selection-start="169" selection-end="169" vertical-scroll-proportion="0.2587269">
+            <state line="10" column="5" selection-start="351" selection-end="351" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SafeReader.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/io/SafeReader.java">
+      <file leaf-file-name="StringTemplateGroupTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/StringTemplateGroupTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="12" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0">
+            <state line="29" column="23" selection-start="924" selection-end="924" vertical-scroll-proportion="0.08898305">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -150,13 +137,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StringTemplateGroupTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/StringTemplateGroupTest.java">
+      <file leaf-file-name="usesSimpleGroupTemplate.st" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/solarsystem/usesSimpleGroupTemplate.st">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="16" selection-start="284" selection-end="284" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="6" column="22" selection-start="207" selection-end="207" vertical-scroll-proportion="-5.478261">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="simpleGroup.stg" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/solarsystem/simpleGroup.stg">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="1" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -174,8 +168,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../../../src/main/resource/st/solarsystem/simpleGroup.stg" />
-        <option value="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/NullReader.java" />
         <option value="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/RuntimeIOException.java" />
         <option value="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/AsSafeReader.java" />
         <option value="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/io/AsSafeReader.java" />
@@ -187,9 +179,11 @@
         <option value="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/io/NullReader.java" />
         <option value="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/StringTemplateLoader.java" />
         <option value="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/io/SafeReader.java" />
-        <option value="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/StringTemplateClasspathLoader.java" />
         <option value="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/io/RuntimeIOException.java" />
         <option value="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/StringTemplateClasspathLoaderTest.java" />
+        <option value="$PROJECT_DIR$/../../../src/main/resource/st/solarsystem/usesSimpleGroupTemplate.st" />
+        <option value="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/StringTemplateGroupTest.java" />
+        <option value="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/StringTemplateClasspathLoader.java" />
       </list>
     </option>
   </component>
@@ -216,7 +210,7 @@
     <option name="STATE" value="2" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="PackagesPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers PackagesPane="true" ProjectPane="true" />
       <showModules />
@@ -255,6 +249,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="resource" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="st" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -460,230 +458,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="string-template" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="string-template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stringtemplate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="solarsystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="string-template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="string-template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stringtemplate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="string-template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="string-template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stringtemplate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NullReader" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="string-template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="string-template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="string-template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="string-template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="development" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stringtemplate-3.2.1-src.zip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stringtemplate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="string-template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="string-template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="development" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stringtemplate-3.2.1-src.zip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stringtemplate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StringTemplateGroup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="string-template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="string-template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="development" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stringtemplate-3.2.1-src.zip" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="string-template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="string-template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="development" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="string-template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="string-template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ide" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="intellij" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="string-template" />
@@ -998,6 +772,42 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="string-template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="string-template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.jimbarritt.spikes.stringtemplate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StringTemplateClasspathLoaderTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="string-template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="string-template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.jimbarritt.spikes.stringtemplate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StringTemplateClasspathLoader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -1041,99 +851,9 @@
     <option name="referencePos" value="0" />
     <option name="showLabels" value="true" />
   </component>
-  <component name="RunManager" selected="JUnit.Run All Tests">
-    <configuration default="false" name="SafeReaderTest" type="JUnit" factoryName="JUnit" temporary="true">
+  <component name="RunManager" selected="JUnit.StringTemplateGroupTest.loadsTemplatesFromAUnionOfTwoGroups">
+    <configuration default="false" name="StringTemplateGroupTest.loadsTemplatesFromARootDirectory" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="emma">
-        <pattern>
-          <option name="PATTERN" value="com.jimbarritt.spikes.stringtemplate.io.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <extension name="snapshooter" />
-      <module name="string-template" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="PACKAGE_NAME" value="com.jimbarritt.spikes.stringtemplate.io" />
-      <option name="MAIN_CLASS_NAME" value="com.jimbarritt.spikes.stringtemplate.io.SafeReaderTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-Dlog4j.configuration=logging/log4j.xml" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="SafeReaderTest.canReadIt" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="emma">
-        <pattern>
-          <option name="PATTERN" value="com.jimbarritt.spikes.stringtemplate.io.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <extension name="snapshooter" />
-      <module name="string-template" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="PACKAGE_NAME" value="com.jimbarritt.spikes.stringtemplate.io" />
-      <option name="MAIN_CLASS_NAME" value="com.jimbarritt.spikes.stringtemplate.io.SafeReaderTest" />
-      <option name="METHOD_NAME" value="canReadIt" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-Dlog4j.configuration=logging/log4j.xml" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="SafeReaderTest.readsFromDelegate" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="emma">
-        <pattern>
-          <option name="PATTERN" value="com.jimbarritt.spikes.stringtemplate.io.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <extension name="snapshooter" />
-      <module name="string-template" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="PACKAGE_NAME" value="com.jimbarritt.spikes.stringtemplate.io" />
-      <option name="MAIN_CLASS_NAME" value="com.jimbarritt.spikes.stringtemplate.io.SafeReaderTest" />
-      <option name="METHOD_NAME" value="readsFromDelegate" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-Dlog4j.configuration=logging/log4j.xml" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="50113" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="StringTemplateGroupTest" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="true" merge="false" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.jimbarritt.spikes.stringtemplate.*" />
           <option name="ENABLED" value="true" />
@@ -1145,11 +865,11 @@
       <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="PACKAGE_NAME" value="com.jimbarritt.spikes.stringtemplate" />
       <option name="MAIN_CLASS_NAME" value="com.jimbarritt.spikes.stringtemplate.StringTemplateGroupTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="loadsTemplatesFromARootDirectory" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-Dlog4j.configuration=logging/log4j.xml" />
       <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../../../" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -1160,7 +880,7 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="StringTemplateClasspathLoaderTest.failsIfResourceDoesNotExist" type="JUnit" factoryName="JUnit" temporary="true">
+    <configuration default="false" name="StringTemplateGroupTest.loadsTemplatesFromAUnionOfTwoGroups" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="emma">
         <pattern>
           <option name="PATTERN" value="com.jimbarritt.spikes.stringtemplate.*" />
@@ -1172,12 +892,12 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="PACKAGE_NAME" value="com.jimbarritt.spikes.stringtemplate" />
-      <option name="MAIN_CLASS_NAME" value="com.jimbarritt.spikes.stringtemplate.StringTemplateClasspathLoaderTest" />
-      <option name="METHOD_NAME" value="failsIfResourceDoesNotExist" />
+      <option name="MAIN_CLASS_NAME" value="com.jimbarritt.spikes.stringtemplate.StringTemplateGroupTest" />
+      <option name="METHOD_NAME" value="loadsTemplatesFromAUnionOfTwoGroups" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-Dlog4j.configuration=logging/log4j.xml" />
       <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../../../" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -1379,7 +1099,7 @@
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-Dlog4j.configuration=logging/log4j.xml" />
       <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../../../" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -1433,7 +1153,7 @@
       <option name="TEST_OBJECT" value="package" />
       <option name="VM_PARAMETERS" value="-Dlog4j.configuration=logging/log4j.xml" />
       <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../../.." />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -1444,13 +1164,10 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="6">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="JUnit.Run All Tests" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.SafeReaderTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.SafeReaderTest.canReadIt" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.SafeReaderTest.canRead" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.StringTemplateGroupTest" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.StringTemplateClasspathLoaderTest.failsIfResourceDoesNotExist" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.StringTemplateGroupTest.loadsTemplatesFromARootDirectory" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.StringTemplateGroupTest.loadsTemplatesFromAUnionOfTwoGroups" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -1495,7 +1212,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3465133" sideWeight="0.6615385" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1976995" sideWeight="0.6615385" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32948717" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1519,7 +1236,7 @@
     <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Trying out a nice reader pattern" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented SafeReader and got 100% coverage back" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1537,6 +1254,7 @@
     <MESSAGE value="Got basic templates up and running" />
     <MESSAGE value="Got back to 100% coverage" />
     <MESSAGE value="Trying out a nice reader pattern" />
+    <MESSAGE value="Implemented SafeReader and got 100% coverage back" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1546,15 +1264,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/io/NullReaderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="28" selection-start="339" selection-end="339" vertical-scroll-proportion="-18.375">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/io/testResource.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="16" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0">
@@ -1606,13 +1315,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/solarsystem/simpleGroup.stg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="1" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/io/NullReader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="22" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0">
@@ -1623,24 +1325,6 @@
     <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/io/SafeReader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="12" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/StringTemplateGroupTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="16" selection-start="284" selection-end="284" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/StringTemplateClasspathLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="310" selection-end="310" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1663,8 +1347,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/StringTemplateClasspathLoaderTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="51" selection-start="169" selection-end="169" vertical-scroll-proportion="0.2587269">
+        <state line="10" column="5" selection-start="351" selection-end="351" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/solarsystem/simpleGroup.stg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="1" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/solarsystem/usesSimpleGroupTemplate.st">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="22" selection-start="207" selection-end="207" vertical-scroll-proportion="-5.478261">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/StringTemplateClasspathLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="1123" selection-end="1123" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/StringTemplateGroupTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="23" selection-start="924" selection-end="924" vertical-scroll-proportion="0.08898305">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

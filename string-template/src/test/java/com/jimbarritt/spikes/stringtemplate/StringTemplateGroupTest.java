@@ -4,7 +4,6 @@ import org.antlr.stringtemplate.*;
 import org.apache.log4j.*;
 import org.junit.*;
 
-import java.io.*;
 import java.util.*;
 
 import static com.jimbarritt.spikes.stringtemplate.StringTemplateLoader.mergeGroups;
@@ -35,7 +34,7 @@ public class StringTemplateGroupTest {
     public void loadsTemplatesFromAHierarchyOfGroups() {
         StringTemplateGroup csvGroup = new StringTemplateLoader().loadGroupFromClasspath("st/formatting/csv.stg");
         StringTemplateGroup utilityGroup = new StringTemplateLoader().loadGroupFromClasspath("st/solarsystem/simpleGroup.stg");
-        StringTemplateGroup coreTemplateGroup = new StringTemplateGroup("coreTemplates", getStringTemplateRootDir());
+        StringTemplateGroup coreTemplateGroup = new StringTemplateGroup("coreTemplates", StringTemplateRootPath.getStringTemplateRootDir());
 
         utilityGroup.setSuperGroup(csvGroup);
         coreTemplateGroup.setSuperGroup(utilityGroup);
@@ -56,7 +55,7 @@ public class StringTemplateGroupTest {
         StringTemplateGroup csvGroup = templateLoader.loadGroupFromClasspath("st/formatting/csv.stg");
         StringTemplateGroup utilityGroup = templateLoader.loadGroupFromClasspath("st/solarsystem/simpleGroup.stg");
 
-        StringTemplateGroup coreTemplateGroup = templateLoader.loadGroupFromRootDir(getStringTemplateRootDir());
+        StringTemplateGroup coreTemplateGroup = templateLoader.loadGroupFromRootDir(StringTemplateRootPath.getStringTemplateRootDir());
 
         mergeGroups(csvGroup, coreTemplateGroup);
         mergeGroups(utilityGroup, coreTemplateGroup);
@@ -80,19 +79,10 @@ public class StringTemplateGroupTest {
 
     @Test
     public void loadsTemplatesFromARootDirectory() throws Exception {
-        StringTemplateGroup group = new StringTemplateGroup("coreTemplates", getStringTemplateRootDir());
+        StringTemplateGroup group = new StringTemplateGroup("coreTemplates", StringTemplateRootPath.getStringTemplateRootDir());
 
         StringTemplate listOfPlanetsTemplate = group.getInstanceOf("st/solarsystem/listofplanets");
         assertThat(listOfPlanetsTemplate, is(notNullValue()));
-    }
-
-    private static String getStringTemplateRootDir() {
-        String templateGroupRootPath = new File("src/main/resource/").getAbsolutePath();
-        File f = new File(templateGroupRootPath, "st/solarsystem/listofplanets.st");
-        assertThat(f.getAbsolutePath(), f.exists(), is(true));
-
-        log.info("Loading templates from: " + templateGroupRootPath);
-        return templateGroupRootPath;
     }
 
     @Test

@@ -1,0 +1,12 @@
+group simple-group;
+
+outerTemplate(input) ::= <<
+    In the outer template.
+    input = $input$ <-- I can see the value of the 'input' parameter and use it.
+    $innerTemplate(input)$
+>>
+
+innerTemplate(nestedInput) ::= <<
+    The Paramater 'nestedInput' was passed to this template.
+    nestedInput = $nestedInput$ <-- I can see the value of the 'nestedInput' parameter and use it.
+>>      

@@ -5,7 +5,7 @@ import org.junit.*;
 
 public class StringTemplateRendererTest {
 
-    @Test(expected = StringTemplateRenderingException.class)
+    @Test(expected = StringTemplateException.class)
     public void failsIfThereIsAProblem() {
         StringTemplateGroup group = new StringTemplateGroup("testClasspathTemplateGroup");
         StringTemplate template = group.getInstanceOf("st/badTemplate");

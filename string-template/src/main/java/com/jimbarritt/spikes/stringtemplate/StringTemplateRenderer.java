@@ -19,7 +19,7 @@ public class StringTemplateRenderer {
                 writer.close();
             }
         } catch (Exception e) {
-            throw new StringTemplateRenderingException("Failed to render template [" + template.getName() + "] (See cause for details)", e);
+            throw new StringTemplateException("Failed to render template [" + template.getName() + "] (See cause for details)", e);
         }
     }
 

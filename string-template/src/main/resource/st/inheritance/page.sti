@@ -1,0 +1,4 @@
+interface Page;
+
+head(title);
+body();

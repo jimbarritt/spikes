@@ -1,12 +1,13 @@
 package com.jimbarritt.spikes.stringtemplate;
 
+import com.jimbarritt.spikes.stringtemplate.io.*;
 import org.antlr.stringtemplate.*;
 import org.apache.log4j.*;
 import org.junit.*;
 
 import java.util.*;
 
-import static com.jimbarritt.spikes.stringtemplate.StringTemplateLoader.mergeGroups;
+import static com.jimbarritt.spikes.stringtemplate.io.StringTemplateLoader.mergeGroups;
 import static org.hamcrest.core.Is.*;
 import static org.hamcrest.core.IsNull.*;
 import static org.junit.Assert.*;

@@ -1,6 +1,6 @@
-package com.jimbarritt.spikes.stringtemplate;
+package com.jimbarritt.spikes.stringtemplate.io;
 
-import com.jimbarritt.spikes.stringtemplate.io.*;
+import com.jimbarritt.spikes.stringtemplate.*;
 import org.antlr.stringtemplate.*;
 import org.antlr.stringtemplate.language.*;
 import org.apache.log4j.*;
@@ -38,7 +38,7 @@ public class StringTemplateLoader {
     }
 
     @SuppressWarnings("unchecked")
-    static void mergeGroups(StringTemplateGroup groupToAdd, StringTemplateGroup groupToAddTo) {
+    public static void mergeGroups(StringTemplateGroup groupToAdd, StringTemplateGroup groupToAddTo) {
         Set<String> templateNames = (Set<String>) groupToAdd.getTemplateNames();
         for (String templateName : templateNames) {
             StringTemplate template = groupToAdd.getTemplateDefinition(templateName);

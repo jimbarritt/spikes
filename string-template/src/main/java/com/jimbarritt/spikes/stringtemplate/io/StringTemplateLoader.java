@@ -52,13 +52,7 @@ public class StringTemplateLoader {
     private static class InterfaceBasedStringTemplateGroup extends StringTemplateGroup {
         public InterfaceBasedStringTemplateGroup(String name, String rootDir) {
             super(name, rootDir);
-        }
-
-        public InterfaceBasedStringTemplateGroup(Reader reader,
-                                                 Class<DefaultTemplateLexer> defaultTemplateLexerClass,
-                                                 StringTemplateErrorListener errorListener) {
-            super(reader, defaultTemplateLexerClass, errorListener);
-        }
+        }        
 
         @Override public void implementInterface(String interfaceName) {
             super.implementInterface(interfaceName);

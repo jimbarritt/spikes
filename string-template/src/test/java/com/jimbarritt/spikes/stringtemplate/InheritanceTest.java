@@ -56,7 +56,7 @@ public class InheritanceTest {
 
         new StringTemplateLoader(errorListener).loadGroupFromClasspath("st/inheritance/brokenPage.stg");
 
-        assertThat(errorListener.getErrors().size(), is(2));
+        assertThat(errorListener.errors().size(), is(2));
     }
 
     @Test

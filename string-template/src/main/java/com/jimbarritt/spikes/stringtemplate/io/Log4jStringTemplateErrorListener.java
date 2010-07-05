@@ -8,6 +8,7 @@ import java.util.*;
 public class Log4jStringTemplateErrorListener implements StringTemplateErrorListener {
     private static final Logger log = Logger.getLogger(Log4jStringTemplateErrorListener.class);
     private final List<String> errors = new ArrayList<String>();
+    private final List<String> warnings = new ArrayList<String>();
 
     public Log4jStringTemplateErrorListener() {
     }
@@ -19,9 +20,14 @@ public class Log4jStringTemplateErrorListener implements StringTemplateErrorList
 
     @Override public void warning(String msg) {
         log.warn(msg);
+        warnings.add(msg);
     }
 
-    public List<String> getErrors() {
+    public List<String> errors() {
         return errors;
+    }
+
+    public List<String> warnings() {
+        return warnings;
     }
 }

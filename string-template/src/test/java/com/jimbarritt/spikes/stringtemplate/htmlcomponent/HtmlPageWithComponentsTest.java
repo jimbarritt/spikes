@@ -15,7 +15,7 @@ public class HtmlPageWithComponentsTest {
     public void hasAComponentOnThePage() {
         StringTemplateGroup group = getProjectStringTemplates();
 
-        StringTemplate homepageTemplate = group.getInstanceOf("st/htmlpages/homepage");
+        StringTemplate homepageTemplate = group.getInstanceOf("st/htmlcomponent/homepage");
 
         ComponentDefinition componentDefinition = new ComponentDefinition();
 

@@ -38,7 +38,7 @@ public class WebsiteTest {
         StringTemplateGroup siteB = templateLoader.loadGroupFromRootDir("siteB", getStringTemplateRootDir() + "/st/htmlpages/site_b");
         siteB.implementInterface("website");
 
-        assertThat(errorListener.getErrors().size(), is(1));
+        assertThat(errorListener.errors().size(), is(1));
     }
 
 

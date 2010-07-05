@@ -1,0 +1,1 @@
+<p>This is the contents of the content page for group B</p>

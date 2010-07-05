@@ -16,9 +16,9 @@ import static org.junit.matchers.JUnitMatchers.*;
 /**
  * http://www.antlr.org/wiki/display/ST/Group+Files
  */
-public class StringTemplateGroupTest {
+public class GroupTest {
 
-    private static final Logger log = Logger.getLogger(StringTemplateGroupTest.class);
+    private static final Logger log = Logger.getLogger(GroupTest.class);
 
     @Test
     public void loadAStringTemplateGroup() throws Exception {
@@ -56,7 +56,7 @@ public class StringTemplateGroupTest {
         StringTemplateGroup csvGroup = templateLoader.loadGroupFromClasspath("st/formatting/csv.stg");
         StringTemplateGroup utilityGroup = templateLoader.loadGroupFromClasspath("st/solarsystem/simpleGroup.stg");
 
-        StringTemplateGroup coreTemplateGroup = templateLoader.loadGroupFromRootDir(StringTemplateRootPath.getStringTemplateRootDir());
+        StringTemplateGroup coreTemplateGroup = templateLoader.loadGroupFromRootDir("allTemplates", StringTemplateRootPath.getStringTemplateRootDir());
 
         mergeGroups(csvGroup, coreTemplateGroup);
         mergeGroups(utilityGroup, coreTemplateGroup);

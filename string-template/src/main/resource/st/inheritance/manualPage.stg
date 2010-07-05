@@ -1,5 +1,3 @@
-group brokenPage implements Page;
-
 page(title) ::= <<
 
 <html>
@@ -8,7 +6,12 @@ page(title) ::= <<
 </html>
 >>
 
-head(title, someOtherParameterNotInIfc) ::= <<
+head(title) ::= <<
       <title>$title$</title>
 >>
 
+body() ::= <<
+<body>
+  <p>Here is a default body</p>
+</body>
+>>

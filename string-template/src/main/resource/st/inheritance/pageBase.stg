@@ -1,7 +1,6 @@
-group basePage implements page;
+group pageBase implements Page;
 
 page(title) ::= <<
-
 <html>
     $head(title)$
     $body()$

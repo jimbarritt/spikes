@@ -1,3 +1,7 @@
-group homePage : basePage implements Page;
+group homePage : pageBase;
 
-       
+body() ::= <<
+<body>
+  <p>Here is a Custom body</p>
+</body>
+>>

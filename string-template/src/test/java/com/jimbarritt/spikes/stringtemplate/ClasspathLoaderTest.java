@@ -3,7 +3,7 @@ package com.jimbarritt.spikes.stringtemplate;
 import com.jimbarritt.spikes.stringtemplate.io.*;
 import org.junit.*;
 
-public class StringTemplateClasspathLoaderTest {
+public class ClasspathLoaderTest {
 
     @Test(expected = StringTemplateException.class)
     public void failsIfResourceDoesNotExist() {

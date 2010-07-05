@@ -15,8 +15,8 @@ import static org.junit.Assert.assertThat;
 import static org.junit.matchers.JUnitMatchers.containsString;
 
 
-public class StringTemplateBasicsTest {
-	private static final Logger log = Logger.getLogger(StringTemplateBasicsTest.class);    
+public class BasicsTest {
+	private static final Logger log = Logger.getLogger(BasicsTest.class);
 
 	@Test
 	public void rendersASimpleTemplate() throws IOException {

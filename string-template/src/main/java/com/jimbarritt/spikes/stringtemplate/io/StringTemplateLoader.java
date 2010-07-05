@@ -43,10 +43,27 @@ public class StringTemplateLoader {
 
     }
 
-    public StringTemplateGroup loadGroupFromRootDir(String stringTemplateRootDir) {
-        StringTemplateGroup group = new StringTemplateGroup("coreTemplates", stringTemplateRootDir);
+    public StringTemplateGroup loadGroupFromRootDir(String groupName, String rootPath) {
+        StringTemplateGroup group = new InterfaceBasedStringTemplateGroup(groupName, rootPath);
         group.setErrorListener(errorListener);
         return group;
+    }
+
+    private static class InterfaceBasedStringTemplateGroup extends StringTemplateGroup {
+        public InterfaceBasedStringTemplateGroup(String name, String rootDir) {
+            super(name, rootDir);
+        }
+
+        public InterfaceBasedStringTemplateGroup(Reader reader,
+                                                 Class<DefaultTemplateLexer> defaultTemplateLexerClass,
+                                                 StringTemplateErrorListener errorListener) {
+            super(reader, defaultTemplateLexerClass, errorListener);
+        }
+
+        @Override public void implementInterface(String interfaceName) {
+            super.implementInterface(interfaceName);
+            super.verifyInterfaceImplementations();
+        }
     }
 
     @SuppressWarnings("unchecked")
@@ -65,4 +82,6 @@ public class StringTemplateLoader {
 
         }
     }
+
+
 }

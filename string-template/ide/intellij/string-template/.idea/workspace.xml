@@ -2,11 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="fdbe9c65-e5d1-458f-80c4-c1a9e25c6630" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../src/main/resource/st/inheritance/brokenPage.stg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/jim.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/jim.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../src/main/resource/st/htmlpages/site_definition/pageHeader.st" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/main/resource/st/inheritance/pageBase.stg" afterPath="$PROJECT_DIR$/../../../src/main/resource/st/inheritance/pageBase.stg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../src/main/resource/st/htmlpages/site_a/homePageBody.st" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/StringTemplateClasspathLoaderTest.java" afterPath="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/ClasspathLoaderTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/InheritanceTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/StringTemplateGroupTest.java" afterPath="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/GroupTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/main/resource/st/inheritance/homePage.stg" afterPath="$PROJECT_DIR$/../../../src/main/resource/st/inheritance/homePage.stg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/io/Log4jStringTemplateErrorListener.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/StringTemplateInheritanceTest.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/StringTemplateBasicsTest.java" afterPath="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/BasicsTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/WebsiteTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/io/StringTemplateLoader.java" afterPath="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/io/StringTemplateLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/StringTemplateInheritanceTest.java" afterPath="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/StringTemplateInheritanceTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../src/main/resource/st/htmlpages/site_definition/contactPage.st" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../src/main/resource/st/htmlpages/site_definition/page.stg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../../../src/main/resource/st/inheritance/page.sti" afterPath="$PROJECT_DIR$/../../../src/main/resource/st/inheritance/Page.sti" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../src/main/resource/st/htmlpages/site_definition/homePage.stg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../src/main/resource/st/htmlpages/site_definition/website.sti" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../src/main/resource/st/htmlpages/site_definition/htmlElements.stg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../src/main/resource/st/htmlpages/site_a/contactPageBody.st" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/io/StringTemplateRootPath.java" afterPath="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/io/StringTemplateRootPath.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/main/resource/st/inheritance/brokenPage.stg" afterPath="$PROJECT_DIR$/../../../src/main/resource/st/inheritance/brokenPage.stg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/StringTemplateRendererTest.java" afterPath="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/io/StringTemplateRendererTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../src/main/resource/st/inheritance/manualPage.stg" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../src/main/resource/st/htmlpages/homepage.st" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../src/main/resource/st/htmlpages/site_b/contactPageBody.st" />
     </list>
     <ignored path="$USER_HOME_GRAILS$/" />
     <ignored path="$USER_HOME_GRIFFON$/" />
@@ -26,7 +47,7 @@
     <option name="showMethodBody" value="true" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/string-template$Run_All_Tests.ic" NAME="Run All Tests Coverage Results" MODIFIED="1278185639184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/string-template$Run_All_Tests.ic" NAME="Run All Tests Coverage Results" MODIFIED="1278320740581" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.jimbarritt.spikes.stringtemplate.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/string-template$StringTemplateGroupTest.ic" NAME="StringTemplateGroupTest Coverage Results" MODIFIED="1278084144679" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
@@ -43,6 +64,19 @@
   <component name="DebuggerManager">
     <line_breakpoints>
       <breakpoint url="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/io/SafeReaderTest.java" line="28" class="com.jimbarritt.spikes.stringtemplate.io.SafeReaderTest" package="com.jimbarritt.spikes.stringtemplate.io">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/InheritanceTest.java" line="33" class="com.jimbarritt.spikes.stringtemplate.InheritanceTest" package="com.jimbarritt.spikes.stringtemplate">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -97,10 +131,10 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="StringTemplateInheritanceTest.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/StringTemplateInheritanceTest.java">
+      <file leaf-file-name="InheritanceTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/InheritanceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="8" selection-start="1717" selection-end="1717" vertical-scroll-proportion="0.13443395">
+            <state line="56" column="91" selection-start="2533" selection-end="2533" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -108,46 +142,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StringTemplateRenderer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/io/StringTemplateRenderer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="756" selection-end="756" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StringTemplateLoader.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/io/StringTemplateLoader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="21" selection-start="1740" selection-end="1740" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StringTemplateGroup.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/../../../lib/development/stringtemplate-3.2.1-src.zip!/src/org/antlr/stringtemplate/StringTemplateGroup.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="835" column="16" selection-start="27134" selection-end="27134" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="brokenPage.stg" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/inheritance/brokenPage.stg">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="183" selection-end="183" vertical-scroll-proportion="-12.782609">
+            <state line="0" column="29" selection-start="29" selection-end="29" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pageBase.stg" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/inheritance/pageBase.stg">
+      <file leaf-file-name="HtmlPageWithComponentsTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/htmlcomponent/HtmlPageWithComponentsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="17" selection-start="0" selection-end="218" vertical-scroll-proportion="-8.217391">
+            <state line="14" column="16" selection-start="435" selection-end="435" vertical-scroll-proportion="0.21098267">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StringTemplateRootPath.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/io/StringTemplateRootPath.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="79" selection-start="491" selection-end="491" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="homePage.stg" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/inheritance/homePage.stg">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="23" selection-start="72" selection-end="72" vertical-scroll-proportion="-3.652174">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Page.sti" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/inheritance/Page.sti">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="10" selection-start="27" selection-end="27" vertical-scroll-proportion="-1.826087">
               <folding />
             </state>
           </provider>
@@ -166,22 +200,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/htmlcomponent/ComponentDefinition.java" />
-        <option value="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/io/StringTemplateRenderer.java" />
-        <option value="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/io/StringTemplateRootPath.java" />
-        <option value="$PROJECT_DIR$/../../../src/main/resource/st/inheritance/home_page.st" />
-        <option value="$PROJECT_DIR$/../../../src/main/resource/st/inheritance/page_interface.stg" />
-        <option value="$PROJECT_DIR$/../../../src/main/resource/st/inheritance/home_page.stg" />
-        <option value="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/StringTemplateInterfaceTest.java" />
-        <option value="$PROJECT_DIR$/../../../src/main/resource/st/implemented/pageInterface.stg" />
-        <option value="$PROJECT_DIR$/../../../src/main/resource/st/inheritance/homePage.stg" />
-        <option value="$PROJECT_DIR$/../../../src/main/resource/st/inheritance/basePage.stg" />
-        <option value="$PROJECT_DIR$/../../../src/main/resource/st/inheritance/pageInterface.stg" />
-        <option value="$PROJECT_DIR$/../../../src/main/resource/st/inheritance/pageBase.stg" />
+        <option value="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/StringTemplateBasedWebsiteTest.java" />
+        <option value="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/BasicsTest.java" />
+        <option value="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/ClasspathLoaderTest.java" />
+        <option value="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/io/Log4jStringTemplateErrorListener.java" />
+        <option value="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/GroupTest.java" />
+        <option value="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/io/StringTemplateRendererTest.java" />
+        <option value="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/WebsiteTest.java" />
+        <option value="$PROJECT_DIR$/../../../src/main/resource/st/inheritance/manualPage.st" />
         <option value="$PROJECT_DIR$/../../../src/main/resource/st/inheritance/page.sti" />
-        <option value="$PROJECT_DIR$/../../../src/main/resource/st/inheritance/brokenPage.stg" />
         <option value="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/io/StringTemplateLoader.java" />
-        <option value="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/StringTemplateInheritanceTest.java" />
+        <option value="$PROJECT_DIR$/../../../src/main/resource/st/inheritance/pageBase.stg" />
+        <option value="$PROJECT_DIR$/../../../src/main/resource/st/inheritance/homePage.stg" />
+        <option value="$PROJECT_DIR$/../../../src/main/resource/st/inheritance/Page.sti" />
+        <option value="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/InheritanceTest.java" />
+        <option value="$PROJECT_DIR$/../../../src/main/resource/st/inheritance/brokenPage.stg" />
+        <option value="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/io/StringTemplateRootPath.java" />
       </list>
     </option>
   </component>
@@ -403,6 +437,54 @@
               <option name="myItemId" value="htmlpages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site_definition" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="string-template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="string-template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="st" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htmlpages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site_b" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="string-template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="string-template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="st" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htmlpages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site_a" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -427,22 +509,8 @@
               <option name="myItemId" value="com.jimbarritt.spikes.stringtemplate" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="string-template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="string-template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com.jimbarritt.spikes.stringtemplate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StringTemplateInheritanceTest" />
+              <option name="myItemId" value="WebsiteTest" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -460,8 +528,40 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="StringTemplateGroupTest" />
+              <option name="myItemId" value="InheritanceTest" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="string-template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="string-template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.jimbarritt.spikes.stringtemplate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GroupTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="string-template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="string-template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.jimbarritt.spikes.stringtemplate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -500,7 +600,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="StringTemplateRenderer" />
+              <option name="myItemId" value="StringTemplateRendererTest" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -518,12 +618,30 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="io" />
+              <option name="myItemId" value="htmlcomponent" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="StringTemplateLoader" />
+              <option name="myItemId" value="HtmlPageWithComponentsTest" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="string-template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="string-template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.jimbarritt.spikes.stringtemplate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htmlcomponent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -870,6 +988,10 @@
     <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../../../src/main/resource/st/inheritance/dynamic_base_group" />
+      <recent name="$PROJECT_DIR$/../../../src/main/resource/st/inheritance/dynamic_group_b" />
+    </key>
     <key name="MoveMembersDialog.RECENTS_KEY">
       <recent name="com.jimbarritt.spikes.stringtemplate.StringTemplateRootPath" />
       <recent name="com.jimbarritt.spikes.stringtemplate.StringTemplateLoader" />
@@ -877,8 +999,14 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.jimbarritt.spikes.stringtemplate" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../../../src/main/resource/st/htmlpages/site_definition" />
+      <recent name="$PROJECT_DIR$/../../../src/main/resource/st/htmlpages" />
+      <recent name="$PROJECT_DIR$/../../../src/main/resource/st/inheritance/dynamic_base_group" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.jimbarritt.spikes.stringtemplate.io" />
+      <recent name="st.htmlpages" />
       <recent name="com.jimbarritt.spikes.stringtemplate" />
     </key>
   </component>
@@ -893,11 +1021,11 @@
     <option name="referencePos" value="0" />
     <option name="showLabels" value="true" />
   </component>
-  <component name="RunManager" selected="JUnit.StringTemplateInheritanceTest.templateFailsIfYouDontImplementInterface">
-    <configuration default="false" name="HtmlPageWithComponentsTest.hasAComponentOnThePage" type="JUnit" factoryName="JUnit" temporary="true">
+  <component name="RunManager" selected="JUnit.Run All Tests">
+    <configuration default="false" name="WebsiteTest.failsIfSiteDoesntImplementInterface" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="emma">
         <pattern>
-          <option name="PATTERN" value="com.jimbarritt.spikes.stringtemplate.htmlcomponent.*" />
+          <option name="PATTERN" value="com.jimbarritt.spikes.stringtemplate.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -905,9 +1033,9 @@
       <module name="string-template" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="PACKAGE_NAME" value="com.jimbarritt.spikes.stringtemplate.htmlcomponent" />
-      <option name="MAIN_CLASS_NAME" value="com.jimbarritt.spikes.stringtemplate.htmlcomponent.HtmlPageWithComponentsTest" />
-      <option name="METHOD_NAME" value="hasAComponentOnThePage" />
+      <option name="PACKAGE_NAME" value="com.jimbarritt.spikes.stringtemplate" />
+      <option name="MAIN_CLASS_NAME" value="com.jimbarritt.spikes.stringtemplate.WebsiteTest" />
+      <option name="METHOD_NAME" value="failsIfSiteDoesntImplementInterface" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-Dlog4j.configuration=logging/log4j.xml" />
       <option name="PARAMETERS" value="" />
@@ -922,10 +1050,10 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="HtmlPageWithComponentsTest" type="JUnit" factoryName="JUnit" temporary="true">
+    <configuration default="false" name="GroupTest.combinesTemplatesFromMultipleGroups" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="emma">
         <pattern>
-          <option name="PATTERN" value="com.jimbarritt.spikes.stringtemplate.htmlcomponent.*" />
+          <option name="PATTERN" value="com.jimbarritt.spikes.stringtemplate.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -933,10 +1061,10 @@
       <module name="string-template" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="PACKAGE_NAME" value="com.jimbarritt.spikes.stringtemplate.htmlcomponent" />
-      <option name="MAIN_CLASS_NAME" value="com.jimbarritt.spikes.stringtemplate.htmlcomponent.HtmlPageWithComponentsTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="com.jimbarritt.spikes.stringtemplate" />
+      <option name="MAIN_CLASS_NAME" value="com.jimbarritt.spikes.stringtemplate.GroupTest" />
+      <option name="METHOD_NAME" value="combinesTemplatesFromMultipleGroups" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-Dlog4j.configuration=logging/log4j.xml" />
       <option name="PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../../../" />
@@ -950,7 +1078,7 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="StringTemplateInheritanceTest.templateImplementsAnInterface" type="JUnit" factoryName="JUnit" temporary="true">
+    <configuration default="false" name="InheritanceTest.canAssignAnInterfaceDynamically" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="emma">
         <pattern>
           <option name="PATTERN" value="com.jimbarritt.spikes.stringtemplate.*" />
@@ -962,8 +1090,36 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="PACKAGE_NAME" value="com.jimbarritt.spikes.stringtemplate" />
-      <option name="MAIN_CLASS_NAME" value="com.jimbarritt.spikes.stringtemplate.StringTemplateInheritanceTest" />
-      <option name="METHOD_NAME" value="templateImplementsAnInterface" />
+      <option name="MAIN_CLASS_NAME" value="com.jimbarritt.spikes.stringtemplate.InheritanceTest" />
+      <option name="METHOD_NAME" value="canAssignAnInterfaceDynamically" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-Dlog4j.configuration=logging/log4j.xml" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../../../" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="InheritanceTest.templateGroupImplementsAnInterface" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="emma">
+        <pattern>
+          <option name="PATTERN" value="com.jimbarritt.spikes.stringtemplate.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="snapshooter" />
+      <module name="string-template" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="PACKAGE_NAME" value="com.jimbarritt.spikes.stringtemplate" />
+      <option name="MAIN_CLASS_NAME" value="com.jimbarritt.spikes.stringtemplate.InheritanceTest" />
+      <option name="METHOD_NAME" value="templateGroupImplementsAnInterface" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-Dlog4j.configuration=logging/log4j.xml" />
       <option name="PARAMETERS" value="" />
@@ -975,7 +1131,7 @@
       </option>
       <envs />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="54545" />
+        <option name="DEBUG_PORT" value="57150" />
         <option name="TRANSPORT" value="0" />
         <option name="LOCAL" value="true" />
       </RunnerSettings>
@@ -984,7 +1140,7 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="StringTemplateInheritanceTest" type="JUnit" factoryName="JUnit" temporary="true">
+    <configuration default="false" name="InheritanceTest.templateGroupFailsToLoadIfYouDontImplementInterface" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="emma">
         <pattern>
           <option name="PATTERN" value="com.jimbarritt.spikes.stringtemplate.*" />
@@ -996,36 +1152,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="PACKAGE_NAME" value="com.jimbarritt.spikes.stringtemplate" />
-      <option name="MAIN_CLASS_NAME" value="com.jimbarritt.spikes.stringtemplate.StringTemplateInheritanceTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-Dlog4j.configuration=logging/log4j.xml" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../../../" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="StringTemplateInheritanceTest.templateFailsIfYouDontImplementInterface" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="emma">
-        <pattern>
-          <option name="PATTERN" value="com.jimbarritt.spikes.stringtemplate.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <extension name="snapshooter" />
-      <module name="string-template" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="PACKAGE_NAME" value="com.jimbarritt.spikes.stringtemplate" />
-      <option name="MAIN_CLASS_NAME" value="com.jimbarritt.spikes.stringtemplate.StringTemplateInheritanceTest" />
-      <option name="METHOD_NAME" value="templateFailsIfYouDontImplementInterface" />
+      <option name="MAIN_CLASS_NAME" value="com.jimbarritt.spikes.stringtemplate.InheritanceTest" />
+      <option name="METHOD_NAME" value="templateGroupFailsToLoadIfYouDontImplementInterface" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-Dlog4j.configuration=logging/log4j.xml" />
       <option name="PARAMETERS" value="" />
@@ -1100,7 +1228,7 @@
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <envs />
-      <module name="string-template" />
+      <module name="" />
       <option name="testToRun" value="" />
       <option name="keywords" value="" />
       <method>
@@ -1298,11 +1426,11 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="JUnit.Run All Tests" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.HtmlPageWithComponentsTest.hasAComponentOnThePage" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.HtmlPageWithComponentsTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.StringTemplateInheritanceTest.templateImplementsAnInterface" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.StringTemplateInheritanceTest" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.StringTemplateInheritanceTest.templateFailsIfYouDontImplementInterface" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.WebsiteTest.failsIfSiteDoesntImplementInterface" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.GroupTest.combinesTemplatesFromMultipleGroups" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.InheritanceTest.canAssignAnInterfaceDynamically" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.InheritanceTest.templateGroupImplementsAnInterface" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.InheritanceTest.templateGroupFailsToLoadIfYouDontImplementInterface" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -1328,12 +1456,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="874" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Code explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1348,8 +1476,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35298347" sideWeight="0.62051284" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3705128" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23436376" sideWeight="0.48076922" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5102564" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1371,7 +1499,7 @@
     <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Moved io stuff into its own package&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Building a website with inheritance and interfaces&#10;" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1397,6 +1525,8 @@
     <MESSAGE value="Trying to invoke methods" />
     <MESSAGE value="Added custom map" />
     <MESSAGE value="Moved io stuff into its own package&#10;" />
+    <MESSAGE value="Added test for breaking an interface&#10;" />
+    <MESSAGE value="Building a website with inheritance and interfaces&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1406,119 +1536,119 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+    <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/io/Log4jStringTemplateErrorListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="8" selection-start="612" selection-end="612" vertical-scroll-proportion="-22.3125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/htmlpages/site_definition/website.sti">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="12" selection-start="51" selection-end="51" vertical-scroll-proportion="-2.7391305">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/htmlpages/site_b/contactPageBody.st">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/htmlcomponent/ComponentDefinition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="23" selection-start="436" selection-end="436" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/StringTemplateException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/io/StringTemplateRootPath.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="228" selection-end="228" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/htmlpages/homepage.st">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="16" selection-start="109" selection-end="109" vertical-scroll-proportion="-7.304348">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/StringTemplateGroupTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="55" selection-start="961" selection-end="961" vertical-scroll-proportion="0.71363634">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../lib/development/stringtemplate-3.2.1-src.zip!/src/org/antlr/stringtemplate/PathGroupLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="21" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../lib/development/stringtemplate-3.2.1-src.zip!/src/org/antlr/stringtemplate/CommonGroupLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="1072" selection-end="1072" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/inheritance/page.sti">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/inheritance/homePage.stg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="26" selection-start="51" selection-end="51" vertical-scroll-proportion="-1.826087">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/inheritance/pageBase.stg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="17" selection-start="0" selection-end="218" vertical-scroll-proportion="-8.217391">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/inheritance/brokenPage.stg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="183" selection-end="183" vertical-scroll-proportion="-12.782609">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/../../../lib/development/stringtemplate-3.2.1-src.zip!/src/org/antlr/stringtemplate/StringTemplateGroup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="835" column="16" selection-start="27134" selection-end="27134" vertical-scroll-proportion="0.0">
+        <state line="65" column="30" selection-start="3010" selection-end="3010" vertical-scroll-proportion="-11.307693">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/GroupTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="100" selection-start="2546" selection-end="2546" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/WebsiteTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="32" selection-start="303" selection-end="303" vertical-scroll-proportion="-9.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/inheritance/manualPage.stg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="2" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/io/StringTemplateRendererTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/io/StringTemplateLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="21" selection-start="1740" selection-end="1740" vertical-scroll-proportion="0.0">
+        <state line="36" column="23" selection-start="1274" selection-end="1274" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/io/StringTemplateRenderer.java">
+    <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/inheritance/pageBase.stg">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="756" selection-end="756" vertical-scroll-proportion="0.0">
+        <state line="17" column="2" selection-start="154" selection-end="217" vertical-scroll-proportion="-12.217391">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/StringTemplateInheritanceTest.java">
+    <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/inheritance/homePage.stg">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="8" selection-start="1717" selection-end="1717" vertical-scroll-proportion="0.13443395">
+        <state line="4" column="23" selection-start="72" selection-end="72" vertical-scroll-proportion="-3.652174">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/inheritance/Page.sti">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="10" selection-start="27" selection-end="27" vertical-scroll-proportion="-1.826087">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/InheritanceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="91" selection-start="2533" selection-end="2533" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/inheritance/brokenPage.stg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="29" selection-start="29" selection-end="29" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/io/StringTemplateRootPath.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="79" selection-start="491" selection-end="491" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/htmlcomponent/HtmlPageWithComponentsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="16" selection-start="435" selection-end="435" vertical-scroll-proportion="0.21098267">
+          <folding />
         </state>
       </provider>
     </entry>

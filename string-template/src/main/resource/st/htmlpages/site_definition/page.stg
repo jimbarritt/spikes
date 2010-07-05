@@ -1,0 +1,10 @@
+group page;
+
+page(title) ::= <<
+
+<html>
+    $pageHeader()$
+    $body()$
+</html>
+>>
+

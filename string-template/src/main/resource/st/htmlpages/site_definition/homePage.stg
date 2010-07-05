@@ -1,0 +1,7 @@
+group homePage : page;
+
+body() ::= <<
+    <body class="contactPage">
+        $contactPageBody()$
+    </body>
+>>

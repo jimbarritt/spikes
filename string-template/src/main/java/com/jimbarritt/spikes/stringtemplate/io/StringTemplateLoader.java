@@ -16,6 +16,16 @@ public class StringTemplateLoader {
 
     private static final Logger log = Logger.getLogger(StringTemplateLoader.class);
 
+    private final StringTemplateErrorListener errorListener;
+
+    public StringTemplateLoader() {
+        this(StringTemplateGroup.DEFAULT_ERROR_LISTENER);
+    }
+
+    public StringTemplateLoader(StringTemplateErrorListener errorListener) {
+        this.errorListener = errorListener;
+    }
+
     public StringTemplateGroup loadGroupFromClasspath(String groupPath) {
         SafeReader safeReader = nullSafeReader();
         try {
@@ -24,7 +34,7 @@ public class StringTemplateLoader {
                 throw new StringTemplateException("Could not load resource from classpath: " + groupPath);
             }
             safeReader = new SafeReader(new InputStreamReader(groupUrl.openStream()));
-            return new StringTemplateGroup(safeReader, DefaultTemplateLexer.class);
+            return new StringTemplateGroup(safeReader, DefaultTemplateLexer.class, errorListener);
         } catch (Exception e) {
             throw new StringTemplateException("Could not load template", e);
         } finally {
@@ -34,7 +44,9 @@ public class StringTemplateLoader {
     }
 
     public StringTemplateGroup loadGroupFromRootDir(String stringTemplateRootDir) {
-        return new StringTemplateGroup("coreTemplates", stringTemplateRootDir);
+        StringTemplateGroup group = new StringTemplateGroup("coreTemplates", stringTemplateRootDir);
+        group.setErrorListener(errorListener);
+        return group;
     }
 
     @SuppressWarnings("unchecked")

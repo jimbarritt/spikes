@@ -1,0 +1,14 @@
+group basePage implements page;
+
+page(title) ::= <<
+
+<html>
+    $head(title)$
+    $body()$
+</html>
+>>
+
+head(title, someOtherParameterNotInIfc) ::= <<
+      <title>$title$</title>
+>>
+

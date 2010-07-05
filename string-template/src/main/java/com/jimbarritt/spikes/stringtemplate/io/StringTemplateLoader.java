@@ -16,13 +16,19 @@ public class StringTemplateLoader {
 
     private static final Logger log = Logger.getLogger(StringTemplateLoader.class);
 
+    private final StringTemplateGroupFactory groupFactory;
     private final StringTemplateErrorListener errorListener;
 
     public StringTemplateLoader() {
-        this(StringTemplateGroup.DEFAULT_ERROR_LISTENER);
+        this(new StandardStringTemplateGroupFactory(), StringTemplateGroup.DEFAULT_ERROR_LISTENER);
     }
 
-    public StringTemplateLoader(StringTemplateErrorListener errorListener) {
+    public StringTemplateLoader(Log4jStringTemplateErrorListener errorListener) {
+        this(new StandardStringTemplateGroupFactory(), errorListener);
+    }
+
+    public StringTemplateLoader(StringTemplateGroupFactory groupFactory, StringTemplateErrorListener errorListener) {
+        this.groupFactory = groupFactory;
         this.errorListener = errorListener;
     }
 
@@ -34,7 +40,7 @@ public class StringTemplateLoader {
                 throw new StringTemplateException("Could not load resource from classpath: " + groupPath);
             }
             safeReader = new SafeReader(new InputStreamReader(groupUrl.openStream()));
-            return new StringTemplateGroup(safeReader, DefaultTemplateLexer.class, errorListener);
+            return groupFactory.createGroupFromReader(safeReader, errorListener);
         } catch (Exception e) {
             throw new StringTemplateException("Could not load template", e);
         } finally {
@@ -43,21 +49,8 @@ public class StringTemplateLoader {
 
     }
 
-    public StringTemplateGroup loadGroupFromRootDir(String groupName, String rootPath) {
-        StringTemplateGroup group = new InterfaceBasedStringTemplateGroup(groupName, rootPath);
-        group.setErrorListener(errorListener);
-        return group;
-    }
-
-    private static class InterfaceBasedStringTemplateGroup extends StringTemplateGroup {
-        public InterfaceBasedStringTemplateGroup(String name, String rootDir) {
-            super(name, rootDir);
-        }        
-
-        @Override public void implementInterface(String interfaceName) {
-            super.implementInterface(interfaceName);
-            super.verifyInterfaceImplementations();
-        }
+    public StringTemplateGroup loadGroupFromRootPath(String groupName, String rootPath) {
+        return groupFactory.createGroupFromRootPath(groupName, rootPath, errorListener);
     }
 
     @SuppressWarnings("unchecked")

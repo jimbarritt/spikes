@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="16f113ca-cbdf-4342-978d-698e8ddceb3f" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/MatchUpToTest.java" afterPath="$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/MatchUpToTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/regex-spike.iws" afterPath="$PROJECT_DIR$/regex-spike.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/test/unit/resource/logging/log4j.xml" afterPath="$PROJECT_DIR$/../../src/test/unit/resource/logging/log4j.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/MatchHyphenatedString.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/MatcherDebug.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/UrlSplitterTest.java" afterPath="$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/UrlSplitterTest.java" />
     </list>
     <ignored path=".idea/workspace.xml" />
-    <ignored path="$USER_HOME_GRAILS$/" />
     <ignored path="regex-spike.iws" />
+    <ignored path="$USER_HOME_GRAILS$/" />
     <ignored path="$USER_HOME_GRIFFON$/" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +33,9 @@
       <FILTER>com.jimbarritt.spikes.regex.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/regex-spike$ClassNameFilterTest_filtersOutClassesCalledIntegrationTest.ic" NAME="ClassNameFilterTest.filtersOutClassesCalledIntegrationTest Coverage Results" MODIFIED="1275038230781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.jimbarritt.spikes.regex.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/regex-spike$MatchHyphenatedString_matchesLastHyphenatedParamter.ic" NAME="MatchHyphenatedString.matchesLastHyphenatedParamter Coverage Results" MODIFIED="1278572412805" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.jimbarritt.spikes.regex.*</FILTER>
     </SUITE>
   </component>
@@ -83,7 +91,7 @@
       <file leaf-file-name="FindMultipleMatchesTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/FindMultipleMatchesTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="343" selection-end="343" vertical-scroll-proportion="0.0">
+            <state line="7" column="13" selection-start="126" selection-end="126" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -92,26 +100,50 @@
       <file leaf-file-name="MatchUpToTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/MatchUpToTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="8" selection-start="314" selection-end="314" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="2" column="0" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UrlSplitterTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/UrlSplitterTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="8" selection-start="636" selection-end="636" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IntegrationTestNameFilterTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="IntegrationTestNameFilterTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/IntegrationTestNameFilterTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="52" selection-start="482" selection-end="505" vertical-scroll-proportion="0.3423913">
+            <state line="17" column="52" selection-start="482" selection-end="505" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MatchHyphenatedString.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/MatchHyphenatedString.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="0" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0862423">
+              <folding>
+                <marker date="1278574684000" expanded="true" signature="45:143" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="log4j.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../src/test/unit/resource/logging/log4j.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="0" selection-start="90" selection-end="90" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MatcherDebug.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/MatcherDebug.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="12" selection-start="475" selection-end="475" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -132,13 +164,16 @@
         <option value="$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/UrlMatherTest.java" />
         <option value="$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/UrlMatcherTest.java" />
         <option value="$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/FindMultipleMatchesTest.java" />
-        <option value="$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/MatchUpToTest.java" />
         <option value="$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/UrlSplitterTest.java" />
         <option value="$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/ClassnameFilterTest.java" />
         <option value="$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/ClassnameFilterTest2.java" />
         <option value="$PROJECT_DIR$/../../src/main/java/com/jimbarritt/spikes/regex/ClassNameFilter.java" />
         <option value="$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/ClassNameFilterTest.java" />
         <option value="$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/IntegrationTestNameFilterTest.java" />
+        <option value="$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/MatcherDebug.java" />
+        <option value="$PROJECT_DIR$/../../src/test/unit/resource/logging/log4j.xml" />
+        <option value="$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/MatchUpToTest.java" />
+        <option value="$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/MatchHyphenatedString.java" />
       </list>
     </option>
   </component>
@@ -289,9 +324,9 @@
       <showLibraryContents />
       <hideEmptyPackages />
       <abbreviatePackageNames />
-      <autoscrollToSource ProjectPane="true" />
-      <autoscrollFromSource ProjectPane="true" />
-      <sortByType ProjectPane="true" />
+      <autoscrollToSource PackagesPane="true" ProjectPane="true" />
+      <autoscrollFromSource PackagesPane="true" ProjectPane="true" />
+      <sortByType PackagesPane="true" ProjectPane="true" />
     </navigator>
     <panes>
       <pane id="ProjectPane">
@@ -428,8 +463,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Favorites" />
       <pane id="Scope" />
+      <pane id="Favorites" />
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -455,6 +490,28 @@
               <option name="myItemId" value="regex" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logging" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="regex-spike" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="regex" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.jimbarritt.spikes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="regex" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -470,16 +527,20 @@
     <property name="options.lastSelected" value="com.thoughtworks.fireworks.plugin.FireworksProject" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="com.jimbarritt.spikes.regex.MatcherDebug" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.jimbarritt.spikes.regex" />
     </key>
@@ -498,7 +559,7 @@
     <option name="referencePos" value="0" />
     <option name="showLabels" value="true" />
   </component>
-  <component name="RunManager" selected="JUnit.IntegrationTestNameFilterTest.playWithRegex">
+  <component name="RunManager" selected="JUnit.MatchHyphenatedString.matchesLastHyphenatedParamter">
     <configuration default="false" name="IntegrationTestNameFilterTest.playWithRegex" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="true" merge="true" runner="idea">
         <pattern>
@@ -539,6 +600,33 @@
       <option name="PACKAGE_NAME" value="com.jimbarritt.spikes.regex" />
       <option name="MAIN_CLASS_NAME" value="com.jimbarritt.spikes.regex.IntegrationTestNameFilterTest" />
       <option name="METHOD_NAME" value="filtersOutClassesCalledIntegrationTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-Dlog4j.configuration=logging/log4j.xml" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="MatchHyphenatedString.matchesLastHyphenatedParamter" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="true" merge="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.jimbarritt.spikes.regex.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="regex" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="PACKAGE_NAME" value="com.jimbarritt.spikes.regex" />
+      <option name="MAIN_CLASS_NAME" value="com.jimbarritt.spikes.regex.MatchHyphenatedString" />
+      <option name="METHOD_NAME" value="matchesLastHyphenatedParamter" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-Dlog4j.configuration=logging/log4j.xml" />
       <option name="PARAMETERS" value="" />
@@ -667,9 +755,10 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.ClassNameFilterTest.playWithRegex" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.ClassNameFilterTest.filtersOutClassesCalledIntegrationTest" />
+    <list size="3">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.IntegrationTestNameFilterTest.playWithRegex" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.IntegrationTestNameFilterTest.filtersOutClassesCalledIntegrationTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.MatchHyphenatedString.matchesLastHyphenatedParamter" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -722,20 +811,23 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Code explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="JSTestDriver Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4974359" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Code Graph" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.09705248" sideWeight="0.61025643" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Code Graph" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0984903" sideWeight="0.61025643" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32820514" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Fireworks" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32948717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Metrics" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24946082" sideWeight="0.61025643" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24946082" sideWeight="0.6615385" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38076922" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Cycles" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Dataflow to this" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -762,7 +854,7 @@
     <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Renamed test method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added test for hyphenated strings" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -782,6 +874,7 @@
     <MESSAGE value="Added a test for not matching a word" />
     <MESSAGE value="Renamed to be more explanatory" />
     <MESSAGE value="Renamed test method" />
+    <MESSAGE value="Added test for hyphenated strings" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -791,30 +884,58 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../src/test/unit/resource/logging/log4j.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="14" selection-start="392" selection-end="392" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/FindMultipleMatchesTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="343" selection-end="343" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/MatchUpToTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="8" selection-start="314" selection-end="314" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/UrlSplitterTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="8" selection-start="636" selection-end="636" vertical-scroll-proportion="0.0" />
+        <state line="22" column="8" selection-start="577" selection-end="577" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/IntegrationTestNameFilterTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="52" selection-start="482" selection-end="505" vertical-scroll-proportion="0.3423913">
+        <state line="17" column="52" selection-start="482" selection-end="505" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/MatcherDebug.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="12" selection-start="475" selection-end="475" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/FindMultipleMatchesTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="13" selection-start="126" selection-end="126" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/test/unit/resource/logging/log4j.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="90" selection-end="90" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/MatchUpToTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/MatchHyphenatedString.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0862423">
+          <folding>
+            <marker date="1278574684000" expanded="true" signature="45:143" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

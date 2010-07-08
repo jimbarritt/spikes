@@ -4,7 +4,6 @@ import org.junit.*;
 
 import java.util.regex.*;
 
-import static com.jimbarritt.spikes.regex.MatchUpToTest.*;
 import static org.hamcrest.MatcherAssert.*;
 import static org.hamcrest.Matchers.*;
 
@@ -22,7 +21,7 @@ public class UrlSplitterTest {
     public void splitsUrlWithServerAndPath() {
         Matcher matcher = pattern.matcher("http://www.google.com/some/path/to/file.css");
         
-        printMatcher(matcher);
+        MatcherDebug.printMatcher(matcher);
         assertThat(matcher.matches(), is(true));
         assertThat(matcher.group(1), is("http://www.google.com"));
         assertThat(matcher.group(2), is("/some/path/to/file.css"));
@@ -32,7 +31,7 @@ public class UrlSplitterTest {
     public void splitsUrlWithJustServer() {
         Matcher matcher = pattern.matcher("http://www.google.com");
 
-        printMatcher(matcher);
+        MatcherDebug.printMatcher(matcher);
         assertThat(matcher.matches(), is(true));
         assertThat(matcher.group(1), is("http://www.google.com"));
         assertThat(matcher.group(2), is(nullValue()));
@@ -42,7 +41,7 @@ public class UrlSplitterTest {
     public void splitsUrlWithJustServerAndTrailingSlash() {
         Matcher matcher = pattern.matcher("http://www.google.com/");
 
-        printMatcher(matcher);
+        MatcherDebug.printMatcher(matcher);
         assertThat(matcher.matches(), is(true));
         assertThat(matcher.group(1), is("http://www.google.com"));
         assertThat(matcher.group(2), is("/"));
@@ -52,7 +51,7 @@ public class UrlSplitterTest {
     public void splitsUrlWithServerPortAndTrailingSlash() {
         Matcher matcher = pattern.matcher("http://www.google.com:8080/");
 
-        printMatcher(matcher);
+        MatcherDebug.printMatcher(matcher);
         assertThat(matcher.matches(), is(true));
         assertThat(matcher.group(1), is("http://www.google.com:8080"));
         assertThat(matcher.group(2), is("/"));
@@ -62,7 +61,7 @@ public class UrlSplitterTest {
     public void splitsUrlWithServerAndPort() {
         Matcher matcher = pattern.matcher("http://www.google.com:8080");
 
-        printMatcher(matcher);
+        MatcherDebug.printMatcher(matcher);
         assertThat(matcher.matches(), is(true));
         assertThat(matcher.group(1), is("http://www.google.com:8080"));
         assertThat(matcher.group(2), is(nullValue()));

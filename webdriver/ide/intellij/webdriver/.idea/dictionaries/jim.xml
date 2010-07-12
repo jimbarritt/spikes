@@ -6,6 +6,8 @@
       <w>google</w>
       <w>htmlunit</w>
       <w>httpclient</w>
+      <w>screenshot</w>
+      <w>screenshots</w>
       <w>webdriver</w>
     </words>
   </dictionary>

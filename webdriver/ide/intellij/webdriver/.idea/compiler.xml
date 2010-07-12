@@ -14,6 +14,7 @@
       <entry name="?*.jpeg" />
       <entry name="?*.jpg" />
       <entry name="?*.html" />
+      <entry name="?*.xhtml" />
       <entry name="?*.dtd" />
       <entry name="?*.tld" />
       <entry name="?*.ftl" />

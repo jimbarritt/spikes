@@ -13,10 +13,20 @@ import static org.junit.Assert.*;
 
 public class CaptureImagesTest {
     private static final Logger log = Logger.getLogger(CaptureImagesTest.class);
+    private FirefoxDriver firefoxDriver;
+
+    @Before
+    public void onceBeforeEachTest() {
+        firefoxDriver = (FirefoxDriver) new WebDriverFactory().useFirefox().createWebDriver();
+    }
+
+    @After
+    public void onceAfterEachTest() {
+        firefoxDriver.close();
+    }
 
     @Test
     public void createsImagesFromHtml() throws Exception {
-        FirefoxDriver firefoxDriver = (FirefoxDriver) new WebDriverFactory().useFirefox().createWebDriver();
 
         URL masterUrl = currentThread().getContextClassLoader().getResource("html/testPage_master.xhtml");
         firefoxDriver.get(masterUrl.toExternalForm());
@@ -28,5 +38,6 @@ public class CaptureImagesTest {
         assertThat(screenshotFile.exists(), is(true));
 
         log.info("Wrote file to [" + screenshotFile.getAbsolutePath() + "]");
+
     }
 }

@@ -5,10 +5,12 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.*;
 import org.openqa.selenium.htmlunit.*;
 
+@SuppressWarnings("unchecked")
 public class WebDriverFactory {
     private static final Logger log = Logger.getLogger(WebDriverFactory.class);
 
     private static final WebDriverFactory FIREFOX_FACTORY = new WebDriverFactory() {
+
         @Override public WebDriver createWebDriver() {
             return new FirefoxDriver();
         }

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="dbdeploy" >
+
+    <macrodef name="dbdeploy.init-live">
+        <attribute name="src.dbdeploy.dir" />
+        <sequential>
+            <echo message="Initialising the database in live mode from [@{src.dbdeploy.dir}]" />
+        </sequential>
+    </macrodef>
+
+</project>

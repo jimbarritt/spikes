@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project name="jimbarritt.spikes.dbdeploy" default="pre.checkin" basedir=".">
+<project name="jimbarritt.spikes.dbdeploy" default="pre-checkin" basedir=".">
 
 	<description>
         Standard ant build for spikes.dbdeploy project
         (c) Jim Barritt 2010
     </description>
 
+    <import file="src/build/ant/project-structure.xml" />
+    <import file="src/deploy/ant/dbdeploy.xml" />
+
     <property name="module.dir" value="${basedir}" />
 
     <property name="src.dir" value="${module.dir}/src"/>
+    <property name="src.deploy.dir" value="${src.dir}/deploy"/>
+    <property name="src.deploy.db.dir" value="${src.deploy.dir}/db"/>
     <property name="src.main.dir" value="${src.dir}/main"/>
     <property name="src.main.java.dir" value="${src.main.dir}/java"/>
     <property name="src.test.dir" value="${src.dir}/test"/>
@@ -54,13 +59,19 @@
 		</fileset>
 	</path>
 
-    <target name="pre.checkin"
-            description="Run this before checking in"
-            depends="init, compile.test.unit, test.unit"/>
-
     <target name="clean"
             description="Remove all files created by the build/test process.">
         <delete dir="${target.dir}" />
+    </target>
+
+    <target name="pre-checkin"
+            description="Run this before checking in"
+            depends="init, compile:test-unit, test:unit"/>
+
+
+    <target name="init-live-db">
+         <dbdeploy.init-live src.dbdeploy.dir="${src.deploy.db.dir}">
+         </dbdeploy.init-live>
     </target>
 
     <target name="init" depends="clean">
@@ -72,13 +83,13 @@
         <mkdir dir="${target.report.test.unit.html.dir}" />
 	</target>
 
-    <target name="compile.test.unit">
+    <target name="compile:test-unit">
         <javac srcdir="${src.test.java.dir}" destdir="${target.compile.classes.test.unit.dir}" debug="yes">
 			<classpath refid="development.classpath" />
 		</javac>
     </target>
 
-    <target name="test.unit">
+    <target name="test:unit">
 		<junit fork="yes" dir="${basedir}" failureProperty="test.failed">
             <classpath refid="test.unit.classpath" />
 			<formatter type="xml" />

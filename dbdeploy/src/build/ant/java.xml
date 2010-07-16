@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="java" >
+
+    <macrodef name="compile">
+        <attribute name="src.test.dir" />
+        <sequential>
+            <echo message="Compiling Java from [@{src.test.dir}]" />
+        </sequential>
+    </macrodef>
+
+</project>

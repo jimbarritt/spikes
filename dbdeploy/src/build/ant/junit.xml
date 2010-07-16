@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="junit" >
+
+    <macrodef name="execute">
+        <attribute name="src.test.dir" />
+        <sequential>
+            <echo message="Executing JUnit Tests from [@{src.test.dir}]" />
+        </sequential>
+    </macrodef>
+
+</project>

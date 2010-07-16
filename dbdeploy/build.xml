@@ -7,107 +7,31 @@
         (c) Jim Barritt 2010
     </description>
 
-    <import file="src/build/ant/project-structure.xml" />
-    <import file="src/deploy/ant/dbdeploy.xml" />
-
     <property name="module.dir" value="${basedir}" />
 
-    <property name="src.dir" value="${module.dir}/src"/>
-    <property name="src.deploy.dir" value="${src.dir}/deploy"/>
-    <property name="src.deploy.db.dir" value="${src.deploy.dir}/db"/>
-    <property name="src.main.dir" value="${src.dir}/main"/>
-    <property name="src.main.java.dir" value="${src.main.dir}/java"/>
-    <property name="src.test.dir" value="${src.dir}/test"/>
-    <property name="src.test.java.dir" value="${src.test.dir}/java"/>
-
-    <property name="lib.dir" value="${module.dir}/lib"/>
-    <property name="lib.development.dir" value="${lib.dir}/development"/>
-    <property name="lib.production.dir" value="${lib.dir}/production"/>
-
-    <property name="testcase" value=""/>
-
-    <property name="target.dir" value="${module.dir}/target"/>
-
-    <property name="target.compile.dir" value="${target.dir}/compilation"/>
-    <property name="target.compile.classes.dir" value="${target.compile.dir}/classes"/>
-    <property name="target.compile.classes.production.dir" value="${target.compile.classes.dir}/production" />
-    <property name="target.compile.classes.test.unit.dir" value="${target.compile.classes.dir}/test/unit" />
-
-    <property name="target.report.dir" value="${target.dir}/report"/>
-    <property name="target.report.test.dir" value="${target.report.dir}/test"/>
-    <property name="target.report.test.unit.dir" value="${target.report.test.dir}/unit"/>
-    <property name="target.report.test.unit.xml.dir" value="${target.report.test.unit.dir}/xml"/>
-    <property name="target.report.test.unit.html.dir" value="${target.report.test.unit.dir}/html"/>
-
-    <path id="production.classpath">
-		<fileset dir="${lib.production.dir}">
-			<include name="**/*.jar" />
-		</fileset>
-	</path>
-
-    <path id="development.classpath">
-		<fileset dir="${lib.development.dir}">
-			<include name="**/*.jar" />
-		</fileset>
-        <path refid="production.classpath" />
-	</path>
-
-    <path id="test.unit.classpath">
-        <path refid="development.classpath" />
-		<fileset dir="${lib.development.dir}">
-			<include name="**/*.jar" />
-		</fileset>
-	</path>
+    <import file="src/build/ant/module.xml" />
+    <import file="src/build/ant/compile.xml" />
+    <import file="src/build/ant/test.xml" />
+    <import file="src/deploy/ant/dbdeploy.xml" />
 
     <target name="clean"
-            description="Remove all files created by the build/test process.">
-        <delete dir="${target.dir}" />
-    </target>
+            description="Remove all files created by the build/test process."
+            depends="module.clean-target"/>
 
     <target name="pre-checkin"
             description="Run this before checking in"
-            depends="init, compile:test-unit, test:unit"/>
+            depends="unit-test,
+                     init-live-db"/>
+    
+    <target name="unit-test"
+            description="Compiles the code and runs the unit tests"
+            depends="module.init,
+                     compile.unit-test-java, test.unit"/>
 
-
-    <target name="init-live-db">
-         <dbdeploy.init-live src.dbdeploy.dir="${src.deploy.db.dir}">
-         </dbdeploy.init-live>
+    <target name="init-live-db"
+            description="Initialises the database in live mode.">
+         <dbdeploy.init-live src.dbdeploy.dir="${src.deploy.db.dir}" />
     </target>
 
-    <target name="init" depends="clean">
-        <echo message="Creating target directory structure ..." />
-        <mkdir dir="${target.dir}" />
-        <mkdir dir="${target.compile.classes.production.dir}" />
-        <mkdir dir="${target.compile.classes.test.unit.dir}" />
-        <mkdir dir="${target.report.test.unit.xml.dir}" />
-        <mkdir dir="${target.report.test.unit.html.dir}" />
-	</target>
-
-    <target name="compile:test-unit">
-        <javac srcdir="${src.test.java.dir}" destdir="${target.compile.classes.test.unit.dir}" debug="yes">
-			<classpath refid="development.classpath" />
-		</javac>
-    </target>
-
-    <target name="test:unit">
-		<junit fork="yes" dir="${basedir}" failureProperty="test.failed">
-            <classpath refid="test.unit.classpath" />
-			<formatter type="xml" />
-			<test name="${testcase}" todir="${target.report.test.unit.xml.dir}" if="testcase" />
-			<batchtest todir="${target.report.test.unit.xml.dir}" unless="testcase">
-				<fileset dir="${src.dir}">
-					<include name="**/*Test.java" />
-				</fileset>
-			</batchtest>
-		</junit>
-
-		<junitreport todir="${target.report.test.unit.html.dir}" >
-			<fileset dir="${target.report.test.unit.xml.dir}">
-				<include name="TEST-*.xml" />
-			</fileset>
-			<report format="frames" todir="${target.report.test.unit.html.dir}" />
-		</junitreport>
-        <echo message="test.unit ${target.report.test.unit.html.dir}/index.html" />
-	</target>
-
+    
 </project>

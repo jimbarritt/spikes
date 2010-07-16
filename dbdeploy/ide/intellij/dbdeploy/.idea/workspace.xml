@@ -2,21 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="87c6cb1f-74ab-4d52-8210-c5e354800fcd" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../src/build/ant/module.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../../../src/build/ant/junit.xml" afterPath="$PROJECT_DIR$/../../../src/build/ant/macros/junit.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../src/build/ant/test.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../lib/development/dbdeploy-cli-3.0M2-sources.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../lib/deployment/dbdeploy-cli-3.0M2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../lib/development/dbdeploy-core-3.0M2-sources.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../src/deploy/db/init-db/h2/create_schemas.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../src/build/ant/junit.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../lib/deployment/dbdeploy-ant-3.0M2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../src/deploy/ant/dbdeploy.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../lib/development/dbdeploy-ant-3.0M2-sources.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../src/build/ant/project-structure.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../src/deploy/db/init-db/oracle/create_schemas.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../src/deploy/db/init-db/h2/create_users.sql" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../src/build/ant/project-structure.xml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../src/build/ant/compile.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../build.xml" afterPath="$PROJECT_DIR$/../../../build.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../src/build/ant/java.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../src/deploy/db/init-db/oracle/create_users.sql" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../../../src/build/ant/java.xml" afterPath="$PROJECT_DIR$/../../../src/build/ant/macros/java.xml" />
     </list>
     <ignored path="$USER_HOME_GRIFFON$/" />
     <ignored path="$USER_HOME_GRAILS$/" />
@@ -84,37 +77,46 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="build.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="53" selection-start="401" selection-end="401" vertical-scroll-proportion="0.2881356">
+            <state line="27" column="42" selection-start="921" selection-end="921" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="project-structure.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../src/build/ant/project-structure.xml">
+      <file leaf-file-name="test.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../../src/build/ant/test.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0">
+            <state line="3" column="18" selection-start="81" selection-end="81" vertical-scroll-proportion="0.13347457">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="compile.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../src/build/ant/compile.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="28" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="module.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../src/build/ant/module.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="54" column="24" selection-start="2213" selection-end="2213" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="junit.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../src/build/ant/junit.xml">
+        <entry file="file://$PROJECT_DIR$/../../../src/build/ant/macros/junit.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state line="6" column="53" selection-start="0" selection-end="282" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="java.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../src/build/ant/java.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="27" selection-start="90" selection-end="90" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -124,15 +126,6 @@
         <entry file="file://$PROJECT_DIR$/../../../src/deploy/ant/dbdeploy.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state line="9" column="0" selection-start="310" selection-end="310" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create_schemas.sql" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../src/deploy/db/init-db/h2/create_schemas.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -156,7 +149,12 @@
         <option value="$PROJECT_DIR$/../../../src/build/compile.xml" />
         <option value="$PROJECT_DIR$/../../../src/deploy/ant/dbdeploy.xml" />
         <option value="$PROJECT_DIR$/../../../src/build/project-structure.xml" />
+        <option value="$PROJECT_DIR$/../../../src/build/ant/project-structure.xml" />
+        <option value="$PROJECT_DIR$/../../../src/build/ant/module-structure.xml" />
+        <option value="$PROJECT_DIR$/../../../src/build/ant/compile.xml" />
+        <option value="$PROJECT_DIR$/../../../src/build/ant/module.xml" />
         <option value="$PROJECT_DIR$/../../../build.xml" />
+        <option value="$PROJECT_DIR$/../../../src/build/ant/test.xml" />
       </list>
     </option>
   </component>
@@ -279,6 +277,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="build" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="macros" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dbdeploy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dbdeploy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -326,6 +350,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../../../src/build/ant/macros" />
       <recent name="$PROJECT_DIR$/../../../src/build/ant" />
       <recent name="$PROJECT_DIR$/../../../src/deploy/db" />
     </key>
@@ -571,7 +596,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="874" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -592,7 +617,7 @@
       <window_info id="Metrics" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.6615385" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.6615385" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Cycles" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -617,7 +642,7 @@
     <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added build script" />
+    <option name="LAST_COMMIT_MESSAGE" value="Setting up the build" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -632,6 +657,7 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="FIrst commit, adding H2 and HSQLDB libraries" />
     <MESSAGE value="Added build script" />
+    <MESSAGE value="Setting up the build" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -643,11 +669,12 @@
       <antCommandLine value="" />
       <runInBackground value="true" />
       <targetFilters>
-        <filter targetName="clean" isVisible="true" />
-        <filter targetName="compile.test.unit" isVisible="false" />
+        <filter targetName="clean" isVisible="false" />
         <filter targetName="init" isVisible="false" />
-        <filter targetName="pre.checkin" isVisible="true" />
-        <filter targetName="test.unit" isVisible="false" />
+        <filter targetName="init-live-db" isVisible="true" />
+        <filter targetName="pre-checkin" isVisible="true" />
+        <filter targetName="unit" isVisible="false" />
+        <filter targetName="unit-test" isVisible="true" />
       </targetFilters>
       <treeView value="false" />
       <verbose value="true" />
@@ -697,7 +724,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/build/ant/java.xml">
+    <entry file="file://$PROJECT_DIR$/../../../src/build/ant/macros/java.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="27" selection-start="90" selection-end="90" vertical-scroll-proportion="0.0">
           <folding />
@@ -711,23 +738,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/build/ant/junit.xml">
+    <entry file="file://$PROJECT_DIR$/../../../src/build/ant/macros/junit.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="53" selection-start="0" selection-end="282" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/build/ant/project-structure.xml">
+    <entry file="file://$PROJECT_DIR$/../../../src/build/ant/compile.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0">
+        <state line="6" column="28" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/build/ant/module.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="24" selection-start="2213" selection-end="2213" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="53" selection-start="401" selection-end="401" vertical-scroll-proportion="0.2881356">
+        <state line="27" column="42" selection-start="921" selection-end="921" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/build/ant/test.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="18" selection-start="81" selection-end="81" vertical-scroll-proportion="0.13347457">
           <folding />
         </state>
       </provider>

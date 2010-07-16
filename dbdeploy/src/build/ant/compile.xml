@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="compile" >
+
+    <import file="module.xml" />
+
+    <target name="unit-test-java">
+        <javac srcdir="${src.test.java.dir}" destdir="${target.compile.classes.test.unit.dir}" debug="yes">
+			<classpath refid="development.classpath" />
+		</javac>
+    </target>
+
+    
+</project>

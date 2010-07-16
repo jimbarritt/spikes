@@ -26,7 +26,7 @@ public class InterfaceStringTemplateGroupFactoryTest {
 
         InterfaceStringTemplateGroupFactory factory = new InterfaceStringTemplateGroupFactory();
 
-        StringTemplateGroup group = factory.createGroupFromReader(new StringReader(groupContents), StringTemplateRootPath.getStringTemplateRootDir(), StringTemplateGroup.DEFAULT_ERROR_LISTENER);
+        StringTemplateGroup group = factory.createGroupFromReader(new StringReader(groupContents), StringTemplateGroup.DEFAULT_ERROR_LISTENER);
 
         assertThat(group, is(instanceOf(InterfaceBasedStringTemplateGroup.class)));
     }

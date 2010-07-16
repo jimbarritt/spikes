@@ -5,7 +5,6 @@
     <resourceExtensions>
       <entry name=".+\.(properties|xml|html|dtd|tld)" />
       <entry name=".+\.(gif|png|jpeg|jpg)" />
-      <entry name=".+\.(st|stg)" />
     </resourceExtensions>
     <wildcardResourcePatterns>
       <entry name="?*.properties" />
@@ -18,13 +17,11 @@
       <entry name="?*.dtd" />
       <entry name="?*.tld" />
       <entry name="?*.ftl" />
-      <entry name="?*.st" />
-      <entry name="?*.stg" />
-      <entry name="?*.txt" />
     </wildcardResourcePatterns>
-    <annotationProcessing enabled="true" useClasspath="true" />
+    <annotationProcessing enabled="false" useClasspath="true" />
   </component>
   <component name="EclipseCompilerSettings">
+    <option name="GENERATE_NO_WARNINGS" value="true" />
     <option name="DEPRECATION" value="false" />
   </component>
 </project>

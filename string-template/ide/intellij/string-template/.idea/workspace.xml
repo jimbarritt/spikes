@@ -146,7 +146,7 @@
       <file leaf-file-name="IntrospectTemplatesTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/IntrospectTemplatesTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="81" selection-start="2155" selection-end="2155" vertical-scroll-proportion="0.47368422">
+            <state line="89" column="8" selection-start="3826" selection-end="3826" vertical-scroll-proportion="0.54385966">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1722,7 +1722,7 @@
     <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Got template names, now going for parameters&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Trying to get parameters out of StringTemplate&#10;" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1759,6 +1759,7 @@
     <MESSAGE value="Getting dependancy graph" />
     <MESSAGE value="Refactored test to extract only the dependency printing" />
     <MESSAGE value="Got template names, now going for parameters&#10;" />
+    <MESSAGE value="Trying to get parameters out of StringTemplate&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1875,7 +1876,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/IntrospectTemplatesTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="81" selection-start="2155" selection-end="2155" vertical-scroll-proportion="0.47368422">
+        <state line="89" column="8" selection-start="3826" selection-end="3826" vertical-scroll-proportion="0.54385966">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

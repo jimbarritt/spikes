@@ -7,7 +7,7 @@ import java.io.*;
 
 public interface StringTemplateGroupFactory {
 
-    StringTemplateGroup createGroupFromRootPath(String name, String rootPath, StringTemplateErrorListener errorListener);
+    StringTemplateGroup createGroupFromRootPath(String rootPath, StringTemplateErrorListener errorListener);
 
     StringTemplateGroup createGroupFromReader(Reader reader, StringTemplateErrorListener errorListener);
 

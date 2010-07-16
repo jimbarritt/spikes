@@ -56,7 +56,7 @@ public class GroupTest {
         StringTemplateGroup csvGroup = templateLoader.loadGroupFromClasspath("st/formatting/csv.stg");
         StringTemplateGroup utilityGroup = templateLoader.loadGroupFromClasspath("st/solarsystem/simpleGroup.stg");
 
-        StringTemplateGroup coreTemplateGroup = templateLoader.loadGroupFromRootPath("allTemplates", StringTemplateRootPath.getStringTemplateRootDir());
+        StringTemplateGroup coreTemplateGroup = templateLoader.loadGroupFromRootPath(StringTemplateRootPath.getStringTemplateRootDir());
 
         mergeGroups(csvGroup, coreTemplateGroup);
         mergeGroups(utilityGroup, coreTemplateGroup);

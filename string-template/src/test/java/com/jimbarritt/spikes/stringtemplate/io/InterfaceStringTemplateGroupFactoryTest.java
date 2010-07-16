@@ -15,7 +15,7 @@ public class InterfaceStringTemplateGroupFactoryTest {
     public void createsInterfaceBasedGroup() {
         InterfaceStringTemplateGroupFactory factory = new InterfaceStringTemplateGroupFactory();
 
-        StringTemplateGroup group = factory.createGroupFromRootPath("testGroup", StringTemplateRootPath.getStringTemplateRootDir(), StringTemplateGroup.DEFAULT_ERROR_LISTENER);
+        StringTemplateGroup group = factory.createGroupFromRootPath(StringTemplateRootPath.getStringTemplateRootDir(), StringTemplateGroup.DEFAULT_ERROR_LISTENER);
 
         assertThat(group, is(instanceOf(InterfaceBasedStringTemplateGroup.class)));
     }

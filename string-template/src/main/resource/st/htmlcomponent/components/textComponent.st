@@ -1,3 +1,3 @@
-<div id="componentId" class="textComponent">
+<div id="$id$" class="textComponent">
     <p>$text$</p>
 </div>

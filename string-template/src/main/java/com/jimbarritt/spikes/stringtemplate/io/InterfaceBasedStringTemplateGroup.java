@@ -6,8 +6,8 @@ import org.antlr.stringtemplate.language.*;
 import java.io.*;
 
 class InterfaceBasedStringTemplateGroup extends StringTemplateGroup {
-    public InterfaceBasedStringTemplateGroup(String name, String rootDir) {
-        super(name, rootDir);
+    public InterfaceBasedStringTemplateGroup(String rootDir) {
+        super(rootDir, rootDir);
     }
 
     public InterfaceBasedStringTemplateGroup(Reader reader, StringTemplateErrorListener errorListener) {

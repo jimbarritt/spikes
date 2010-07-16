@@ -22,8 +22,8 @@ public class WebsiteTest {
     public void rendersAPage() {
         StringTemplateGroup.registerGroupLoader(new PathGroupLoader(getStringTemplateRootDir() + "/st/htmlpages/site_definition", new Log4jStringTemplateErrorListener()));
 
-        StringTemplateGroup siteDefinition = templateLoader.loadGroupFromRootPath("site-definition", getStringTemplateRootDir() + "/st/htmlpages/site_definition");
-        StringTemplateGroup siteA = templateLoader.loadGroupFromRootPath("site-a", getStringTemplateRootDir() + "/st/htmlpages/site_a");
+        StringTemplateGroup siteDefinition = templateLoader.loadGroupFromRootPath(getStringTemplateRootDir() + "/st/htmlpages/site_definition");
+        StringTemplateGroup siteA = templateLoader.loadGroupFromRootPath(getStringTemplateRootDir() + "/st/htmlpages/site_a");
 
         siteA.setSuperGroup(siteDefinition);
         siteA.implementInterface("website");
@@ -35,7 +35,7 @@ public class WebsiteTest {
     public void failsIfSiteDoesntImplementInterface() {
         StringTemplateGroup.registerGroupLoader(new PathGroupLoader(getStringTemplateRootDir() + "/st/htmlpages/site_definition", new Log4jStringTemplateErrorListener()));
 
-        StringTemplateGroup siteB = templateLoader.loadGroupFromRootPath("siteB", getStringTemplateRootDir() + "/st/htmlpages/site_b");
+        StringTemplateGroup siteB = templateLoader.loadGroupFromRootPath(getStringTemplateRootDir() + "/st/htmlpages/site_b");
         siteB.implementInterface("website");
 
         assertThat(errorListener.errors().size(), is(1));

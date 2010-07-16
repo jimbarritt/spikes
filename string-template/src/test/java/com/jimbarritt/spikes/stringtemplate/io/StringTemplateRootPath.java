@@ -12,7 +12,7 @@ public class StringTemplateRootPath {
     private static final Logger log = Logger.getLogger(StringTemplateRootPath.class);
     
     public static StringTemplateGroup getProjectStringTemplates() {
-        return new StringTemplateLoader().loadGroupFromRootPath("projectGroup", getStringTemplateRootDir());
+        return new StringTemplateLoader().loadGroupFromRootPath(getStringTemplateRootDir());
     }
 
     public static String getStringTemplateRootDir() {

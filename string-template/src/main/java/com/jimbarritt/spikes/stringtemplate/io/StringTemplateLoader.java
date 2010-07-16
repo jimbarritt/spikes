@@ -49,8 +49,8 @@ public class StringTemplateLoader {
 
     }
 
-    public StringTemplateGroup loadGroupFromRootPath(String groupName, String rootPath) {
-        return groupFactory.createGroupFromRootPath(groupName, rootPath, errorListener);
+    public StringTemplateGroup loadGroupFromRootPath(String rootPath) {
+        return groupFactory.createGroupFromRootPath(rootPath, errorListener);
     }
 
     @SuppressWarnings("unchecked")

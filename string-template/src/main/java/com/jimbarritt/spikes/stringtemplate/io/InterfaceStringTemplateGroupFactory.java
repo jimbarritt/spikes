@@ -7,8 +7,8 @@ import java.io.*;
 
 public class InterfaceStringTemplateGroupFactory implements StringTemplateGroupFactory {
     @Override
-    public StringTemplateGroup createGroupFromRootPath(String name, String rootPath, StringTemplateErrorListener errorListener) {
-        StringTemplateGroup group = new InterfaceBasedStringTemplateGroup(name, rootPath);
+    public StringTemplateGroup createGroupFromRootPath(String rootPath, StringTemplateErrorListener errorListener) {
+        StringTemplateGroup group = new InterfaceBasedStringTemplateGroup(rootPath);
         group.setErrorListener(errorListener);
         return group;
     }

@@ -8,9 +8,7 @@ import org.junit.*;
 import java.io.*;
 import java.util.*;
 
-import static com.jimbarritt.spikes.stringtemplate.io.StringTemplateRootPath.getStringTemplateRootDir;
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat;
+import static com.jimbarritt.spikes.stringtemplate.io.StringTemplateRootPath.*;
 
 public class IntrospectTemplatesTest {
 
@@ -27,9 +25,8 @@ public class IntrospectTemplatesTest {
     }
 
     @Test
-	public void canFindOutAboutTemplates() throws IOException {
-        String rootPath = getPathFor("/st/htmlcomponent");
-        StringTemplateGroup group = factory.createGroupFromRootPath(rootPath, errorListener);
+    public void canFindOutAboutTemplates() throws IOException {
+        StringTemplateGroup group = factory.createGroupFromRootPath(getPathFor("/st/htmlcomponent"), errorListener);
 
         StringTemplate manyComponentsTemplate = group.getInstanceOf("manyComponents");
 
@@ -41,13 +38,19 @@ public class IntrospectTemplatesTest {
         StringTemplate template = manyComponentsTemplate.getDOTForDependencyGraph(true);
         String dotDependencyGraph = templateRenderer.render(template);
         log.info("DOT dependencyGraph: \n" + dotDependencyGraph);
+    }
+
+    @Test
+    public void canFindDebugParametersAndTemplateNames() throws IOException {
+        StringTemplateGroup group = factory.createGroupFromRootPath(getPathFor("/st/htmlcomponent"), errorListener);
+        StringTemplate manyComponentsTemplate = group.getInstanceOf("manyComponents");
 
         log.info("Dependencies And Parameters of Template:\n" + printDependenciesAndParametersOf(manyComponentsTemplate));
     }
 
+
     private String getPathFor(String templatePath) {
-        String rootPath = getStringTemplateRootDir() + templatePath;
-        return rootPath;
+        return getStringTemplateRootDir() + templatePath;        
     }
 
     private static String printDependenciesAndParametersOf(StringTemplate template) {

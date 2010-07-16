@@ -53,15 +53,24 @@ public class IntrospectTemplatesTest {
         return getStringTemplateRootDir() + templatePath;        
     }
 
+    @SuppressWarnings("unchecked")
     private static String printDependenciesAndParametersOf(StringTemplate template) {
-        Map<Object, Object> edges = new HashMap<Object, Object>();
+        Map<String, Set> edges = new HashMap<String, Set>();
         template.getDependencyGraph(edges, true);
         StringBuilder sb = new StringBuilder();
-        for (Map.Entry<Object, Object> edge : edges.entrySet()) {
-
-            sb.append("edge: key=").append(edge.getKey()).append("#").append(edge.getKey().getClass().getSimpleName());
-            sb.append(", ").append("value=").append(edge.getValue()).append("#").append(edge.getValue().getClass().getSimpleName()).append("\n");
+        for (Map.Entry<String, Set> edge : edges.entrySet()) {
+            String edgeName = edge.getKey();
+            Set<String> elements = edge.getValue();
+            sb.append("[").append(edgeName).append("]:\n");
+            for (String includedTemplateName : elements) {
+                sb.append("    ").append(includedTemplateName).append("\n");
+                sb.append(printTemplateParameters(template.getGroup(), includedTemplateName));
+            }            
         }
         return sb.toString();
+    }
+
+    private static String printTemplateParameters(StringTemplateGroup group, String includedTemplateName) {
+        return "no parameters";
     }
 }

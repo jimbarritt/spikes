@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="test" >
 
+    <import file="macros/logging.xml" />
     <import file="module.xml" />
 
     <target name="unit">
@@ -21,7 +22,7 @@
 			</fileset>
 			<report format="frames" todir="${target.report.test.unit.html.dir}" />
 		</junitreport>
-        <echo message="test.unit ${target.report.test.unit.html.dir}/index.html" />
+        <log.info task="test.unit" message="${target.report.test.unit.html.dir}/index.html" />        
 	</target>
     
 

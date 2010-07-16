@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="logging" >
+
+    <macrodef name="log.info">
+        <attribute name="task" />
+        <attribute name="message" />
+        <sequential>
+            <echo message="[@{task}] @{message}" />
+        </sequential>
+    </macrodef>
+
+
+    <target name="test-javascript">
+         <script language="javascript">
+ <![CDATA[
+ importPackage(java.lang);
+ System.out.println("${src.dir}");
+ ]]>
+         </script>
+     </target>
+
+</project>

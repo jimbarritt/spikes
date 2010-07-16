@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="module">
+<project name="module">    
+
+    <import file="macros/logging.xml" />
 
     <property name="module.dir" value="not-set"/>
 
@@ -57,7 +59,7 @@
     </target>
 
     <target name="init">
-        <echo message="Creating target directory structure ..." />
+        <log.info task="init" message="Creating target directory structure in ${target.dir}" />
         <mkdir dir="${target.dir}" />
         <mkdir dir="${target.compile.classes.production.dir}" />
         <mkdir dir="${target.compile.classes.test.unit.dir}" />

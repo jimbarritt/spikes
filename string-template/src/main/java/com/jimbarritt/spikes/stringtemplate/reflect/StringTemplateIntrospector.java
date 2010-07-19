@@ -90,10 +90,10 @@ public class StringTemplateIntrospector {
 
         private StringTemplateArgument parseArgumentFrom(AST argumentAst) {
             if (!"=".equals(argumentAst.getText())) {
-                throw new StringTemplateIntrospectionException("Tried to parse arguments from first child of AST which is not called '=' : " + argumentAst.toStringTree());
+                throw new StringTemplateIntrospectionException("Tried to parse arguments from first child of AST which is not called '='");
             }
             if (2 != argumentAst.getNumberOfChildren()) {
-                throw new StringTemplateIntrospectionException("Argument AST does not have 2 children, instead it has " + argumentAst.getNumberOfChildren() + " : " + argumentAst.toStringTree());
+                throw new StringTemplateIntrospectionException("Argument AST does not have 2 children, instead it has " + argumentAst.getNumberOfChildren());
             }
 
             String argumentName = argumentAst.getFirstChild().getText();

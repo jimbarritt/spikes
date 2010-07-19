@@ -1,0 +1,1 @@
+<a href="$link.href$" rel="$link.rel$" title="$link.title$">$link.text$</a>  

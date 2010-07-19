@@ -62,15 +62,15 @@ public class StringTemplateTreePrinter {
     }
 
     private static void appendAst(String indent, StringBuilder sb, AST ast) {
-
+        sb.append(INDENT).append(ast.getText()).append("\n");
         AST firstChild = ast.getFirstChild();
         if (firstChild != null) {
             sb.append(INDENT).append(indent).append(" Number of children: ").append(ast.getNumberOfChildren()).append("\n");
-            sb.append(INDENT).append(indent).append(" First child: ").append(firstChild).append("\n");
+            sb.append(INDENT).append(indent).append(" firstChild(): ").append(firstChild).append("\n");
             appendAst(INDENT + INDENT + indent, sb, firstChild);
             AST nextSibling = firstChild.getNextSibling();
             if (nextSibling != null) {
-                sb.append(INDENT).append(indent).append(" Next Child : ").append(nextSibling).append(typeOf(nextSibling)).append("\n");
+                sb.append(INDENT).append(indent).append(" firstChild().nextSibling() : ").append(nextSibling).append(typeOf(nextSibling)).append("\n");
                 appendAst(INDENT + indent, sb, nextSibling);
             }
         }

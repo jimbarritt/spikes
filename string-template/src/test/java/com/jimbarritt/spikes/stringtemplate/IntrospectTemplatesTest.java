@@ -1,6 +1,7 @@
 package com.jimbarritt.spikes.stringtemplate;
 
 import com.jimbarritt.spikes.stringtemplate.io.*;
+import com.jimbarritt.spikes.stringtemplate.reflect.*;
 import org.antlr.stringtemplate.*;
 import org.apache.log4j.*;
 import org.junit.*;
@@ -40,11 +41,9 @@ public class IntrospectTemplatesTest {
     }
 
     @Test
-    public void canFindDebugParametersAndTemplateNames() throws IOException {
+    public void canDebugParametersAndTemplateNames() throws IOException {
         StringTemplateGroup group = factory.createGroupFromRootPath(getPathFor("/st/htmlcomponent"), errorListener);
         StringTemplate manyComponentsTemplate = group.getInstanceOf("manyComponents");
-
-        templateRenderer.render(manyComponentsTemplate);
 
         StringTemplateTreePrinter printer = new StringTemplateTreePrinter();
         log.info("Dependencies And Parameters of Template:\n" + printer.printTreeOf(manyComponentsTemplate));

@@ -1,4 +1,4 @@
-package com.jimbarritt.spikes.stringtemplate.io;
+package com.jimbarritt.spikes.stringtemplate.reflect;
 
 import antlr.collections.*;
 import org.antlr.stringtemplate.*;

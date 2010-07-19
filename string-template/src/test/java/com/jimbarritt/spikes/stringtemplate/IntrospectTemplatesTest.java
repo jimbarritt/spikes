@@ -47,13 +47,7 @@ public class IntrospectTemplatesTest {
         templateRenderer.render(manyComponentsTemplate);
 
         StringTemplateTreePrinter printer = new StringTemplateTreePrinter();
-        log.info("ManyComponents:\n" + printer.printTemplateArguments("    -->", manyComponentsTemplate));
         log.info("Dependencies And Parameters of Template:\n" + printer.printTreeOf(manyComponentsTemplate));
-    }
-
-
-    private String getPathFor(String templatePath) {
-        return getStringTemplateRootDir() + templatePath;
     }
 
 

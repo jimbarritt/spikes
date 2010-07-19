@@ -23,4 +23,8 @@ public class StringTemplateRootPath {
         log.info("Loading templates from: " + templateGroupRootPath);
         return templateGroupRootPath;
     }
+
+    public static String getPathFor(String templatePath) {
+        return getStringTemplateRootDir() + templatePath;
+    }
 }

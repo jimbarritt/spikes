@@ -12,6 +12,8 @@ public class StringTemplateTreePrinter {
 
     @SuppressWarnings("unchecked")
     public String printTreeOf(StringTemplate template) {
+
+        String arguments = template.getName() + ":\n" + printTemplateArguments("    -->", template);
         Map<String, Set> edges = new HashMap<String, Set>();
         template.getDependencyGraph(edges, true);
         StringBuilder sb = new StringBuilder();
@@ -24,10 +26,10 @@ public class StringTemplateTreePrinter {
                 sb.append(printTemplateArguments(INDENT + "-->", template.getGroup(), includedTemplateName));
             }
         }
-        return sb.toString();
+        return arguments + sb.toString();
     }
 
-    public String printTemplateArguments(String indent, StringTemplate stringTemplate) {
+    private String printTemplateArguments(String indent, StringTemplate stringTemplate) {
         StringBuilder sb = new StringBuilder();
 
         appendAttributes(indent, stringTemplate, sb);

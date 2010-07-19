@@ -2,21 +2,16 @@ package com.jimbarritt.spikes.stringtemplate.reflect;
 
 import com.jimbarritt.spikes.stringtemplate.io.*;
 import org.antlr.stringtemplate.*;
-import org.apache.log4j.*;
 import org.junit.*;
 
 import java.util.*;
 
-import static com.jimbarritt.spikes.stringtemplate.io.StringTemplateRootPath.getPathFor;
-import static com.jimbarritt.spikes.stringtemplate.reflect.StringTemplateIntrospector.inspect;
-import static org.hamcrest.core.Is.is;
-import static org.hamcrest.core.IsNot.not;
-import static org.hamcrest.core.IsNull.nullValue;
-import static org.junit.Assert.assertThat;
+import static com.jimbarritt.spikes.stringtemplate.io.StringTemplateRootPath.*;
+import static com.jimbarritt.spikes.stringtemplate.reflect.StringTemplateIntrospector.*;
+import static org.hamcrest.core.Is.*;
+import static org.junit.Assert.*;
 
 public class StringTemplateIntrospectorTest {
-
-    private static final Logger log = Logger.getLogger(StringTemplateIntrospectorTest.class);
 
     private Log4jStringTemplateErrorListener errorListener;
     private StandardStringTemplateGroupFactory factory;
@@ -45,13 +40,17 @@ public class StringTemplateIntrospectorTest {
         assertThat(include_1.stringTemplateDefinition().name(), is("components/textComponent"));
 
         List<StringTemplateArgument> arguments = include_1.arguments();
-        assertThat(arguments.size(), is(2));
+        assertThat(arguments.size(), is(3));
         StringTemplateArgument argument_1 = arguments.get(0);
         assertThat(argument_1.name(), is("id"));
-        assertThat(argument_1.value(), is("welcomeText"));
+        assertThat(argument_1.value(), is("welcomeMessage"));
 
         StringTemplateArgument argument_2 = arguments.get(1);
         assertThat(argument_2.name(), is("text"));
         assertThat(argument_2.value(), is("<b>Some default text</b>"));
+
+        StringTemplateArgument argument_3 = arguments.get(2);
+        assertThat(argument_3.name(), is("editable"));
+        assertThat(argument_3.value(), is("false"));
     }
 }

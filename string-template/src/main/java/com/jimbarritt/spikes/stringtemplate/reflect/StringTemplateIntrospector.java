@@ -39,7 +39,7 @@ public class StringTemplateIntrospector {
                 return;
             }
 
-            ASTExpr astExpr = (ASTExpr)chunk;
+            ASTExpr astExpr = (ASTExpr) chunk;
             if (isInclude(astExpr)) {
                 includes.add(parser.parseIncludeFrom(astExpr.getAST()));
             }
@@ -62,7 +62,7 @@ public class StringTemplateIntrospector {
                 List<StringTemplateArgument> arguments = parseArgumentsFrom(includeAst.getFirstChild().getNextSibling());
                 return new StringTemplateInclude(definition, arguments);
             } catch (Exception e) {
-                throw new StringTemplateIntrospectionException("Failed to parse include from ast (See Cause). AST: " + includeAst.toStringTree(), e);        
+                throw new StringTemplateIntrospectionException("Failed to parse include from ast (See Cause). AST: " + includeAst.toStringTree(), e);
             }
         }
 
@@ -70,16 +70,19 @@ public class StringTemplateIntrospector {
             if (!"ARGS".equals(argsAst.getText())) {
                 throw new StringTemplateIntrospectionException("Tried to parse arguments from an AST which is not called 'ARGS'");
             }
+
             if (0 == argsAst.getNumberOfChildren()) {
                 return new ArrayList<StringTemplateArgument>();
             }
 
             List<StringTemplateArgument> arguments = new ArrayList<StringTemplateArgument>();
-            arguments.add(parseArgumentFrom(argsAst.getFirstChild()));
+            AST firstArgumentAst = argsAst.getFirstChild();
+            arguments.add(parseArgumentFrom(firstArgumentAst));
 
-            AST sibling=argsAst.getNextSibling();
-            while (sibling!=null) {
-                arguments.add(parseArgumentFrom(sibling));                                
+            AST nextArgumentAst = firstArgumentAst.getNextSibling();
+            while (nextArgumentAst != null) {
+                arguments.add(parseArgumentFrom(nextArgumentAst));
+                nextArgumentAst = nextArgumentAst.getNextSibling();
             }
 
             return arguments;

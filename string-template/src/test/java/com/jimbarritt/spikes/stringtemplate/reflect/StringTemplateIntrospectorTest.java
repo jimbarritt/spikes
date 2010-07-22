@@ -32,11 +32,11 @@ public class StringTemplateIntrospectorTest {
 
         assertThat(stringTemplateDefinition.name(), is("manyComponents"));
 
-        List<StringTemplateInclude> invokedTemplates = stringTemplateDefinition.includedTemplates();
+        List<StringTemplateInclude> includedTemplates = stringTemplateDefinition.includedTemplates();
 
-        assertThat(invokedTemplates.size(), is(4));
+        assertThat(includedTemplates.size(), is(4));
 
-        StringTemplateInclude include_1 = invokedTemplates.get(0);
+        StringTemplateInclude include_1 = includedTemplates.get(0);
         assertThat(include_1.stringTemplateDefinition().name(), is("components/textComponent"));
 
         List<StringTemplateArgument> arguments = include_1.arguments();

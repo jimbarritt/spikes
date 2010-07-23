@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="antx" >
+    <macrodef name="overrideProperty">
+        <attribute name="name" />
+        <sequential>
+            <property name="@{name}" value="[property @{name} not set]" />
+        </sequential>
+    </macrodef>
+
+</project>

@@ -24,6 +24,9 @@
     <property name="lib.development.dir" value="${lib.dir}/development"/>
     <property name="lib.production.dir" value="${lib.dir}/production"/>
 
+    <property name="tool.dir" value="${basedir}/tool"/>
+    <property name="tool.cloc.command" value="${tool.dir}/cloc-1.51.pl" />
+
     <property name="target.dir" value="${module.dir}/target"/>
 
     <property name="target.compilation.dir" value="${target.dir}/compilation"/>
@@ -200,6 +203,9 @@
     </target>
 
     <target name="report:cloc">
+        <exec executable="${tool.cloc.command}">            
+            <arg value="${src.dir}" />
+        </exec>
     </target>
 
     <target name="report:cobertura-html">

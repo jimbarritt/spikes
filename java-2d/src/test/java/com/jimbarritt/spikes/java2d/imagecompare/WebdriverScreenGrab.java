@@ -21,7 +21,7 @@ public class WebdriverScreenGrab {
 	public File takeScreenshot() {
         ensureOutputDirExists(outputDir);
         File outputFile = new File(outputDir, format("screenshot-%d.jpg", nextScreenshotId()));
-		firefoxDriver.saveScreenshot(outputFile);
+		firefoxDriver.getScreenshotAs(outputFile);
         return outputFile;
 	}
 

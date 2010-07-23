@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="da1d35bc-9567-4dc0-8427-2476eebd1fc0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/main/clojure/com/jimbarritt/spikes/clojure/FunctionExamples.clj" afterPath="$PROJECT_DIR$/../../../src/main/clojure/com/jimbarritt/spikes/clojure/FunctionExamples.clj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/test/com/jimbarritt/spikes/clojure/MathsTest.clj" afterPath="$PROJECT_DIR$/../../../src/test/com/jimbarritt/spikes/clojure/MathsTest.clj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/main/clojure/com/jimbarritt/spikes/clojure/Maths.clj" afterPath="$PROJECT_DIR$/../../../src/main/clojure/com/jimbarritt/spikes/clojure/Maths.clj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/main/clojure/com/jimbarritt/spikes/clojure/NamespaceUsingExample.clj" afterPath="$PROJECT_DIR$/../../../src/main/clojure/com/jimbarritt/spikes/clojure/NamespaceUsingExample.clj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/main/clojure/com/jimbarritt/spikes/clojure/VariableDeclaration.clj" afterPath="$PROJECT_DIR$/../../../src/main/clojure/com/jimbarritt/spikes/clojure/VariableDeclaration.clj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/main/clojure/com/jimbarritt/spikes/clojure/JFrameExample.clj" afterPath="$PROJECT_DIR$/../../../src/main/clojure/com/jimbarritt/spikes/clojure/JFrameExample.clj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/test/com/jimbarritt/spikes/clojure/RunAllTests.clj" afterPath="$PROJECT_DIR$/../../../src/test/com/jimbarritt/spikes/clojure/RunAllTests.clj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/main/clojure/com/jimbarritt/spikes/clojure/NamespaceExample.clj" afterPath="$PROJECT_DIR$/../../../src/main/clojure/com/jimbarritt/spikes/clojure/NamespaceExample.clj" />
     </list>
     <ignored path="$USER_HOME_GRAILS$/" />
     <ignored path="$USER_HOME_GRIFFON$/" />
@@ -404,17 +396,6 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="RunAllTests" type="ClojureScriptRunConfiguration" factoryName="Clojure Script" temporary="true">
-      <module name="clojure" />
-      <setting name="path" value="$PROJECT_DIR$/../../../src/test/com/jimbarritt/spikes/clojure/RunAllTests.clj" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="$PROJECT_DIR$/../../../src/test/com/jimbarritt/spikes/clojure" />
-      <setting name="repl" value="false" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
     <configuration default="true" type="ClojureScriptRunConfiguration" factoryName="Clojure Script">
       <module name="" />
       <setting name="path" value="" />
@@ -614,6 +595,17 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="false" name="RunAllTests" type="ClojureScriptRunConfiguration" factoryName="Clojure Script">
+      <module name="clojure" />
+      <setting name="path" value="$PROJECT_DIR$/../../../src/test/com/jimbarritt/spikes/clojure/RunAllTests.clj" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="$PROJECT_DIR$/../../../src/test/com/jimbarritt/spikes/clojure" />
+      <setting name="repl" value="false" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Clojure Script.VariableDeclaration" />
       <item index="1" class="java.lang.String" itemvalue="Clojure Script.MathsTest" />
@@ -657,7 +649,7 @@
       <window_info id="Code Graph" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2185478" sideWeight="0.6615385" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Fireworks" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Fireworks" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -688,7 +680,7 @@
     <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Trying to get tests to run" />
+    <option name="LAST_COMMIT_MESSAGE" value="Got tests running" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -704,6 +696,7 @@
     <MESSAGE value="Added some basic Examples" />
     <MESSAGE value="Addes some namespaces and also trying out a test harnes" />
     <MESSAGE value="Trying to get tests to run" />
+    <MESSAGE value="Got tests running" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />

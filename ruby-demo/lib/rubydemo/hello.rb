@@ -1,9 +1,7 @@
 module RubyDemo
 
 class Hello
-
-
-  def speak
+  def speak    
     return true
   end
 end

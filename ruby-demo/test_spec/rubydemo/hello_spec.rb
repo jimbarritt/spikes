@@ -14,7 +14,7 @@ describe RubyDemo::Hello do
     # Do nothing
   end
 
-  it "should speak" do
+  it "should speak" do    
     hello = RubyDemo::Hello.new
     hello.speak.should == true
   end

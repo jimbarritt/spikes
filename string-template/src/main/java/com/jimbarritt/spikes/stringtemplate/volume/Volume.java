@@ -2,6 +2,8 @@ package com.jimbarritt.spikes.stringtemplate.volume;
 
 import java.text.*;
 
+import static java.lang.String.format;
+
 public class Volume {
     private float value;
     private final UnitOfMeasure unitOfMeasure;
@@ -12,11 +14,11 @@ public class Volume {
     }
 
     public Volume in(UnitOfMeasure newUnitOfMeasure) {
-        return newUnitOfMeasure.convert(this);
+        return newUnitOfMeasure.convert(value, unitOfMeasure);
     }   
 
     public String toString() {
-        return unitOfMeasure.format(this);
+        return unitOfMeasure.toString(this);
     }
 
     public static abstract class UnitOfMeasure {
@@ -31,9 +33,9 @@ public class Volume {
             this.shortName = shortName;
         }
 
-        public abstract Volume convert(Volume volume);
+        public abstract Volume convert(float value, UnitOfMeasure originalUnitOfMeasure);
 
-        public String format(Volume volume) {
+        public String toString(Volume volume) {
             return decimalFormat.format(volume.value);
         }
 
@@ -46,28 +48,34 @@ public class Volume {
         }
 
         public static UnitOfMeasure LITRES = new UnitOfMeasure(new DecimalFormat("0.00"), "litres", "l") {
-            @Override public Volume convert(Volume volume) {
-                if (LITRES == volume.unitOfMeasure) {
-                    return volume;
+            @Override public Volume convert(float value, UnitOfMeasure originalUnitOfMeasure) {
+                if (LITRES == originalUnitOfMeasure) {
+                    return new Volume(value, originalUnitOfMeasure);
                 }
-                if (CC == volume.unitOfMeasure) {
-                    return new Volume(volume.value / 1000, CC);
+                if (CC == originalUnitOfMeasure) {
+                    return new Volume(value / 1000, CC);
                 }
-                throw new IllegalArgumentException("Cannot Convert Volume " + volume + " to litres");
+                throw new VolumeConversionException(value, this);
             }
         };
 
         public static UnitOfMeasure CC = new UnitOfMeasure(new DecimalFormat("0"), "cubic centimetres", "cc") {
-            @Override public Volume convert(Volume volume) {
-                if (CC == volume.unitOfMeasure) {
-                    return volume;
+            @Override public Volume convert(float value, UnitOfMeasure originalUnitOfMeasure) {
+                if (CC == originalUnitOfMeasure) {
+                    return new Volume(value, originalUnitOfMeasure);
                 }
-                if (LITRES == volume.unitOfMeasure) {
-                    return new Volume(volume.value * 1000, CC);
+                if (LITRES == originalUnitOfMeasure) {
+                    return new Volume(value * 1000, CC);
                 }
-                throw new IllegalArgumentException("Cannot Convert Volume " + volume + " to cc");
+                throw new VolumeConversionException(value, this);
             }
         };
+
+        private static class VolumeConversionException extends RuntimeException {
+            public VolumeConversionException(float value, UnitOfMeasure unitOfMeasure) {
+                super(format("Cannot Convert Volume %0.00f to units %s", value, unitOfMeasure.shortName()));
+            }
+        }
     }
 
 }

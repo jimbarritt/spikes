@@ -2,44 +2,56 @@
 <project name="environment">
 
     <import file="macros/logging.xml"/>
-    <import file="module.xml" />
+    <import file="module.xml"/>
 
     <property name="target.environment" value="LOCAL"/>
     <property name="target.db" value="oracle"/>
 
-    <property name="env.properties.file" value="${src.config.dir}/dbdeploy-spike-${target.environment}.properties"/>
-    <property file="${env.properties.file}" />
+    <property name="env.properties.file" value="${src.config.dir}/${module.name}-${target.environment}.properties"/>
+    <property file="${env.properties.file}"/>
     <available file="${env.properties.file}" property="env.properties.file.available"/>
 
-    <property name="db.username" value="not-set" />
-    <property name="db.password" value="not-set" />
-    <property name="db.jdbc.url" value="not-set" />
-    
-    <property name="db.jdbc.oracle.url" value="not-set" />
-    <property name="db.jdbc.h2.url" value="not-set" />
+    <property name="hostname" value="not-set" />
+    <property name="db.username" value="not-set"/>
+    <property name="db.password" value="not-set"/>
+    <property name="db.jdbc.url" value="not-set"/>
+
+    <property name="db.jdbc.oracle.url" value="not-set"/>
+    <property name="db.jdbc.h2.url" value="not-set"/>
 
 
+    <target name="init-properties"
+            depends="check-properties-file, init-hostname">
+        <log.info message="[${env.properties.file}]" task="environment.init-properties"/>
+    </target>
 
-    <target name="init-environment-properties"
-            depends="check-properties-file">
-        <log.info message="${env.properties.file} " task="init-environment-properties"/>
-        <log.info message="${env.properties.file.available} " task="init-environment-properties"/>
+    <target name="init-hostname">
+        <exec executable="hostname" outputproperty="hostname.from.os">
+            <arg line="-s"/>
+        </exec>
+
+        <script language="javascript">
+            hostNameFromOs = project.getProperty("hostname.from.os");
+            project.setProperty("hostname", hostNameFromOs);
+        </script>        
     </target>
 
     <target name="check-properties-file"
             unless="env.properties.file.available">
-        <fail message="No properties file called ${env.properties.file}" />
+        <fail message="[environment] No properties file called ${env.properties.file}"/>
     </target>
 
-    <target name="select-target-db" depends="init-environment-properties">
+
+
+    <target name="select-target-db" depends="init-properties">
         <script language="javascript">
             propertyName = "db.jdbc." + project.getProperty("target.db") + ".url";
             propertyValue = project.getProperty(propertyName);
             project.setProperty("db.jdbc.url", propertyValue);
         </script>
 
-        <log.info message="Selected target.db to be ${target.db} " task="select-target-db"/>
-        <log.info message="db.jdbc.url=${db.jdbc.url}" task="select-target-db"/>
+        <log.info message="Selected target.db to be ${target.db} " task="environment.select-target-db"/>
+        <log.info message="db.jdbc.url=${db.jdbc.url}" task="environment.select-target-db"/>
     </target>
 
 </project>

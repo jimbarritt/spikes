@@ -3,6 +3,7 @@
 
     <import file="macros/logging.xml" />
 
+    <property name="module.name" value="dbdeploy-spike"/>
     <property name="module.dir" value="not-set"/>
 
     <property name="src.dir" value="${module.dir}/src"/>

@@ -4,8 +4,6 @@
     <list default="true" readonly="true" id="87c6cb1f-74ab-4d52-8210-c5e354800fcd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/build/ant/environment.xml" afterPath="$PROJECT_DIR$/../../../src/build/ant/environment.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../src/build/ant/macros/antx.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../build.xml" afterPath="$PROJECT_DIR$/../../../build.xml" />
     </list>
     <ignored path="$USER_HOME_GRIFFON$/" />
     <ignored path="$USER_HOME_GRAILS$/" />
@@ -85,7 +83,7 @@
       <file leaf-file-name="environment.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../../../src/build/ant/environment.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="27" selection-start="762" selection-end="762" vertical-scroll-proportion="0.093541205">
+            <state line="11" column="87" selection-start="499" selection-end="499" vertical-scroll-proportion="0.5144766">
               <folding />
             </state>
           </provider>
@@ -697,7 +695,7 @@
     <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Trying to get an overriden property" />
+    <option name="LAST_COMMIT_MESSAGE" value="Getting environment properties loaded up" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -717,6 +715,7 @@
     <MESSAGE value="Fancy pants scripting and a nice logging macro" />
     <MESSAGE value="Trying to switch between oracle and h2" />
     <MESSAGE value="Trying to get an overriden property" />
+    <MESSAGE value="Getting environment properties loaded up" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -830,7 +829,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/build/ant/environment.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="27" selection-start="762" selection-end="762" vertical-scroll-proportion="0.093541205">
+        <state line="11" column="87" selection-start="499" selection-end="499" vertical-scroll-proportion="0.5144766">
           <folding />
         </state>
       </provider>

@@ -7,6 +7,10 @@
     <property name="target.environment" value="LOCAL"/>
     <property name="target.db" value="oracle"/>
 
+    <property name="env.properties.file" value="${src.config.dir}/dbdeploy-spike-${target.environment}.properties"/>
+    <property file="${env.properties.file}" />
+    <available file="${env.properties.file}" property="env.properties.file.available"/>
+
     <property name="db.username" value="not-set" />
     <property name="db.password" value="not-set" />
     <property name="db.jdbc.url" value="not-set" />
@@ -14,11 +18,17 @@
     <property name="db.jdbc.oracle.url" value="not-set" />
     <property name="db.jdbc.h2.url" value="not-set" />
 
-    <property name="env.properties.file" value="${src.config.dir}/deploy-spike-${target.environment}.properties"/>
-    <property file="${env.properties.file}" />
 
-    <target name="init-environment-properties">
-        <log.info message="${env.properties.file} " task="init-environment-properties"/>        
+
+    <target name="init-environment-properties"
+            depends="check-properties-file">
+        <log.info message="${env.properties.file} " task="init-environment-properties"/>
+        <log.info message="${env.properties.file.available} " task="init-environment-properties"/>
+    </target>
+
+    <target name="check-properties-file"
+            unless="env.properties.file.available">
+        <fail message="No properties file called ${env.properties.file}" />
     </target>
 
     <target name="select-target-db" depends="init-environment-properties">

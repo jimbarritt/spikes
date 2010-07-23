@@ -15,9 +15,6 @@
     <import file="src/build/ant/test.xml" />
     <import file="src/deploy/ant/dbdeploy.xml" />
 
-
-    <property file="${src.config.dir}/deploy-spike-${target.environment}.properties" />
-
     <target name="clean"
             description="Remove all files created by the build/test process."
             depends="module.clean-target"/>

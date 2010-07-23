@@ -2,22 +2,26 @@
 <project name="environment">
 
     <import file="macros/logging.xml"/>
-    <import file="macros/antx.xml"/>
-
-    <property name="value.not.set" value="not-set"/>
+    <import file="module.xml" />
 
     <property name="target.environment" value="LOCAL"/>
     <property name="target.db" value="oracle"/>
 
-    <overrideProperty name="db.username" />
-    <overrideProperty name="db.password" />
+    <property name="db.username" value="not-set" />
+    <property name="db.password" value="not-set" />
+    <property name="db.jdbc.url" value="not-set" />
+    
+    <property name="db.jdbc.oracle.url" value="not-set" />
+    <property name="db.jdbc.h2.url" value="not-set" />
 
-    <overrideProperty name="db.jdbc.url" />
+    <property name="env.properties.file" value="${src.config.dir}/deploy-spike-${target.environment}.properties"/>
+    <property file="${env.properties.file}" />
 
-    <overrideProperty name="db.jdbc.oracle.url" />
-    <overrideProperty name="db.jdbc.h2.url" />
+    <target name="init-environment-properties">
+        <log.info message="${env.properties.file} " task="init-environment-properties"/>        
+    </target>
 
-    <target name="select-target-db">
+    <target name="select-target-db" depends="init-environment-properties">
         <script language="javascript">
             propertyName = "db.jdbc." + project.getProperty("target.db") + ".url";
             propertyValue = project.getProperty(propertyName);

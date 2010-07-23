@@ -4,9 +4,8 @@
     <list default="true" readonly="true" id="87c6cb1f-74ab-4d52-8210-c5e354800fcd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/build/ant/environment.xml" afterPath="$PROJECT_DIR$/../../../src/build/ant/environment.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../src/build/ant/macros/antx.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/jim.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/jim.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/deploy/ant/dbdeploy.xml" afterPath="$PROJECT_DIR$/../../../src/deploy/ant/dbdeploy.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../src/build/ant/macros/antx.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../build.xml" afterPath="$PROJECT_DIR$/../../../build.xml" />
     </list>
     <ignored path="$USER_HOME_GRIFFON$/" />
     <ignored path="$USER_HOME_GRAILS$/" />
@@ -86,16 +85,25 @@
       <file leaf-file-name="environment.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../../../src/build/ant/environment.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="0" selection-start="936" selection-end="936" vertical-scroll-proportion="0.8129176">
+            <state line="20" column="27" selection-start="762" selection-end="762" vertical-scroll-proportion="0.093541205">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="antx.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../src/build/ant/macros/antx.xml">
+      <file leaf-file-name="compile.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../src/build/ant/compile.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="18" selection-start="57" selection-end="57" vertical-scroll-proportion="0.0">
+            <state line="4" column="32" selection-start="111" selection-end="139" vertical-scroll-proportion="-3.652174">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../build.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="35" selection-start="375" selection-end="375" vertical-scroll-proportion="-7.304348">
               <folding />
             </state>
           </provider>
@@ -105,15 +113,6 @@
         <entry file="file://$PROJECT_DIR$/../../../src/build/ant/macros/java.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state line="3" column="27" selection-start="0" selection-end="274" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dbdeploy-spike-LOCAL.properties" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../src/config/dbdeploy-spike-LOCAL.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="24" selection-start="59" selection-end="137" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -153,10 +152,10 @@
         <option value="$PROJECT_DIR$/../../../src/build/ant/macros/logging.xml" />
         <option value="$PROJECT_DIR$/../../../src/config/dbdeploy-spike-LOCAL.properties" />
         <option value="$PROJECT_DIR$/../../../src/build/ant/module.xml" />
-        <option value="$PROJECT_DIR$/../../../build.xml" />
         <option value="$PROJECT_DIR$/../../../src/deploy/ant/dbdeploy.xml" />
         <option value="$PROJECT_DIR$/../../../src/build/ant/macros/ant.xml" />
         <option value="$PROJECT_DIR$/../../../src/build/ant/macros/antx.xml" />
+        <option value="$PROJECT_DIR$/../../../build.xml" />
         <option value="$PROJECT_DIR$/../../../src/build/ant/environment.xml" />
       </list>
     </option>
@@ -657,6 +656,7 @@
       <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32948717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14090583" sideWeight="0.6615385" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Code explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="JSTestDriver Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -680,7 +680,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -698,7 +697,7 @@
     <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Trying to switch between oracle and h2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Trying to get an overriden property" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -717,6 +716,7 @@
     <MESSAGE value="Nicely organised ant files" />
     <MESSAGE value="Fancy pants scripting and a nice logging macro" />
     <MESSAGE value="Trying to switch between oracle and h2" />
+    <MESSAGE value="Trying to get an overriden property" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -759,13 +759,6 @@
         <state line="6" column="53" selection-start="0" selection-end="282" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/build/ant/compile.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="40" selection-start="70" selection-end="106" vertical-scroll-proportion="-2.7391305">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/build/ant/test.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="18" selection-start="156" selection-end="156" vertical-scroll-proportion="2.7391305">
@@ -786,13 +779,6 @@
     <entry file="file://$PROJECT_DIR$/../../../src/config/dbdeploy-spike-CI.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="49" selection-start="1321" selection-end="1321" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/build/ant/module.xml">
@@ -828,16 +814,23 @@
         <state line="3" column="27" selection-start="0" selection-end="274" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/build/ant/macros/antx.xml">
+    <entry file="file://$PROJECT_DIR$/../../../build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="18" selection-start="57" selection-end="57" vertical-scroll-proportion="0.0">
+        <state line="12" column="35" selection-start="375" selection-end="375" vertical-scroll-proportion="-7.304348">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/build/ant/compile.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="32" selection-start="111" selection-end="139" vertical-scroll-proportion="-3.652174">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/build/ant/environment.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="936" selection-end="936" vertical-scroll-proportion="0.8129176">
+        <state line="20" column="27" selection-start="762" selection-end="762" vertical-scroll-proportion="0.093541205">
           <folding />
         </state>
       </provider>

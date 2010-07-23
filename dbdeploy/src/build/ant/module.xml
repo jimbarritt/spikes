@@ -6,6 +6,7 @@
     <property name="module.dir" value="not-set"/>
 
     <property name="src.dir" value="${module.dir}/src"/>
+    <property name="src.config.dir" value="${src.dir}/config"/>
     <property name="src.deploy.dir" value="${src.dir}/deploy"/>
     <property name="src.deploy.db.dir" value="${src.deploy.dir}/db"/>
     <property name="src.main.dir" value="${src.dir}/main"/>

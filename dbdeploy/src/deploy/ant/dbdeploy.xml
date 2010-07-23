@@ -5,8 +5,17 @@
     
     <macrodef name="dbdeploy.init-live">
         <attribute name="src.dbdeploy.dir" />
+        <attribute name="dbdeploy.username" />
+        <attribute name="dbdeploy.password" />
+        <attribute name="dbdeploy.jdbc.url" />
+        <attribute name="dbdeploy.db.type" default="oracle" />
+
         <sequential>
-            <log.info task="dbdeploy.init-live" message="Initialising the database in live mode from [@{src.dbdeploy.dir}]" />            
+            <log.info message="Initialising the database in live mode. dbdeploy scripts rooted in: [@{src.dbdeploy.dir}]" task="dbdeploy.init-live" />
+            <log.info message="dbdeploy.username : @{dbdeploy.username}" task="dbdeploy.init-live" />
+            <log.info message="dbdeploy.password : @{dbdeploy.password}" task="dbdeploy.init-live" />
+            <log.info message="dbdeploy.jdbc.url : @{dbdeploy.jdbc.url}" task="dbdeploy.init-live" />
+            <log.info message="dbdeploy.db.type  : @{dbdeploy.db.type}" task="dbdeploy.init-live" />
         </sequential>
     </macrodef>
 

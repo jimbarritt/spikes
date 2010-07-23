@@ -10,9 +10,13 @@
     <property name="module.dir" value="${basedir}" />
 
     <import file="src/build/ant/module.xml" />
+    <import file="src/build/ant/environment.xml" />
     <import file="src/build/ant/compile.xml" />
     <import file="src/build/ant/test.xml" />
     <import file="src/deploy/ant/dbdeploy.xml" />
+
+
+    <property file="${src.config.dir}/deploy-spike-${target.environment}.properties" />
 
     <target name="clean"
             description="Remove all files created by the build/test process."
@@ -29,8 +33,12 @@
                      compile.unit-test-java, test.unit"/>
 
     <target name="init-live-db"
-            description="Initialises the database in live mode.">
-         <dbdeploy.init-live src.dbdeploy.dir="${src.deploy.db.dir}" />
+            description="Initialises the database in live mode."
+            depends="environment.select-target-db">
+         <dbdeploy.init-live src.dbdeploy.dir="${src.deploy.db.dir}"
+                             dbdeploy.username="${db.username}"
+                             dbdeploy.password="${db.password}"
+                             dbdeploy.jdbc.url="${db.jdbc.url}"/>
     </target>
 
     

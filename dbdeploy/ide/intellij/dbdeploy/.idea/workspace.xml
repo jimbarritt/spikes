@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="87c6cb1f-74ab-4d52-8210-c5e354800fcd" name="Default" comment="">
+    <list default="true" readonly="true" id="87c6cb1f-74ab-4d52-8210-c5e354800fcd" name="Default" comment="Fancy pants scripting and a nice logging macro">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../src/config/dbdeploy-spike-LOCAL.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../src/config/dbdeploy-spike-LIVE.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../src/config/dbdeploy-spike-CI.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/jim.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/jim.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../build.xml" afterPath="$PROJECT_DIR$/../../../build.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/deploy/ant/dbdeploy.xml" afterPath="$PROJECT_DIR$/../../../src/deploy/ant/dbdeploy.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../src/build/ant/environment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/build/ant/module.xml" afterPath="$PROJECT_DIR$/../../../src/build/ant/module.xml" />
     </list>
-    <ignored path="$USER_HOME_GRAILS$/" />
     <ignored path="$USER_HOME_GRIFFON$/" />
+    <ignored path="$USER_HOME_GRAILS$/" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,19 +79,10 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="test.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../src/build/ant/test.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="94" selection-start="851" selection-end="937" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dbdeploy.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="dbdeploy.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../src/deploy/ant/dbdeploy.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="27" selection-start="425" selection-end="425" vertical-scroll-proportion="0.3423913">
+            <state line="17" column="69" selection-start="968" selection-end="968" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -91,16 +91,16 @@
       <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="3" selection-start="1169" selection-end="1169" vertical-scroll-proportion="0.0">
+            <state line="37" column="49" selection-start="1321" selection-end="1321" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="compile.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../src/build/ant/compile.xml">
+      <file leaf-file-name="environment.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../../src/build/ant/environment.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="40" selection-start="70" selection-end="106" vertical-scroll-proportion="0.0">
+            <state line="12" column="26" selection-start="397" selection-end="397" vertical-scroll-proportion="0.5612472">
               <folding />
             </state>
           </provider>
@@ -109,16 +109,25 @@
       <file leaf-file-name="module.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../src/build/ant/module.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="4" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0">
+            <state line="62" column="95" selection-start="2419" selection-end="2506" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="logging.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../src/build/ant/macros/logging.xml">
+      <file leaf-file-name="dbdeploy-spike-LOCAL.properties" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../src/config/dbdeploy-spike-LOCAL.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="34" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0">
+            <state line="4" column="24" selection-start="59" selection-end="137" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dbdeploy-spike-LIVE.properties" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../src/config/dbdeploy-spike-LIVE.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -132,7 +141,7 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
-    <option name="GIT_EXECUTABLE" value="git" />
+    <option name="GIT_EXECUTABLE" value="/usr/local/bin/git" />
     <option name="CHECKOUT_INCLUDE_TAGS" value="false" />
   </component>
   <component name="IdeDocumentHistory">
@@ -147,11 +156,13 @@
         <option value="$PROJECT_DIR$/../../../src/build/ant/macros/output.xml" />
         <option value="$PROJECT_DIR$/../../../src/build/ant/macros/log.xml" />
         <option value="$PROJECT_DIR$/../../../src/build/ant/compile.xml" />
-        <option value="$PROJECT_DIR$/../../../src/build/ant/module.xml" />
         <option value="$PROJECT_DIR$/../../../src/build/ant/test.xml" />
-        <option value="$PROJECT_DIR$/../../../src/deploy/ant/dbdeploy.xml" />
-        <option value="$PROJECT_DIR$/../../../build.xml" />
         <option value="$PROJECT_DIR$/../../../src/build/ant/macros/logging.xml" />
+        <option value="$PROJECT_DIR$/../../../src/deploy/ant/dbdeploy.xml" />
+        <option value="$PROJECT_DIR$/../../../src/config/dbdeploy-spike-LOCAL.properties" />
+        <option value="$PROJECT_DIR$/../../../src/build/ant/module.xml" />
+        <option value="$PROJECT_DIR$/../../../build.xml" />
+        <option value="$PROJECT_DIR$/../../../src/build/ant/environment.xml" />
       </list>
     </option>
   </component>
@@ -161,7 +172,21 @@
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
-      <profile-state />
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id>Ant inspections</id>
+          </State>
+          <State>
+            <id>Inspections</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>AntMissingPropertiesFileInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
     </entry>
   </component>
   <component name="ProjectLevelVcsManager">
@@ -190,9 +215,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Favorites" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -242,6 +264,10 @@
               <option name="myItemId" value="deploy" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -279,11 +305,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="build" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ant" />
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -308,45 +330,12 @@
               <option name="myItemId" value="ant" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="macros" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dbdeploy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dbdeploy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dbdeploy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dbdeploy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="deployment" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Favorites" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -386,6 +375,23 @@
     <option name="showLabels" value="true" />
   </component>
   <component name="RunManager" selected="Application.H2 Web Console">
+    <configuration default="true" type="PhpRunConfigurationType" factoryName="PHP">
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="FtpUpload" enabled="false" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="ValidateXdebugSetup" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="ValidateXdebugSetup" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="RSpecRunConfigurationType" factoryName="RSpec">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="" />
@@ -505,6 +511,15 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="FtpUpload" enabled="false" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="ValidateXdebugSetup" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" />
       <module name="" />
@@ -619,14 +634,14 @@
     <editor active="true" />
     <layout>
       <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32948717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14152299" sideWeight="0.6615385" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14090583" sideWeight="0.6615385" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Code explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="JSTestDriver Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Code Graph" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980227" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Code Graph" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34148094" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Fireworks" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -701,22 +716,12 @@
         <filter targetName="unit-test" isVisible="true" />
         <filter targetName="unit-test-java" isVisible="false" />
       </targetFilters>
-      <treeView value="false" />
+      <treeView value="true" />
       <verbose value="true" />
       <viewClosedWhenNoErrors value="false" />
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/../../../lib/production/h2-1.2.139.jar!/org/h2/tools/Console.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="20" selection-start="157" selection-end="157" vertical-scroll-proportion="0.234375" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../lib/development/h2-1.2.139-src.zip!/org/h2/tools/Console.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="16" selection-start="1604" selection-end="1604" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/deploy/db/init-db/oracle/create_users.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -727,46 +732,9 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/deploy/db/init-db/h2/create_users.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/deploy/db/init-db/h2/create_schemas.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/build/ant/macros/junit.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="53" selection-start="0" selection-end="282" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/build/ant/macros/java.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="27" selection-start="0" selection-end="274" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/build/ant/test.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="94" selection-start="851" selection-end="937" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="3" selection-start="1169" selection-end="1169" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/build/ant/compile.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="40" selection-start="70" selection-end="106" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/build/ant/module.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="4" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/build/ant/macros/logging.xml">
@@ -774,9 +742,78 @@
         <state line="12" column="34" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/build/ant/macros/junit.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="53" selection-start="0" selection-end="282" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/build/ant/compile.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="40" selection-start="70" selection-end="106" vertical-scroll-proportion="-2.7391305">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/build/ant/test.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="18" selection-start="156" selection-end="156" vertical-scroll-proportion="2.7391305">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/deploy/db/init-db/h2/create_schemas.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/deploy/db/init-db/h2/create_users.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/config/dbdeploy-spike-CI.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/deploy/ant/dbdeploy.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="27" selection-start="425" selection-end="425" vertical-scroll-proportion="0.3423913">
+        <state line="17" column="69" selection-start="968" selection-end="968" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="49" selection-start="1321" selection-end="1321" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/build/ant/module.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="95" selection-start="2419" selection-end="2506" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/config/dbdeploy-spike-LOCAL.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="24" selection-start="59" selection-end="137" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/config/dbdeploy-spike-LIVE.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/build/ant/environment.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="26" selection-start="397" selection-end="397" vertical-scroll-proportion="0.5612472">
           <folding />
         </state>
       </provider>

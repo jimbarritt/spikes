@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="environment">
+
+    <import file="macros/logging.xml" />
+
+    <property name="value.not.set" value="not-set" />
+
+    <property name="target.environment" value="LOCAL" />
+    <property name="target.db" value="oracle" />
+    
+    <property name="db.username" value="${value.not.set}"/>
+    <property name="db.password" value="${value.not.set}"/>
+
+    <property name="db.jdbc.oracle.url" value="db.jdbc.oracle.url ${value.not.set}"/>
+    <property name="db.jdbc.h2.url" value="db.jdbc.h2.url ${value.not.set}"/>
+
+    <property name="db.jdbc.url" value="${value.not.set}" />
+
+    <target name="select-target-db">
+        <script language="javascript">
+            propertyName = "db.jdbc." + project.getProperty("target.db") + ".url";
+            propertyValue = project.getProperty(propertyName);
+            project.setNewProperty("db.jdbc.url", propertyValue);
+        </script>
+        <log.info message="Selected target.db to be ${target.db}, db.jdbc.url=${db.jdbc.url}" task="select-target-db" />
+    </target>
+
+</project>

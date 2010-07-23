@@ -8,7 +8,7 @@
         <attribute name="dbdeploy.username" />
         <attribute name="dbdeploy.password" />
         <attribute name="dbdeploy.jdbc.url" />
-        <attribute name="dbdeploy.target.db" default="oracle" />
+        <attribute name="dbdeploy.target.db" />
 
         <sequential>
             <log.info message="Initialising the database in live mode. " task="dbdeploy.init-live" />

@@ -35,7 +35,8 @@
          <dbdeploy.init-live src.dbdeploy.dir="${src.deploy.db.dir}"
                              dbdeploy.username="${db.username}"
                              dbdeploy.password="${db.password}"
-                             dbdeploy.jdbc.url="${db.jdbc.url}"/>
+                             dbdeploy.jdbc.url="${db.jdbc.url}"
+                             dbdeploy.target.db="${target.db}"/>
     </target>
 
     

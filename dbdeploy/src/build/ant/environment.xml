@@ -5,7 +5,7 @@
     <import file="module.xml"/>
 
     <property name="target.environment" value="LOCAL"/>
-    <property name="target.db" value="oracle"/>
+    <property name="target.db" value="oracle.xe"/>
 
     <property name="env.properties.file" value="${src.config.dir}/${module.name}-${target.environment}.properties"/>
     <property file="${env.properties.file}"/>
@@ -16,7 +16,7 @@
     <property name="db.password" value="not-set"/>
     <property name="db.jdbc.url" value="not-set"/>
 
-    <property name="db.jdbc.oracle.url" value="not-set"/>
+    <property name="db.jdbc.oracle.xe.url" value="not-set"/>
     <property name="db.jdbc.h2.url" value="not-set"/>
 
 

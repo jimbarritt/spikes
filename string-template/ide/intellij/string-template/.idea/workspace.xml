@@ -27,7 +27,7 @@
     <SUITE FILE_PATH="coverage/string-template$VolumeAttributeRendererTest_formatsInLitresWithShortFormat.ic" NAME="VolumeAttributeRendererTest.formatsInLitresWithShortFormat Coverage Results" MODIFIED="1279876266400" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.jimbarritt.spikes.stringtemplate.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/string-template$Run_All_Tests.ic" NAME="Run All Tests Coverage Results" MODIFIED="1279876293416" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/string-template$Run_All_Tests.ic" NAME="Run All Tests Coverage Results" MODIFIED="1279876751026" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.jimbarritt.spikes.stringtemplate.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/string-template$StringTemplateGroupTest.ic" NAME="StringTemplateGroupTest Coverage Results" MODIFIED="1278084144679" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
@@ -57,19 +57,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
       <breakpoint url="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/InheritanceTest.java" line="33" class="com.jimbarritt.spikes.stringtemplate.InheritanceTest" package="com.jimbarritt.spikes.stringtemplate">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/io/InlineStringTemplateRenderer.java" line="11" class="com.jimbarritt.spikes.stringtemplate.io.InlineStringTemplateRenderer" package="com.jimbarritt.spikes.stringtemplate.io">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -149,7 +136,7 @@
       <file leaf-file-name="VolumeAttributeRendererTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/volume/VolumeAttributeRendererTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="4" selection-start="364" selection-end="364" vertical-scroll-proportion="0.2542056">
+            <state line="9" column="0" selection-start="280" selection-end="280" vertical-scroll-proportion="0.039252337">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -160,7 +147,7 @@
       <file leaf-file-name="InlineStringTemplateRenderer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/io/InlineStringTemplateRenderer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="16" selection-start="781" selection-end="781" vertical-scroll-proportion="0.0">
+            <state line="43" column="30" selection-start="1366" selection-end="1366" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1268,7 +1255,7 @@
     <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Building fluent api for InlineStringTemplate&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added with().attribute()&#10;" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1281,7 +1268,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Got 100% test coverage back and removed unused constructor from the Interface st group loader" />
     <MESSAGE value="Introduced factory to control which kind of StringTemplateGroup we load up" />
     <MESSAGE value="Committing after being away from code" />
     <MESSAGE value="Added a test to try and introspect templates" />
@@ -1306,6 +1292,7 @@
     <MESSAGE value="Removing exceptions from log output&#10;" />
     <MESSAGE value="Moving Volume into main src tree so that coverage gets reported. Also removing dependancy on private members between volume and unitof measure&#10;" />
     <MESSAGE value="Building fluent api for InlineStringTemplate&#10;" />
+    <MESSAGE value="Added with().attribute()&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1411,7 +1398,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/io/InlineStringTemplateRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="16" selection-start="781" selection-end="781" vertical-scroll-proportion="0.0">
+        <state line="43" column="30" selection-start="1366" selection-end="1366" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1420,7 +1407,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/volume/VolumeAttributeRendererTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="4" selection-start="364" selection-end="364" vertical-scroll-proportion="0.2542056">
+        <state line="9" column="0" selection-start="280" selection-end="280" vertical-scroll-proportion="0.039252337">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

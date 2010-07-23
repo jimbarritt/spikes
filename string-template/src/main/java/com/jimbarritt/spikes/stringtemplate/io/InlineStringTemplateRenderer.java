@@ -6,7 +6,15 @@ import org.antlr.stringtemplate.*;
 import java.util.*;
 
 public class InlineStringTemplateRenderer {
-    public static String renderStringTemplate(String template, AttributeList attributes) {
+    private String template;
+    private AttributeList attributes;
+
+    public InlineStringTemplateRenderer template(String template) {
+        this.template = template;
+        return this;
+    }
+
+    String renderTemplate() {
         StringTemplate stringTemplate = new StringTemplate(template);
         stringTemplate.registerRenderer(Volume.class, new VolumeAttributeRenderer());
         for (Attribute attribute : attributes) {
@@ -15,16 +23,26 @@ public class InlineStringTemplateRenderer {
         return stringTemplate.toString();
     }
 
-    public static AttributeList with() {
-        return new AttributeList();
+    public AttributeList with() {
+        attributes = new AttributeList(this);
+        return attributes;
     }
 
     public static class AttributeList implements Iterable<Attribute> {
         private List<Attribute> attributes = new ArrayList<Attribute>();
+        private final InlineStringTemplateRenderer parent;
+
+        public AttributeList(InlineStringTemplateRenderer parent) {
+            this.parent = parent;
+        }
 
         public AttributeList attribute(String key, Object value) {
             attributes.add(new Attribute(key, value));
             return this;
+        }
+
+        public String toString() {
+            return parent.renderTemplate();
         }
 
         @Override public Iterator<Attribute> iterator() {

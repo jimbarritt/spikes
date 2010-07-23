@@ -47,7 +47,7 @@ public class StringTemplateIntrospectorTest {
 
         StringTemplateArgument argument_2 = arguments.get(1);
         assertThat(argument_2.name(), is("text"));
-        assertThat(argument_2.value(), is("<b>Some default text</b>"));
+        assertThat(argument_2.value(), is("<strong>Some default text</strong>"));
 
         StringTemplateArgument argument_3 = arguments.get(2);
         assertThat(argument_3.name(), is("editable"));

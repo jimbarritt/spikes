@@ -1,18 +1,19 @@
-package com.jimbarritt.spikes.stringtemplate;
+package com.jimbarritt.spikes.stringtemplate.volume;
 
 import com.jimbarritt.spikes.stringtemplate.volume.*;
 import org.antlr.stringtemplate.*;
 import org.junit.*;
 
+import static com.jimbarritt.spikes.stringtemplate.volume.Volume.UnitOfMeasure.LITRES;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
-public class CustomFormatTest {
+public class VolumeAttributeRendererTest {
 
     @Test
     public void canFormatInLitres() {
         String representation = renderStringTemplate("My car has an engine size of $engineSize;format=\"litres\"$",
-                                                     new Volume(20, Volume.UnitOfMeasure.LITRES));
+                                                     new Volume(20, LITRES));
 
         assertThat(representation, is("My car has an engine size of 20.00 litres"));
     }
@@ -20,9 +21,22 @@ public class CustomFormatTest {
     @Test
     public void canConvertToCc() {
         String representation = renderStringTemplate("My car has an engine size of $engineSize;format=\"cc\"$",
-                                                     new Volume(20, Volume.UnitOfMeasure.LITRES));
+                                                     new Volume(20, LITRES));
 
         assertThat(representation, is("My car has an engine size of 20000 cubic centimetres"));
+    }
+
+    @Test
+    public void canFormatCcInShortFormat() {
+        String representation = renderStringTemplate("My car has an engine size of $engineSize;format=\"cc-short\"$",
+                                                     new Volume(20, LITRES));
+
+        assertThat(representation, is("My car has an engine size of 20000 cc"));
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void failsIfFormatNotRecognised() {
+        renderStringTemplate("My car has an engine size of $engineSize;format=\"foobar\"$", new Volume(20, LITRES));
     }
 
     private static String renderStringTemplate(String template, Volume volume) {

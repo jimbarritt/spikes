@@ -22,7 +22,7 @@ public class VolumeAttributeRenderer implements AttributeRenderer {
             return renderVolumeWithLongName(volume, CC);
         }
 
-        throw new IllegalArgumentException(String.format("Unrecognised format ["));
+        throw new IllegalArgumentException(String.format("Unrecognised format [%s]", formatName));
     }
 
     private static String renderVolumeWithLongName(Volume inputVolume, Volume.UnitOfMeasure unitOfMeasure) {

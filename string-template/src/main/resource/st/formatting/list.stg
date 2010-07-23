@@ -1,0 +1,24 @@
+group list;
+
+simpleList(list) ::= <<
+<ul>
+$list;format="toUpper", separator=" and ", null="not-set"$
+</ul>
+>>
+
+listWithSeparator(list) ::= <<
+<ul>
+$trunc(list):withSeparator():li():newline()$$last(list):li()$
+</ul>    
+>>
+
+
+withSeparator(item) ::= "$item$ |"
+
+li(item) ::= "  <li>$item$</li>"
+
+newline(item) ::= "$item$
+"
+
+
+

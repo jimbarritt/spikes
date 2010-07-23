@@ -51,7 +51,7 @@ public class Volume {
                     return volume;
                 }
                 if (CC == volume.unitOfMeasure) {
-                    return new Volume(volume.value * 1000, CC);
+                    return new Volume(volume.value / 1000, CC);
                 }
                 throw new IllegalArgumentException("Cannot Convert Volume " + volume + " to litres");
             }
@@ -63,7 +63,7 @@ public class Volume {
                     return volume;
                 }
                 if (LITRES == volume.unitOfMeasure) {
-                    return new Volume(volume.value / 1000, CC);
+                    return new Volume(volume.value * 1000, CC);
                 }
                 throw new IllegalArgumentException("Cannot Convert Volume " + volume + " to cc");
             }

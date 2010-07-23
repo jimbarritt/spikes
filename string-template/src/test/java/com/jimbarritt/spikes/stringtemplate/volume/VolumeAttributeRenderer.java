@@ -84,15 +84,12 @@ public class VolumeAttributeRenderer implements AttributeRenderer {
         }
 
         protected String renderVolumeWithLongName(Volume inputVolume) {
-            return renderVolume(inputVolume.in(unitOfMeasure), unitOfMeasure.longName());
+            return format("%s %s", inputVolume.in(unitOfMeasure), unitOfMeasure.longName());
         }
 
         protected String renderVolumeWithShortName(Volume inputVolume) {
-            return renderVolume(inputVolume.in(unitOfMeasure), unitOfMeasure.shortName());
+            return format("%s%s", inputVolume.in(unitOfMeasure), unitOfMeasure.shortName());
         }
 
-        private String renderVolume(Volume volume, String units) {
-            return format("%s %s", volume, units);
-        }
     }
 }

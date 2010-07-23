@@ -1,37 +1,45 @@
 package com.jimbarritt.spikes.stringtemplate.volume;
 
-import com.jimbarritt.spikes.stringtemplate.volume.*;
 import org.antlr.stringtemplate.*;
 import org.junit.*;
 
-import static com.jimbarritt.spikes.stringtemplate.volume.Volume.UnitOfMeasure.LITRES;
-import static org.hamcrest.core.Is.is;
+import static com.jimbarritt.spikes.stringtemplate.volume.Volume.UnitOfMeasure.*;
+import static org.hamcrest.core.Is.*;
 import static org.junit.Assert.*;
 
 public class VolumeAttributeRendererTest {
 
     @Test
-    public void canFormatInLitres() {
+    public void formatsInLitres() {
         String representation = renderStringTemplate("My car has an engine size of $engineSize;format=\"litres\"$",
-                                                     new Volume(20, LITRES));
+                new Volume(20, LITRES));
 
         assertThat(representation, is("My car has an engine size of 20.00 litres"));
     }
 
     @Test
-    public void canConvertToCc() {
+    public void formatsInLitresWithShortFormat() {
+        String representation = renderStringTemplate("My car has an engine size of $engineSize;format=\"litres-short\"$",
+                new Volume(20, LITRES));
+
+        assertThat(representation, is("My car has an engine size of 20.00l"));
+    }
+
+
+    @Test
+    public void convertsToCc() {
         String representation = renderStringTemplate("My car has an engine size of $engineSize;format=\"cc\"$",
-                                                     new Volume(20, LITRES));
+                new Volume(20, LITRES));
 
         assertThat(representation, is("My car has an engine size of 20000 cubic centimetres"));
     }
 
     @Test
-    public void canFormatCcInShortFormat() {
+    public void formatsCcInShortFormat() {
         String representation = renderStringTemplate("My car has an engine size of $engineSize;format=\"cc-short\"$",
-                                                     new Volume(20, LITRES));
+                new Volume(20, LITRES));
 
-        assertThat(representation, is("My car has an engine size of 20000 cc"));
+        assertThat(representation, is("My car has an engine size of 20000cc"));
     }
 
     @Test(expected = IllegalArgumentException.class)
@@ -43,7 +51,7 @@ public class VolumeAttributeRendererTest {
         StringTemplate stringTemplate = new StringTemplate(template);
         stringTemplate.registerRenderer(Volume.class, new VolumeAttributeRenderer());
         stringTemplate.setAttribute("engineSize", volume);
-        return stringTemplate.toString();        
+        return stringTemplate.toString();
     }
 
 }

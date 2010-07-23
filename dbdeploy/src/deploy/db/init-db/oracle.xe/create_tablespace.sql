@@ -1,2 +1,2 @@
-create tablespace DBDS_DATA datafile '/ORACLEXE/ORADATA/XE/DBDS_DATA.dbf' size 500m
+create tablespace @TABLESPACE_NAME@ datafile '/ORACLEXE/ORADATA/XE/@TABLESPACE_NAME@.dbf' size 500m
 /

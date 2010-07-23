@@ -8,7 +8,7 @@ $list;format="toUpper", separator=" and ", null="not-set"$
 
 listWithSeparator(list) ::= <<
 <ul>
-$trunc(list):withSeparator():li():newline()$$last(list):li()$
+    $trunc(list):withSeparator():li():newline()$$last(list):li()$
 </ul>    
 >>
 

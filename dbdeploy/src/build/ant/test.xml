@@ -24,7 +24,7 @@
             </batchtest>
         </junit>
 
-        <junitreport todir="${target.report.test.unit.html.dir}">
+        <junitreport taskname="junit" todir="${target.report.test.unit.html.dir}">
             <fileset dir="${target.report.test.unit.xml.dir}">
                 <include name="TEST-*.xml"/>
             </fileset>

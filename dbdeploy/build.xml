@@ -11,8 +11,8 @@
 
     <import file="src/build/ant/module.xml" />
     <import file="src/build/ant/environment.xml" />
-    <import file="src/build/ant/database.xml" />
     <import file="src/build/ant/compile.xml" />
+    <import file="src/build/ant/database.xml" />
     <import file="src/build/ant/test.xml" />
 
     <target name="pre-checkin"

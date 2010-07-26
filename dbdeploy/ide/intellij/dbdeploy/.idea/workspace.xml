@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="87c6cb1f-74ab-4d52-8210-c5e354800fcd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/build/ant/sql.xml" afterPath="$PROJECT_DIR$/../../../src/build/ant/sql.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/build/ant/environment.xml" afterPath="$PROJECT_DIR$/../../../src/build/ant/environment.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/build/ant/database.xml" afterPath="$PROJECT_DIR$/../../../src/build/ant/database.xml" />
     </list>
     <ignored path="$USER_HOME_GRAILS$/" />
     <ignored path="$USER_HOME_GRIFFON$/" />
@@ -794,7 +791,7 @@
     <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Logging db properties" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding an input for the bootstrap username and password" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -826,6 +823,7 @@
     <MESSAGE value="Trying to work out ow to not show stylsheet processing" />
     <MESSAGE value="Logging for environment.init-properties" />
     <MESSAGE value="Logging db properties" />
+    <MESSAGE value="Adding an input for the bootstrap username and password" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />

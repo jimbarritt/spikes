@@ -18,7 +18,7 @@
     <target name="pre-checkin"
             description="Run this before checking in"
             depends="run-unit-tests,
-                     init-live-schema"/>
+                     database.init-live-schema"/>
     
     <target name="run-unit-tests"
             description="Compiles the code and runs the unit tests"

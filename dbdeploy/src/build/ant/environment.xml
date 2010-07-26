@@ -20,7 +20,7 @@
     <property name="db.jdbc.h2.url" value="not-set"/>
 
 
-    <target name="init-properties"
+    <target name="environment.init-properties"
             depends="check-properties-file, init-hostname">
         <log.info message="[${env.properties.file}]" task="environment.init-properties"/>
     </target>
@@ -43,7 +43,7 @@
 
 
 
-    <target name="select-target-db" depends="init-properties">
+    <target name="select-target-db" depends="environment.init-properties">
         <script language="javascript">
             propertyName = "db.jdbc." + project.getProperty("target.db") + ".url";
             propertyValue = project.getProperty(propertyName);

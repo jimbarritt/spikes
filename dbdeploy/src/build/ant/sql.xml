@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="sql" >
+
+    <import file="../../build/ant/macros/logging.xml" />
+
+    <macrodef name="sql.execute">
+        <attribute name="script.file" />
+        <attribute name="username" />
+        <attribute name="password" />
+        <attribute name="jdbc.url" />
+
+        <sequential>
+            <log.info message="Executing script @{script.file} ... " task="sql.execute" />
+            <log.info message="username   : @{username}" task="sql.execute" />
+            <log.info message="password   : @{password}" task="sql.execute" />
+            <log.info message="jdbc.url   : @{jdbc.url}" task="sql.execute" />
+        </sequential>
+    </macrodef>
+
+
+
+
+</project>

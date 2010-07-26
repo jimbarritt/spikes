@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="database" >
+
+    <import file="macros/logging.xml" />
+    <import file="module.xml" />
+    <import file="environment.xml" />
+    <import file="dbdeploy.xml" />
+
+    <target name="setup-db"
+            depends="environment.select-target-db">
+          <dbdeploy.init-live src.dbdeploy.dir="${src.deploy.db.dir}"
+                     dbdeploy.username="${db.username}"
+                     dbdeploy.password="${db.password}"
+                     dbdeploy.jdbc.url="${db.jdbc.url}"
+                     dbdeploy.target.db="${target.db}"/>
+	</target>
+
+    <target name="db-prerequisites"
+            depends="module.init-target, environment.select-target-db">
+    </target>
+
+    <target name="create-live-schema" depends="db-prerequisites">
+    </target>
+
+    <target name="upgrade-live-schema" depends="db-prerequisites">
+    </target>
+
+    <target name="create-test-schema" depends="db-prerequisites">
+    </target>
+
+    <target name="upgrade-test-schema" depends="db-prerequisites">
+    </target>
+
+</project>

@@ -60,7 +60,7 @@
         <delete dir="${target.dir}" />
     </target>
 
-    <target name="init">
+    <target name="init-target">
         <log.info task="init" message="Creating target directory structure in ${target.dir}" />
         <mkdir dir="${target.dir}" />
         <mkdir dir="${target.compile.classes.production.dir}" />

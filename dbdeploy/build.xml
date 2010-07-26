@@ -11,33 +11,39 @@
 
     <import file="src/build/ant/module.xml" />
     <import file="src/build/ant/environment.xml" />
+    <import file="src/build/ant/database.xml" />
     <import file="src/build/ant/compile.xml" />
     <import file="src/build/ant/test.xml" />
-    <import file="src/deploy/ant/dbdeploy.xml" />
+    
 
     <target name="clean"
-            description="Remove all files created by the build/test process."
-            depends="module.clean-target"/>
+            description="Remove all files created by the build/test process, and drops database schema."
+            depends="module.clean-target, drop-schema"/>
 
     <target name="pre-checkin"
             description="Run this before checking in"
-            depends="unit-test,
-                     init-live-db"/>
+            depends="run-unit-tests,
+                     init-live-schema"/>
     
-    <target name="unit-test"
+    <target name="run-unit-tests"
             description="Compiles the code and runs the unit tests"
-            depends="module.init,
+            depends="module.init-target,
                      compile.unit-test-java, test.unit"/>
 
-    <target name="init-live-db"
-            description="Initialises the database in live mode."
-            depends="environment.select-target-db">
-         <dbdeploy.init-live src.dbdeploy.dir="${src.deploy.db.dir}"
-                             dbdeploy.username="${db.username}"
-                             dbdeploy.password="${db.password}"
-                             dbdeploy.jdbc.url="${db.jdbc.url}"
-                             dbdeploy.target.db="${target.db}"/>
-    </target>
+    <target name="init-database"
+            description="Initialises a database (Admin user and tablespaces, if applicable) for the first time; run once per machine."
+            depends="setup-db" />
 
-    
+    <target name="init-live-schema"
+            description="Initialises the schema in live mode."
+            depends="database.create-live-schema" />
+
+
+    <target name="init-test-schema"
+            description="Initialises the schema in test mode."
+            depends="database.create-test-schema" />
+
+    <target name="drop-schema"
+                depends="database.upgrade-live-schema" />
+
 </project>

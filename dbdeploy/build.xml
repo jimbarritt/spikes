@@ -14,11 +14,6 @@
     <import file="src/build/ant/database.xml" />
     <import file="src/build/ant/compile.xml" />
     <import file="src/build/ant/test.xml" />
-    
-
-    <target name="clean"
-            description="Remove all files created by the build/test process, and drops database schema."
-            depends="module.clean-target, drop-schema"/>
 
     <target name="pre-checkin"
             description="Run this before checking in"
@@ -30,20 +25,5 @@
             depends="module.init-target,
                      compile.unit-test-java, test.unit"/>
 
-    <target name="init-database"
-            description="Initialises a database (Admin user and tablespaces, if applicable) for the first time; run once per machine."
-            depends="setup-db" />
-
-    <target name="init-live-schema"
-            description="Initialises the schema in live mode."
-            depends="database.create-live-schema" />
-
-
-    <target name="init-test-schema"
-            description="Initialises the schema in test mode."
-            depends="database.create-test-schema" />
-
-    <target name="drop-schema"
-                depends="database.upgrade-live-schema" />
 
 </project>

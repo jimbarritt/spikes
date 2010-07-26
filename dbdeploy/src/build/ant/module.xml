@@ -56,7 +56,8 @@
 		</fileset>
 	</path>
 
-    <target name="clean-target">
+    <target name="clean"
+            description="Remove all files created by the build/test process, and drops database schema.">
         <delete dir="${target.dir}" />
     </target>
 

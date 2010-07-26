@@ -6,8 +6,9 @@
     <import file="environment.xml" />
     <import file="dbdeploy.xml" />
 
-    <target name="setup-db"
-            depends="environment.select-target-db">
+    <target name="init-database"
+            depends="environment.select-target-db"
+            description="Initialises a database (Admin user and tablespaces, if applicable) for the first time; run once per machine.">
           <dbdeploy.init-live src.dbdeploy.dir="${src.deploy.db.dir}"
                      dbdeploy.username="${db.username}"
                      dbdeploy.password="${db.password}"
@@ -19,13 +20,17 @@
             depends="module.init-target, environment.select-target-db">
     </target>
 
-    <target name="create-live-schema" depends="db-prerequisites">
+    <target name="init-live-schema"
+            depends="db-prerequisites"
+            description="Initialises the schema in live mode.">
     </target>
 
     <target name="upgrade-live-schema" depends="db-prerequisites">
     </target>
 
-    <target name="create-test-schema" depends="db-prerequisites">
+    <target name="init-test-schema"
+            depends="db-prerequisites"
+            description="Initialises the schema in test mode.">
     </target>
 
     <target name="upgrade-test-schema" depends="db-prerequisites">

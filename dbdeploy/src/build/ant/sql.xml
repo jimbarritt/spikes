@@ -10,10 +10,10 @@
         <attribute name="jdbc.url" />
 
         <sequential>
-            <log.info message="Executing script @{script.file} ... " task="sql.execute" />
-            <log.info message="username   : @{username}" task="sql.execute" />
-            <log.info message="password   : @{password}" task="sql.execute" />
-            <log.info message="jdbc.url   : @{jdbc.url}" task="sql.execute" />
+            <log.info message="Executing script @{script.file} ... " />
+            <log.info message="username   : @{username}" />
+            <log.info message="password   : @{password}" />
+            <log.info message="jdbc.url   : @{jdbc.url}" />
         </sequential>
     </macrodef>
 

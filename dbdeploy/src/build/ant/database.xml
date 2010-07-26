@@ -2,8 +2,10 @@
 <project name="database">
 
     <import file="macros/logging.xml"/>
+
     <import file="module.xml"/>
     <import file="environment.xml"/>
+    <import file="sql.xml"/>
     <import file="dbdeploy.xml"/>
 
     <target name="database.select-target-db" depends="environment.init-properties">
@@ -13,21 +15,30 @@
             project.setProperty("db.jdbc.url", propertyValue);
         </script>
 
-        <log.info message="target.db   = ${target.db} "/>
-        <log.info message="db.jdbc.url = ${db.jdbc.url}"/>
+        <log.info message="target.db       = ${target.db} "/>
+        <log.info message="db.jdbc.url     = ${db.jdbc.url}"/>
         <log.info message="db.app.username = ${db.app.username}"/>
         <log.info message="db.app.password = ${db.app.password}"/>
+    </target>
 
+    <target name="database.prompt-for-username" unless="db.bootstrap.username">
+        <input message="Enter a db username:" addproperty="db.bootstrap.username" />
+    </target>
+
+    <target name="database.prompt-for-password" unless="db.bootstrap.password">
+        <input message="Enter a db password:" addproperty="db.bootstrap.password" />
     </target>
 
     <target name="init-database"
-            depends="database.select-target-db"
-            description="Initialises a database (Admin user and tablespaces, if applicable) for the first time; run once per machine.">
-        <dbdeploy.init-live src.dbdeploy.dir="${src.deploy.db.dir}"
-                            dbdeploy.username="${db.app.username}"
-                            dbdeploy.password="${db.app.password}"
-                            dbdeploy.jdbc.url="${db.jdbc.url}"
-                            dbdeploy.target.db="${target.db}"/>
+            depends="database.select-target-db, database.prompt-for-username, database.prompt-for-password"
+            description="Initialises a database (Admin user and tablespaces, if applicable) for the first time; run once per machine. You will need an admin account.">
+
+        <log.info message="Creating an admin user called: ${db.admin.username}"/>
+
+        <sql.execute script.file="somescript.sql"
+                     jdbc.url="${db.jdbc.url}"
+                     username="${db.bootstrap.username}"
+                     password="${db.bootstrap.password}"/>
     </target>
 
     <target name="db-prerequisites"

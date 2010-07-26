@@ -12,6 +12,8 @@
     <available file="${env.properties.file}" property="env.properties.file.available"/>
 
     <property name="hostname" value="not-set" />
+    <property name="db.admin.username" value="dbadmin"/>
+    <property name="db.admin.password" value="dbadm1n"/>
     <property name="db.app.username" value="not-set"/>
     <property name="db.app.password" value="not-set"/>
     <property name="db.jdbc.url" value="not-set"/>

@@ -12,15 +12,14 @@
     <property name="src.deploy.db.dir" value="${src.deploy.dir}/db"/>
     <property name="src.main.dir" value="${src.dir}/main"/>
     <property name="src.main.java.dir" value="${src.main.dir}/java"/>
+    <property name="src.main.resource.dir" value="${src.main.dir}/resource"/>
     <property name="src.test.dir" value="${src.dir}/test"/>
     <property name="src.test.java.dir" value="${src.test.dir}/java"/>
 
 
     <property name="lib.dir" value="${module.dir}/lib"/>
     <property name="lib.development.dir" value="${lib.dir}/development"/>
-    <property name="lib.production.dir" value="${lib.dir}/production"/>
-
-    <property name="testcase" value=""/>
+    <property name="lib.production.dir" value="${lib.dir}/production"/>    
 
     <property name="target.dir" value="${module.dir}/target"/>
 
@@ -51,6 +50,7 @@
 
     <path id="test.unit.classpath">
         <path refid="development.classpath" />
+        <pathelement path="${target.compile.classes.test.unit.dir}" />			
 		<fileset dir="${lib.development.dir}">
 			<include name="**/*.jar" />
 		</fileset>

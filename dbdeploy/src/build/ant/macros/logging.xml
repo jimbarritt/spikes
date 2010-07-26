@@ -9,6 +9,24 @@
         </sequential>
     </macrodef>
 
+    <macrodef name="log.classpath">
+        <attribute name="task" />
+        <attribute name="refid" />
+        <sequential>
+            <property name="classpath.to.log" refid="@{refid}" />
+            <echo message="[@{task}] Classpath is: ${classpath.to.log}" />
+        </sequential>
+    </macrodef>
+
+    <macrodef name="log.fileset">
+        <attribute name="task" />
+        <attribute name="refid" />
+        <sequential>
+            <property name="fileset.to.log" refid="@{refid}" />
+            <echo message="[@{task}] Fileset is: ${fileset.to.log}" />
+        </sequential>
+    </macrodef>
+
 
     <target name="test-javascript">
          <script language="javascript">

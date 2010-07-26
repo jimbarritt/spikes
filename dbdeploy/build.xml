@@ -23,6 +23,7 @@
     <target name="run-unit-tests"
             description="Compiles the code and runs the unit tests"
             depends="module.init-target,
+                     compile.main-java,
                      compile.unit-test-java, test.unit"/>
 
 

@@ -1,29 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="test" >
+<project name="test">
 
-    <import file="macros/logging.xml" />
-    <import file="module.xml" />
+    <import file="macros/logging.xml"/>
+    <import file="module.xml"/>
 
     <target name="unit">
-		<junit fork="yes" dir="${basedir}" failureProperty="test.failed">
-            <classpath refid="test.unit.classpath" />
-			<formatter type="xml" />
-			<test name="${testcase}" todir="${target.report.test.unit.xml.dir}" if="testcase" />
-			<batchtest todir="${target.report.test.unit.xml.dir}" unless="testcase">
-				<fileset dir="${src.dir}">
-					<include name="**/*Test.java" />
-				</fileset>
-			</batchtest>
-		</junit>
+        <fileset id="junit.sources" dir="${src.test.java.dir}">
+            <include name="**/*Test.java"/>
+            <exclude name="**/*IntegrationTest.java"/>
+            <exclude name="**/*AcceptanceTest.java"/>
+        </fileset>
+        <log.info task="test.unit" message="Running unit tests from ${src.test.java.dir}"/>
 
-		<junitreport todir="${target.report.test.unit.html.dir}" >
-			<fileset dir="${target.report.test.unit.xml.dir}">
-				<include name="TEST-*.xml" />
-			</fileset>
-			<report format="frames" todir="${target.report.test.unit.html.dir}" />
-		</junitreport>
-        <log.info task="test.unit" message="${target.report.test.unit.html.dir}/index.html" />        
-	</target>
-    
+        <junit fork="yes"
+               printsummary="true"               
+               failureProperty="test.failed">
+            <jvmarg value="-Dlog4j.configuration=logging/log4j.xml" />            
+            <classpath refid="test.unit.classpath"/>
+            <formatter type="xml"/>
+            <batchtest todir="${target.report.test.unit.xml.dir}" haltonerror="true" haltonfailure="true" filtertrace="true">
+
+                  <fileset refid="junit.sources" />
+            </batchtest>
+        </junit>
+
+        <junitreport todir="${target.report.test.unit.html.dir}">
+            <fileset dir="${target.report.test.unit.xml.dir}">
+                <include name="TEST-*.xml"/>
+            </fileset>
+            <report format="frames" todir="${target.report.test.unit.html.dir}"/>
+        </junitreport>
+        <log.info task="test.unit" message="${target.report.test.unit.html.dir}/index.html"/>
+    </target>
+
 
 </project>

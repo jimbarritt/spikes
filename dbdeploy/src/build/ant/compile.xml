@@ -4,8 +4,24 @@
     <import file="macros/logging.xml" />
     <import file="module.xml" />
 
+    <target name="main-java"
+            depends="copy-main-resources">
+        <log.info task="compile.main-java" message="${src.main.java.dir}" />
+
+        <javac srcdir="${src.test.java.dir}" destdir="${target.compile.classes.test.unit.dir}" debug="yes">
+			<classpath refid="development.classpath" />
+		</javac>
+    </target>
+
+    <target name="copy-main-resources">
+        <log.info task="compile.copy-main-resources" message="Copying resources from ${src.main.resource.dir}" />
+        <copy todir="${target.compile.classes.test.unit.dir}">
+            <fileset dir="${src.main.resource.dir}" />
+        </copy>
+    </target>
+
     <target name="unit-test-java">
-        <log.info task="compile" message="${src.test.java.dir}" />
+        <log.info task="compile.unit-test-java" message="${src.test.java.dir}" />
         
         <javac srcdir="${src.test.java.dir}" destdir="${target.compile.classes.test.unit.dir}" debug="yes">
 			<classpath refid="development.classpath" />

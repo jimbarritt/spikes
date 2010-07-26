@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="87c6cb1f-74ab-4d52-8210-c5e354800fcd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/build/ant/compile.xml" afterPath="$PROJECT_DIR$/../../../src/build/ant/compile.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/build/ant/test.xml" afterPath="$PROJECT_DIR$/../../../src/build/ant/test.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../build.xml" afterPath="$PROJECT_DIR$/../../../build.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/build/ant/module.xml" afterPath="$PROJECT_DIR$/../../../src/build/ant/module.xml" />
     </list>
     <ignored path="$USER_HOME_GRAILS$/" />
     <ignored path="$USER_HOME_GRIFFON$/" />
@@ -106,7 +103,7 @@
       <file leaf-file-name="test.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../../../src/build/ant/test.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="37" selection-start="1042" selection-end="1042" vertical-scroll-proportion="0.3452116">
+            <state line="20" column="65" selection-start="848" selection-end="848" vertical-scroll-proportion="0.28879312">
               <folding />
             </state>
           </provider>
@@ -757,7 +754,7 @@
     <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added compilation and unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tidied up log output" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -785,6 +782,7 @@
     <MESSAGE value="Worked out nice format for target names&#10;" />
     <MESSAGE value="Removing strange format from h2-src zip&#10;" />
     <MESSAGE value="Added compilation and unit tests" />
+    <MESSAGE value="Tidied up log output" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -903,7 +901,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/build/ant/test.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="37" selection-start="1042" selection-end="1042" vertical-scroll-proportion="0.3452116">
+        <state line="20" column="65" selection-start="848" selection-end="848" vertical-scroll-proportion="0.28879312">
           <folding />
         </state>
       </provider>

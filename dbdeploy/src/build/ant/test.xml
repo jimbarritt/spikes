@@ -18,8 +18,7 @@
             <jvmarg value="-Dlog4j.configuration=logging/log4j.xml" />            
             <classpath refid="test.unit.classpath"/>
             <formatter type="xml"/>
-            <batchtest todir="${target.report.test.unit.xml.dir}" haltonerror="true" haltonfailure="true" filtertrace="true">
-
+            <batchtest todir="${target.report.test.unit.xml.dir}">
                   <fileset refid="junit.sources" />
             </batchtest>
         </junit>
@@ -30,6 +29,7 @@
             </fileset>
             <report format="frames" todir="${target.report.test.unit.html.dir}"/>
         </junitreport>
+
         <log.info task="test.unit" message="${target.report.test.unit.html.dir}/index.html"/>
     </target>
 

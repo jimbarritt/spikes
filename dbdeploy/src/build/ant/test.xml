@@ -10,7 +10,7 @@
             <exclude name="**/*IntegrationTest.java"/>
             <exclude name="**/*AcceptanceTest.java"/>
         </fileset>
-        <log.info task="test.unit" message="Running unit tests from ${src.test.java.dir}"/>
+        <log.info message="Running unit tests from ${src.test.java.dir}"/>
 
         <junit fork="yes"
                printsummary="true"               
@@ -30,7 +30,7 @@
             <report format="frames" todir="${target.report.test.unit.html.dir}"/>
         </junitreport>
 
-        <log.info task="test.unit" message="${target.report.test.unit.html.dir}/index.html"/>
+        <log.info message="${target.report.test.unit.html.dir}/index.html"/>
     </target>
 
 

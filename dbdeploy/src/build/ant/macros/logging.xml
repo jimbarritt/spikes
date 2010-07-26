@@ -2,19 +2,17 @@
 <project name="logging" >
 
     <macrodef name="log.info">
-        <attribute name="task" />
         <attribute name="message" />
         <sequential>
-            <echo message="[@{task}] @{message}" />
+            <echo message="@{message}" />
         </sequential>
     </macrodef>
 
-    <macrodef name="log.classpath">
-        <attribute name="task" />
+    <macrodef name="log.classpath">        
         <attribute name="refid" />
         <sequential>
             <property name="classpath.to.log" refid="@{refid}" />
-            <echo message="[@{task}] Classpath is: ${classpath.to.log}" />
+            <echo message="Classpath is: ${classpath.to.log}" />
         </sequential>
     </macrodef>
 

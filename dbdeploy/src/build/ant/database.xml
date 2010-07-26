@@ -1,23 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="database" >
+<project name="database">
 
-    <import file="macros/logging.xml" />
-    <import file="module.xml" />
-    <import file="environment.xml" />
-    <import file="dbdeploy.xml" />
+    <import file="macros/logging.xml"/>
+    <import file="module.xml"/>
+    <import file="environment.xml"/>
+    <import file="dbdeploy.xml"/>
+
+    <target name="database.select-target-db" depends="environment.init-properties">
+        <script language="javascript">
+            propertyName = "db.jdbc." + project.getProperty("target.db") + ".url";
+            propertyValue = project.getProperty(propertyName);
+            project.setProperty("db.jdbc.url", propertyValue);
+        </script>
+
+        <log.info message="target.db   = ${target.db} "/>
+        <log.info message="db.jdbc.url = ${db.jdbc.url}"/>
+        <log.info message="db.app.username = ${db.app.username}"/>
+        <log.info message="db.app.password = ${db.app.password}"/>
+
+    </target>
 
     <target name="init-database"
-            depends="environment.select-target-db"
+            depends="database.select-target-db"
             description="Initialises a database (Admin user and tablespaces, if applicable) for the first time; run once per machine.">
-          <dbdeploy.init-live src.dbdeploy.dir="${src.deploy.db.dir}"
-                     dbdeploy.username="${db.username}"
-                     dbdeploy.password="${db.password}"
-                     dbdeploy.jdbc.url="${db.jdbc.url}"
-                     dbdeploy.target.db="${target.db}"/>
-	</target>
+        <dbdeploy.init-live src.dbdeploy.dir="${src.deploy.db.dir}"
+                            dbdeploy.username="${db.app.username}"
+                            dbdeploy.password="${db.app.password}"
+                            dbdeploy.jdbc.url="${db.jdbc.url}"
+                            dbdeploy.target.db="${target.db}"/>
+    </target>
 
     <target name="db-prerequisites"
-            depends="module.init-target, environment.select-target-db">
+            depends="module.init-target, database.select-target-db">
     </target>
 
     <target name="init-live-schema"

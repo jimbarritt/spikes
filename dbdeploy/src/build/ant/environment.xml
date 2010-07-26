@@ -12,17 +12,17 @@
     <available file="${env.properties.file}" property="env.properties.file.available"/>
 
     <property name="hostname" value="not-set" />
-    <property name="db.username" value="not-set"/>
-    <property name="db.password" value="not-set"/>
+    <property name="db.app.username" value="not-set"/>
+    <property name="db.app.password" value="not-set"/>
     <property name="db.jdbc.url" value="not-set"/>
 
     <property name="db.jdbc.oracle.xe.url" value="not-set"/>
     <property name="db.jdbc.h2.url" value="not-set"/>
 
 
-    <target name="environment.init-properties"
+    <target name="init-properties"
             depends="check-properties-file, init-hostname">
-        <log.info message="[${env.properties.file}]" task="environment.init-properties"/>
+        <log.info message="Properties loaded from: [${env.properties.file}]" />
     </target>
 
     <target name="init-hostname">
@@ -39,19 +39,6 @@
     <target name="check-properties-file"
             unless="env.properties.file.available">
         <fail message="[environment] No properties file called ${env.properties.file}"/>
-    </target>
-
-
-
-    <target name="select-target-db" depends="environment.init-properties">
-        <script language="javascript">
-            propertyName = "db.jdbc." + project.getProperty("target.db") + ".url";
-            propertyValue = project.getProperty(propertyName);
-            project.setProperty("db.jdbc.url", propertyValue);
-        </script>
-
-        <log.info message="Selected target.db to be ${target.db} " task="environment.select-target-db"/>
-        <log.info message="db.jdbc.url=${db.jdbc.url}" task="environment.select-target-db"/>
-    </target>
+    </target>    
 
 </project>

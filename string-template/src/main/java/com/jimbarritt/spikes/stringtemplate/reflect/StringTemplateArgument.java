@@ -28,4 +28,8 @@ public class StringTemplateArgument {
         }
         return argumentMap;
     }
+
+    public boolean nameIsNot(String name) {
+        return !this.argumentName.equals(name);
+    }
 }

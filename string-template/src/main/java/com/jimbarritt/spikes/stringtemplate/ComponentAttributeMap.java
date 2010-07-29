@@ -6,8 +6,8 @@ import org.antlr.stringtemplate.*;
 import java.util.*;
 import java.util.regex.*;
 
-import static java.lang.String.format;
-import static java.util.regex.Pattern.compile;
+import static java.lang.String.*;
+import static java.util.regex.Pattern.*;
 
 public class ComponentAttributeMap {
     private final Map<String, Map<String, Object>> componentAttributes = new HashMap<String, Map<String, Object>>();
@@ -19,11 +19,11 @@ public class ComponentAttributeMap {
 
     public static ComponentAttributeMap loadDefaultsFrom(StringTemplateDefinition stringTemplateDefinition) {
         ComponentAttributeMap componentAttributeMap = new ComponentAttributeMap();
-        for (StringTemplateInclude include : stringTemplateDefinition.templateIncludes()) {            
+        for (StringTemplateInclude include : stringTemplateDefinition.templateIncludes()) {
             String componentType = extractComponentTypeFrom(include.name());
 
             String componentIdentifier = (include.hasArgument("id"))
-                    ? componentKey(componentType, include.getArgumentValueAsString("id"))
+                    ? include.getArgumentValueAsString("id")
                     : componentType;
 
             componentAttributeMap.addAttributes(componentIdentifier, include.arguments());
@@ -45,31 +45,30 @@ public class ComponentAttributeMap {
         }
         Map<String, Object> attributeMap = componentAttributes.get(componentIdentifier);
         for (StringTemplateArgument argument : arguments) {
-            argument.addToMap(attributeMap);
+            if (argument.nameIsNot("id")) {
+                argument.addToMap(attributeMap);
+            }
         }
     }
 
-    public void setAttributeForComponent(String componentType, String componentIdentifier, String attributeName, Object value) {
-        String componentKey = componentKey(componentType, componentIdentifier);
-        if (!componentAttributes.containsKey(componentKey)) {
+    public void setAttributeForComponent(String componentIdentifier, String attributeName, Object value) {
+        if (!componentAttributes.containsKey(componentIdentifier)) {
             throw new StringTemplateIntrospectionException(format("Could not find component with identifier [%s]", componentIdentifier));
         }
-        componentAttributes.get(componentKey).put(attributeName, value);
+        componentAttributes.get(componentIdentifier).put(attributeName, value);
     }
-
-    private static String componentKey(String componentType, String componentIdentifier) {
-        return format("%s", componentIdentifier);
-    }
-
+    
     public void populateTemplateAttributes(StringTemplate stringTemplate) {
+        Map<String, Object> componentParameters = new HashMap<String, Object>();
         for (String key : componentAttributes.keySet()) {
-            populateTemplateAttributes(stringTemplate, key, componentAttributes.get(key));
+            populateTemplateAttributes(componentParameters, key, componentAttributes.get(key));
         }
+        stringTemplate.setAttribute("componentParameters", componentParameters);
     }
 
-    private void populateTemplateAttributes(StringTemplate stringTemplate, String componentIdentifier, Map<String, Object> attributes) {
+    private void populateTemplateAttributes(Map<String, Object> attributeMap, String componentIdentifier, Map<String, Object> attributes) {
         for (String key : attributes.keySet()) {
-            stringTemplate.setAttribute(format("%s_%s", componentIdentifier, key), attributes.get(key));
+            attributeMap.put(format("%s_%s", componentIdentifier, key), attributes.get(key));
         }
     }
 }

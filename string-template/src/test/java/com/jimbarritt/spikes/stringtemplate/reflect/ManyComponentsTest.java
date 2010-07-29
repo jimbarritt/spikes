@@ -8,7 +8,7 @@ import org.junit.*;
 
 import java.util.*;
 
-import static com.jimbarritt.spikes.stringtemplate.ComponentAttributeMap.loadDefaultsFrom;
+import static com.jimbarritt.spikes.stringtemplate.ComponentAttributeMap.*;
 import static com.jimbarritt.spikes.stringtemplate.io.StringTemplateRootPath.*;
 import static com.jimbarritt.spikes.stringtemplate.reflect.StringTemplateIntrospector.*;
 import static org.junit.Assert.*;
@@ -31,11 +31,9 @@ public class ManyComponentsTest {
     public void canSetWelcomeMessageText() {
         StringTemplateGroup group = factory.createGroupFromRootPath(getPathFor("/st/htmlcomponent"), errorListener);
         StringTemplate manyComponentsTemplate = group.getInstanceOf("manyComponents");
-
-        StringTemplateDefinition templateDefinition = inspect(manyComponentsTemplate);
-
+        
         Map<String, Object> attributes = new HashMap<String, Object>();
-        attributes.put("welcomeMessageText", "Hello from Jim!");
+        attributes.put("aboutMe_text", "Hello from Jim!");
         manyComponentsTemplate.setAttribute("componentParameters", attributes);
 
         String representation = new StringTemplateRenderer().render(manyComponentsTemplate);
@@ -53,7 +51,7 @@ public class ManyComponentsTest {
         StringTemplateDefinition templateDefinition = inspect(manyComponentsTemplate);
 
         ComponentAttributeMap componentAttributeMap = loadDefaultsFrom(templateDefinition);
-        componentAttributeMap.setAttributeForComponent("textComponent", "aboutMe", "text", "A New About Message");
+        componentAttributeMap.setAttributeForComponent("aboutMe", "text", "A New About Message");
 
         componentAttributeMap.populateTemplateAttributes(manyComponentsTemplate);
 

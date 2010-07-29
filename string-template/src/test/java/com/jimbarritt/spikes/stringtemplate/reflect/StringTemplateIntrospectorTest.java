@@ -2,6 +2,7 @@ package com.jimbarritt.spikes.stringtemplate.reflect;
 
 import com.jimbarritt.spikes.stringtemplate.io.*;
 import org.antlr.stringtemplate.*;
+import org.apache.log4j.*;
 import org.junit.*;
 
 import java.util.*;
@@ -9,9 +10,14 @@ import java.util.*;
 import static com.jimbarritt.spikes.stringtemplate.io.StringTemplateRootPath.*;
 import static com.jimbarritt.spikes.stringtemplate.reflect.StringTemplateIntrospector.*;
 import static org.hamcrest.core.Is.*;
+import static org.hamcrest.core.IsNot.not;
+import static org.hamcrest.core.IsSame.sameInstance;
 import static org.junit.Assert.*;
+import static org.junit.matchers.JUnitMatchers.*;
 
 public class StringTemplateIntrospectorTest {
+
+    private static final Logger log = Logger.getLogger(StringTemplateIntrospectorTest.class);
 
     private Log4jStringTemplateErrorListener errorListener;
     private StandardStringTemplateGroupFactory factory;
@@ -22,6 +28,33 @@ public class StringTemplateIntrospectorTest {
         factory = new StandardStringTemplateGroupFactory();
     }
 
+    @Test
+    public void templateInstancesAreTheSame() {
+        StringTemplateGroup group = factory.createGroupFromRootPath(getPathFor("/st/htmlcomponent"), errorListener);
+        StringTemplate textComponent1 = group.getInstanceOf("components/textComponent");
+        StringTemplate textComponent2 = group.getInstanceOf("components/textComponent");
+
+        assertThat(textComponent1, is(not(sameInstance(textComponent2))));
+    }
+    
+
+    @Test
+    public void setAttributesForIncludedComponents() {
+        StringTemplateGroup group = factory.createGroupFromRootPath(getPathFor("/st/htmlcomponent"), errorListener);
+        StringTemplate manyComponentsTemplate = group.getInstanceOf("manyComponents");
+        StringTemplateDefinition definition = inspect(manyComponentsTemplate);
+
+        Map<String, Object> attributes = new HashMap<String, Object>();
+        attributes.put("welcomeMessage.text", "This is my welcome message");
+        attributes.put("aboutMe.text", "This is my about text");
+
+        definition.populateIncludedTemplateAttributes("id", attributes);
+
+        String representation = new StringTemplateRenderer().render(manyComponentsTemplate);
+
+        assertThat(representation, containsString("This is my welcome message"));
+        assertThat(representation, containsString("This is my about text"));
+    }
 
     @Test
     public void canIntrospectSubTemplatesWithParameters() {

@@ -5,7 +5,7 @@
 </head>
 
 <body>
-    <div id="content">
+    <div id="content">              
         $components/textComponent(id="welcomeMessage", text="<strong>Some default text</strong>", editable="false")$
         $components/textComponent(id="aboutMe")$
         $components/imageComponent()$

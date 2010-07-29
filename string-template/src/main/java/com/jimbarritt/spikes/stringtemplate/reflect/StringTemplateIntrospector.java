@@ -3,11 +3,14 @@ package com.jimbarritt.spikes.stringtemplate.reflect;
 import antlr.collections.*;
 import org.antlr.stringtemplate.*;
 import org.antlr.stringtemplate.language.*;
+import org.apache.log4j.*;
 
 import java.util.*;
 import java.util.List;
 
 public class StringTemplateIntrospector {
+    private static final Logger log = Logger.getLogger(StringTemplateIntrospector.class);
+
     public static StringTemplateDefinition inspect(StringTemplate stringTemplate) {
         return new StringTemplateIntrospector().createStringTemplateDefinition(stringTemplate);
     }
@@ -18,7 +21,7 @@ public class StringTemplateIntrospector {
     }
 
     private List<StringTemplateInclude> parseIncludesTemplates(StringTemplate stringTemplate) {
-        IncludeChunkMatcher includeChunkMatcher = new IncludeChunkMatcher(new IncludeAstParser());
+        IncludeChunkMatcher includeChunkMatcher = new IncludeChunkMatcher(new IncludeAstParser());        
         for (Object chunk : stringTemplate.getChunks()) {
             includeChunkMatcher.matchChunk(chunk);
         }
@@ -26,7 +29,6 @@ public class StringTemplateIntrospector {
     }
 
     private static class IncludeChunkMatcher {
-
         List<StringTemplateInclude> includes = new ArrayList<StringTemplateInclude>();
         private final IncludeAstParser parser;
 
@@ -59,14 +61,25 @@ public class StringTemplateIntrospector {
         private StringTemplateInclude parseIncludeFrom(AST includeAst) {
             try {
                 StringTemplateDefinition definition = new StringTemplateDefinition(includeAst.getFirstChild().getText());
-                List<StringTemplateArgument> arguments = parseArgumentsFrom(includeAst.getFirstChild().getNextSibling());
+
+                StringTemplateAST stringTemplateAST = convertToStringTemplateAst(includeAst.getFirstChild().getNextSibling());
+
+                List<StringTemplateArgument> arguments = parseArgumentsFrom(stringTemplateAST);
+                log.debug("Included string template is: " + stringTemplateAST.getStringTemplate());
                 return new StringTemplateInclude(definition, arguments);
             } catch (Exception e) {
                 throw new StringTemplateIntrospectionException("Failed to parse include from ast (See Cause). AST: " + includeAst.toStringTree(), e);
             }
         }
 
-        private List<StringTemplateArgument> parseArgumentsFrom(AST argsAst) {
+        private StringTemplateAST convertToStringTemplateAst(AST ast) {
+            if (!(ast instanceof StringTemplateAST)) {
+                throw new StringTemplateIntrospectionException(String.format("ast [%s] is not a StringTemplateAST, it is a [%s]", ast, ast.getClass().getSimpleName()));
+            }
+            return (StringTemplateAST)ast;            
+        }
+
+        private List<StringTemplateArgument> parseArgumentsFrom(StringTemplateAST argsAst) {
             if (!"ARGS".equals(argsAst.getText())) {
                 throw new StringTemplateIntrospectionException("Tried to parse arguments from an AST which is not called 'ARGS'");
             }

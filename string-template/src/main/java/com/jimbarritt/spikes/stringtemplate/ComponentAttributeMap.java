@@ -1,6 +1,7 @@
 package com.jimbarritt.spikes.stringtemplate;
 
 import com.jimbarritt.spikes.stringtemplate.reflect.*;
+import org.antlr.stringtemplate.*;
 
 import java.util.*;
 import java.util.regex.*;
@@ -57,6 +58,18 @@ public class ComponentAttributeMap {
     }
 
     private static String componentKey(String componentType, String componentIdentifier) {
-        return format("%s.%s", componentType, componentIdentifier);
+        return format("%s", componentIdentifier);
+    }
+
+    public void populateTemplateAttributes(StringTemplate stringTemplate) {
+        for (String key : componentAttributes.keySet()) {
+            populateTemplateAttributes(stringTemplate, key, componentAttributes.get(key));
+        }
+    }
+
+    private void populateTemplateAttributes(StringTemplate stringTemplate, String componentIdentifier, Map<String, Object> attributes) {
+        for (String key : attributes.keySet()) {
+            stringTemplate.setAttribute(format("%s_%s", componentIdentifier, key), attributes.get(key));
+        }
     }
 }

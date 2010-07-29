@@ -55,6 +55,8 @@ public class ManyComponentsTest {
         ComponentAttributeMap componentAttributeMap = loadDefaultsFrom(templateDefinition);
         componentAttributeMap.setAttributeForComponent("textComponent", "aboutMe", "text", "A New About Message");
 
+        componentAttributeMap.populateTemplateAttributes(manyComponentsTemplate);
+
         String representation = new StringTemplateRenderer().render(manyComponentsTemplate);
 
         log.info("ManyComponents:\n" + representation);

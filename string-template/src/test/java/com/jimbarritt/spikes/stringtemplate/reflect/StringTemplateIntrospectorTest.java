@@ -13,7 +13,6 @@ import static org.hamcrest.core.Is.*;
 import static org.hamcrest.core.IsNot.not;
 import static org.hamcrest.core.IsSame.sameInstance;
 import static org.junit.Assert.*;
-import static org.junit.matchers.JUnitMatchers.*;
 
 public class StringTemplateIntrospectorTest {
 
@@ -46,7 +45,7 @@ public class StringTemplateIntrospectorTest {
 
         assertThat(stringTemplateDefinition.name(), is("manyComponents"));
 
-        List<StringTemplateInclude> includedTemplates = stringTemplateDefinition.includedTemplates();
+        List<StringTemplateInclude> includedTemplates = stringTemplateDefinition.templateIncludes();
 
         assertThat(includedTemplates.size(), is(4));
 
@@ -56,15 +55,12 @@ public class StringTemplateIntrospectorTest {
         List<StringTemplateArgument> arguments = include_1.arguments();
         assertThat(arguments.size(), is(3));
         StringTemplateArgument argument_1 = arguments.get(0);
-        assertThat(argument_1.name(), is("id"));
-        assertThat(argument_1.value(), is("welcomeMessage"));
+        assertThat(argument_1.toString(), is("id=welcomeMessage"));
 
         StringTemplateArgument argument_2 = arguments.get(1);
-        assertThat(argument_2.name(), is("text"));
-        assertThat(argument_2.value(), is("<strong>Some default text</strong>"));
+        assertThat(argument_2.toString(), is("text=<strong>Some default text</strong>"));
 
         StringTemplateArgument argument_3 = arguments.get(2);
-        assertThat(argument_3.name(), is("editable"));
-        assertThat(argument_3.value(), is("false"));
+        assertThat(argument_3.toString(), is("editable=false"));        
     }
 }

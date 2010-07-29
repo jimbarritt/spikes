@@ -1,3 +1,3 @@
 <div id="$id$" class="textComponent">
-    <p>$componentParameters.(id + "Text")$</p>
+    <p>$components/parameter(componentId=id, parameterName="Text")$</p>
 </div>

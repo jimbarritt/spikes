@@ -1,0 +1,1 @@
+$componentParameters.(componentId + parameterName)$

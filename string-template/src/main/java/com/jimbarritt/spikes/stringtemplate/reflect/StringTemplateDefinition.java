@@ -29,32 +29,7 @@ public class StringTemplateDefinition {
     public List<StringTemplateInclude> includedTemplates() {
         return includedTemplates;
     }
-
-    /**
-     * Allows you to populate the properties of included templates based on an identifying property. For example if you
-     * include a template like this:
-     * <p/>
-     * <pre>
-     * $components/textComponent(id="aboutMe")$
-     * </pre>
-     * <p/>
-     * This method will allow you to do something like this:
-     * <p/>
-     * <pre>
-     *      Map<String, Object> attributesToSet = new HashMap<String, Object>();
-     *      attributesToSet.put("aboutMe.text", "Hello, I'm your friend");
-     *      definition.setIncludedTemplateAttributes("id", attributesToSet);
-     * </pre>
-     */
-    public void populateIncludedTemplateAttributes(String identifyingAttributeName, Map<String, Object> attributes) {
-        AttributesByTemplateMap attributesByIncludedTemplate = attributesByIncludedTemplate(attributes);
-        for (StringTemplateInclude include : includedTemplates()) {
-            String templateIdentifier = include.getArgument(identifyingAttributeName);
-            Map<String, Object> templateAttributes = attributesByIncludedTemplate.get(templateIdentifier);
-            include.setAttributes(templateAttributes);
-        }
-    }
-
+    
     private static AttributesByTemplateMap attributesByIncludedTemplate(Map<String, Object> attributes) {
         AttributesByTemplateMap attributesByTemplateMap = new AttributesByTemplateMap();
 

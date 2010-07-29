@@ -37,25 +37,6 @@ public class StringTemplateIntrospectorTest {
         assertThat(textComponent1, is(not(sameInstance(textComponent2))));
     }
     
-
-    @Test
-    public void setAttributesForIncludedComponents() {
-        StringTemplateGroup group = factory.createGroupFromRootPath(getPathFor("/st/htmlcomponent"), errorListener);
-        StringTemplate manyComponentsTemplate = group.getInstanceOf("manyComponents");
-        StringTemplateDefinition definition = inspect(manyComponentsTemplate);
-
-        Map<String, Object> attributes = new HashMap<String, Object>();
-        attributes.put("welcomeMessage.text", "This is my welcome message");
-        attributes.put("aboutMe.text", "This is my about text");
-
-        definition.populateIncludedTemplateAttributes("id", attributes);
-
-        String representation = new StringTemplateRenderer().render(manyComponentsTemplate);
-
-        assertThat(representation, containsString("This is my welcome message"));
-        assertThat(representation, containsString("This is my about text"));
-    }
-
     @Test
     public void canIntrospectSubTemplatesWithParameters() {
         StringTemplateGroup group = factory.createGroupFromRootPath(getPathFor("/st/htmlcomponent"), errorListener);

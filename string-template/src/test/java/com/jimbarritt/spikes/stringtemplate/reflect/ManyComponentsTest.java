@@ -49,7 +49,6 @@ public class ManyComponentsTest {
         StringTemplate manyComponentsTemplate = group.getInstanceOf("manyComponents");
 
         StringTemplateDefinition templateDefinition = inspect(manyComponentsTemplate);
-
         ComponentAttributeMap componentAttributeMap = loadDefaultsFrom(templateDefinition);
         componentAttributeMap.setAttributeForComponent("aboutMe", "text", "A New About Message");
 

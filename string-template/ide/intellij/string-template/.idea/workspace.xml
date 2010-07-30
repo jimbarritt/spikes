@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="fdbe9c65-e5d1-458f-80c4-c1a9e25c6630" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/reflect/StringTemplateArgument.java" afterPath="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/reflect/StringTemplateArgument.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/ComponentAttributeMap.java" afterPath="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/ComponentAttributeMap.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/SayHelloTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/SayHello.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/reflect/ManyComponentsTest.java" afterPath="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/reflect/ManyComponentsTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -28,7 +28,7 @@
     <SUITE FILE_PATH="coverage/string-template$VolumeAttributeRendererTest_formatsInLitresWithShortFormat.ic" NAME="VolumeAttributeRendererTest.formatsInLitresWithShortFormat Coverage Results" MODIFIED="1279876266400" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.jimbarritt.spikes.stringtemplate.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/string-template$Run_All_Tests.ic" NAME="Run All Tests Coverage Results" MODIFIED="1280408548676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/string-template$Run_All_Tests.ic" NAME="Run All Tests Coverage Results" MODIFIED="1280495888566" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.jimbarritt.spikes.stringtemplate.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/string-template$StringTemplateGroupTest.ic" NAME="StringTemplateGroupTest Coverage Results" MODIFIED="1278084144679" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
@@ -115,7 +115,7 @@
       <file leaf-file-name="ManyComponentsTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/reflect/ManyComponentsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="1272" selection-end="1272" vertical-scroll-proportion="0.0">
+            <state line="38" column="0" selection-start="1493" selection-end="1493" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -123,53 +123,49 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ComponentAttributeMap.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/ComponentAttributeMap.java">
+      <file leaf-file-name="SafeReader.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/io/SafeReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="15" selection-start="2282" selection-end="2282" vertical-scroll-proportion="0.33333334">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StringTemplateArgument.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/reflect/StringTemplateArgument.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="46" selection-start="1042" selection-end="1042" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="textComponent.st" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/htmlcomponent/components/textComponent.st">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="17" selection-start="116" selection-end="116" vertical-scroll-proportion="-1.826087">
+            <state line="17" column="15" selection-start="297" selection-end="377" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="parameter.st" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/htmlcomponent/components/parameter.st">
+      <file leaf-file-name="SayHelloTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/SayHelloTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="42" selection-start="42" selection-end="42" vertical-scroll-proportion="-0.0">
+            <state line="18" column="22" selection-start="410" selection-end="410" vertical-scroll-proportion="0.5520505">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SayHello.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/SayHello.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="28" selection-start="144" selection-end="144" vertical-scroll-proportion="-6.5625">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StringTemplateInclude.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/reflect/StringTemplateInclude.java">
+      <file leaf-file-name="Is.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/../../../lib/development/mockito-all-1.8.4.jar!/org/hamcrest/core/Is.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="38" selection-start="1663" selection-end="1663" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="18" column="46" selection-start="720" selection-end="720" vertical-scroll-proportion="-12.958333">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SafeReaderTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/io/SafeReaderTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="0" selection-start="239" selection-end="239" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -188,9 +184,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/IterationTest.java" />
-        <option value="$PROJECT_DIR$/../../../src/main/resource/st/formatting/list.stg" />
-        <option value="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/reflect/ManyComponentsTest.java" />
         <option value="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/reflect/StringTemplateIntrospector.java" />
         <option value="$PROJECT_DIR$/../../../src/main/resource/st/htmlcomponent/manyComponents.st" />
         <option value="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/reflect/TemplateIncludeAttributeMap.java" />
@@ -202,8 +195,11 @@
         <option value="$PROJECT_DIR$/../../../src/main/resource/st/htmlcomponent/components/parameter.st" />
         <option value="$PROJECT_DIR$/../../../src/main/resource/st/htmlcomponent/components/textComponent.st" />
         <option value="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/reflect/StringTemplateArgument.java" />
-        <option value="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/reflect/ManyComponentsTest.java" />
         <option value="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/ComponentAttributeMap.java" />
+        <option value="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/reflect/ManyComponentsTest.java" />
+        <option value="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/io/SafeReader.java" />
+        <option value="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/SayHelloTest.java" />
+        <option value="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/SayHello.java" />
       </list>
     </option>
   </component>
@@ -614,6 +610,84 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="hamcrest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="string-template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="string-template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hamcrest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="string-template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="string-template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hamcrest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Is" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="string-template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="string-template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="antlr.stringtemplate" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
@@ -862,7 +936,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ComponentAttributeMap" />
+              <option name="myItemId" value="SayHelloTest" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -880,165 +954,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="reflect" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StringTemplateIntrospectorTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="string-template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="string-template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com.jimbarritt.spikes.stringtemplate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reflect" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ManyComponentsTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="string-template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="string-template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com.jimbarritt.spikes.stringtemplate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reflect" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="string-template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="string-template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com.jimbarritt.spikes.stringtemplate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reflect" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StringTemplateIntrospector" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="string-template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="string-template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com.jimbarritt.spikes.stringtemplate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reflect" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StringTemplateIntrospector" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IncludeAstParser" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="string-template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="string-template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com.jimbarritt.spikes.stringtemplate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reflect" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StringTemplateInclude" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="string-template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="string-template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com.jimbarritt.spikes.stringtemplate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reflect" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StringTemplateDefinition" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="string-template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="string-template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com.jimbarritt.spikes.stringtemplate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reflect" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StringTemplateArgument" />
+              <option name="myItemId" value="SayHello" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1078,7 +994,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="StringTemplateGroupFactory" />
+              <option name="myItemId" value="SafeReader" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1149,97 +1065,7 @@
     <option name="referencePos" value="0" />
     <option name="showLabels" value="true" />
   </component>
-  <component name="RunManager" selected="JUnit.ManyComponentsTest.rendersDefaultProperty">
-    <configuration default="false" name="StringTemplateIntrospectorTest.canFindTheInstanceOfAnIncludedTemplate" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="emma">
-        <pattern>
-          <option name="PATTERN" value="com.jimbarritt.spikes.stringtemplate.reflect.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <extension name="snapshooter" />
-      <module name="string-template" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="PACKAGE_NAME" value="com.jimbarritt.spikes.stringtemplate.reflect" />
-      <option name="MAIN_CLASS_NAME" value="com.jimbarritt.spikes.stringtemplate.reflect.StringTemplateIntrospectorTest" />
-      <option name="METHOD_NAME" value="canFindTheInstanceOfAnIncludedTemplate" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-Dlog4j.configuration=logging/log4j.xml" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../../../" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="62565" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="ManyComponentsTest.printoutManyComponentsResult" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="emma">
-        <pattern>
-          <option name="PATTERN" value="com.jimbarritt.spikes.stringtemplate.reflect.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <extension name="snapshooter" />
-      <module name="string-template" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="PACKAGE_NAME" value="com.jimbarritt.spikes.stringtemplate.reflect" />
-      <option name="MAIN_CLASS_NAME" value="com.jimbarritt.spikes.stringtemplate.reflect.ManyComponentsTest" />
-      <option name="METHOD_NAME" value="printoutManyComponentsResult" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-Dlog4j.configuration=logging/log4j.xml" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../../../" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="StringTemplateIntrospectorTest" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="emma">
-        <pattern>
-          <option name="PATTERN" value="com.jimbarritt.spikes.stringtemplate.reflect.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <extension name="snapshooter" />
-      <module name="string-template" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="PACKAGE_NAME" value="com.jimbarritt.spikes.stringtemplate.reflect" />
-      <option name="MAIN_CLASS_NAME" value="com.jimbarritt.spikes.stringtemplate.reflect.StringTemplateIntrospectorTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-Dlog4j.configuration=logging/log4j.xml" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../../../" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.Run All Tests">
     <configuration default="false" name="ManyComponentsTest.rendersDefaultProperty" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="emma">
         <pattern>
@@ -1288,6 +1114,90 @@
       <option name="PACKAGE_NAME" value="com.jimbarritt.spikes.stringtemplate.reflect" />
       <option name="MAIN_CLASS_NAME" value="com.jimbarritt.spikes.stringtemplate.reflect.ManyComponentsTest" />
       <option name="METHOD_NAME" value="canSetWelcomeMessageText" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-Dlog4j.configuration=logging/log4j.xml" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../../../" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="SayHelloTest.saysHelloToJim" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="emma">
+        <pattern>
+          <option name="PATTERN" value="com.jimbarritt.spikes.stringtemplate.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="snapshooter" />
+      <module name="string-template" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="PACKAGE_NAME" value="com.jimbarritt.spikes.stringtemplate" />
+      <option name="MAIN_CLASS_NAME" value="com.jimbarritt.spikes.stringtemplate.SayHelloTest" />
+      <option name="METHOD_NAME" value="saysHelloToJim" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-Dlog4j.configuration=logging/log4j.xml" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../../../" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="SayHelloTest.saysHelloToFrank" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="emma">
+        <pattern>
+          <option name="PATTERN" value="com.jimbarritt.spikes.stringtemplate.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="snapshooter" />
+      <module name="string-template" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="PACKAGE_NAME" value="com.jimbarritt.spikes.stringtemplate" />
+      <option name="MAIN_CLASS_NAME" value="com.jimbarritt.spikes.stringtemplate.SayHelloTest" />
+      <option name="METHOD_NAME" value="saysHelloToFrank" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-Dlog4j.configuration=logging/log4j.xml" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../../../" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="SayHelloTest.saysHelloToFranck" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="emma">
+        <pattern>
+          <option name="PATTERN" value="com.jimbarritt.spikes.stringtemplate.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="snapshooter" />
+      <module name="string-template" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="PACKAGE_NAME" value="com.jimbarritt.spikes.stringtemplate" />
+      <option name="MAIN_CLASS_NAME" value="com.jimbarritt.spikes.stringtemplate.SayHelloTest" />
+      <option name="METHOD_NAME" value="saysHelloToFranck" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-Dlog4j.configuration=logging/log4j.xml" />
       <option name="PARAMETERS" value="" />
@@ -1560,11 +1470,11 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="JUnit.Run All Tests" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.StringTemplateIntrospectorTest.canFindTheInstanceOfAnIncludedTemplate" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ManyComponentsTest.printoutManyComponentsResult" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.StringTemplateIntrospectorTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.ManyComponentsTest.rendersDefaultProperty" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.ManyComponentsTest.canSetWelcomeMessageText" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ManyComponentsTest.rendersDefaultProperty" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ManyComponentsTest.canSetWelcomeMessageText" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.SayHelloTest.saysHelloToJim" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.SayHelloTest.saysHelloToFrank" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.SayHelloTest.saysHelloToFranck" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -1590,7 +1500,7 @@
     <supportedVersion>125</supportedVersion>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="874" extended-state="0" />
+    <frame x="-10" y="22" width="1024" height="742" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
@@ -1605,16 +1515,16 @@
       <window_info id="Code Graph" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.05371025" sideWeight="0.6615385" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Fireworks" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32862645" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Fireworks" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32921174" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32862645" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Metrics" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19410495" sideWeight="0.66238767" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36328626" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2574359" sideWeight="0.5347759" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.45440495" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Cycles" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1684,34 +1594,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/../../../lib/development/stringtemplate-3.2.1-src.zip!/src/org/antlr/stringtemplate/StringTemplateGroup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="360" column="18" selection-start="12731" selection-end="12731" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../lib/development/stringtemplate-3.2.1-src.zip!/src/org/antlr/stringtemplate/StringTemplateGroupLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="17" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../lib/development/stringtemplate-3.2.1-src.zip!/src/org/antlr/stringtemplate/StringTemplate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="704" column="29" selection-start="24176" selection-end="24176" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../lib/development/stringtemplate-3.2.1-src.zip!/src/org/antlr/stringtemplate/language/StringTemplateAST.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="71" selection-start="1982" selection-end="1982" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/reflect/StringTemplateIntrospector.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="68" column="70" selection-start="2736" selection-end="2736" vertical-scroll-proportion="0.0">
@@ -1722,13 +1604,6 @@
     <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/htmlcomponent/components/imageComponent.st">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/htmlcomponent/manyComponents.st">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="54" selection-start="278" selection-end="299" vertical-scroll-proportion="-5.652174">
           <folding />
         </state>
       </provider>
@@ -1760,6 +1635,15 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/reflect/StringTemplateArgument.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="46" selection-start="1042" selection-end="1042" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/htmlcomponent/components/parameter.st">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="42" selection-start="42" selection-end="42" vertical-scroll-proportion="0.0">
@@ -1774,9 +1658,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/reflect/StringTemplateArgument.java">
+    <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/htmlcomponent/manyComponents.st">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="46" selection-start="1042" selection-end="1042" vertical-scroll-proportion="0.0">
+        <state line="8" column="96" selection-start="162" selection-end="203" vertical-scroll-proportion="-5.3913045">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/ComponentAttributeMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="29" selection-start="2065" selection-end="2065" vertical-scroll-proportion="-16.375">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1785,16 +1676,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/reflect/ManyComponentsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="1272" selection-end="1272" vertical-scroll-proportion="0.0">
+        <state line="38" column="0" selection-start="1493" selection-end="1493" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/ComponentAttributeMap.java">
+    <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/io/SafeReaderTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="15" selection-start="2282" selection-end="2282" vertical-scroll-proportion="0.33333334">
+        <state line="12" column="0" selection-start="239" selection-end="239" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../lib/development/mockito-all-1.8.4.jar!/org/hamcrest/core/Is.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="46" selection-start="720" selection-end="720" vertical-scroll-proportion="-12.958333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/io/SafeReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="15" selection-start="297" selection-end="377" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/SayHello.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="28" selection-start="144" selection-end="144" vertical-scroll-proportion="-6.5625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/SayHelloTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="22" selection-start="410" selection-end="410" vertical-scroll-proportion="0.5520505">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

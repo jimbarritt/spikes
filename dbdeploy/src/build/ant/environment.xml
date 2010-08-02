@@ -21,7 +21,6 @@
     <property name="db.jdbc.oracle.xe.url" value="not-set"/>
     <property name="db.jdbc.h2.url" value="not-set"/>
 
-
     <target name="init-properties"
             depends="check-properties-file, init-hostname">
         <log.info message="Properties loaded from: [${env.properties.file}]" />

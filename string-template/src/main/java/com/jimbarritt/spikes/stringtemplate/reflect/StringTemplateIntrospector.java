@@ -8,6 +8,8 @@ import org.apache.log4j.*;
 import java.util.*;
 import java.util.List;
 
+import static java.lang.String.format;
+
 public class StringTemplateIntrospector {
     private static final Logger log = Logger.getLogger(StringTemplateIntrospector.class);
 
@@ -17,8 +19,10 @@ public class StringTemplateIntrospector {
 
     private StringTemplateDefinition createStringTemplateDefinition(StringTemplate stringTemplate) {
         List<StringTemplateInclude> invokedTemplates = parseIncludesTemplates(stringTemplate);
-        return new StringTemplateDefinition(stringTemplate.getName(), invokedTemplates);
+        List<StringTemplateAttribute> referencedAttributes = parseReferencedAttributes(stringTemplate);
+        return new StringTemplateDefinition(stringTemplate.getName(), invokedTemplates, referencedAttributes);
     }
+
 
     private List<StringTemplateInclude> parseIncludesTemplates(StringTemplate stringTemplate) {
         IncludeChunkMatcher includeChunkMatcher = new IncludeChunkMatcher(new IncludeAstParser());        
@@ -51,7 +55,7 @@ public class StringTemplateIntrospector {
             return includes;
         }
 
-        private static boolean isInclude(ASTExpr astExpr) {
+        private static boolean isInclude(ASTExpr astExpr) {            
             return "include".equals(astExpr.getAST().getText());
         }
     }
@@ -74,7 +78,7 @@ public class StringTemplateIntrospector {
 
         private StringTemplateAST convertToStringTemplateAst(AST ast) {
             if (!(ast instanceof StringTemplateAST)) {
-                throw new StringTemplateIntrospectionException(String.format("ast [%s] is not a StringTemplateAST, it is a [%s]", ast, ast.getClass().getSimpleName()));
+                throw new StringTemplateIntrospectionException(format("ast [%s] is not a StringTemplateAST, it is a [%s]", ast, ast.getClass().getSimpleName()));
             }
             return (StringTemplateAST)ast;            
         }
@@ -113,6 +117,50 @@ public class StringTemplateIntrospector {
             String argumentValue = argumentAst.getFirstChild().getNextSibling().getText();
 
             return new StringTemplateArgument(argumentName, argumentValue);
+        }
+    }
+
+    private List<StringTemplateAttribute> parseReferencedAttributes(StringTemplate stringTemplate) {
+        AttributeChunkMatcher attributeChunkMatcher = new AttributeChunkMatcher(new AttributeAstParser());
+        for (Object chunk : stringTemplate.getChunks()) {
+            attributeChunkMatcher.matchChunk(chunk);
+        }
+        return attributeChunkMatcher.referencedAttributes();
+    }
+
+    private static class AttributeChunkMatcher  {
+        List<StringTemplateAttribute> referencedAttributes = new ArrayList<StringTemplateAttribute>();
+        private final AttributeAstParser parser;
+
+        public AttributeChunkMatcher(AttributeAstParser parser) {
+            this.parser = parser;
+        }
+
+        public void matchChunk(Object chunk) {
+            if (!(chunk instanceof ASTExpr)) {
+                return;
+            }
+
+            ASTExpr astExpr = (ASTExpr) chunk;
+            if (isReferencedAttribute(astExpr)) {
+                referencedAttributes.add(parser.parseAttributeFrom(astExpr.getAST()));
+            }
+        }
+
+        public List<StringTemplateAttribute> referencedAttributes() {
+            return referencedAttributes;
+        }
+
+        private static boolean isReferencedAttribute(ASTExpr astExpr) {
+            log.info(format("checking : %s - %d", astExpr.getAST().getText(), astExpr.getAST().getType() ));
+            return (ActionParser.ID == astExpr.getAST().getType());            
+        }
+    }
+
+    private static class AttributeAstParser {
+
+        public StringTemplateAttribute parseAttributeFrom(AST ast) {
+            return new StringTemplateAttribute(ast.getText());
         }
     }
 

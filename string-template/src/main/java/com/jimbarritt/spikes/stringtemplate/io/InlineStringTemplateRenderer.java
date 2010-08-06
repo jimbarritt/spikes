@@ -8,14 +8,14 @@ import java.util.*;
 public class InlineStringTemplateRenderer {
     private String template;
     private AttributeList attributes;
-
+  
     public InlineStringTemplateRenderer template(String template) {
         this.template = template;
         return this;
     }
 
     String renderTemplate() {
-        StringTemplate stringTemplate = new StringTemplate(template);
+        StringTemplate stringTemplate = new StringTemplate(template);       
         stringTemplate.registerRenderer(Volume.class, new VolumeAttributeRenderer());
         for (Attribute attribute : attributes) {
             attribute.registerIn(stringTemplate);

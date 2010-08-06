@@ -13,11 +13,11 @@
     <orderEntry type="module-library">
       <library name="development">
         <CLASSES>
-          <root url="file://$MODULE_DIR$/../../../lib/development" />
+          <root url="jar://$MODULE_DIR$/../../../lib/development/junit-4.8.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../lib/development/mockito-all-1.8.4.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
-        <jarDirectory url="file://$MODULE_DIR$/../../../lib/development" recursive="false" />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -27,6 +27,8 @@
         </CLASSES>
         <JAVADOC />
         <SOURCES>
+          <root url="jar://$MODULE_DIR$/../../../lib/development/stringtemplate-3.2.1-src.zip!/src" />
+          <root url="jar://$MODULE_DIR$/../../../lib/development/stringtemplate-3.2.1-src.zip!/src" />
           <root url="jar://$MODULE_DIR$/../../../lib/development/stringtemplate-3.2.1-src.zip!/src" />
         </SOURCES>
         <jarDirectory url="file://$MODULE_DIR$/../../../lib/production" recursive="false" />

@@ -50,7 +50,7 @@
     <option name="maxMemory" />
     <option name="maxSize" value="5" />
     <option name="enable" value="true" />
-    <option name="enableAutoTask" value="true" />
+    <option name="enableAutoTask" value="false" />
     <option name="autoRunTestsDelayTime" value="1000" />
     <option name="jvmArgs" />
     <option name="clearLogConsole" value="true" />
@@ -266,6 +266,13 @@
         <default-constraints vsize-policy="6" hsize-policy="0" anchor="0" fill="2" />
       </item>
     </group>
+  </component>
+  <component name="ProjectDictionaryState">
+    <dictionary name="jim">
+      <words>
+        <w>attr</w>
+      </words>
+    </dictionary>
   </component>
   <component name="ProjectKey">
     <option name="state" value="project://default" />

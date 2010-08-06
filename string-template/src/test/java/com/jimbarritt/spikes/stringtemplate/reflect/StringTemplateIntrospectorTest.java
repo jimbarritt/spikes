@@ -63,4 +63,26 @@ public class StringTemplateIntrospectorTest {
         StringTemplateArgument argument_3 = arguments.get(2);
         assertThat(argument_3.toString(), is("editable=false"));        
     }
+
+    @Test
+    public void knowsIfAnAttributeWasRequiredButNotProvided() {
+        StringTemplate stringTemplate = new StringTemplate("$attrA$, $attrB$");
+        stringTemplate.setErrorListener(errorListener);
+        stringTemplate.setAttribute("attrA", "foo");
+
+        String representation = stringTemplate.toString();
+
+        log.info(representation);
+
+        log.info(new StringTemplateTreePrinter().printTreeOf(stringTemplate));
+
+
+        StringTemplateDefinition definition = StringTemplateIntrospector.inspect(stringTemplate);
+
+        List<StringTemplateAttribute> attributesNotInTemplate = definition.whichAttributesAreMissingIn(stringTemplate);
+        assertThat(attributesNotInTemplate.size(), is(1));
+        assertThat(attributesNotInTemplate.get(0).toString(), is("attrB"));
+    }
+
+
 }

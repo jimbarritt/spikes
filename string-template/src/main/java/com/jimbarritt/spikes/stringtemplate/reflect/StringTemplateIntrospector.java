@@ -151,8 +151,7 @@ public class StringTemplateIntrospector {
             return referencedAttributes;
         }
 
-        private static boolean isReferencedAttribute(ASTExpr astExpr) {
-            log.info(format("checking : %s - %d", astExpr.getAST().getText(), astExpr.getAST().getType() ));
+        private static boolean isReferencedAttribute(ASTExpr astExpr) {           
             return (ActionParser.ID == astExpr.getAST().getType());            
         }
     }

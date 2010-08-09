@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<inventory>
+    <totalWeight>30kg</totalWeight>
+    <link rel="inventory/item" href="/inventory/3432" />
+    <link rel="inventory/item" href="/inventory/223" />
+    <link rel="inventory/item" href="/inventory/678" />
+        
+</inventory>

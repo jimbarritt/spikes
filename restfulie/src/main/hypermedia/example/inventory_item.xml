@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<inventoryItem>
+    <name>Sword of slaying</name>
+    <type>Weapon</type>
+    <hitPoints>10</hitPoints>
+    <magicBonus>
+        <ac>+1</ac>
+        <attack>+2</attack>
+    </magicBonus>
+</inventoryItem>

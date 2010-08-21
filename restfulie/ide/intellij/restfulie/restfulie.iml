@@ -9,6 +9,13 @@
         <webroots>
           <root url="file://$MODULE_DIR$/../../../src/main/web" relative="/" />
         </webroots>
+        <sourceRoots>
+          <root url="file://$MODULE_DIR$/../../../src/main/java" />
+          <root url="file://$MODULE_DIR$/../../../src/test/java" />
+          <root url="file://$MODULE_DIR$/../../../src/main/resource" />
+          <root url="file://$MODULE_DIR$/../../../src/test/resource" />
+          <root url="file://$MODULE_DIR$/../../../src/main/hypermedia" />
+        </sourceRoots>
         <context-artifact name="restfulie-spike:war exploded" />
       </configuration>
     </facet>
@@ -22,6 +29,7 @@
       <sourceFolder url="file://$MODULE_DIR$/../../../src/main/resource" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../../src/test/resource" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../../src/main/hypermedia" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../src/functionaltest" isTestSource="true" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

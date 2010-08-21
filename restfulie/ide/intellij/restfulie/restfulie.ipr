@@ -3,6 +3,22 @@
   <component name="AntConfiguration">
     <defaultAnt bundledAnt="true" />
   </component>
+  <component name="ArtifactManager">
+    <artifact type="exploded-war" name="restfulie-spike:war exploded">
+      <output-path>$PROJECT_DIR$/out/artifacts/restfulie_spike_war_exploded</output-path>
+      <root id="root">
+        <element id="directory" name="WEB-INF">
+          <element id="directory" name="classes">
+            <element id="module-output" name="restfulie" />
+          </element>
+          <element id="directory" name="lib">
+            <element id="library" level="module" name="lib-production" module-name="restfulie" />
+          </element>
+        </element>
+        <element id="javaee-facet-resources" facet="restfulie/web/Web" />
+      </root>
+    </artifact>
+  </component>
   <component name="BSFConsole">
     <option name="searchOptions">
       <BSFConsoleSearchOptions />

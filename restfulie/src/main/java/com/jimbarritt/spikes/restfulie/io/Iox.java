@@ -22,7 +22,7 @@ public class Iox {
         }
     }
 
-    private static void tryToClose(OutputStream out) {
+    public static void tryToClose(OutputStream out) {
         if (out == null) {
             return;
         }

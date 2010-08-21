@@ -4,6 +4,9 @@ import com.jimbarritt.spikes.restfulie.io.*;
 import org.apache.log4j.*;
 import org.junit.*;
 
+import static org.junit.Assert.assertThat;
+import static org.junit.matchers.JUnitMatchers.containsString;
+
 public class LocationTest {
 
     private static final Logger log = Logger.getLogger(LocationTest.class);
@@ -14,6 +17,6 @@ public class LocationTest {
 
         String representation = httpClient.getFrom("http://localhost:8080/restfulie-spike/locations/34523");
         
-        log.info("Content: " + representation);
+        assertThat(representation, containsString("34523"));
     }
 }

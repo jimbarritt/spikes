@@ -4,7 +4,7 @@ import org.junit.*;
 
 import java.io.*;
 
-import static com.jimbarritt.spikes.restfulie.io.Iox.readAsUtf8String;
+import static com.jimbarritt.spikes.restfulie.io.Iox.readAsString;
 import static com.jimbarritt.spikes.restfulie.io.Iox.tryToClose;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
@@ -16,7 +16,7 @@ public class IoxTest {
         String input = "This is my string \u00A3";
         ByteArrayInputStream in = new ByteArrayInputStream(input.getBytes("UTF-8"));
 
-        String result = readAsUtf8String(in);
+        String result = readAsString(in, "UTF-8");
 
         assertThat(result, is("This is my string \u00A3"));
     }

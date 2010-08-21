@@ -1,9 +1,8 @@
 package com.jimbarritt.spikes.restfulie.functionaltest;
 
+import com.jimbarritt.spikes.restfulie.io.*;
 import org.apache.log4j.*;
 import org.junit.*;
-
-import java.net.*;
 
 public class LocationTest {
 
@@ -11,10 +10,10 @@ public class LocationTest {
 
     @Test
     public void canGetALocation() throws Exception {
-        URL url = new URL("http://localhost:8080/restfulie-spike/");
+        SimpleHttpClient httpClient = new SimpleHttpClient();
 
-        Object content = url.getContent();
-
-        log.info("Content: " + content);
+        String representation = httpClient.getFrom("http://localhost:8080/restfulie-spike/locations/34523");
+        
+        log.info("Content: " + representation);
     }
 }

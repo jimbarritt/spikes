@@ -4,7 +4,7 @@ import java.io.*;
 
 public class Iox {
 
-    public static String readAsUtf8String(InputStream in) {
+    public static String readAsString(InputStream in, String charsetName) {
         byte[] buffer = new byte[255];
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         try {
@@ -14,7 +14,7 @@ public class Iox {
                 out.flush();
                 bytesRead = in.read(buffer);
             }
-            return out.toString("UTF-8");
+            return out.toString(charsetName);
         } catch (IOException e) {
             throw new RuntimeIoException("Could not read from input stream", e);
         } finally {

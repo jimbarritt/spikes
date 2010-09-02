@@ -287,6 +287,7 @@
     <dictionary name="jim">
       <words>
         <w>restfulie</w>
+        <w>simplehtml</w>
       </words>
     </dictionary>
   </component>

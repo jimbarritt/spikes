@@ -13,7 +13,7 @@ public class SimpleHttpClientBasedTest {
     public void canGetALocation() throws Exception {
         SimpleHttpClient httpClient = new SimpleHttpClient();
 
-        String representation = httpClient.getFrom(new RemoteApplication().uriForPath("simplehtml/34523"));
+        String representation = httpClient.getFrom(new RemoteApplication().uriForPath("/simplehtml/34523"));
         
         assertThat(representation, containsString("34523"));
     }

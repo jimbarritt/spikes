@@ -39,8 +39,6 @@ public class RestfulieXmlLocationTest {
 		Location location = response.getResource();
 
 		assertNotNull(location);
-
-		assertNotNull(location);
         assertThat(location.toString(), containsString("666"));
 
         log.info(format("Current Location : %s", location));

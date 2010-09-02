@@ -6,7 +6,6 @@ import org.apache.log4j.*;
 
 import static br.com.caelum.vraptor.view.Results.*;
 import static java.lang.String.*;
-import static java.lang.String.format;
 
 @Resource
 public class LocationResource {
@@ -21,10 +20,11 @@ public class LocationResource {
 
     @Get
     @Path("/locations/{id}")
-    public void getLocation(int id) {        
+    public void getLocation(int id) {
         log.info(format("Looking for location [%d]", id));
+        Location location = new Location(format("This is my location @%d", id));
         result.use(representation())
-                .from(new Location(format("This is my location @%d", id)))
+                .from(location)
                 .serialize();
     }
 }

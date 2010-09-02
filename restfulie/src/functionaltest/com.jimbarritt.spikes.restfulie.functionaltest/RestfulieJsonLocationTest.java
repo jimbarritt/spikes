@@ -10,10 +10,10 @@ import java.util.*;
 
 import static java.lang.String.format;
 import static org.junit.Assert.*;
-import static org.junit.matchers.JUnitMatchers.containsString;
+import static org.junit.matchers.JUnitMatchers.*;
 
-public class RestfulieXmlLocationTest {
-    private static final Logger log = Logger.getLogger(RestfulieXmlLocationTest.class);
+public class RestfulieJsonLocationTest {
+    private static final Logger log = Logger.getLogger(RestfulieJsonLocationTest.class);
 
     private RestClient restfulie;
     private RemoteApplication remoteApplication;
@@ -21,7 +21,7 @@ public class RestfulieXmlLocationTest {
     @Before
 	public void setUp() throws Exception {
 		restfulie = Restfulie.custom();
-		restfulie.getMediaTypes().register(new XmlMediaType() {
+		restfulie.getMediaTypes().register(new JsonMediaType() {
 			@SuppressWarnings("unchecked")
 			@Override
 			protected List<Class> getTypesToEnhance() {
@@ -34,16 +34,15 @@ public class RestfulieXmlLocationTest {
 	@Test
 	public void canGetALocationRepresentation() throws Exception {
         Response response = restfulie.at(remoteApplication.uriForPath("/locations/666"))
-                                     .accept("application/xml")
+                                     .accept("application/json")
                                      .get();
-        log.info(format("Response was \n%s", response.getContent()));
 		Location location = response.getResource();
 
 		assertNotNull(location);
         assertThat(location.toString(), containsString("666"));
 
         log.info(format("Current Location : %s", location));
-
+        log.info(format("Response was \n%s", response.getContent()));
 	}
 	
 }

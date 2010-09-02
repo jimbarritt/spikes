@@ -2,6 +2,7 @@ package com.jimbarritt.spikes.restfulie.server.domain;
 
 import com.thoughtworks.xstream.annotations.*;
 
+
 @XStreamAlias("location")
 public class Location {
 
@@ -14,4 +15,5 @@ public class Location {
     public String description() {
         return description;
     }
+
 }

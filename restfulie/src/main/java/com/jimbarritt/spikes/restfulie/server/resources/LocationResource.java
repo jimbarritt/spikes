@@ -21,8 +21,8 @@ public class LocationResource {
 
     @Get
     @Path("/locations/{id}")
-    public void getLocation(int id) {
-        log.info(format("Looking for location %d", id));
+    public void getLocation(int id) {        
+        log.info(format("Looking for location [%d]", id));
         result.use(representation())
                 .from(new Location(format("This is my location @%d", id)))
                 .serialize();

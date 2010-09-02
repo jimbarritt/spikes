@@ -12,7 +12,7 @@ public class PingServerTest {
     public void hasWelcomePage() {
         SimpleHttpClient httpClient = new SimpleHttpClient();
 
-        String representation = httpClient.getFrom("http://localhost:8080/restfulie-spike/");
+        String representation = httpClient.getFrom(new RemoteApplication().rootUri());
 
         assertThat(representation, containsString("Welcome to the Restfulie Spike!"));
     }

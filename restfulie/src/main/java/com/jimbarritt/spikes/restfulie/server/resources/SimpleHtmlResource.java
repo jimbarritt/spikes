@@ -16,8 +16,9 @@ public class SimpleHtmlResource {
 
     @Get
     @Path("/simplehtml/{id}")
-    public void location(int id) {
-        result.use(DefaultHttpResult.class).body(format("<html><h1>Oh yeah baby, VRaptor Rockin! id is %d</h1></html>", id));
+    public void serveSomeHtmlFor(int id) {
+        result.use(DefaultHttpResult.class)
+              .body(format("<html><h1>Oh yeah baby, VRaptor Rockin! id is %d</h1></html>", id));
     }
 
 }

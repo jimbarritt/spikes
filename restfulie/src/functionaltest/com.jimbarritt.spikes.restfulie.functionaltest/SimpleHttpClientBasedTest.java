@@ -7,15 +7,13 @@ import org.junit.*;
 import static org.junit.Assert.assertThat;
 import static org.junit.matchers.JUnitMatchers.containsString;
 
-public class SimpleHtmlTest {
-
-    private static final Logger log = Logger.getLogger(SimpleHtmlTest.class);
-
+public class SimpleHttpClientBasedTest {
+    
     @Test
     public void canGetALocation() throws Exception {
         SimpleHttpClient httpClient = new SimpleHttpClient();
 
-        String representation = httpClient.getFrom("http://localhost:8080/restfulie-spike/simplehtml/34523");
+        String representation = httpClient.getFrom(new RemoteApplication().uriForPath("simplehtml/34523"));
         
         assertThat(representation, containsString("34523"));
     }

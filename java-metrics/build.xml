@@ -7,232 +7,26 @@
         (c) Jim Barritt 2010
     </description>
 
-    <property name="test.to.run" value=""
-              description="Set this if you want to run a specific test, e.g. -Dtest.to.run=com.blah.SomeTest"/>
-
-    <property name="module.dir" value="${basedir}"/>
-
-    <property name="src.dir" value="${module.dir}/src"/>
-    <property name="src.main.dir" value="${src.dir}/main"/>
-    <property name="src.main.java.dir" value="${src.main.dir}/java"/>
-    <property name="src.main.resource.dir" value="${src.main.dir}/resource"/>
-
-    <property name="src.test.dir" value="${src.dir}/test"/>
-    <property name="src.test.java.dir" value="${src.test.dir}/java"/>
-
-    <property name="lib.dir" value="${module.dir}/lib"/>
-    <property name="lib.development.dir" value="${lib.dir}/development"/>
-    <property name="lib.production.dir" value="${lib.dir}/production"/>
-
-    <property name="tool.dir" value="${basedir}/tool"/>
-    <property name="tool.cloc.command" value="${tool.dir}/cloc-1.51.pl" />
-
-    <property name="target.dir" value="${module.dir}/target"/>
-
-    <property name="target.compilation.dir" value="${target.dir}/compilation"/>
-    <property name="target.compilation.production.dir" value="${target.compilation.dir}/production"/>
-    <property name="target.compilation.test.dir" value="${target.compilation.dir}/test"/>
-    <property name="target.compilation.instrumented.dir" value="${target.compilation.dir}/instrumented"/>
-    <property name="target.compilation.instrumented.cobertura.dir" value="${target.compilation.instrumented.dir}/cobertura"/>
-
-    <property name="target.reports.dir" value="${target.dir}/reports"/>
-    <property name="target.reports.test.dir" value="${target.reports.dir}/test"/>
-    <property name="target.reports.test.unit.dir" value="${target.reports.test.dir}/unit"/>
-    <property name="target.reports.test.unit.xml.dir" value="${target.reports.test.unit.dir}/xml"/>
-    <property name="target.reports.test.unit.html.dir" value="${target.reports.test.unit.dir}/html"/>
-
-    <property name="target.reports.coverage.dir" value="${target.reports.dir}/coverage"/>
-    <property name="target.reports.coverage.cobertura.dir" value="${target.reports.coverage.dir}/cobertura"/>
-    <property name="target.reports.coverage.cobertura.datafile"
-              value="${target.reports.coverage.cobertura.dir}/cobertura.ser"/>
-    <property name="target.reports.coverage.cobertura.html.dir" value="${target.reports.coverage.cobertura.dir}/html"/>
-    <property name="target.reports.coverage.cobertura.xml.dir" value="${target.reports.coverage.cobertura.dir}/xml"/>
-    <property name="target.reports.coverage.cobertura.summary.dir"
-              value="${target.reports.coverage.cobertura.dir}/summary"/>
-
-    <property name="target.reports.loc.dir" value="${target.reports.dir}/loc"/>
-    <property name="target.reports.loc.outputfile" value="${target.reports.loc.dir}/lines-of-code.txt"/>
-
-
-    <path id="production.classpath">
-        <fileset dir="${lib.production.dir}">
-            <include name="**/*.jar"/>
-        </fileset>
-    </path>
-
-    <path id="development.classpath">
-        <fileset dir="${lib.development.dir}">
-            <include name="**/*.jar"/>
-        </fileset>
-        <path refid="production.classpath"/>
-    </path>
-
-    <path id="test.compile.classpath">
-        <path refid="development.classpath"/>
-        <path location="${target.compilation.production.dir}"/>
-    </path>
-
-    <path id="test.execute.classpath">
-        <path location="${target.compilation.instrumented.cobertura.dir}"/>
-        <path refid="test.compile.classpath"/>
-        <path location="${target.compilation.test.dir}"/>
-    </path>
-
-    <path id="cobertura.classpath">
-        <path refid="production.classpath"/>
-        <path refid="development.classpath"/>
-    </path>
-
-    <taskdef classpathref="cobertura.classpath" resource="tasks.properties"/>
+    <import file="${basedir}/build/module-structure.xml"/>
+    <import file="${basedir}/build/compile.xml"/>
+    <import file="${basedir}/build/cobertura.xml"/>
+    <import file="${basedir}/build/cloc.xml"/>
+    <import file="${basedir}/build/test.xml"/>
 
     <target name="coverage"
-            description="Compile, instrument production classes, run the tests and generate coverage reports.">
-
-        <antcall target="compile:production" />
-        <antcall target="cobertura:instrument" />
-        <antcall target="compile:test" />
-        <antcall target="test:unit" />
-        <antcall target="cobertura:check" />
-        <antcall target="report" />
-    </target>
-
-    <target name="init" depends="clean">
-        <mkdir dir="${target.dir}"/>
-        <mkdir dir="${target.compilation.production.dir}"/>
-        <mkdir dir="${target.compilation.test.dir}"/>
-
-        <mkdir dir="${target.reports.test.unit.xml.dir}"/>
-        <mkdir dir="${target.reports.test.unit.html.dir}"/>
-
-        <mkdir dir="${target.compilation.instrumented.cobertura.dir}"/>
-        <mkdir dir="${target.reports.coverage.cobertura.xml.dir}"/>
-        <mkdir dir="${target.reports.coverage.cobertura.summary.dir}"/>
-        <mkdir dir="${target.reports.coverage.cobertura.html.dir}"/>
-    </target>
-
-    <target name="compile:production" depends="init">
-        <javac srcdir="${src.main.java.dir}" destdir="${target.compilation.production.dir}" debug="yes">
-            <classpath refid="development.classpath"/>
-        </javac>
-        <copy todir="${target.compilation.production.dir}">
-            <fileset dir="${src.main.resource.dir}"/>
-            <fileset dir="${src.main.java.dir}">
-                <exclude name="**/*.java"/>
-            </fileset>
-        </copy>
-    </target>
-
-    <target name="compile:test">
-        <property name="classpath.string" refid="test.compile.classpath"/>
-        <echo message="Classpath is ${classpath.string}"/>
-        <javac srcdir="${src.test.dir}"
-               destdir="${target.compilation.test.dir}"
-               debug="yes">
-            <classpath refid="test.compile.classpath"/>
-        </javac>
-    </target>
-
-    <target name="test:unit">
-        <junit printsummary="on">
-            <classpath refid="test.execute.classpath"/>
-
-            <sysproperty key="net.sourceforge.cobertura.datafile"
-                         file="${target.reports.coverage.cobertura.datafile}"/>
-
-            <formatter type="xml"/>
-
-            <batchtest fork="yes"
-                       todir="${target.reports.test.unit.xml.dir}">
-
-                <fileset dir="${src.test.java.dir}">
-                    <include name="**/*Test.java"/>
-                </fileset>
-            </batchtest>
-        </junit>
-    </target>
-
-    <target name="report:test">
-        <junitreport todir="${target.reports.test.unit.html.dir}">
-            <fileset dir="${target.reports.test.unit.xml.dir}">
-                <include name="*.xml"/>
-            </fileset>
-            <report format="frames"
-                    todir="${target.reports.test.unit.html.dir}">
-                <param name="TITLE" expression="The results of the unit tests" />
-            </report>
-        </junitreport>
-    </target>
-
-
-    <target name="cobertura:check">
-        <cobertura-check branchrate="34"
-                         datafile="${target.reports.coverage.cobertura.datafile}"
-                         totallinerate="100"/>
-    </target>
-
-    <target name="cobertura:instrument">
-        <echo message="Instrumenting classes in ${target.compilation.production.dir}"/>
-        <cobertura-instrument todir="${target.compilation.instrumented.cobertura.dir}"
-                              datafile="${target.reports.coverage.cobertura.datafile}">
-
-            <ignore regex="org.apache.log4j.*"/>
-
-            <fileset dir="${target.compilation.production.dir}">
-                <include name="**/*.class"/>
-            </fileset>
-        </cobertura-instrument>
-    </target>
-
-    <target  name="report"
-             depends="report:test, report:cobertura, report:cloc"
-             description="Generates reports for tests and any other processes">
+            depends="compile:production, cobertura:instrument, compile:test, test:unit, cobertura:check, report"
+            description="Compile, instrument production classes, run the tests and generate all kinds of reports.">
         
-        <echo message="Reports @" />
-        <echo message="Lines of code      : ${target.reports.loc.outputfile}" />
-        <echo message="Test               : ${target.reports.test.unit.html.dir}/index.html" />
-        <echo message="Cobertura coverage : ${target.reports.coverage.cobertura.html.dir}/index.html" />
     </target>
 
-    <target name="report:cobertura">
-        <antcall target="report:cobertura-xml" />
-        <antcall target="report:cobertura-xml-summary" />
-        <antcall target="report:cobertura-html" />
+    <target name="report"
+            depends="report:test, report:cobertura, report:cloc"
+            description="Generates reports for tests and any other processes">
+
+        <echo message="Reports @"/>
+        <echo message="Lines of code      : ${target.reports.loc.outputfile}"/>
+        <echo message="Test               : ${target.reports.test.unit.html.dir}/index.html"/>
+        <echo message="Cobertura coverage : ${target.reports.coverage.cobertura.html.dir}/index.html"/>
     </target>
-
-    <target name="report:cobertura-xml">
-        <cobertura-report srcdir="${src.main.java.dir}"
-                          datafile="${target.reports.coverage.cobertura.datafile}"
-                          format="xml"
-                          destdir="${target.reports.coverage.cobertura.xml.dir}"/>
-    </target>
-
-
-
-    <target name="report:cloc">
-        <mkdir dir="${target.reports.loc.dir}" />
-        <exec executable="${tool.cloc.command}" output="${target.reports.loc.outputfile}">
-            <arg value="${src.dir}" />
-        </exec>
-    </target>
-
-    <target name="report:cobertura-html">
-        <cobertura-report srcdir="${src.main.java.dir}"
-                          datafile="${target.reports.coverage.cobertura.datafile}"
-                          format="html"
-                          destdir="${target.reports.coverage.cobertura.html.dir}"/>
-    </target>
-
-    <target name="report:cobertura-xml-summary">
-        <cobertura-report srcdir="${src.main.java.dir}"
-                          datafile="${target.reports.coverage.cobertura.datafile}"
-                          format="summaryXml"
-                          destdir="${target.reports.coverage.cobertura.summary.dir}"/>
-    </target>
-
-
-    <target name="clean" description="Remove all files created by the build/test process.">
-        <delete dir="${target.dir}"/>
-    </target>
-
 
 </project>

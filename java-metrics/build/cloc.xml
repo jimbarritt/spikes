@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="cloc" basedir="..">
+
+    <import file="${basedir}/build/module-structure.xml" />
+
+    <property name="tool.cloc.command" value="${tool.dir}/cloc-1.51.pl"/>
+    
+     <target name="report:cloc">
+        <mkdir dir="${target.reports.loc.dir}"/>
+        <exec executable="${tool.cloc.command}" output="${target.reports.loc.outputfile}">
+            <arg value="${src.dir}"/>
+        </exec>
+    </target>
+
+</project>

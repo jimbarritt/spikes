@@ -1,43 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="4f69e8e4-a967-4020-9221-10e3833ccc2a" name="Default" comment="Adding version numbers to the jar files">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/xerces_2_5_0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/xml-apis.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/batik-xml.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/batik-svg-dom.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectFilesBackup1/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/batik-awt-util.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/batik-extension.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/batik-svggen.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../build/project-structure.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/batik-css.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/pdf-transcoder.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/batik-transcoder.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/batik-parser.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/panopticode/lib/dom4j-1.6.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/panopticode/build-example.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/js.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/panopticode/batik/batik-imports.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/batik-gui-util.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/batik-bridge.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/batik-util.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../build.xml" afterPath="$PROJECT_DIR$/../../../build.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/panopticode/lib/ant.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/panopticode/lib/TreemapAlgorithms.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/RasterizerTask.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/batik-swing.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/batik-gvt.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/batik-rasterizer.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/panopticode/lib/jaxen-1.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/batik.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/jim.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/batik-ext.jar" />
+    <list default="true" readonly="true" id="4f69e8e4-a967-4020-9221-10e3833ccc2a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../build/test.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../build/module-structure.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/panopticode/panopticode-imports.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/batik-script.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/panopticode/panopticode.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/batik-dom.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../build.xml" afterPath="$PROJECT_DIR$/../../../build.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../build/cloc.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../build/project-structure.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/jim.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/jim.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../build/cobertura.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../build/compile.xml" />
     </list>
     <ignored path="$USER_HOME_GRIFFON$/" />
     <ignored path="$USER_HOME_GRAILS$/" />
@@ -113,52 +86,52 @@
       <file leaf-file-name="build.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../../../build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="188" column="105" selection-start="8000" selection-end="8000" vertical-scroll-proportion="0.29401994">
+            <state line="17" column="105" selection-start="763" selection-end="763" vertical-scroll-proportion="0.15822785">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="project-structure.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../build/project-structure.xml">
+      <file leaf-file-name="test.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../build/test.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="4" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0">
+            <state line="5" column="4" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Bee.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/metricsexample/bee/Bee.java">
+      <file leaf-file-name="cloc.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../build/cloc.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="13" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0">
+            <state line="4" column="59" selection-start="80" selection-end="135" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Beehive.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/metricsexample/bee/Beehive.java">
+      <file leaf-file-name="cobertura.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../build/cobertura.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="13" selection-start="85" selection-end="85" vertical-scroll-proportion="0.0">
+            <state line="2" column="15" selection-start="55" selection-end="55" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BeehiveTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/metricsexample/bee/BeehiveTest.java">
+      <file leaf-file-name="compile.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../build/compile.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="13" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0">
+            <state line="2" column="15" selection-start="55" selection-end="55" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainIntegrationTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/metricsexample/MainIntegrationTest.java">
+      <file leaf-file-name="module-structure.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../build/module-structure.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="1" selection-start="188" selection-end="188" vertical-scroll-proportion="0.0">
+            <state line="12" column="47" selection-start="537" selection-end="537" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -187,6 +160,11 @@
         <option value="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/metricsexample/bee/Beehive.java" />
         <option value="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/metricsexample/MainIntegrationTest.java" />
         <option value="$PROJECT_DIR$/../../../build/project-structure.xml" />
+        <option value="$PROJECT_DIR$/../../../build/module-structure.xml" />
+        <option value="$PROJECT_DIR$/../../../build/cloc.xml" />
+        <option value="$PROJECT_DIR$/../../../build/cobertura.xml" />
+        <option value="$PROJECT_DIR$/../../../build/compile.xml" />
+        <option value="$PROJECT_DIR$/../../../build/test.xml" />
         <option value="$PROJECT_DIR$/../../../build.xml" />
       </list>
     </option>
@@ -256,6 +234,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="tool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-metrics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-metrics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="build" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -705,37 +697,37 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="874" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15256411" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1675054" sideWeight="0.8384615" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15147625" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1675054" sideWeight="0.45314506" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Code explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="JSTestDriver Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Code Graph" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37095615" sideWeight="0.6615385" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Fireworks" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18461539" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="JSTestDriver Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Code Graph" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37095615" sideWeight="0.6615385" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Fireworks" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31578946" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Metrics" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22214234" sideWeight="0.48205128" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Dependency Cycles" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Metrics" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22214234" sideWeight="0.67522466" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Cycles" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsManagerConfiguration">
@@ -751,7 +743,7 @@
     <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding version numbers to the jar files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding panopticode" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -774,6 +766,7 @@
     <MESSAGE value="Added some comments for testing cloc" />
     <MESSAGE value="Adding cloc and emma" />
     <MESSAGE value="Adding version numbers to the jar files" />
+    <MESSAGE value="Adding panopticode" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -786,7 +779,7 @@
       <runInBackground value="true" />
       <targetFilters />
       <treeView value="false" />
-      <verbose value="false" />
+      <verbose value="true" />
       <viewClosedWhenNoErrors value="false" />
     </buildFile>
   </component>
@@ -826,16 +819,44 @@
         <state line="10" column="1" selection-start="188" selection-end="188" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../build/project-structure.xml">
+    <entry file="file://$PROJECT_DIR$/../../../build/cobertura.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="4" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0">
+        <state line="2" column="15" selection-start="55" selection-end="55" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../build/compile.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="15" selection-start="55" selection-end="55" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../build/module-structure.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="47" selection-start="537" selection-end="537" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../build/cloc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="59" selection-start="80" selection-end="135" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../build/test.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="4" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="188" column="105" selection-start="8000" selection-end="8000" vertical-scroll-proportion="0.29401994">
+        <state line="17" column="105" selection-start="763" selection-end="763" vertical-scroll-proportion="0.15822785">
           <folding />
         </state>
       </provider>

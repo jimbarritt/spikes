@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="cobertura" basedir=".." >
+
+    <import file="${basedir}/build/module-structure.xml" />
+
+    <path id="cobertura.classpath">
+        <path refid="production.classpath"/>
+        <path refid="development.classpath"/>
+    </path>
+
+    <taskdef classpathref="cobertura.classpath" resource="tasks.properties"/>
+
+    
+    <target name="cobertura:check">
+          <cobertura-check branchrate="34"
+                           datafile="${target.reports.coverage.cobertura.datafile}"
+                           totallinerate="100"/>
+      </target>
+
+      <target name="cobertura:instrument">
+          <echo message="Instrumenting classes in ${target.compilation.production.dir}"/>
+          <cobertura-instrument todir="${target.compilation.instrumented.cobertura.dir}"
+                                datafile="${target.reports.coverage.cobertura.datafile}">
+
+              <ignore regex="org.apache.log4j.*"/>
+
+              <fileset dir="${target.compilation.production.dir}">
+                  <include name="**/*.class"/>
+              </fileset>
+          </cobertura-instrument>
+      </target>
+
+    <target name="report:cobertura">
+        <antcall target="report:cobertura-xml" />
+        <antcall target="report:cobertura-xml-summary" />
+        <antcall target="report:cobertura-html" />
+    </target>
+
+    <target name="report:cobertura-xml">
+        <cobertura-report srcdir="${src.main.java.dir}"
+                          datafile="${target.reports.coverage.cobertura.datafile}"
+                          format="xml"
+                          destdir="${target.reports.coverage.cobertura.xml.dir}"/>
+    </target>
+
+       <target name="report:cobertura-html">
+        <cobertura-report srcdir="${src.main.java.dir}"
+                          datafile="${target.reports.coverage.cobertura.datafile}"
+                          format="html"
+                          destdir="${target.reports.coverage.cobertura.html.dir}"/>
+    </target>
+
+    <target name="report:cobertura-xml-summary">
+        <cobertura-report srcdir="${src.main.java.dir}"
+                          datafile="${target.reports.coverage.cobertura.datafile}"
+                          format="summaryXml"
+                          destdir="${target.reports.coverage.cobertura.summary.dir}"/>
+    </target>
+
+</project>

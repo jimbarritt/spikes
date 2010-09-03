@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="test" basedir="..">
+
+    <import file="${basedir}/build/module-structure.xml" />
+    
+    <property name="test.to.run" value=""
+              description="Set this if you want to run a specific test, e.g. -Dtest.to.run=com.blah.SomeTest"/>
+
+    <target name="test:unit">
+        <junit printsummary="on">
+            <classpath refid="test.execute.classpath"/>
+
+            <sysproperty key="net.sourceforge.cobertura.datafile"
+                         file="${target.reports.coverage.cobertura.datafile}"/>
+
+            <formatter type="xml"/>
+
+            <batchtest fork="yes"
+                       todir="${target.reports.test.unit.xml.dir}">
+
+                <fileset dir="${src.test.java.dir}">
+                    <include name="**/*Test.java"/>
+                </fileset>
+            </batchtest>
+        </junit>
+    </target>
+
+    <target name="report:test">
+        <junitreport todir="${target.reports.test.unit.html.dir}">
+            <fileset dir="${target.reports.test.unit.xml.dir}">
+                <include name="*.xml"/>
+            </fileset>
+            <report format="frames"
+                    todir="${target.reports.test.unit.html.dir}">
+                <param name="TITLE" expression="The results of the unit tests"/>
+            </report>
+        </junitreport>
+    </target>
+
+
+</project>

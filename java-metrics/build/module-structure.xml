@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="module-structure" basedir="..">
+
+    <property name="module.dir" value="${basedir}"/>
+    <property name="src.dir" value="${module.dir}/src"/>
+    <property name="src.main.dir" value="${src.dir}/main"/>
+    <property name="src.main.java.dir" value="${src.main.dir}/java"/>
+    <property name="src.main.resource.dir" value="${src.main.dir}/resource"/>
+
+    <property name="src.test.dir" value="${src.dir}/test"/>
+    <property name="src.test.java.dir" value="${src.test.dir}/java"/>
+
+    <property name="lib.dir" value="${module.dir}/lib"/>
+    <property name="lib.development.dir" value="${lib.dir}/development"/>
+    <property name="lib.production.dir" value="${lib.dir}/production"/>
+
+    <property name="tool.dir" value="${basedir}/tool"/>
+
+    <property name="target.dir" value="${module.dir}/target"/>
+
+    <property name="target.compilation.dir" value="${target.dir}/compilation"/>
+    <property name="target.compilation.production.dir" value="${target.compilation.dir}/production"/>
+    <property name="target.compilation.test.dir" value="${target.compilation.dir}/test"/>
+    <property name="target.compilation.instrumented.dir" value="${target.compilation.dir}/instrumented"/>
+    <property name="target.compilation.instrumented.cobertura.dir"
+              value="${target.compilation.instrumented.dir}/cobertura"/>
+
+
+    <property name="target.reports.dir" value="${target.dir}/reports"/>
+    <property name="target.reports.test.dir" value="${target.reports.dir}/test"/>
+    <property name="target.reports.test.unit.dir" value="${target.reports.test.dir}/unit"/>
+    <property name="target.reports.test.unit.xml.dir" value="${target.reports.test.unit.dir}/xml"/>
+    <property name="target.reports.test.unit.html.dir" value="${target.reports.test.unit.dir}/html"/>
+
+    <property name="target.reports.coverage.dir" value="${target.reports.dir}/coverage"/>
+    <property name="target.reports.coverage.cobertura.dir" value="${target.reports.coverage.dir}/cobertura"/>
+    <property name="target.reports.coverage.cobertura.datafile"
+              value="${target.reports.coverage.cobertura.dir}/cobertura.ser"/>
+    <property name="target.reports.coverage.cobertura.html.dir" value="${target.reports.coverage.cobertura.dir}/html"/>
+    <property name="target.reports.coverage.cobertura.xml.dir" value="${target.reports.coverage.cobertura.dir}/xml"/>
+    <property name="target.reports.coverage.cobertura.summary.dir"
+              value="${target.reports.coverage.cobertura.dir}/summary"/>
+
+    <property name="target.reports.loc.dir" value="${target.reports.dir}/loc"/>
+    <property name="target.reports.loc.outputfile" value="${target.reports.loc.dir}/lines-of-code.txt"/>
+
+    <path id="production.classpath">
+        <fileset dir="${lib.production.dir}">
+            <include name="**/*.jar"/>
+        </fileset>
+    </path>
+
+    <path id="development.classpath">
+        <fileset dir="${lib.development.dir}">
+            <include name="**/*.jar"/>
+        </fileset>
+        <path refid="production.classpath"/>
+    </path>
+
+    <path id="test.compile.classpath">
+        <path refid="development.classpath"/>
+        <path location="${target.compilation.production.dir}"/>
+    </path>
+
+    <path id="test.execute.classpath">
+        <path location="${target.compilation.instrumented.cobertura.dir}"/>
+        <path refid="test.compile.classpath"/>
+        <path location="${target.compilation.test.dir}"/>
+    </path>
+
+    <target name="init" depends="clean">
+        <mkdir dir="${target.dir}"/>
+        <mkdir dir="${target.compilation.production.dir}"/>
+        <mkdir dir="${target.compilation.test.dir}"/>
+
+        <mkdir dir="${target.reports.test.unit.xml.dir}"/>
+        <mkdir dir="${target.reports.test.unit.html.dir}"/>
+
+        <mkdir dir="${target.compilation.instrumented.cobertura.dir}"/>
+        <mkdir dir="${target.reports.coverage.cobertura.xml.dir}"/>
+        <mkdir dir="${target.reports.coverage.cobertura.summary.dir}"/>
+        <mkdir dir="${target.reports.coverage.cobertura.html.dir}"/>
+    </target>
+
+    <target name="clean" description="Remove all files created by the build/test process.">
+        <delete dir="${target.dir}"/>
+    </target>
+
+
+</project>

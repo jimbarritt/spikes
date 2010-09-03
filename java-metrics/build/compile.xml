@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="compile" basedir=".." >
+
+    <import file="${basedir}/build/module-structure.xml" />
+
+    <target name="compile:production" depends="init">
+            <javac srcdir="${src.main.java.dir}" destdir="${target.compilation.production.dir}" debug="yes">
+                <classpath refid="development.classpath"/>
+            </javac>
+            <copy todir="${target.compilation.production.dir}">
+                <fileset dir="${src.main.resource.dir}"/>
+                <fileset dir="${src.main.java.dir}">
+                    <exclude name="**/*.java"/>
+                </fileset>
+            </copy>
+        </target>
+
+        <target name="compile:test">
+            <property name="classpath.string" refid="test.compile.classpath"/>
+            <echo message="Classpath is ${classpath.string}"/>
+            <javac srcdir="${src.test.dir}"
+                   destdir="${target.compilation.test.dir}"
+                   debug="yes">
+                <classpath refid="test.compile.classpath"/>
+            </javac>
+        </target>
+
+</project>

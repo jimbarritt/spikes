@@ -11,22 +11,29 @@
     <import file="${basedir}/build/compile.xml"/>
     <import file="${basedir}/build/cobertura.xml"/>
     <import file="${basedir}/build/cloc.xml"/>
+    <import file="${basedir}/build/simian.xml"/>
     <import file="${basedir}/build/test.xml"/>
 
     <target name="coverage"
-            depends="compile:production, cobertura:instrument, compile:test, test:unit, cobertura:check, report"
+            depends="compile:production,
+                     cobertura:instrument,
+                     compile:test,
+                     test:unit,
+                     cobertura:check,
+                     report"
             description="Compile, instrument production classes, run the tests and generate all kinds of reports.">
         
     </target>
 
     <target name="report"
-            depends="report:test, report:cobertura, report:cloc"
+            depends="report:test, report:cobertura, report:cloc, report:simian"
             description="Generates reports for tests and any other processes">
 
         <echo message="Reports @"/>
-        <echo message="Lines of code      : ${target.reports.loc.outputfile}"/>
-        <echo message="Test               : ${target.reports.test.unit.html.dir}/index.html"/>
-        <echo message="Cobertura coverage : ${target.reports.coverage.cobertura.html.dir}/index.html"/>
+        <echo message="Lines of code      : file://${target.reports.loc.outputfile}"/>
+        <echo message="Junit              : file://${target.reports.test.unit.html.dir}/index.html"/>
+        <echo message="Cobertura coverage : file://${target.reports.coverage.cobertura.html.dir}/index.html"/>
+        <echo message="Simian             : file://${target.reports.simian.dir}/duplications.txt"/>
     </target>
 
 </project>

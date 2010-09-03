@@ -5,6 +5,7 @@
     <import file="${basedir}/build/module-structure.xml" />
 
     <property name="tool.cloc.command" value="${tool.dir}/cloc-1.51.pl"/>
+    <property name="target.reports.loc.outputfile" value="${target.reports.loc.dir}/lines-of-code.txt"/>
     
      <target name="report:cloc">
         <mkdir dir="${target.reports.loc.dir}"/>

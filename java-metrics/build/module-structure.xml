@@ -43,7 +43,8 @@
               value="${target.reports.coverage.cobertura.dir}/summary"/>
 
     <property name="target.reports.loc.dir" value="${target.reports.dir}/loc"/>
-    <property name="target.reports.loc.outputfile" value="${target.reports.loc.dir}/lines-of-code.txt"/>
+    <property name="target.reports.simian.dir" value="${target.reports.dir}/simian"/>
+    
 
     <path id="production.classpath">
         <fileset dir="${lib.production.dir}">

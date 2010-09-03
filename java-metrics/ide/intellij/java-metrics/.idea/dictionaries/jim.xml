@@ -1,6 +1,8 @@
 <component name="ProjectDictionaryState">
   <dictionary name="jim">
     <words>
+      <w>checkstyle</w>
+      <w>checkstyletask</w>
       <w>classpathref</w>
       <w>cloc</w>
       <w>complexian</w>

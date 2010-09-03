@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="checkstyle" basedir="..">
+
+    <import file="${basedir}/build/module-structure.xml"/>
+
+    <path id="checkstyle.classpath">
+        <fileset dir="${tool.dir}/checkstyle" includes="lib/*.jar"/>
+    </path>
+
+    <taskdef resource="checkstyletask.properties"
+             classpathref="checkstyle.classpath"/>
+
+    <target name="report:checkstyle-metrics">
+        <mkdir dir="${target.reports.checkstyle.dir}" />
+        <checkstyle config="${basedir}/build/checkstyle-metrics.xml">
+            <fileset dir="${src.dir}" includes="**/*.java"/>
+            <formatter type="xml" toFile="${target.reports.checkstyle.dir}/checkstyle-metrics.xml"/>            
+        </checkstyle>
+
+        <style in="${target.reports.checkstyle.dir}/checkstyle-metrics.xml"
+               out="${target.reports.checkstyle.dir}/checkstyle-metrics.html"
+               style="${tool.dir}/checkstyle/checkstyle-metrics.xsl"/>
+    </target>
+</project>

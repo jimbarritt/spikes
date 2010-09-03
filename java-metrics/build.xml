@@ -9,10 +9,10 @@
 
 
     <import file="${basedir}/build/cloc.xml"/>
+    <import file="${basedir}/build/checkstyle.xml"/>
     <import file="${basedir}/build/compile.xml"/>
     <import file="${basedir}/build/cobertura.xml"/>
     <import file="${basedir}/build/module-structure.xml"/>
-    <import file="${basedir}/build/batik.xml"/>
     <import file="${basedir}/build/panopticode.xml"/>    
     <import file="${basedir}/build/simian.xml"/>
     <import file="${basedir}/build/test.xml"/>
@@ -33,7 +33,8 @@
                      report:cobertura,
                      report:cloc,
                      report:simian,
-                     report:panopticode"
+                     report:panopticode,
+                     report:checkstyle-metrics"
             description="Generates reports for tests and any other processes">
 
         <echo message="Reports @"/>

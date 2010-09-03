@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="panopticode" basedir="..">
+
+    <import file="${basedir}/build/module-structure.xml"/>
+    <import file="${basedir}/build/batik.xml"/>
+    <import file="${basedir}/build/complexian.xml"/>
+
+    <property name="panopticode.dir" value="${basedir}/tool/panopticode"/>
+
+    <import file="${panopticode.dir}/supplements/noscm-imports.xml"/>
+
+    <path id="panopticode.classpath">
+        <path refid="development.classpath"/>
+        <fileset dir="${tool.dir}/panopticode" includes="lib/*.jar"/>
+    </path>
+
+    <target name="report:panopticode">
+        <panopticode projectname="${module.name}"
+                     projectversion="${module.version}"
+                     classpathref="panopticode.classpath"
+                     panopticodedir="${panopticode.dir}"
+                     srcdir="${src.dir}"
+                     outputdir="${target.reports.panopticode.dir}"/>
+    </target>
+
+    <macrodef name="panopticode">
+        <attribute name="panopticodeDir" default="panopticode"/>
+        <attribute name="srcDir" default="${basedir}/src/"/>
+        <attribute name="outputDir" default="target"/>
+        <attribute name="classpathref"/>
+        <attribute name="projectName"/>
+        <attribute name="projectVersion"/>
+
+        <sequential>
+            <javadoc classpathref="@{classpathref}"
+                     sourcepath="@{srcDir}"
+                     access="private">
+                <fileset dir="@{srcDir}"/>
+                <doclet name="org.panopticode.doclet.PanopticodeDoclet"
+                        pathref="@{classpathref}">
+                    <param name="-debug" value="true"/>
+                    <param name="-projectName" value="@{projectName}"/>
+                    <param name="-projectVersion" value="@{projectVersion}"/>
+                    <param name="-outputFile" value="@{outputDir}/panopticode.xml"/>
+                </doclet>
+            </javadoc>
+
+           <!--
+           Complexian doesnt seem to like this version of ant
+            <execute-complexian panopticodeDir="@{panopticodeDir}"
+                                outputDir="@{outputDir}"
+                                srcDir="@{srcDir}"/>
+            -->
+
+            <mkdir dir="@{outputDir}/svg"/>
+
+            <echo message="Building Static Reports"/>
+
+            <report pluginClass="org.panopticode.report.treemap.ComplexityTreemap"
+                    classpathref="@{classpathref}"
+                    panopticodeXmlFile="@{outputDir}/panopticode.xml"
+                    file="@{outputDir}/svg/complexity-treemap.svg"/>
+
+            <report pluginClass="org.panopticode.report.treemap.CoverageTreemap"
+                    classpathref="@{classpathref}"
+                    panopticodeXmlFile="@{outputDir}/panopticode.xml"
+                    file="@{outputDir}/svg/coverage-treemap.svg"/>
+
+            <echo message="Building Interactive Reports"/>
+
+            <report pluginClass="org.panopticode.report.treemap.ComplexityTreemap"
+                    classpathref="@{classpathref}"
+                    panopticodeXmlFile="@{outputDir}/panopticode.xml"
+                    file="@{outputDir}/svg/interactive-complexity-treemap.svg"
+                    interactive="-interactive"/>
+
+            <report pluginClass="org.panopticode.report.treemap.CoverageTreemap"
+                    classpathref="@{classpathref}"
+                    panopticodeXmlFile="@{outputDir}/panopticode.xml"
+                    file="@{outputDir}/svg/interactive-coverage-treemap.svg"
+                    interactive="-interactive"/>
+
+        </sequential>
+    </macrodef>
+
+
+    <macrodef name="report">
+        <attribute name="pluginClass"/>
+        <attribute name="panopticodeXmlFile"/>
+        <attribute name="file"/>
+        <attribute name="interactive" default=""/>
+        <attribute name="classpathref"/>
+
+        <sequential>
+            <java classpathref="@{classpathref}"
+                  classname="org.panopticode.ReportRunner"
+                  fork="true">
+                <arg value="@{pluginClass}"/>
+                <arg value="@{panopticodeXmlFile}"/>
+                <arg value="@{file}"/>
+                <arg value="@{interactive}"/>
+            </java>
+        </sequential>
+    </macrodef>
+
+
+</project>

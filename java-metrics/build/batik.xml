@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="batik" basedir="..">
+
+    <import file="${basedir}/build/module-structure.xml" />
+
+    <path id="batik.path">
+        <fileset dir="${tool.dir}/batik" includes="lib/*.jar"/>
+    </path>
+
+    <taskdef name="rasterize"
+             classpathref="batik.path"
+             classname="org.apache.tools.ant.taskdefs.optional.RasterizerTask"/>
+
+    <macrodef name="svg-to-png">
+        <attribute name="srcFile"/>
+        <attribute name="destFile"/>
+        <attribute name="width" default="1024"/>
+        <attribute name="height" default="768"/>
+
+        <sequential>
+            <rasterize result="image/png"
+                       bg="255,255,255"
+                       width="@{width}"
+                       height="@{height}"
+                       area="0,0,1024,768"
+                       src="@{srcFile}"
+                       dest="@{destFile}"/>
+        </sequential>
+    </macrodef>
+
+    <macrodef name="svg-to-jpeg">
+        <attribute name="srcFile"/>
+        <attribute name="destFile"/>
+        <attribute name="width" default="1024"/>
+        <attribute name="height" default="768"/>
+
+        <sequential>
+            <rasterize result="image/jpeg"
+                       bg="255,255,255"
+                       width="@{width}"
+                       height="@{height}"
+                       area="0,0,1024,768"
+                       src="@{srcFile}"
+                       dest="@{destFile}"/>
+        </sequential>
+    </macrodef>
+
+    <macrodef name="svg-to-tiff">
+        <attribute name="srcFile"/>
+        <attribute name="destFile"/>
+        <attribute name="width" default="1024"/>
+        <attribute name="height" default="768"/>
+
+        <sequential>
+            <rasterize result="image/tiff"
+                       bg="255,255,255"
+                       width="@{width}"
+                       height="@{height}"
+                       area="0,0,1024,768"
+                       src="@{srcFile}"
+                       dest="@{destFile}"/>
+        </sequential>
+    </macrodef>
+</project>

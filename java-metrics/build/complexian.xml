@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="complexian" basedir="..">
+
+    <import file="${basedir}/build/module-structure.xml"/>
+
+    <path id="complexian.classpath">
+        <path location="${lib.development.dir}/complexian-0.14.1.jar"/>
+    </path>
+    <taskdef resource="complexiantask.properties" classpathref="complexian.classpath"/>
+
+    <macrodef name="execute-complexian">
+        <attribute name="outputDir"/>
+        <attribute name="panopticodeDir"/>
+        <attribute name="srcDir"/>
+        <attribute name="failOnViolation" default="false"/>
+        <attribute name="threshold" default="100"/>
+
+        <sequential>
+            <mkdir dir="@{outputDir}"/>
+
+            <complexian failOnViolation="@{failOnViolation}" threshold="@{threshold}">
+                <fileset dir="@{srcDir}" includes="**/*.java"/>
+            </complexian>
+
+            <complexian type="cyclomatic" failOnViolation="true" threshold="10">
+                <fileset dir="@{srcDir}" includes="**/*.java"/>                
+                <formatter type="xml" tofile="@{outputDir}/complexian-output.xml"/>
+            </complexian>
+        </sequential>
+    </macrodef>
+
+
+</project>

@@ -2,6 +2,8 @@
 
 <project name="module-structure" basedir="..">
 
+    <property name="module.name" value="spike-java-metrics" />
+    <property name="module.version" value="1.0" />
     <property name="module.dir" value="${basedir}"/>
     <property name="src.dir" value="${module.dir}/src"/>
     <property name="src.main.dir" value="${src.dir}/main"/>
@@ -44,7 +46,7 @@
 
     <property name="target.reports.loc.dir" value="${target.reports.dir}/loc"/>
     <property name="target.reports.simian.dir" value="${target.reports.dir}/simian"/>
-    
+    <property name="target.reports.panopticode.dir" value="${target.reports.dir}/panopticode" />
 
     <path id="production.classpath">
         <fileset dir="${lib.production.dir}">

@@ -7,10 +7,13 @@
         (c) Jim Barritt 2010
     </description>
 
-    <import file="${basedir}/build/module-structure.xml"/>
+
+    <import file="${basedir}/build/cloc.xml"/>
     <import file="${basedir}/build/compile.xml"/>
     <import file="${basedir}/build/cobertura.xml"/>
-    <import file="${basedir}/build/cloc.xml"/>
+    <import file="${basedir}/build/module-structure.xml"/>
+    <import file="${basedir}/build/batik.xml"/>
+    <import file="${basedir}/build/panopticode.xml"/>    
     <import file="${basedir}/build/simian.xml"/>
     <import file="${basedir}/build/test.xml"/>
 
@@ -29,7 +32,8 @@
             depends="report:test,
                      report:cobertura,
                      report:cloc,
-                     report:simian"
+                     report:simian,
+                     report:panopticode"
             description="Generates reports for tests and any other processes">
 
         <echo message="Reports @"/>

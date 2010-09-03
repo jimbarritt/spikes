@@ -1,9 +1,20 @@
 <component name="ProjectDictionaryState">
   <dictionary name="jim">
     <words>
+      <w>classpathref</w>
       <w>cloc</w>
+      <w>complexian</w>
+      <w>complexiantask</w>
+      <w>dest</w>
+      <w>noscm</w>
       <w>outputfile</w>
+      <w>panopticode</w>
+      <w>rasterize</w>
+      <w>rasterizer</w>
+      <w>rawmetrics</w>
       <w>simiantask</w>
+      <w>taskdefs</w>
+      <w>treemap</w>
     </words>
   </dictionary>
 </component>

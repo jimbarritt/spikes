@@ -50,6 +50,9 @@
     <property name="target.reports.coverage.cobertura.summary.dir"
               value="${target.reports.coverage.cobertura.dir}/summary"/>
 
+    <property name="target.reports.loc.dir" value="${target.reports.dir}/loc"/>
+    <property name="target.reports.loc.outputfile" value="${target.reports.loc.dir}/lines-of-code.txt"/>
+
 
     <path id="production.classpath">
         <fileset dir="${lib.production.dir}">
@@ -185,8 +188,9 @@
              description="Generates reports for tests and any other processes">
         
         <echo message="Reports @" />
+        <echo message="Lines of code      : ${target.reports.loc.outputfile}" />
         <echo message="Test               : ${target.reports.test.unit.html.dir}/index.html" />
-        <echo message="Cobertura coverage : ${target.reports.coverage.cobertura.html.dir}/index.html" />        
+        <echo message="Cobertura coverage : ${target.reports.coverage.cobertura.html.dir}/index.html" />
     </target>
 
     <target name="report:cobertura">
@@ -202,8 +206,11 @@
                           destdir="${target.reports.coverage.cobertura.xml.dir}"/>
     </target>
 
+
+
     <target name="report:cloc">
-        <exec executable="${tool.cloc.command}">            
+        <mkdir dir="${target.reports.loc.dir}" />
+        <exec executable="${tool.cloc.command}" output="${target.reports.loc.outputfile}">
             <arg value="${src.dir}" />
         </exec>
     </target>

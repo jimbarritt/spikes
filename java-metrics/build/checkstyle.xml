@@ -18,8 +18,17 @@
             <formatter type="xml" toFile="${target.reports.checkstyle.dir}/checkstyle-metrics.xml"/>            
         </checkstyle>
 
-        <style in="${target.reports.checkstyle.dir}/checkstyle-metrics.xml"
+        <xslt in="${target.reports.checkstyle.dir}/checkstyle-metrics.xml"
                out="${target.reports.checkstyle.dir}/checkstyle-metrics.html"
                style="${tool.dir}/checkstyle/checkstyle-metrics.xsl"/>
+
+        <!-- provided by Erik doernenburg -->
+        <exec command="/usr/bin/ruby" output="${target.reports.checkstyle.dir}/complexity-treemap.tm3" >
+            <arg value="${tool.dir}/checkstyle/checkstyle2tm3.rb" />
+            <arg value="${target.reports.checkstyle.dir}/checkstyle-metrics.xml" />
+            <arg value="${src.dir}" />
+        </exec>
     </target>
+
+
 </project>

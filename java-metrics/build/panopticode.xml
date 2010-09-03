@@ -15,6 +15,7 @@
         <fileset dir="${tool.dir}/panopticode" includes="lib/*.jar"/>
     </path>
 
+
     <target name="report:panopticode">
         <panopticode projectname="${module.name}"
                      projectversion="${module.version}"
@@ -46,13 +47,23 @@
                 </doclet>
             </javadoc>
 
-           <!--
+            <!--
            Complexian doesnt seem to like this version of ant
             <execute-complexian panopticodeDir="@{panopticodeDir}"
                                 outputDir="@{outputDir}"
                                 srcDir="@{srcDir}"/>
             -->
 
+<!--
+Doesnt seem to be here!
+            <taskdef name="mergeCheckStyle"
+                        classpathref="panopticode.classpath"
+                        classname="org.panopticode.supplement.ant.CheckstylePanopticode">
+               </taskdef>
+
+            <mergeCheckStyle panopticodeFile="@{outputDir}/panopticode.xml"
+                             checkstyleFile="${target.reports.checkstyle.dir}/checkstyle-metrics.xml"/>
+    -->
             <mkdir dir="@{outputDir}/svg"/>
 
             <echo message="Building Static Reports"/>

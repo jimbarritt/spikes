@@ -42,6 +42,7 @@
         <echo message="Junit              : file://${target.reports.test.unit.html.dir}/index.html"/>
         <echo message="Cobertura coverage : file://${target.reports.coverage.cobertura.html.dir}/index.html"/>
         <echo message="Simian             : file://${target.reports.simian.dir}/duplications.txt"/>
+        <echo message="Checkstyle Metrics : file://${target.reports.checkstyle.dir}/checkstyle-metrics.html"/>
     </target>
 
 </project>

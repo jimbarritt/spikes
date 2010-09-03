@@ -2,42 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="4f69e8e4-a967-4020-9221-10e3833ccc2a" name="Default" comment="Getting list of output files correct urls">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/batik-parser.jar" afterPath="$PROJECT_DIR$/../../../tool/batik/lib/batik-parser.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/batik-swing.jar" afterPath="$PROJECT_DIR$/../../../tool/batik/lib/batik-swing.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../build/batik.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/batik-svggen.jar" afterPath="$PROJECT_DIR$/../../../tool/batik/lib/batik-svggen.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/batik-transcoder.jar" afterPath="$PROJECT_DIR$/../../../tool/batik/lib/batik-transcoder.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/batik-xml.jar" afterPath="$PROJECT_DIR$/../../../tool/batik/lib/batik-xml.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../build/complexian.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/jim.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/jim.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/js.jar" afterPath="$PROJECT_DIR$/../../../tool/batik/lib/js.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../lib/development/complexian-0.14.1.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/batik-bridge.jar" afterPath="$PROJECT_DIR$/../../../tool/batik/lib/batik-bridge.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/panopticode/supplements/noscm-imports.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/batik-extension.jar" afterPath="$PROJECT_DIR$/../../../tool/batik/lib/batik-extension.jar" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../tool/panopticode/panopticode-imports.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/batik-ext.jar" afterPath="$PROJECT_DIR$/../../../tool/batik/lib/batik-ext.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/pdf-transcoder.jar" afterPath="$PROJECT_DIR$/../../../tool/batik/lib/pdf-transcoder.jar" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../tool/panopticode/batik/batik-imports.xml" afterPath="" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../build/panopticode.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../build/module-structure.xml" afterPath="$PROJECT_DIR$/../../../build/module-structure.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/batik-rasterizer.jar" afterPath="$PROJECT_DIR$/../../../tool/batik/lib/batik-rasterizer.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/batik-dom.jar" afterPath="$PROJECT_DIR$/../../../tool/batik/lib/batik-dom.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/batik-gui-util.jar" afterPath="$PROJECT_DIR$/../../../tool/batik/lib/batik-gui-util.jar" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../../../tool/panopticode/build-example.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../build.xml" afterPath="$PROJECT_DIR$/../../../build.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/batik.jar" afterPath="$PROJECT_DIR$/../../../tool/batik/lib/batik.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/batik-css.jar" afterPath="$PROJECT_DIR$/../../../tool/batik/lib/batik-css.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/batik-awt-util.jar" afterPath="$PROJECT_DIR$/../../../tool/batik/lib/batik-awt-util.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/batik-util.jar" afterPath="$PROJECT_DIR$/../../../tool/batik/lib/batik-util.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/batik-script.jar" afterPath="$PROJECT_DIR$/../../../tool/batik/lib/batik-script.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/RasterizerTask.jar" afterPath="$PROJECT_DIR$/../../../tool/batik/lib/RasterizerTask.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../../../tool/panopticode/panopticode.jar" afterPath="$PROJECT_DIR$/../../../tool/panopticode/lib/panopticode.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/batik-gvt.jar" afterPath="$PROJECT_DIR$/../../../tool/batik/lib/batik-gvt.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/xerces_2_5_0.jar" afterPath="$PROJECT_DIR$/../../../tool/batik/lib/xerces_2_5_0.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/batik-svg-dom.jar" afterPath="$PROJECT_DIR$/../../../tool/batik/lib/batik-svg-dom.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../../../tool/panopticode/batik/lib/xml-apis.jar" afterPath="$PROJECT_DIR$/../../../tool/batik/lib/xml-apis.jar" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../tool/panopticode/panopticode-imports.xml" afterPath="" />
     </list>
     <ignored path="$USER_HOME_GRIFFON$/" />
     <ignored path="$USER_HOME_GRAILS$/" />
@@ -1055,7 +1021,7 @@
     <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Getting list of output files correct urls" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding complexian and panopticode" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1082,6 +1048,7 @@
     <MESSAGE value="Refactoring the build script into imports" />
     <MESSAGE value="Added simian deduplication checking" />
     <MESSAGE value="Getting list of output files correct urls" />
+    <MESSAGE value="Adding complexian and panopticode" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />

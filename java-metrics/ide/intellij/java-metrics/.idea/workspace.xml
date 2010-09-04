@@ -2,9 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="4f69e8e4-a967-4020-9221-10e3833ccc2a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../tool/checkstyle/checkstyle2tm3.rb" afterPath="$PROJECT_DIR$/../../../tool/checkstyle/checkstyle2tm3.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/vecmath-1.3.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/colt-1.2.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/colt.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/infovis-toolkit-trunk.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/xstream-1.3.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/concurrent.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/jim.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/jim.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/antlr.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/xmlenc-0.52.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/jung-visualization-2.0.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/wstx-asl-3.2.6.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/commons-compress-1.1-sources.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/jung-io-2.0.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/jung-algorithms-2.0.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/xml-apis.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/jung-3d-demos-2.0.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/collections-generic-4.01.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/jung-jai-samples-2.0.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/jung-graph-impl-2.0.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/jung-3d-2.0.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/png.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/jung-samples-2.0.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/junit.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/JFontChooser.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/infovis-toolkit-trunk-src.zip" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/ant.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/log4j.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/jung-api-2.0.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/xercesImpl.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/commons-compress-1.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/stax-api-1.0.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/xml-writer.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/j3d-core-1.3.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/jung-jai-2.0.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/opencsv-2.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/ant-launcher.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/concurrent-1.3.4.jar" />
     </list>
     <ignored path="$USER_HOME_GRAILS$/" />
     <ignored path="$USER_HOME_GRIFFON$/" />
@@ -89,7 +124,7 @@
       <file leaf-file-name="checkstyle2tm3.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../../../tool/checkstyle/checkstyle2tm3.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="18" selection-start="1846" selection-end="1846" vertical-scroll-proportion="0.9058296">
+            <state line="31" column="25" selection-start="821" selection-end="821" vertical-scroll-proportion="0.52012384">
               <folding />
             </state>
           </provider>
@@ -927,17 +962,17 @@
     <editor active="false" />
     <layout>
       <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18485238" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.48652118" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32862645" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1675054" sideWeight="0.66238767" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32862645" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1675054" sideWeight="0.50449294" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Code explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="JSTestDriver Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Code Graph" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37742633" sideWeight="0.83953786" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991013" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Fireworks" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32862645" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46084723" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
@@ -946,7 +981,7 @@
       <window_info id="Metrics" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22214234" sideWeight="0.66238767" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22214234" sideWeight="0.50449294" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32862645" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Cycles" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
@@ -970,7 +1005,7 @@
     <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Doctorin the ruby script so that it handles both test and main source and collapses the root paths so they appear in the same package." />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor tweaks&#10;" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1002,6 +1037,7 @@
     <MESSAGE value="Adding checkstyle to generate metrics" />
     <MESSAGE value="Adding script to generate treemap" />
     <MESSAGE value="Doctorin the ruby script so that it handles both test and main source and collapses the root paths so they appear in the same package." />
+    <MESSAGE value="Minor tweaks&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1120,7 +1156,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../tool/checkstyle/checkstyle2tm3.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="18" selection-start="1846" selection-end="1846" vertical-scroll-proportion="0.9058296">
+        <state line="31" column="25" selection-start="821" selection-end="821" vertical-scroll-proportion="0.52012384">
           <folding />
         </state>
       </provider>

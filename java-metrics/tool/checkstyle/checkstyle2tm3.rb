@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'nokogiri'
 
-# provided by Erik doernenburg
+# Initial version provided by Erik Doernenburg (http://erik.doernenburg.com/2010/05/metrics-tree-maps/)
 class Metrics
   
   PATH_SEP = /\//                  

@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="4f69e8e4-a967-4020-9221-10e3833ccc2a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../tool/checkstyle/checkstyle2tm3.rb" afterPath="$PROJECT_DIR$/../../../tool/checkstyle/checkstyle2tm3.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../build/checkstyle.xml" afterPath="$PROJECT_DIR$/../../../build/checkstyle.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/jim.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/jim.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java-metrics.iml" afterPath="$PROJECT_DIR$/java-metrics.iml" />
     </list>
     <ignored path="$USER_HOME_GRAILS$/" />
     <ignored path="$USER_HOME_GRIFFON$/" />
@@ -92,7 +89,7 @@
       <file leaf-file-name="checkstyle2tm3.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../../../tool/checkstyle/checkstyle2tm3.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="11" selection-start="958" selection-end="958" vertical-scroll-proportion="0.45553145">
+            <state line="77" column="18" selection-start="1846" selection-end="1846" vertical-scroll-proportion="0.9058296">
               <folding />
             </state>
           </provider>
@@ -162,8 +159,8 @@
         <option value="$PROJECT_DIR$/../../../tool/checkstyle/checkstyle-metrics.xsl" />
         <option value="$PROJECT_DIR$/../../../build.xml" />
         <option value="$PROJECT_DIR$/../../../build/panopticode.xml" />
-        <option value="$PROJECT_DIR$/../../../tool/checkstyle/checkstyle2tm3.rb" />
         <option value="$PROJECT_DIR$/../../../build/checkstyle.xml" />
+        <option value="$PROJECT_DIR$/../../../tool/checkstyle/checkstyle2tm3.rb" />
       </list>
     </option>
   </component>
@@ -927,7 +924,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="874" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18485238" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -949,7 +946,7 @@
       <window_info id="Metrics" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22214234" sideWeight="0.66238767" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22214234" sideWeight="0.66238767" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32862645" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Cycles" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
@@ -973,7 +970,7 @@
     <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding script to generate treemap" />
+    <option name="LAST_COMMIT_MESSAGE" value="Doctorin the ruby script so that it handles both test and main source and collapses the root paths so they appear in the same package." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1004,6 +1001,7 @@
     <MESSAGE value="Missed some files" />
     <MESSAGE value="Adding checkstyle to generate metrics" />
     <MESSAGE value="Adding script to generate treemap" />
+    <MESSAGE value="Doctorin the ruby script so that it handles both test and main source and collapses the root paths so they appear in the same package." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1122,7 +1120,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../tool/checkstyle/checkstyle2tm3.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="11" selection-start="958" selection-end="958" vertical-scroll-proportion="0.45553145">
+        <state line="77" column="18" selection-start="1846" selection-end="1846" vertical-scroll-proportion="0.9058296">
           <folding />
         </state>
       </provider>

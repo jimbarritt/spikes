@@ -14,7 +14,8 @@
     <target name="report:checkstyle-metrics">
         <mkdir dir="${target.reports.checkstyle.dir}" />
         <checkstyle config="${basedir}/build/checkstyle-metrics.xml">
-            <fileset dir="${src.dir}" includes="**/*.java"/>
+            <fileset dir="${src.main.java.dir}" includes="**/*.java"/>
+            <fileset dir="${src.test.java.dir}" includes="**/*.java"/>
             <formatter type="xml" toFile="${target.reports.checkstyle.dir}/checkstyle-metrics.xml"/>            
         </checkstyle>
 
@@ -22,11 +23,12 @@
                out="${target.reports.checkstyle.dir}/checkstyle-metrics.html"
                style="${tool.dir}/checkstyle/checkstyle-metrics.xsl"/>
 
-        <!-- provided by Erik doernenburg -->
+        
         <exec command="/usr/bin/ruby" output="${target.reports.checkstyle.dir}/complexity-treemap.tm3" >
             <arg value="${tool.dir}/checkstyle/checkstyle2tm3.rb" />
             <arg value="${target.reports.checkstyle.dir}/checkstyle-metrics.xml" />
-            <arg value="${src.dir}" />
+            <arg value="${src.main.java.dir}" />
+            <arg value="${src.test.java.dir}" />
         </exec>
     </target>
 

@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="4f69e8e4-a967-4020-9221-10e3833ccc2a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/checkstyle/checkstyle2tm3.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../tool/checkstyle/checkstyle2tm3.rb" afterPath="$PROJECT_DIR$/../../../tool/checkstyle/checkstyle2tm3.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../build/checkstyle.xml" afterPath="$PROJECT_DIR$/../../../build/checkstyle.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../build/panopticode.xml" afterPath="$PROJECT_DIR$/../../../build/panopticode.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../build.xml" afterPath="$PROJECT_DIR$/../../../build.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/jim.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/jim.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/java-metrics.iml" afterPath="$PROJECT_DIR$/java-metrics.iml" />
     </list>
     <ignored path="$USER_HOME_GRAILS$/" />
     <ignored path="$USER_HOME_GRIFFON$/" />
@@ -82,16 +83,34 @@
       <file leaf-file-name="checkstyle.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../build/checkstyle.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="103" selection-start="1107" selection-end="1107" vertical-scroll-proportion="0.0">
+            <state line="26" column="103" selection-start="1086" selection-end="1151" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="complexity-treemap.tm3" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="checkstyle2tm3.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../../tool/checkstyle/checkstyle2tm3.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="11" selection-start="958" selection-end="958" vertical-scroll-proportion="0.45553145">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="complexity-treemap.tm3" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../target/reports/checkstyle/complexity-treemap.tm3">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="1" column="0" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Bee.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/metricsexample/bee/Bee.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="13" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -100,34 +119,16 @@
       <file leaf-file-name="checkstyle-metrics.xsl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../tool/checkstyle/checkstyle-metrics.xsl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="128" column="30" selection-start="3913" selection-end="3913" vertical-scroll-proportion="-6.923077">
+            <state line="161" column="37" selection-start="4892" selection-end="4892" vertical-scroll-proportion="-8.692307">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../build.xml">
+      <file leaf-file-name="checkstyle-metrics.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../target/reports/checkstyle/checkstyle-metrics.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="8" selection-start="1846" selection-end="1846" vertical-scroll-proportion="-13.913043">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="panopticode.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../build/panopticode.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="23" selection-start="2248" selection-end="2248" vertical-scroll-proportion="-6.478261">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cobertura.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../build/cobertura.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="15" selection-start="145" selection-end="281" vertical-scroll-proportion="-8.217391">
+            <state line="3" column="154" selection-start="328" selection-end="343" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -147,7 +148,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../../../build/test.xml" />
         <option value="$PROJECT_DIR$/../../../build/cloc.xml" />
         <option value="$PROJECT_DIR$/../../../build/simian.xml" />
         <option value="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/metricsexample/bee/NaughtyBee.java" />
@@ -162,6 +162,7 @@
         <option value="$PROJECT_DIR$/../../../tool/checkstyle/checkstyle-metrics.xsl" />
         <option value="$PROJECT_DIR$/../../../build.xml" />
         <option value="$PROJECT_DIR$/../../../build/panopticode.xml" />
+        <option value="$PROJECT_DIR$/../../../tool/checkstyle/checkstyle2tm3.rb" />
         <option value="$PROJECT_DIR$/../../../build/checkstyle.xml" />
       </list>
     </option>
@@ -498,12 +499,12 @@
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="preferences.externalTools" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Ruby" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -926,13 +927,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="874" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18485238" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32862645" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1675054" sideWeight="0.5198973" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32862645" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1675054" sideWeight="0.66238767" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Code explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="JSTestDriver Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -941,14 +942,14 @@
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Fireworks" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32862645" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4711168" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46084723" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Metrics" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22214234" sideWeight="0.5198973" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22214234" sideWeight="0.66238767" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32862645" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Cycles" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
@@ -972,7 +973,7 @@
     <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding checkstyle to generate metrics" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding script to generate treemap" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1002,6 +1003,7 @@
     <MESSAGE value="Adding complexian and panopticode" />
     <MESSAGE value="Missed some files" />
     <MESSAGE value="Adding checkstyle to generate metrics" />
+    <MESSAGE value="Adding script to generate treemap" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1019,16 +1021,6 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/metricsexample/bee/NaughtyBeeTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="14" selection-start="455" selection-end="455" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/metricsexample/bee/NaughtyBee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="18" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../build/simian.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="4" selection-start="142" selection-end="229" vertical-scroll-proportion="-4.7391305" />
@@ -1072,20 +1064,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../target/reports/checkstyle/checkstyle-metrics.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../tool/checkstyle/checkstyle-metrics.xsl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="128" column="30" selection-start="3913" selection-end="3913" vertical-scroll-proportion="-6.923077">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../build.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="8" selection-start="1846" selection-end="1846" vertical-scroll-proportion="-13.913043">
@@ -1107,16 +1085,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../build/checkstyle.xml">
+    <entry file="file://$PROJECT_DIR$/../../../tool/checkstyle/checkstyle-metrics.xsl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="103" selection-start="1107" selection-end="1107" vertical-scroll-proportion="0.0">
+        <state line="161" column="37" selection-start="4892" selection-end="4892" vertical-scroll-proportion="-8.692307">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/metricsexample/bee/Bee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="13" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../target/reports/checkstyle/complexity-treemap.tm3">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="1" column="0" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../build/checkstyle.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="103" selection-start="1086" selection-end="1151" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../target/reports/checkstyle/checkstyle-metrics.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="154" selection-start="328" selection-end="343" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../tool/checkstyle/checkstyle2tm3.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="11" selection-start="958" selection-end="958" vertical-scroll-proportion="0.45553145">
           <folding />
         </state>
       </provider>

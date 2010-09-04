@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'nokogiri'
-              
+
+# provided by Erik doernenburg
 class Metrics
   
   PATH_SEP = /\//                  
@@ -53,16 +54,17 @@ end
 
 class Processor
 
-  def initialize(filename, prefix)
+  def initialize(filename, prefix, testPrefix)
     @doc = Nokogiri::XML(File.new(filename))
     @prefix = prefix
+    @test_prefix = testPrefix
   end
 
   def run
     puts Metrics.titles
     puts Metrics.types
     @doc.xpath("//file").each do |filenode|    
-      metrics = Metrics.new(filenode["name"].sub(@prefix, ""))
+      metrics = Metrics.new(filenode["name"].sub(@prefix, "").sub(@test_prefix, ""))      
       filenode.xpath(".//error").each do |errnode| 
         metrics.add(errnode["source"], errnode["message"])
       end  
@@ -72,4 +74,4 @@ class Processor
   
 end
 
-Processor.new(ARGV[0], ARGV[1]).run
+Processor.new(ARGV[0], ARGV[1], ARGV[2]).run

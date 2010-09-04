@@ -15,6 +15,15 @@
     <option name="OPEN_IN_BROWSER" value="true" />
     <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../../../target/metrics/coverage/intellij" />
   </component>
+  <component name="FacetAutodetectingManager">
+    <autodetection-disabled>
+      <facet-type id="JRUBY">
+        <modules>
+          <module name="java-metrics" />
+        </modules>
+      </facet-type>
+    </autodetection-disabled>
+  </component>
   <component name="FireworksProject">
     <option name="expectedTestCaseNameRegex" />
     <option name="maxMemory" />

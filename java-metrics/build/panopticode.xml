@@ -21,7 +21,7 @@
                      projectversion="${module.version}"
                      classpathref="panopticode.classpath"
                      panopticodedir="${panopticode.dir}"
-                     srcdir="${src.dir}"
+                     srcdir="${src.main.java.dir}"
                      outputdir="${target.reports.panopticode.dir}"/>
     </target>
 
@@ -34,6 +34,7 @@
         <attribute name="projectVersion"/>
 
         <sequential>
+            <mkdir dir="@{outputDir}" />
             <javadoc classpathref="@{classpathref}"
                      sourcepath="@{srcDir}"
                      access="private">

@@ -1,45 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="4f69e8e4-a967-4020-9221-10e3833ccc2a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/vecmath-1.3.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/colt-1.2.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/colt.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/infovis-toolkit-trunk.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/xstream-1.3.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/concurrent.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/jim.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/jim.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/antlr.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/xmlenc-0.52.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/jung-visualization-2.0.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/wstx-asl-3.2.6.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/commons-compress-1.1-sources.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/jung-io-2.0.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/jung-algorithms-2.0.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/xml-apis.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/jung-3d-demos-2.0.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/collections-generic-4.01.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/jung-jai-samples-2.0.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/jung-graph-impl-2.0.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/jung-3d-2.0.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/png.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/jung-samples-2.0.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/junit.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/JFontChooser.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/infovis-toolkit-trunk-src.zip" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/ant.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/log4j.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/jung-api-2.0.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/xercesImpl.jar" />
+    <list default="true" readonly="true" id="4f69e8e4-a967-4020-9221-10e3833ccc2a" name="Default" comment="Adding a build of the infovis toolkit&#10;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/commons-compress-1.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/stax-api-1.0.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/xml-writer.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/j3d-core-1.3.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/jung-jai-2.0.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/opencsv-2.2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/ant-launcher.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../tool/infovis-toolkit/lib/concurrent-1.3.4.jar" />
     </list>
     <ignored path="$USER_HOME_GRAILS$/" />
     <ignored path="$USER_HOME_GRIFFON$/" />
@@ -121,10 +84,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="checkstyle2tm3.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="checkstyle2tm3.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../tool/checkstyle/checkstyle2tm3.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="25" selection-start="821" selection-end="821" vertical-scroll-proportion="0.52012384">
+            <state line="31" column="25" selection-start="821" selection-end="821" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -139,10 +102,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Bee.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Bee.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/metricsexample/bee/Bee.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="13" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0">
+            <state line="2" column="13" selection-start="64" selection-end="64" vertical-scroll-proportion="0.115384616">
               <folding />
             </state>
           </provider>
@@ -151,7 +114,7 @@
       <file leaf-file-name="checkstyle-metrics.xsl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../tool/checkstyle/checkstyle-metrics.xsl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="161" column="37" selection-start="4892" selection-end="4892" vertical-scroll-proportion="-8.692307">
+            <state line="161" column="37" selection-start="4892" selection-end="4892" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -342,7 +305,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Favorites" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -525,7 +488,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Favorites" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -542,9 +505,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -931,8 +894,8 @@
     <list size="4">
       <item index="0" class="java.lang.String" itemvalue="JUnit.BeehiveTest.beesCanEnterTheHive" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.BeehiveTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.Run All Tests" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.NaughtyBeeTest.testTheDuplicatedMethods" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.NaughtyBeeTest.testTheDuplicatedMethods" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.Run All Tests" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -964,17 +927,15 @@
       <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.48652118" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32862645" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1675054" sideWeight="0.50449294" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Code explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="JSTestDriver Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Code Graph" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37742633" sideWeight="0.83953786" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Code Graph" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37711865" sideWeight="0.83953786" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991013" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Fireworks" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32862645" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46084723" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -988,6 +949,8 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32862645" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46084723" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1005,7 +968,7 @@
     <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor tweaks&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding a build of the infovis toolkit&#10;" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1038,6 +1001,7 @@
     <MESSAGE value="Adding script to generate treemap" />
     <MESSAGE value="Doctorin the ruby script so that it handles both test and main source and collapses the root paths so they appear in the same package." />
     <MESSAGE value="Minor tweaks&#10;" />
+    <MESSAGE value="Adding a build of the infovis toolkit&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1119,16 +1083,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../tool/checkstyle/checkstyle-metrics.xsl">
+    <entry file="file://$PROJECT_DIR$/../../../build/checkstyle.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="161" column="37" selection-start="4892" selection-end="4892" vertical-scroll-proportion="-8.692307">
+        <state line="26" column="103" selection-start="1086" selection-end="1151" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/metricsexample/bee/Bee.java">
+    <entry file="file://$PROJECT_DIR$/../../../tool/checkstyle/checkstyle2tm3.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0">
+        <state line="31" column="25" selection-start="821" selection-end="821" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1140,9 +1104,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../build/checkstyle.xml">
+    <entry file="file://$PROJECT_DIR$/../../../tool/checkstyle/checkstyle-metrics.xsl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="103" selection-start="1086" selection-end="1151" vertical-scroll-proportion="0.0">
+        <state line="161" column="37" selection-start="4892" selection-end="4892" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1154,9 +1118,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../tool/checkstyle/checkstyle2tm3.rb">
+    <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/metricsexample/bee/Bee.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="25" selection-start="821" selection-end="821" vertical-scroll-proportion="0.52012384">
+        <state line="2" column="13" selection-start="64" selection-end="64" vertical-scroll-proportion="0.115384616">
           <folding />
         </state>
       </provider>

@@ -48,6 +48,7 @@
     <property name="target.reports.simian.dir" value="${target.reports.dir}/simian"/>
     <property name="target.reports.panopticode.dir" value="${target.reports.dir}/panopticode" />
     <property name="target.reports.checkstyle.dir" value="${target.reports.dir}/checkstyle"/>
+    <property name="target.reports.jdepend.dir" value="${target.reports.dir}/jdepend"/>
 
     <path id="production.classpath">
         <fileset dir="${lib.production.dir}">

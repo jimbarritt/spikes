@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- you need to put lib/development/jdepend-2.9.jar into /opt/local/share/java/apache-ant/lib -->       
+<project name="jdepend" basedir="..">
+
+    <import file="${basedir}/build/module-structure.xml"/>
+
+    <property  name="jdepend.report.file" value="${target.reports.jdepend.dir}/jdepend.xml" />  
+
+    <target name="report:jdepend">
+        <mkdir dir="${target.reports.jdepend.dir}"/>
+
+        <jdepend format="xml"
+                 outputfile="${jdepend.report.file}">
+            <exclude name="java.*"/>
+            <exclude name="javax.*"/>
+            <exclude name="net.sourceforge.cobertura.*"/>
+            <classespath>
+                <pathelement location="${target.compilation.dir}"/>
+            </classespath>
+            <classpath location="${target.compilation.dir}"/>
+        </jdepend>
+
+        <xslt in="${jdepend.report.file}"
+              out="${target.reports.jdepend.dir}/jdepend-report.html"              
+              style="${tool.dir}/jdepend/jdepend.xsl"/>
+    </target>
+
+</project>

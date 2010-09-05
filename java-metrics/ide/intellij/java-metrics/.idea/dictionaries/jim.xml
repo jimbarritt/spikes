@@ -12,6 +12,7 @@
       <w>errnode</w>
       <w>filenode</w>
       <w>getval</w>
+      <w>jdepend</w>
       <w>noscm</w>
       <w>outputfile</w>
       <w>panopticode</w>

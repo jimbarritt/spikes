@@ -12,6 +12,7 @@
     <import file="${basedir}/build/checkstyle.xml"/>
     <import file="${basedir}/build/compile.xml"/>
     <import file="${basedir}/build/cobertura.xml"/>
+    <import file="${basedir}/build/jdepend.xml"/>
     <import file="${basedir}/build/module-structure.xml"/>
     <import file="${basedir}/build/panopticode.xml"/>    
     <import file="${basedir}/build/simian.xml"/>
@@ -32,6 +33,7 @@
             depends="report:test,
                      report:cobertura,
                      report:cloc,
+                     report:jdepend,
                      report:simian,
                      report:panopticode,
                      report:checkstyle-metrics"
@@ -39,6 +41,7 @@
 
         <echo message="Reports @"/>
         <echo message="Lines of code      : file://${target.reports.loc.outputfile}"/>
+        <echo message="JDepend            : file://${target.reports.jdepend.dir}/jdepend-report.html"/>
         <echo message="Junit              : file://${target.reports.test.unit.html.dir}/index.html"/>
         <echo message="Cobertura coverage : file://${target.reports.coverage.cobertura.html.dir}/index.html"/>
         <echo message="Simian             : file://${target.reports.simian.dir}/duplications.txt"/>

@@ -21,16 +21,14 @@ public class LocationRepresentation implements HypermediaResource {
     public static LocationRepresentation locationRepresentationOf(Location location) {
         return new LocationRepresentation(location.number(), location.description(), location.getExits());
     }
-    
+
     private LocationRepresentation(int number, String description, List<ExitTo> exitTos) {
         this.number = number;
         this.description = description;
         this.exitTos = exitTos;
     }
 
-
-    @Override public List<Relation> getRelations(Restfulie control) {
-        control.relation("exit").uses(LocationResource.class).getLocation(33);        
-        return control.getRelations();
+    @Override public void configureRelations(RelationBuilder relationBuilder) {
+        relationBuilder.relation("exit").uses(LocationResource.class).getLocation(33);        
     }
 }

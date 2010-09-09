@@ -50,9 +50,10 @@
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="jar://$MODULE_DIR$/../../../lib/development/vraptor-3.2.0-SNAPSHOT-src.zip!/" />
-          <root url="file://$MODULE_DIR$/../../../../../../external/restfulie/restfulie-java/client/src/main/java" />
           <root url="jar://$MODULE_DIR$/../../../lib/development/vraptor-3.2.0-SNAPSHOT-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../lib/development/restfulie-java-client-1.0.0-beta-2-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../lib/development/restfulie-java-client-1.0.0-beta-2-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../lib/development/restfulie-java-client-1.0.0-beta-2-sources.jar!/" />
         </SOURCES>
         <jarDirectory url="file://$MODULE_DIR$/../../../lib/production" recursive="true" />
       </library>

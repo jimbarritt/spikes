@@ -5,6 +5,7 @@ import com.jimbarritt.spikes.restfulie.server.domain.*;
 import org.apache.log4j.*;
 
 import static br.com.caelum.vraptor.view.Results.*;
+import static com.jimbarritt.spikes.restfulie.server.representations.LocationRepresentation.locationRepresentationOf;
 import static java.lang.String.*;
 
 @Resource
@@ -19,12 +20,12 @@ public class LocationResource {
 
 
     @Get
-    @Path("/locations/{id}")
-    public void getLocation(int id) {
-        log.info(format("Looking for location [%d]", id));
-        Location location = new Location(format("This is my location @%d", id));
+    @Path("/locations/{number}")
+    public void getLocation(int number) {
+        log.info(format("Looking for location [%d]", number));
+        Location location = new Location(number, format("This is my location @%d", number));
         result.use(representation())
-                .from(location)
+                .from(locationRepresentationOf(location))
                 .serialize();
     }
 }

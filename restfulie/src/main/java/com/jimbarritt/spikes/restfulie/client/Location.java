@@ -15,6 +15,6 @@ public class Location {
     }
 
     public String toString() {
-        return String.format("Location %d: %s", number, description);
+        return String.format("Location %d - %s", number, description);
     }
 }

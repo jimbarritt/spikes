@@ -9,6 +9,7 @@ import static java.lang.String.format;
 public class LocationRepository {
     
     public Location get(int number) {
-        return new Location(number, format("This is my location @%d", number));
+        Location nextLocation = new Location(33, "Next location");
+        return new Location(number, format("This is my location @%d", number)).withExitTo(nextLocation);
     }
 }

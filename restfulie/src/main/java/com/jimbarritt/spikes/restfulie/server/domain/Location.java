@@ -6,12 +6,17 @@ public class Location {
 
     private final String description;
     private final int number;
-    private List<Exit> exits;
+    private List<ExitTo> exitTos;
 
     public Location(int number, String description) {
         this.number = number;
         this.description = description;
-        this.exits = new ArrayList<Exit>();
+        this.exitTos = new ArrayList<ExitTo>();
+    }
+
+    public Location withExitTo(Location otherLocation) {
+        exitTos.add(new ExitTo(otherLocation.number()));
+        return this;
     }
 
     public String description() {
@@ -22,7 +27,7 @@ public class Location {
         return this.number;
     }
 
-    public List<Exit> getExits() {
-        return exits;
+    public List<ExitTo> getExits() {
+        return exitTos;
     }
 }

@@ -1,8 +1,13 @@
 package com.jimbarritt.spikes.restfulie.server.resources;
 
 import br.com.caelum.vraptor.*;
+import br.com.caelum.vraptor.restfulie.*;
+import br.com.caelum.vraptor.restfulie.hypermedia.*;
+import br.com.caelum.vraptor.restfulie.relation.*;
 import com.jimbarritt.spikes.restfulie.logging.*;
 import com.jimbarritt.spikes.restfulie.server.domain.*;
+
+import java.util.*;
 
 import static br.com.caelum.vraptor.view.Results.*;
 import static com.jimbarritt.spikes.restfulie.logging.StringFormatLogger.*;
@@ -30,4 +35,6 @@ public class LocationResource {
                 .from(locationRepresentationOf(location))
                 .serialize();
     }
+
+
 }

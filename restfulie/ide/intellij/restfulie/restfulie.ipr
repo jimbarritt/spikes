@@ -9,13 +9,13 @@
       <root id="root">
         <element id="directory" name="WEB-INF">
           <element id="directory" name="classes">
-            <element id="module-output" name="restfulie" />
+            <element id="module-output" name="restfulie-spike" />
           </element>
           <element id="directory" name="lib">
-            <element id="library" level="module" name="lib-production" module-name="restfulie" />
+            <element id="library" level="module" name="lib-production" module-name="restfulie-spike" />
           </element>
         </element>
-        <element id="javaee-facet-resources" facet="restfulie/web/Web" />
+        <element id="javaee-facet-resources" facet="restfulie-spike/web/Web" />
       </root>
     </artifact>
   </component>
@@ -301,7 +301,7 @@
   </component>
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/restfulie.iml" filepath="$PROJECT_DIR$/restfulie.iml" />
+      <module fileurl="file://$PROJECT_DIR$/restfulie-spike.iml" filepath="$PROJECT_DIR$/restfulie-spike.iml" />
     </modules>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_5" assert-keyword="true" jdk-15="true" project-jdk-name="1.6" project-jdk-type="JavaSDK">

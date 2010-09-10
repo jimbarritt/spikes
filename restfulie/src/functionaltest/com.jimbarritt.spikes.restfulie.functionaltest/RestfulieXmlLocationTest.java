@@ -28,13 +28,8 @@ public class RestfulieXmlLocationTest {
 
     @Before
 	public void setUp() throws Exception {
-		restfulie = Restfulie.custom();
-		restfulie.getMediaTypes().register(new XmlMediaType() {
-            @Override protected void configure(XStream xstream) {
-                super.configure(xstream);
-                xstream.processAnnotations(Location.class);
-            }
-		});
+		restfulie = Restfulie.custom();		
+        restfulie.getMediaTypes().register(new XmlMediaType().withTypes(Location.class));
         remoteApplication = new RemoteApplication();
 	}
 

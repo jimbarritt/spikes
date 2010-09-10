@@ -5,7 +5,7 @@
         You realise with a churn of the stomach that its is the smell of rotting human flesh!
         In the centre of the room, dimly illuminated by a sputtering torch, squats a disgusting beast gnawing and slavering over what can only be a human femur. It is a Kobold!</p>
     </description>
-    <link rel="exit" href="">A dark passageway leads off to the right, you might be able to sneak past the Kobold if you roll for agility</link>
-    <link rel="exit" href="">There is a door in the far wall, beyond the kobold! You will have to fight it to escape that way.</link>
+    <link rel="exitTo" href="">A dark passageway leads off to the right, you might be able to sneak past the Kobold if you roll for agility</link>
+    <link rel="exitTo" href="">There is a door in the far wall, beyond the kobold! You will have to fight it to escape that way.</link>
     <link rel="encounter" href="">You can attack the kobold! you have the element of surprise!</link>
 </location>

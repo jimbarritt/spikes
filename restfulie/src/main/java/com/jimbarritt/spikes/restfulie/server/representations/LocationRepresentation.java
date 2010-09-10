@@ -1,26 +1,34 @@
 package com.jimbarritt.spikes.restfulie.server.representations;
 
+import br.com.caelum.vraptor.restfulie.*;
+import br.com.caelum.vraptor.restfulie.hypermedia.*;
+import br.com.caelum.vraptor.restfulie.relation.*;
 import com.jimbarritt.spikes.restfulie.server.domain.*;
+import com.jimbarritt.spikes.restfulie.server.resources.*;
 import com.thoughtworks.xstream.annotations.*;
 
 import java.util.*;
 
 @XStreamAlias("location")
-public class LocationRepresentation implements Representation {
+public class LocationRepresentation implements HypermediaResource {
 
-    private final Map<RepresentationField, Object> values = new HashMap<RepresentationField, Object>();
+    private final int number;
+    private final String description;
 
-    public static enum LocationField implements RepresentationField {
-        DESCRIPTION;
+    @XStreamOmitField
+    private final List<ExitTo> exitTos;
+
+    public static LocationRepresentation locationRepresentationOf(Location location) {
+        return new LocationRepresentation(location.number(), location.description(), location.getExits());
     }
 
-    public static LocationRepresentation representationFrom(Location location) {
-        LocationRepresentation representation = new LocationRepresentation();
-//        location.writeToRepresentation(representation);
-        return representation;
+    private LocationRepresentation(int number, String description, List<ExitTo> exitTos) {
+        this.number = number;
+        this.description = description;
+        this.exitTos = exitTos;
     }
 
-    public void appendField(RepresentationField field, String value) {
-        values.put(field, value);        
+    @Override public void configureRelations(RelationBuilder relationBuilder) {
+        relationBuilder.relation("exit").uses(LocationResource.class).getLocation(33);        
     }
 }

@@ -1,30 +1,40 @@
 package com.jimbarritt.spikes.restfulie.server.resources;
 
 import br.com.caelum.vraptor.*;
+import br.com.caelum.vraptor.restfulie.*;
+import br.com.caelum.vraptor.restfulie.hypermedia.*;
+import br.com.caelum.vraptor.restfulie.relation.*;
+import com.jimbarritt.spikes.restfulie.logging.*;
 import com.jimbarritt.spikes.restfulie.server.domain.*;
-import org.apache.log4j.*;
+
+import java.util.*;
 
 import static br.com.caelum.vraptor.view.Results.*;
-import static java.lang.String.*;
+import static com.jimbarritt.spikes.restfulie.logging.StringFormatLogger.*;
+import static com.jimbarritt.spikes.restfulie.server.representations.LocationRepresentation.*;
 
 @Resource
 public class LocationResource {
-    private static final Logger log = Logger.getLogger(LocationResource.class);
+    private static final StringFormatLogger log = getStringFormatLogger(LocationResource.class);
 
     private final Result result;
+    private final LocationRepository locationRepository;
 
-    public LocationResource(Result result) {
+    public LocationResource(Result result, LocationRepository locationRepository) {
         this.result = result;
+        this.locationRepository = locationRepository;
     }
 
 
     @Get
-    @Path("/locations/{id}")
-    public void getLocation(int id) {
-        log.info(format("Looking for location [%d]", id));
-        Location location = new Location(format("This is my location @%d", id));
+    @Path("/locations/{number}")
+    public void getLocation(int number) {
+        log.info("Looking for location [%d]", number);
+        Location location = locationRepository.get(number);
         result.use(representation())
-                .from(location)
+                .from(locationRepresentationOf(location))
                 .serialize();
     }
+
+
 }

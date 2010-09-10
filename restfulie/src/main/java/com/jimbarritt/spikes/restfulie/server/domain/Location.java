@@ -1,29 +1,33 @@
 package com.jimbarritt.spikes.restfulie.server.domain;
 
-import br.com.caelum.vraptor.restfulie.*;
-import br.com.caelum.vraptor.restfulie.hypermedia.*;
-import br.com.caelum.vraptor.restfulie.relation.*;
-import com.thoughtworks.xstream.annotations.*;
-
 import java.util.*;
 
-import static java.util.Arrays.asList;
-
-
-@XStreamAlias("location")
-public class Location implements HypermediaResource {
+public class Location {
 
     private final String description;
+    private final int number;
+    private List<ExitTo> exitTos;
 
-    public Location(String description) {
+    public Location(int number, String description) {
+        this.number = number;
         this.description = description;
+        this.exitTos = new ArrayList<ExitTo>();
+    }
+
+    public Location withExitTo(Location otherLocation) {
+        exitTos.add(new ExitTo(otherLocation.number()));
+        return this;
     }
 
     public String description() {
         return description;
     }
 
-    @Override public List<Relation> getRelations(Restfulie control) {
-        return asList(control.relation("exit").build());
+    public int number() {
+        return this.number;
+    }
+
+    public List<ExitTo> getExits() {
+        return exitTos;
     }
 }

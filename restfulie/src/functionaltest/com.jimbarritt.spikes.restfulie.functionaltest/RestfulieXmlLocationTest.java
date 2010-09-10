@@ -57,8 +57,8 @@ public class RestfulieXmlLocationTest {
 		Location location = response.getResource();
         assertThat(location, is(not(nullValue())));
         Resource resource = resource(location);
-        log.info("Links: %d", resource.getLinks().size());
-        Location nextLocation = resource.getLink("exit").follow().access().getResource();        
+        log.info("Links: %s", resource.getLinks("exit"));
+        Location nextLocation = resource.getLinks("exit").get(0).follow().access().getResource();
         assertNotNull(nextLocation);
         assertThat(nextLocation.toString(), containsString("33"));
 

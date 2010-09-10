@@ -2,13 +2,21 @@ package com.jimbarritt.spikes.restfulie.server.domain;
 
 import java.util.*;
 
+import static com.jimbarritt.spikes.restfulie.server.domain.LocationDescription.simpleDescription;
+
 public class Location {
 
-    private final String description;
+    private final LocationDescription description;
     private final int number;
     private List<ExitTo> exitTos;
 
+    public Location(int number) {
+        this(number, new LocationDescription());
+    }
     public Location(int number, String description) {
+        this(number, simpleDescription(description));        
+    }
+    public Location(int number, LocationDescription description) {
         this.number = number;
         this.description = description;
         this.exitTos = new ArrayList<ExitTo>();
@@ -19,8 +27,8 @@ public class Location {
         return this;
     }
 
-    public String description() {
-        return description;
+    public String describe() {
+        return description.toString(exitTos);
     }
 
     public int number() {
@@ -29,5 +37,10 @@ public class Location {
 
     public List<ExitTo> getExits() {
         return exitTos;
+    }
+
+    public Location appendDescription(String text) {
+        description.appendText(text);
+        return this; 
     }
 }

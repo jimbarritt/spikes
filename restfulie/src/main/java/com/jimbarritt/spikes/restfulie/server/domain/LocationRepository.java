@@ -2,14 +2,20 @@ package com.jimbarritt.spikes.restfulie.server.domain;
 
 import br.com.caelum.vraptor.ioc.*;
 
-import static java.lang.String.format;
+import static com.jimbarritt.spikes.restfulie.server.domain.LocationDescription.*;
 
 @Component
 @ApplicationScoped
 public class LocationRepository {
-    
+
     public Location get(int number) {
-        Location nextLocation = new Location(33, "Next location");
-        return new Location(number, format("This is my location @%d", number)).withExitTo(nextLocation);
+        Location westLocation = new Location(33, "The room to the west");
+        Location eastLocation = new Location(44, "The room to the east");
+        LocationDescription description = new LocationDescription()
+                .appendText("You are in a dark room. Something smells fishy. ")
+                .appendText("You could leave by the west door {0} or the east door {1}");
+        return new Location(number, description)
+                .withExitTo(westLocation)
+                .withExitTo(eastLocation);
     }
 }

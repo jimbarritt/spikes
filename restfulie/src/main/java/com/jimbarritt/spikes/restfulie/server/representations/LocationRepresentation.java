@@ -1,6 +1,5 @@
 package com.jimbarritt.spikes.restfulie.server.representations;
 
-import br.com.caelum.vraptor.restfulie.*;
 import br.com.caelum.vraptor.restfulie.hypermedia.*;
 import br.com.caelum.vraptor.restfulie.relation.*;
 import com.jimbarritt.spikes.restfulie.server.domain.*;
@@ -19,7 +18,7 @@ public class LocationRepresentation implements HypermediaResource {
     private final List<ExitTo> exitTos;
 
     public static LocationRepresentation locationRepresentationOf(Location location) {
-        return new LocationRepresentation(location.number(), location.description(), location.getExits());
+        return new LocationRepresentation(location.number(), location.describe(), location.getExits());
     }
 
     private LocationRepresentation(int number, String description, List<ExitTo> exitTos) {
@@ -29,6 +28,8 @@ public class LocationRepresentation implements HypermediaResource {
     }
 
     @Override public void configureRelations(RelationBuilder relationBuilder) {
-        relationBuilder.relation("exit").uses(LocationResource.class).getLocation(33);        
+        for (ExitTo exit: exitTos) {
+            relationBuilder.relation("exit").uses(LocationResource.class).getLocation(exit.number());
+        }                
     }
 }

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<monster>
-    <character>
-        <link rel="species" href="/species/kobold" />
-        <hitPoints>20</hitPoints>
-        <strength>10</strength>
-        <agility>33</agility>
-    </character>    
-</monster>    

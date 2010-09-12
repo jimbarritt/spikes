@@ -12,13 +12,14 @@ import static com.jimbarritt.spikes.restfulie.io.Iox.*;
 import static java.lang.String.*;
 import static java.nio.charset.Charset.*;
 
-public class HttpConsumer {
-    StringFormatLogger log = StringFormatLogger.getStringFormatLogger(HttpConsumer.class);
+public class HttpClient {
+    StringFormatLogger log = StringFormatLogger.getStringFormatLogger(HttpClient.class);
 
     private final Charset defaultCharset = defaultCharset();
     private List<RequestParameter> requestParameters = new ArrayList<RequestParameter>();
 
     public String getFrom(String urlString) {
+        log.info("GET : %s", urlString);
         InputStream in = null;
         HttpURLConnection httpConnection = null;
         try {
@@ -100,7 +101,7 @@ public class HttpConsumer {
         httpConnection.disconnect();
     }
 
-    public HttpConsumer withRequestParameter(String parameterName, String parameterValue) {
+    public HttpClient withRequestParameter(String parameterName, String parameterValue) {
         requestParameters.add(new RequestParameter(parameterName, parameterValue));
         return this;
     }

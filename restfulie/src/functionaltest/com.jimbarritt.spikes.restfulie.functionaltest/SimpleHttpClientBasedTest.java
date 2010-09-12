@@ -18,20 +18,20 @@ public class SimpleHttpClientBasedTest {
 
     @Test
     public void canGetALocation() throws Exception {
-        HttpConsumer httpConsumer = new HttpConsumer();
+        HttpClient httpClient = new HttpClient();
 
-        String representation = httpConsumer.getFrom(remoteApplication.uriForPath("/simplehtml/34523"));
+        String representation = httpClient.getFrom(remoteApplication.uriForPath("/simplehtml/34523"));
         
         assertThat(representation, containsString("34523"));
     }
 
     @Test
     public void canMakeAPost() {
-        HttpConsumer httpConsumer = new HttpConsumer();
+        HttpClient httpClient = new HttpClient();
 
 
         remoteApplication = new RemoteApplication();
-        HttpResponse response = httpConsumer.withRequestParameter("parameterA", "http://foobar/A")
+        HttpResponse response = httpClient.withRequestParameter("parameterA", "http://foobar/A")
                                             .withRequestParameter("parameterB", "http://foobar/B")
                                             .postTo(remoteApplication.uriForPath("/simplehtml/3456"));
 
@@ -40,11 +40,11 @@ public class SimpleHttpClientBasedTest {
 
     @Test
     public void canMakeAPut() {
-        HttpConsumer httpConsumer = new HttpConsumer();
+        HttpClient httpClient = new HttpClient();
 
 
         remoteApplication = new RemoteApplication();
-        HttpResponse response = httpConsumer.withRequestParameter("parameterA", "http://foobar/A")
+        HttpResponse response = httpClient.withRequestParameter("parameterA", "http://foobar/A")
                                             .withRequestParameter("parameterB", "http://foobar/B")
                                             .putTo(remoteApplication.uriForPath("/simplehtml/3456"));
 

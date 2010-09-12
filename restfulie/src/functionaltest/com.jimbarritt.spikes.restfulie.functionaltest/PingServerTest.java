@@ -10,9 +10,9 @@ public class PingServerTest {
 
     @Test
     public void hasWelcomePage() {
-        HttpConsumer httpConsumer = new HttpConsumer();
+        HttpClient httpClient = new HttpClient();
 
-        String representation = httpConsumer.getFrom(new RemoteApplication().rootUri());
+        String representation = httpClient.getFrom(new RemoteApplication().rootUri());
 
         assertThat(representation, containsString("Welcome to the Restfulie Spike!"));
     }

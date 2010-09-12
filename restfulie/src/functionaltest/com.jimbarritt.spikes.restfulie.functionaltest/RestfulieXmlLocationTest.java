@@ -9,6 +9,7 @@ import com.thoughtworks.xstream.*;
 import org.apache.log4j.*;
 import org.junit.*;
 
+import java.net.*;
 import java.util.*;
 
 import static br.com.caelum.restfulie.Restfulie.resource;
@@ -47,6 +48,20 @@ public class RestfulieXmlLocationTest {
         log.info(format("Current Location : %s", location));
 
 	}
+
+    @Test
+    public void canPostAnEncounterRequestToALocation() throws Exception {
+        EncounterRequest encounterRequest = new EncounterRequest()
+                                                    .withCharacterUrl("foo")
+                                                    .withCreatureUrl("baa");
+
+        Response response = restfulie.at(remoteApplication.uriForPath("/locations/666"))
+                                             .as("application/xml")
+                                             .post(encounterRequest);
+
+        log.info(format("Response was (%d)\n%s", response.getCode(), response.getContent()));
+
+    }
 
     @Test    
 	public void canNavigateRelations() throws Exception {

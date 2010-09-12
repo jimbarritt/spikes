@@ -6,6 +6,7 @@ import br.com.caelum.vraptor.restfulie.hypermedia.*;
 import br.com.caelum.vraptor.restfulie.relation.*;
 import com.jimbarritt.spikes.restfulie.logging.*;
 import com.jimbarritt.spikes.restfulie.server.domain.*;
+import com.jimbarritt.spikes.restfulie.server.representations.*;
 
 import java.util.*;
 
@@ -37,13 +38,14 @@ public class LocationResource {
     }
 
     @Post
-    @Path("/locations/{number}/createEncounter")
-    public void createEncounter(int number, String characterUrl, String creatureUrl) {
+    @Path("/locations/{number}")
+    @Consumes("application/xml")
+    public void createEncounter(int number, EncounterRequestRepresentation encounterRequest) {
         log.info("Received post @ location [%d]", number);
-        log.info("characterUrl : %s", characterUrl);
-        log.info("creatureUrl  : %s", creatureUrl);
+        log.info("encounterRequest: %s", encounterRequest);
 
 
+        result.use(status()).created("/encounters/666");
     }
 
 

@@ -36,5 +36,15 @@ public class LocationResource {
                 .serialize();
     }
 
+    @Post
+    @Path("/locations/{number}/createEncounter")
+    public void createEncounter(int number, String characterUrl, String creatureUrl) {
+        log.info("Received post @ location [%d]", number);
+        log.info("characterUrl : %s", characterUrl);
+        log.info("creatureUrl  : %s", creatureUrl);
+
+
+    }
+
 
 }

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<player>
+    <character>
+        <name>Johnny Foo</name>
+        <link rel="species" href="/species/human" />
+        <hitPoints>20</hitPoints>
+        <strength>10</strength>
+        <agility>33</agility>
+    </character>
+    <link rel="inventory" href="" />    
+</player>

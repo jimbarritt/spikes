@@ -9,13 +9,15 @@
       <root id="root">
         <element id="directory" name="WEB-INF">
           <element id="directory" name="classes">
-            <element id="module-output" name="restfulie-spike" />
+            <element id="module-output" name="restfulie-spike-server" />
+            <element id="module-output" name="restfulie-spike-common" />
           </element>
           <element id="directory" name="lib">
-            <element id="library" level="module" name="lib-production" module-name="restfulie-spike" />
+            <element id="library" level="project" name="production" />
           </element>
         </element>
         <element id="javaee-facet-resources" facet="restfulie-spike/web/Web" />
+        <element id="javaee-facet-resources" facet="restfulie-spike-server/web/Web" />
       </root>
     </artifact>
   </component>
@@ -330,10 +332,12 @@
   </component>
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/restfulie-spike.iml" filepath="$PROJECT_DIR$/restfulie-spike.iml" />
+      <module fileurl="file://$PROJECT_DIR$/restfulie-spike-client/restfulie-spike-client.iml" filepath="$PROJECT_DIR$/restfulie-spike-client/restfulie-spike-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../restfulie-spike-comon/restfulie-spike-common.iml" filepath="$PROJECT_DIR$/../restfulie-spike-comon/restfulie-spike-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/restfulie-spike-server/restfulie-spike-server.iml" filepath="$PROJECT_DIR$/restfulie-spike-server/restfulie-spike-server.iml" />
     </modules>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_5" assert-keyword="true" jdk-15="true" project-jdk-name="1.6" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true" project-jdk-name="1.6" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="ResourceManagerContainer">
@@ -361,6 +365,24 @@
     <option name="flattenInnerClasses" value="true" />
     <option name="cycleTableSpecificationString" value="" />
     <option name="shortCycleTableSpecificationString" value="" />
+  </component>
+  <component name="libraryTable">
+    <library name="development">
+      <CLASSES>
+        <root url="file://$PROJECT_DIR$/../../../lib/development" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+      <jarDirectory url="file://$PROJECT_DIR$/../../../lib/development" recursive="false" />
+    </library>
+    <library name="production">
+      <CLASSES>
+        <root url="file://$PROJECT_DIR$/../../../lib/production" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+      <jarDirectory url="file://$PROJECT_DIR$/../../../lib/production" recursive="false" />
+    </library>
   </component>
 </project>
 

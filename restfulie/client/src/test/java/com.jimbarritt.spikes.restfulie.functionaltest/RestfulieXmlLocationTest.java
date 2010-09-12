@@ -30,7 +30,9 @@ public class RestfulieXmlLocationTest {
     @Before
 	public void setUp() throws Exception {
 		restfulie = Restfulie.custom();		
-        restfulie.getMediaTypes().register(new XmlMediaType().withTypes(Location.class));
+        restfulie.getMediaTypes().register(new XmlMediaType()
+                                                    .withTypes(Location.class)
+                                                    .withTypes(EncounterRequest.class));
         remoteApplication = new RemoteApplication();
 	}
 

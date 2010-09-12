@@ -1,16 +1,10 @@
 package com.jimbarritt.spikes.restfulie.functionaltest;
 
 import br.com.caelum.restfulie.*;
-import br.com.caelum.restfulie.http.*;
 import br.com.caelum.restfulie.mediatype.*;
 import com.jimbarritt.spikes.restfulie.client.*;
 import com.jimbarritt.spikes.restfulie.logging.*;
-import com.thoughtworks.xstream.*;
-import org.apache.log4j.*;
 import org.junit.*;
-
-import java.net.*;
-import java.util.*;
 
 import static br.com.caelum.restfulie.Restfulie.resource;
 import static com.jimbarritt.spikes.restfulie.logging.StringFormatLogger.getStringFormatLogger;
@@ -21,8 +15,8 @@ import static org.hamcrest.CoreMatchers.nullValue;
 import static org.junit.Assert.*;
 import static org.junit.matchers.JUnitMatchers.containsString;
 
-public class RestfulieXmlLocationTest {
-    private static final StringFormatLogger log = getStringFormatLogger(RestfulieXmlLocationTest.class);
+public class XmlLocationTest {
+    private static final StringFormatLogger log = getStringFormatLogger(XmlLocationTest.class);
 
     private RestClient restfulie;
     private RemoteApplication remoteApplication;

@@ -12,8 +12,8 @@ import static java.lang.String.format;
 import static org.junit.Assert.*;
 import static org.junit.matchers.JUnitMatchers.*;
 
-public class RestfulieJsonLocationTest {
-    private static final Logger log = Logger.getLogger(RestfulieJsonLocationTest.class);
+public class JsonLocationTest {
+    private static final Logger log = Logger.getLogger(JsonLocationTest.class);
 
     private RestClient restfulie;
     private RemoteApplication remoteApplication;

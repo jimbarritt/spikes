@@ -39,7 +39,7 @@ public class SimpleHtmlResource {
     @Path("/simplehtml/{id}")
     public void makeAPut(int id, String parameterA, String parameterB) {
         log.info("Received PUT @ [%d]", id);
-        log.info("characterUrl : %s", parameterB);
+        log.info("characterUrl : %s", parameterA);
         log.info("creatureUrl  : %s", parameterB);
 
         result.use(status()).ok();

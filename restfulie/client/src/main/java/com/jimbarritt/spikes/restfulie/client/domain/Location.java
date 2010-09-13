@@ -1,4 +1,4 @@
-package com.jimbarritt.spikes.restfulie.client;
+package com.jimbarritt.spikes.restfulie.client.domain;
 
 import com.thoughtworks.xstream.annotations.*;
 
@@ -17,4 +17,5 @@ public class Location {
     public String toString() {
         return String.format("Location %d - %s", number, description);
     }
+    
 }

@@ -1,4 +1,4 @@
-package com.jimbarritt.spikes.restfulie.client;
+package com.jimbarritt.spikes.restfulie.client.domain;
 
 import com.thoughtworks.xstream.annotations.*;
 

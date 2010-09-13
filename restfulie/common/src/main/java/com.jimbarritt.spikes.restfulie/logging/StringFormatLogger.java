@@ -21,4 +21,8 @@ public class StringFormatLogger {
             delegateLogger.info(format(pattern, parameters));
         }
     }
+
+    public void error(String pattern, Throwable t, Object... parameters) {
+        delegateLogger.error(format(pattern, parameters));
+    }
 }

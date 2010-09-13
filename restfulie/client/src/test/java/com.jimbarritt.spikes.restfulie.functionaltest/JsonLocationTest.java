@@ -2,7 +2,7 @@ package com.jimbarritt.spikes.restfulie.functionaltest;
 
 import br.com.caelum.restfulie.*;
 import br.com.caelum.restfulie.mediatype.*;
-import com.jimbarritt.spikes.restfulie.client.*;
+import com.jimbarritt.spikes.restfulie.client.domain.*;
 import org.apache.log4j.*;
 import org.junit.*;
 

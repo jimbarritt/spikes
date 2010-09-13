@@ -53,7 +53,7 @@ public class XmlPlayerTest {
                                                .put(player);
 
           assertThat(response.getCode(), is(200));
-          log.info(format("Response was (%d)\n%s", response.getCode(), response.getContent()));
+          log.info(format("Response was (%d)", response.getCode()));
 
       }
 

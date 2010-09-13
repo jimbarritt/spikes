@@ -23,7 +23,7 @@ public class ContainerPanel extends JPanel {
     private void layoutComponents(ClientGameModel clientGameModel, RemoteGameServer remoteGameServer) {
         serverPanel = new ServerPanel(remoteGameServer, clientGameModel);
         locationPanel = new LocationPanel(clientGameModel);
-        linkPanel = new LinkPanel(clientGameModel);
+        linkPanel = new LinkPanel(clientGameModel, remoteGameServer);
 
         super.add(serverPanel, NORTH);
         super.add(locationPanel, CENTER);

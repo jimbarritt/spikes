@@ -1,6 +1,8 @@
 package com.jimbarritt.spikes.restfulie.swing;
 
+import com.jimbarritt.spikes.restfulie.client.*;
 import com.jimbarritt.spikes.restfulie.client.domain.*;
+import com.jimbarritt.spikes.restfulie.swing.action.*;
 import com.jimbarritt.spikes.restfulie.swing.model.*;
 
 import javax.swing.*;
@@ -10,15 +12,16 @@ import java.util.List;
 
 import static com.jimbarritt.spikes.restfulie.swing.model.ClientGameModel.*;
 import static java.awt.BorderLayout.*;
-import static javax.swing.BoxLayout.Y_AXIS;
 
 public class LinkPanel extends JPanel implements PropertyChangeListener {
     private JPanel buttonPanel;
     private final ClientGameModel clientGameModel;
+    private final RemoteGameServer remoteGameServer;
 
-    public LinkPanel(ClientGameModel clientGameModel) {
+    public LinkPanel(ClientGameModel clientGameModel, RemoteGameServer remoteGameServer) {
         super(new BorderLayout(), true);
         this.clientGameModel = clientGameModel;
+        this.remoteGameServer = remoteGameServer;
         super.setMinimumSize(new Dimension(200, 400));
         super.setSize(new Dimension(200, 400));
 
@@ -35,7 +38,7 @@ public class LinkPanel extends JPanel implements PropertyChangeListener {
 
     @Override public void propertyChange(PropertyChangeEvent evt) {
         if (PROPERTY_EXIT_LINKS.equals(evt.getPropertyName())) {
-            buildLinkButtons((List<ExitTo>)evt.getNewValue());
+            buildLinkButtons((List<ExitTo>) evt.getNewValue());
         }
     }
 
@@ -43,7 +46,7 @@ public class LinkPanel extends JPanel implements PropertyChangeListener {
         buttonPanel.removeAll();
         JPanel buttonContainer = new JPanel(new GridLayout(exitLinks.size(), 1));
         for (ExitTo exit : exitLinks) {
-            JButton button = new JButton(exit.description());
+            JButton button = new JButton(new ExitLinkAction(exit.description(), remoteGameServer, exit.href()));
             buttonContainer.add(button);
         }
         buttonPanel.add(buttonContainer, BorderLayout.NORTH);

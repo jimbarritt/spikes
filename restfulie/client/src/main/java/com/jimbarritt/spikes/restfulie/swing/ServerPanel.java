@@ -6,13 +6,15 @@ import com.jimbarritt.spikes.restfulie.swing.model.*;
 
 import javax.swing.*;
 import java.awt.*;
+import java.beans.*;
 import java.net.*;
 
-import static com.jimbarritt.spikes.restfulie.io.http.HttpClient.toUri;
+import static com.jimbarritt.spikes.restfulie.io.http.HttpClient.*;
+import static com.jimbarritt.spikes.restfulie.swing.model.ClientGameModel.*;
 import static java.awt.BorderLayout.*;
 import static javax.swing.Box.*;
 
-public class ServerPanel extends JPanel {
+public class ServerPanel extends JPanel implements PropertyChangeListener {
     private JTextField serverUrl;
     private JButton connectButton;
 
@@ -31,10 +33,17 @@ public class ServerPanel extends JPanel {
         list.add(connectButton, BorderLayout.EAST);
         container.add(list, WEST);
         super.add(container, WEST);
+
+        clientGameModel.addPropertyChangeListener(this);
     }
 
     public URI getServerUri() {
         return toUri(serverUrl.getText());
     }
 
+    @Override public void propertyChange(PropertyChangeEvent evt) {
+        if (PROPERTY_CURRENT_URI.equals(evt.getPropertyName())) {
+            serverUrl.setText(toExternalForm((URI) evt.getNewValue()));
+        }
+    }
 }

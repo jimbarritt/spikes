@@ -1,9 +1,7 @@
 package com.jimbarritt.spikes.restfulie.swing.action;
 
 import com.jimbarritt.spikes.restfulie.client.*;
-import com.jimbarritt.spikes.restfulie.client.domain.*;
 import com.jimbarritt.spikes.restfulie.swing.*;
-import com.jimbarritt.spikes.restfulie.swing.model.*;
 
 import javax.swing.*;
 import java.awt.event.*;

@@ -114,6 +114,14 @@ public class HttpClient {
         }
     }
 
+    public static String toExternalForm(URI uri) {
+        try {
+            return uri.toURL().toExternalForm();
+        } catch (Exception e) {
+            throw new RuntimeIoException(format("Could not convert %s", uri.toString()), e);
+        }
+    }
+
 
     private static class RequestParameter {
         private final String name;

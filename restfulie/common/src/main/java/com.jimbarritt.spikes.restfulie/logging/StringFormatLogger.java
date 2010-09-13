@@ -22,7 +22,10 @@ public class StringFormatLogger {
         }
     }
 
+    public void error(String message, Throwable t) {
+        delegateLogger.error(format(message, t));
+    }
     public void error(String pattern, Throwable t, Object... parameters) {
-        delegateLogger.error(format(pattern, parameters));
+        delegateLogger.error(format(pattern, parameters), t);
     }
 }

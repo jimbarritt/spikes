@@ -1,12 +1,13 @@
 package com.jimbarritt.spikes.restfulie.swing;
 
+import com.jimbarritt.spikes.restfulie.client.*;
 import com.jimbarritt.spikes.restfulie.logging.*;
+import com.jimbarritt.spikes.restfulie.swing.model.*;
 
 import javax.swing.*;
 import java.awt.*;
 
 import static java.awt.BorderLayout.CENTER;
-import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class MainFrame extends JFrame {
     private static final StringFormatLogger log = StringFormatLogger.getStringFormatLogger(MainFrame.class);
@@ -28,7 +29,10 @@ public class MainFrame extends JFrame {
         super.setTitle("Restfulie Spike");
         super.setLayout(new BorderLayout());
         super.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        super.add(new ContainerPanel(), CENTER);
+
+        ClientGameModel clientGameModel = new ClientGameModel();
+        RemoteGameServer remoteGameServer = new RemoteGameServer();
+        super.add(new ContainerPanel(clientGameModel, remoteGameServer), CENTER);
         
 
     }

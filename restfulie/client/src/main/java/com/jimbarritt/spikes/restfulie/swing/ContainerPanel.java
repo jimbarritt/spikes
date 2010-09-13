@@ -1,5 +1,8 @@
 package com.jimbarritt.spikes.restfulie.swing;
 
+import com.jimbarritt.spikes.restfulie.client.*;
+import com.jimbarritt.spikes.restfulie.swing.model.*;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -12,14 +15,14 @@ public class ContainerPanel extends JPanel {
     private LinkPanel linkPanel;
     private ServerPanel serverPanel;
 
-    public ContainerPanel() {
+    public ContainerPanel(ClientGameModel clientGameModel, RemoteGameServer remoteGameServer) {
         super(new BorderLayout());
-        layoutComponents();
+        layoutComponents(clientGameModel, remoteGameServer);
     }
 
-    private void layoutComponents() {
-        serverPanel = new ServerPanel();
-        locationPanel = new LocationPanel();
+    private void layoutComponents(ClientGameModel clientGameModel, RemoteGameServer remoteGameServer) {
+        serverPanel = new ServerPanel(remoteGameServer, clientGameModel);
+        locationPanel = new LocationPanel(clientGameModel);
         linkPanel = new LinkPanel();
 
         super.add(serverPanel, NORTH);

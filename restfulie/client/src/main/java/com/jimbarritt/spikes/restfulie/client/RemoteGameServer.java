@@ -15,11 +15,13 @@ import static br.com.caelum.restfulie.Restfulie.resource;
 import static java.lang.String.format;
 
 public class RemoteGameServer {
-    private RestClient restfulie;
+    private final RestClient restfulie;
     private final ClientGameModel clientGameModel;
+    private final LocationDescriptionParser locationDescriptionParser;
 
     public RemoteGameServer(ClientGameModel clientGameModel) {
         this.clientGameModel = clientGameModel;
+        this.locationDescriptionParser = new LocationDescriptionParser();
         restfulie = Restfulie.custom();
         restfulie.getMediaTypes().register(new XmlMediaType()
                  .withTypes(Location.class)                 
@@ -35,11 +37,12 @@ public class RemoteGameServer {
             clientGameModel.setCurrentLocation(location);
             List<Link> links = resource(location).getLinks("exit");
             List<ExitTo> exitLinks = new ArrayList<ExitTo>();
-            String[] locationDescriptions = new String[links.size()];
+            String[] linkDescriptions = locationDescriptionParser.parseDescription(location.toString());
             int i=0;
             for (Link link : links) {                                
-                ExitTo exitTo = new ExitTo(link.getHref(), locationDescriptions[i++]);
+                ExitTo exitTo = new ExitTo(link.getHref(), linkDescriptions[i]);
                 exitLinks.add(exitTo);
+                ++i;
             }
             clientGameModel.setExitLinks(exitLinks);
         } catch (IOException e) {

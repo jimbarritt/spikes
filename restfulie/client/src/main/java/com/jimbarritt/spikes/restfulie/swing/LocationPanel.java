@@ -7,6 +7,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.beans.*;
 
+import static com.jimbarritt.spikes.restfulie.swing.model.ClientGameModel.PROPERTY_CURRENT_LOCATION;
 import static java.awt.BorderLayout.CENTER;
 import static java.awt.Color.*;
 import static java.lang.String.format;
@@ -47,6 +48,8 @@ public class LocationPanel extends JPanel implements PropertyChangeListener {
     }
 
     @Override public void propertyChange(PropertyChangeEvent evt) {
-        setLocation((Location) evt.getNewValue());
+        if (PROPERTY_CURRENT_LOCATION.equals(evt.getPropertyName())) {
+            setLocation((Location) evt.getNewValue());
+        }        
     }
 }

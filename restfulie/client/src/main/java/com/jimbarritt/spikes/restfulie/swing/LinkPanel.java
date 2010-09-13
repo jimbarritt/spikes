@@ -17,6 +17,7 @@ public class LinkPanel extends JPanel implements PropertyChangeListener {
     private JPanel buttonPanel;
     private final ClientGameModel clientGameModel;
     private final RemoteGameServer remoteGameServer;
+    private JPanel buttonContainer = new JPanel();
 
     public LinkPanel(ClientGameModel clientGameModel, RemoteGameServer remoteGameServer) {
         super(new BorderLayout(), true);
@@ -36,19 +37,28 @@ public class LinkPanel extends JPanel implements PropertyChangeListener {
         return buttonPanel;
     }
 
-    @Override public void propertyChange(PropertyChangeEvent evt) {
-        if (PROPERTY_EXIT_LINKS.equals(evt.getPropertyName())) {
-            buildLinkButtons((List<ExitTo>) evt.getNewValue());
-        }
-    }
-
     private void buildLinkButtons(List<ExitTo> exitLinks) {
+        buttonContainer.removeAll();
         buttonPanel.removeAll();
-        JPanel buttonContainer = new JPanel(new GridLayout(exitLinks.size(), 1));
+        buttonContainer = new JPanel(new GridLayout(exitLinks.size(), 1));
         for (ExitTo exit : exitLinks) {
             JButton button = new JButton(new ExitLinkAction(exit.description(), remoteGameServer, exit.href()));
             buttonContainer.add(button);
         }
         buttonPanel.add(buttonContainer, BorderLayout.NORTH);
+        SwingUtilities.invokeLater(new Runnable() {
+
+            @Override public void run() {
+                getRootPane().invalidate();
+                getRootPane().repaint();
+            }
+        });
+
+    }
+
+    @Override public void propertyChange(PropertyChangeEvent evt) {
+        if (PROPERTY_EXIT_LINKS.equals(evt.getPropertyName())) {
+            buildLinkButtons((List<ExitTo>) evt.getNewValue());
+        }
     }
 }

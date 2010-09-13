@@ -17,6 +17,6 @@ public class HomeAction extends AbstractAction {
     }
 
     @Override public void actionPerformed(ActionEvent e) {
-        remoteGameServer.connect(toUri("http://localhost:8080/locations/1"));        
+        remoteGameServer.connect(toUri("http://localhost:8080/restfulie-spike/locations/1"));        
     }
 }

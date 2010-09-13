@@ -36,17 +36,24 @@ public class RemoteGameServer {
                 .accept("application/xml")
                 .get();
         try {
+            log.debug("Response from server was \n%s", response.getContent());
             Location location =  response.getResource();
-            log.debug("Response from server was \n%s", location.toString());
+
             clientGameModel.setCurrentLocation(location);
             clientGameModel.setCurrentURI(uri);
-            List<Link> links = resource(location).getLinks("exit");
+            Resource resource = resource(location);
             List<ExitTo> exitLinks = new ArrayList<ExitTo>();
+            if (resource.getLinks() == null) {
+                clientGameModel.setExitLinks(exitLinks);
+                return;
+            }
+            List<Link> links = resource.getLinks("exit");
             String[] linkDescriptions = locationDescriptionParser.parseDescription(location.toString());
             int i=0;
-            for (Link link : links) {                                
+            for (Link link : links) {
                 ExitTo exitTo = new ExitTo(link.getHref(), linkDescriptions[i]);
                 exitLinks.add(exitTo);
+                log.debug("Adding exit link to %s", link.getHref());
                 ++i;
             }
             clientGameModel.setExitLinks(exitLinks);

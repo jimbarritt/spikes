@@ -19,6 +19,10 @@ public class ExitLinkAction extends AbstractAction {
     }
 
     @Override public void actionPerformed(ActionEvent e) {
-        remoteGameServer.connect(HttpClient.toUri(url));        
+        try {
+            remoteGameServer.connect(HttpClient.toUri(url));
+        } catch (Throwable t) {
+            throw new RuntimeException(String.format("Problem connecting to %s", url), t);
+        }
     }
 }

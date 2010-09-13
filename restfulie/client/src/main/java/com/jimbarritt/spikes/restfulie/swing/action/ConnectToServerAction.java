@@ -10,19 +10,15 @@ import java.awt.event.*;
 
 public class ConnectToServerAction extends AbstractAction {
     private final RemoteGameServer remoteGameServer;
-    private final ClientGameModel clientGameModel;
     private final ServerPanel serverPanel;
 
-    public ConnectToServerAction(RemoteGameServer remoteGameServer, ClientGameModel clientGameModel, ServerPanel serverPanel) {
+    public ConnectToServerAction(RemoteGameServer remoteGameServer, ServerPanel serverPanel) {
         super("Connect");
         this.remoteGameServer = remoteGameServer;
-        this.clientGameModel = clientGameModel;
         this.serverPanel = serverPanel;
     }
 
     @Override public void actionPerformed(ActionEvent e) {
-        Location location = remoteGameServer.connect(serverPanel.getServerUri());
-
-        clientGameModel.setCurrentLocation(location);
+        remoteGameServer.connect(serverPanel.getServerUri());
     }
 }

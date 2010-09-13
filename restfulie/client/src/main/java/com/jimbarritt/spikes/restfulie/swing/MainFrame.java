@@ -31,7 +31,7 @@ public class MainFrame extends JFrame {
         super.setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         ClientGameModel clientGameModel = new ClientGameModel();
-        RemoteGameServer remoteGameServer = new RemoteGameServer();
+        RemoteGameServer remoteGameServer = new RemoteGameServer(clientGameModel);
         super.add(new ContainerPanel(clientGameModel, remoteGameServer), CENTER);
         
 

@@ -1,7 +1,7 @@
 package com.jimbarritt.spikes.restfulie.swing;
 
 import com.jimbarritt.spikes.restfulie.client.*;
-import com.jimbarritt.spikes.restfulie.io.*;
+import com.jimbarritt.spikes.restfulie.io.http.*;
 import com.jimbarritt.spikes.restfulie.swing.action.*;
 import com.jimbarritt.spikes.restfulie.swing.model.*;
 
@@ -9,8 +9,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.net.*;
 
+import static com.jimbarritt.spikes.restfulie.io.http.HttpClient.toUri;
 import static java.awt.BorderLayout.*;
-import static java.lang.String.*;
 import static javax.swing.Box.*;
 
 public class ServerPanel extends JPanel {
@@ -22,7 +22,7 @@ public class ServerPanel extends JPanel {
         super(new BorderLayout());
 
         serverUrl = new JTextField("http://localhost:8080/restfulie-spike/locations/1");
-        connectButton = new JButton(new ConnectToServerAction(remoteGameServer, clientGameModel, this));
+        connectButton = new JButton(new ConnectToServerAction(remoteGameServer, this));
 
         JPanel container = new JPanel(new BorderLayout());
 
@@ -36,14 +36,6 @@ public class ServerPanel extends JPanel {
 
     public URI getServerUri() {
         return toUri(serverUrl.getText());
-    }
-
-    private static URI toUri(String url) {
-        try {
-            return new URL(url).toURI();
-        } catch (Exception t) {
-            throw new RuntimeIoException(format("Could not convert url [%s]", url), t);
-        }
     }
 
 }

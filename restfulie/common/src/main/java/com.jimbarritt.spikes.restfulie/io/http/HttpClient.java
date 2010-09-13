@@ -106,6 +106,14 @@ public class HttpClient {
         return this;
     }
 
+    public static URI toUri(String url) {
+        try {
+            return new URL(url).toURI();
+        } catch (Exception t) {
+            throw new RuntimeIoException(format("Could not convert url [%s]", url), t);
+        }
+    }
+
 
     private static class RequestParameter {
         private final String name;

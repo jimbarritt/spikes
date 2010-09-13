@@ -1,7 +1,6 @@
 package com.jimbarritt.spikes.restfulie.swing;
 
 import com.jimbarritt.spikes.restfulie.client.*;
-import com.jimbarritt.spikes.restfulie.io.http.*;
 import com.jimbarritt.spikes.restfulie.swing.action.*;
 import com.jimbarritt.spikes.restfulie.swing.model.*;
 
@@ -22,7 +21,7 @@ public class ServerPanel extends JPanel {
         super(new BorderLayout());
 
         serverUrl = new JTextField("http://localhost:8080/restfulie-spike/locations/1");
-        connectButton = new JButton(new ConnectToServerAction(remoteGameServer, this));
+        connectButton = new JButton(new GoToLocationAction(remoteGameServer, this));
 
         JPanel container = new JPanel(new BorderLayout());
 

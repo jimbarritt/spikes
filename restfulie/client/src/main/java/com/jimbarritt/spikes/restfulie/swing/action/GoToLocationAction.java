@@ -8,12 +8,12 @@ import com.jimbarritt.spikes.restfulie.swing.model.*;
 import javax.swing.*;
 import java.awt.event.*;
 
-public class ConnectToServerAction extends AbstractAction {
+public class GoToLocationAction extends AbstractAction {
     private final RemoteGameServer remoteGameServer;
     private final ServerPanel serverPanel;
 
-    public ConnectToServerAction(RemoteGameServer remoteGameServer, ServerPanel serverPanel) {
-        super("Connect");
+    public GoToLocationAction(RemoteGameServer remoteGameServer, ServerPanel serverPanel) {
+        super("Go");
         this.remoteGameServer = remoteGameServer;
         this.serverPanel = serverPanel;
     }

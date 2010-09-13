@@ -24,8 +24,8 @@ public class MainFrame extends JFrame {
     public MainFrame() throws HeadlessException {
         log.info("Restfulie Spike v1.0");
 
-        super.setSize(800, 600);
-        super.setLocation(200, 200);
+        super.setSize(900, 800);
+        super.setLocation(200, 60);
         super.setTitle("Restfulie Spike");
         super.setLayout(new BorderLayout());
         super.setDefaultCloseOperation(EXIT_ON_CLOSE);

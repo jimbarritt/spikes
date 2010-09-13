@@ -37,7 +37,7 @@ public class RemoteGameServer {
                 .get();
         try {
             Location location =  response.getResource();
-            log.info("Response from server was \n%s", location.toString());
+            log.debug("Response from server was \n%s", location.toString());
             clientGameModel.setCurrentLocation(location);
             clientGameModel.setCurrentURI(uri);
             List<Link> links = resource(location).getLinks("exit");

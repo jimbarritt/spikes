@@ -23,10 +23,18 @@ public class StringFormatLogger {
         }
     }
 
+    public void debug(String pattern, Object... parameters) {
+        if (delegateLogger.isDebugEnabled()) {
+            delegateLogger.debug(format(pattern, parameters));
+        }
+    }
+
     public void error(String message, Throwable t) {
         delegateLogger.error(format(message, t));
     }
     public void error(String pattern, Throwable t, Object... parameters) {
         delegateLogger.error(format(pattern, parameters), t);
     }
+
+
 }

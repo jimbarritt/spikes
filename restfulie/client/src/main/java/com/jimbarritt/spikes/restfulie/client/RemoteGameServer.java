@@ -35,8 +35,10 @@ public class RemoteGameServer {
             clientGameModel.setCurrentLocation(location);
             List<Link> links = resource(location).getLinks("exit");
             List<ExitTo> exitLinks = new ArrayList<ExitTo>();
-            for (Link link : links) {
-                ExitTo exitTo = new ExitTo(link.getHref(), format("Go to %d", location.number()));
+            String[] locationDescriptions = new String[links.size()];
+            int i=0;
+            for (Link link : links) {                                
+                ExitTo exitTo = new ExitTo(link.getHref(), locationDescriptions[i++]);
                 exitLinks.add(exitTo);
             }
             clientGameModel.setExitLinks(exitLinks);

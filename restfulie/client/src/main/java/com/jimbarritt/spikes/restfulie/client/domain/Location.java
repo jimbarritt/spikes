@@ -2,11 +2,14 @@ package com.jimbarritt.spikes.restfulie.client.domain;
 
 import com.thoughtworks.xstream.annotations.*;
 
+import java.util.regex.*;
+
 @XStreamAlias("location")
 public class Location {
 
     private final int number;
     private final String description;
+
 
 
     public Location(int number, String description) {
@@ -21,4 +24,7 @@ public class Location {
     public int number() {
         return number;
     }
+
+
+    
 }

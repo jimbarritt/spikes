@@ -30,8 +30,8 @@ public class PlayerResource {
     @Put
     @Path("/players/{id}")
     @Consumes("application/xml")
-    public void putPlayer(String id, PlayerRepresentation playerRepresentation) {
-        log.info("Updating player [%s] to be ", id, playerRepresentation);
+    public void putPlayer(int id, PlayerRepresentation player) {
+        log.info("Updating player [%s] to be ", id, player);
         result.use(status()).ok();
     }
 }

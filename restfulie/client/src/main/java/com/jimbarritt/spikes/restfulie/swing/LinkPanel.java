@@ -2,6 +2,7 @@ package com.jimbarritt.spikes.restfulie.swing;
 
 import com.jimbarritt.spikes.restfulie.client.*;
 import com.jimbarritt.spikes.restfulie.client.domain.*;
+import com.jimbarritt.spikes.restfulie.logging.*;
 import com.jimbarritt.spikes.restfulie.swing.action.*;
 import com.jimbarritt.spikes.restfulie.swing.model.*;
 
@@ -14,6 +15,7 @@ import static com.jimbarritt.spikes.restfulie.swing.model.ClientGameModel.*;
 import static java.awt.BorderLayout.*;
 
 public class LinkPanel extends JPanel implements PropertyChangeListener {
+    private static final StringFormatLogger log = StringFormatLogger.getStringFormatLogger(LinkPanel.class);
     private JPanel buttonPanel;
     private final ClientGameModel clientGameModel;
     private final RemoteGameServer remoteGameServer;
@@ -40,23 +42,23 @@ public class LinkPanel extends JPanel implements PropertyChangeListener {
     private void buildLinkButtons(List<ExitTo> exitLinks) {
         buttonContainer.removeAll();
         buttonPanel.removeAll();
-        buttonContainer = new JPanel(new GridLayout(exitLinks.size(), 1));
+        buttonPanel.add(Box.createHorizontalStrut(150), SOUTH);        
         for (ExitTo exit : exitLinks) {
             JButton button = new JButton(new ExitLinkAction(exit.description(), remoteGameServer, exit.href()));
+            log.debug("Adding new button %s", button);
             buttonContainer.add(button);
         }
-        buttonPanel.add(buttonContainer, BorderLayout.NORTH);
-        SwingUtilities.invokeLater(new Runnable() {
+        SwingUtilities.invokeLater(new Runnable(){
 
             @Override public void run() {
-                getRootPane().invalidate();
-                getRootPane().repaint();
+                invalidate();
+                repaint();
             }
         });
 
     }
 
-    @Override public void propertyChange(PropertyChangeEvent evt) {
+    @Override public void propertyChange(final PropertyChangeEvent evt) {
         if (PROPERTY_EXIT_LINKS.equals(evt.getPropertyName())) {
             buildLinkButtons((List<ExitTo>) evt.getNewValue());
         }

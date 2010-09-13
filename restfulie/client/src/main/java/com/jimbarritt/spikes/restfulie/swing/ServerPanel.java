@@ -20,12 +20,12 @@ public class ServerPanel extends JPanel implements PropertyChangeListener {
     private JButton homeButton;
 
 
-    public ServerPanel(RemoteGameServer remoteGameServer, ClientGameModel clientGameModel) {
+    public ServerPanel(RemoteGameServer remoteGameServer, ClientGameModel clientGameModel, LinkPanel linkPanel) {
         super(new BorderLayout());
 
         serverUrl = new JTextField("http://localhost:8080/restfulie-spike/locations/1");
-        connectButton = new JButton(new GoToLocationAction(remoteGameServer, this));
-        homeButton = new JButton(new HomeAction(remoteGameServer));
+        connectButton = new JButton(new GoToLocationAction(remoteGameServer, this, linkPanel));
+        homeButton = new JButton(new HomeAction(remoteGameServer, linkPanel));
 
         JPanel container = new JPanel(new BorderLayout());
 
@@ -50,6 +50,13 @@ public class ServerPanel extends JPanel implements PropertyChangeListener {
     @Override public void propertyChange(PropertyChangeEvent evt) {
         if (PROPERTY_CURRENT_URI.equals(evt.getPropertyName())) {
             serverUrl.setText(toExternalForm((URI) evt.getNewValue()));
+            SwingUtilities.invokeLater(new Runnable(){
+
+                @Override public void run() {
+                    invalidate();
+                    repaint();
+                }
+            });
         }
     }
 }

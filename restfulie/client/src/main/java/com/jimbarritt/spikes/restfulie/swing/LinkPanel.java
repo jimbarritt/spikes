@@ -3,6 +3,8 @@ package com.jimbarritt.spikes.restfulie.swing;
 import javax.swing.*;
 import java.awt.*;
 
+import static java.awt.BorderLayout.NORTH;
+
 public class LinkPanel extends JPanel {
 
     public LinkPanel() {
@@ -16,8 +18,7 @@ public class LinkPanel extends JPanel {
 
     private JPanel initButtons() {
         JPanel buttonPanel = new JPanel(new BorderLayout());
-        JButton button = new JButton("Go to 455");
-        super.add(button, BorderLayout.NORTH);
+        buttonPanel.add(Box.createHorizontalStrut(150), NORTH);
         return buttonPanel;
     }
 

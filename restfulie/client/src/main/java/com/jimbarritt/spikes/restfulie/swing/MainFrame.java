@@ -5,6 +5,9 @@ import com.jimbarritt.spikes.restfulie.logging.*;
 import javax.swing.*;
 import java.awt.*;
 
+import static java.awt.BorderLayout.CENTER;
+import static javax.swing.JFrame.EXIT_ON_CLOSE;
+
 public class MainFrame extends JFrame {
     private static final StringFormatLogger log = StringFormatLogger.getStringFormatLogger(MainFrame.class);
 
@@ -20,11 +23,12 @@ public class MainFrame extends JFrame {
     public MainFrame() throws HeadlessException {
         log.info("Restfulie Spike v1.0");
 
-        super.setSize(600, 600);
+        super.setSize(800, 600);
         super.setLocation(200, 200);
         super.setTitle("Restfulie Spike");
         super.setLayout(new BorderLayout());
-        super.add(new ContainerPanel(), BorderLayout.CENTER);
+        super.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        super.add(new ContainerPanel(), CENTER);
         
 
     }

@@ -16,6 +16,7 @@ public class StringFormatLogger {
         this.delegateLogger = delegateLogger;
     }
 
+       
     public void info(String pattern, Object... parameters) {
         if (delegateLogger.isInfoEnabled()) {
             delegateLogger.info(format(pattern, parameters));

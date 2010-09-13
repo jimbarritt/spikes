@@ -82,6 +82,7 @@
       <entry name="?*.ftl" />
       <entry name="?*.st" />
       <entry name="?*.stg" />
+      <entry name="?*.location" />
     </wildcardResourcePatterns>
     <annotationProcessing enabled="false" useClasspath="true" />
   </component>

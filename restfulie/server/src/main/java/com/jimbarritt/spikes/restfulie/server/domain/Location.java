@@ -22,8 +22,8 @@ public class Location {
         this.exitTos = new ArrayList<ExitTo>();
     }
 
-    public Location withExitTo(Location otherLocation) {
-        exitTos.add(new ExitTo(otherLocation.number()));
+    public Location withExitTo(int otherLocationNumber) {
+        exitTos.add(new ExitTo(otherLocationNumber));
         return this;
     }
 

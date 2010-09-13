@@ -1,6 +1,9 @@
 package com.jimbarritt.spikes.restfulie.io;
 
 import java.io.*;
+import java.net.*;
+
+import static java.lang.String.format;
 
 public class Iox {
 
@@ -9,7 +12,7 @@ public class Iox {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         try {
             int bytesRead = in.read(buffer);
-            while(bytesRead != -1)  {
+            while (bytesRead != -1) {
                 out.write(buffer, 0, bytesRead);
                 out.flush();
                 bytesRead = in.read(buffer);
@@ -31,5 +34,23 @@ public class Iox {
         } catch (IOException e) {
             throw new RuntimeIoException("Could not close output stream", e);
         }
+    }
+
+    public static String loadClasspathResourceAsString(String resourcePath) {
+        URL resourceUrl = Thread.currentThread()
+                .getContextClassLoader()
+                .getResource(resourcePath);
+
+        if (resourceUrl == null) {
+            throw new RuntimeException(format("Could not load resource [%s] from the classpath", resourcePath));
+        }
+
+        try {
+            InputStream inputStream = resourceUrl.openStream();
+            return readAsString(inputStream, "UTF-8");
+        } catch (IOException e) {
+            throw new RuntimeIoException(format("Problem reading from resource %s", resourcePath), e);
+        }
+
     }
 }

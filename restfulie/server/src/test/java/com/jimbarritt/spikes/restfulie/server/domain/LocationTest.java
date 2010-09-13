@@ -23,8 +23,8 @@ public class LocationTest {
         Location locationC = new Location(3)
                                     .appendDescription("You are in a room.")
                                     .appendDescription(" To leave by the west door {0}, or by the east {1}.")
-                                    .withExitTo(locationA)
-                                    .withExitTo(locationB);
+                                    .withExitTo(locationA.number())
+                                    .withExitTo(locationB.number());
 
         assertThat(locationC.describe(), is("You are in a room. To leave by the west door (Go to 99), or by the east (Go to 88)."));
     }

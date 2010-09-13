@@ -20,7 +20,7 @@ public class LocationRepositoryTest {
 
         Location location = locationRepository.get(1);
         String description = location.describe();
-
+        log.info("Description \n%s", description);
         assertThat(description, containsString("Something smells fishy"));
         assertThat(description, containsString("(Go to 33)"));
         assertThat(description, containsString("(Go to 44)"));
@@ -38,10 +38,4 @@ public class LocationRepositoryTest {
         log.info("Output is %s", out);
     }
 
-    @Test
-    public void testForLoop() {
-        for (int i=0;i<10;++i) {
-            log.info("i=%d", i);
-        }
-    }
 }

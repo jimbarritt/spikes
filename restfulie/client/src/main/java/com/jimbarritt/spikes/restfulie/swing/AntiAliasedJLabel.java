@@ -6,7 +6,15 @@ import java.awt.*;
 public class AntiAliasedJLabel extends JLabel {
 
     public AntiAliasedJLabel(String text) {
-        super(text);
+        super(formatText(text));
+    }
+
+    private static String formatText(String text) {
+        return text.replaceAll("\\n", "<br/>");
+    }
+
+    @Override public void setText(String text) {
+        super.setText(formatText(text));
     }
 
     @Override public void paint(Graphics g) {

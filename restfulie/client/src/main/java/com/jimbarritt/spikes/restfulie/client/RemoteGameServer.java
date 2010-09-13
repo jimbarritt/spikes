@@ -5,6 +5,7 @@ import br.com.caelum.restfulie.mediatype.*;
 import com.jimbarritt.spikes.restfulie.client.domain.*;
 import com.jimbarritt.spikes.restfulie.io.*;
 import com.jimbarritt.spikes.restfulie.io.http.*;
+import com.jimbarritt.spikes.restfulie.logging.*;
 import com.jimbarritt.spikes.restfulie.swing.model.*;
 
 import java.io.*;
@@ -15,6 +16,8 @@ import static br.com.caelum.restfulie.Restfulie.resource;
 import static java.lang.String.format;
 
 public class RemoteGameServer {
+    private static final StringFormatLogger log = StringFormatLogger.getStringFormatLogger(RemoteGameServer.class);
+
     private final RestClient restfulie;
     private final ClientGameModel clientGameModel;
     private final LocationDescriptionParser locationDescriptionParser;
@@ -34,6 +37,7 @@ public class RemoteGameServer {
                 .get();
         try {
             Location location =  response.getResource();
+            log.info("Response from server was \n%s", location.toString());
             clientGameModel.setCurrentLocation(location);
             clientGameModel.setCurrentURI(uri);
             List<Link> links = resource(location).getLinks("exit");

@@ -4,6 +4,8 @@ import com.thoughtworks.xstream.annotations.*;
 
 import java.util.regex.*;
 
+import static java.lang.String.format;
+
 @XStreamAlias("location")
 public class Location {
 
@@ -18,7 +20,7 @@ public class Location {
     }
 
     public String toString() {
-        return String.format("Location %d - %s", number, description);
+        return format("%s", description);
     }
 
     public int number() {

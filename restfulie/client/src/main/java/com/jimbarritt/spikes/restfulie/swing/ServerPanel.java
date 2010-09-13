@@ -17,6 +17,7 @@ import static javax.swing.Box.*;
 public class ServerPanel extends JPanel implements PropertyChangeListener {
     private JTextField serverUrl;
     private JButton connectButton;
+    private JButton homeButton;
 
 
     public ServerPanel(RemoteGameServer remoteGameServer, ClientGameModel clientGameModel) {
@@ -24,13 +25,18 @@ public class ServerPanel extends JPanel implements PropertyChangeListener {
 
         serverUrl = new JTextField("http://localhost:8080/restfulie-spike/locations/1");
         connectButton = new JButton(new GoToLocationAction(remoteGameServer, this));
+        homeButton = new JButton(new HomeAction(remoteGameServer));
 
         JPanel container = new JPanel(new BorderLayout());
 
         JPanel list = new JPanel(new BorderLayout());
         list.add(createHorizontalStrut(650), NORTH);
         list.add(serverUrl, BorderLayout.CENTER);
-        list.add(connectButton, BorderLayout.EAST);
+
+        JPanel buttonContainer = new JPanel();
+        buttonContainer.add(connectButton);
+        buttonContainer.add(homeButton);
+        list.add(buttonContainer, EAST);
         container.add(list, WEST);
         super.add(container, WEST);
 

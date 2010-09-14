@@ -25,4 +25,8 @@ public class ExitLinkAction extends AbstractAction {
             throw new RuntimeException(String.format("Problem connecting to %s", url), t);
         }
     }
+
+    public String toString() {
+        return url;    
+    }
 }

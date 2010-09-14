@@ -3,6 +3,7 @@ package com.jimbarritt.spikes.restfulie.swing;
 import com.jimbarritt.spikes.restfulie.client.*;
 import com.jimbarritt.spikes.restfulie.logging.*;
 import com.jimbarritt.spikes.restfulie.swing.model.*;
+import org.apache.log4j.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,7 +11,7 @@ import java.awt.*;
 import static java.awt.BorderLayout.CENTER;
 
 public class MainFrame extends JFrame {
-    private static final StringFormatLogger log = StringFormatLogger.getStringFormatLogger(MainFrame.class);
+    private static final Logger log = Logger.getLogger(MainFrame.class);
 
     public static void main(String[] args) {
         try {

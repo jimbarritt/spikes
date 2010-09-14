@@ -9,58 +9,71 @@ import com.jimbarritt.spikes.restfulie.swing.model.*;
 import javax.swing.*;
 import java.awt.*;
 import java.beans.*;
+import java.util.*;
 import java.util.List;
 
 import static com.jimbarritt.spikes.restfulie.swing.model.ClientGameModel.*;
 import static java.awt.BorderLayout.*;
+import static javax.swing.Box.createHorizontalStrut;
 
 public class LinkPanel extends JPanel implements PropertyChangeListener {
     private static final StringFormatLogger log = StringFormatLogger.getStringFormatLogger(LinkPanel.class);
     private JPanel buttonPanel;
     private final ClientGameModel clientGameModel;
     private final RemoteGameServer remoteGameServer;
-    private JPanel buttonContainer = new JPanel();
+    private JPanel panelOfButtons;
+    private List<JButton> currentButtons = new ArrayList<JButton>();
 
     public LinkPanel(ClientGameModel clientGameModel, RemoteGameServer remoteGameServer) {
         super(new BorderLayout(), true);
         this.clientGameModel = clientGameModel;
         this.remoteGameServer = remoteGameServer;
-        super.setMinimumSize(new Dimension(200, 400));
-        super.setSize(new Dimension(200, 400));
+        buttonPanel = new JPanel(new BorderLayout());
+        panelOfButtons = new JPanel();
+        panelOfButtons.setLayout(new BoxLayout(panelOfButtons, BoxLayout.Y_AXIS));
+        buttonPanel.add(createHorizontalStrut(100), NORTH);
+        super.add(panelOfButtons, CENTER);
+        super.add(buttonPanel, EAST);
 
-        buttonPanel = initButtons();
-        super.add(buttonPanel, BorderLayout.EAST);
+        initButtons(new ArrayList<ExitTo>());
+
         clientGameModel.addPropertyChangeListener(this);
     }
 
-    private JPanel initButtons() {
-        JPanel buttonPanel = new JPanel(new BorderLayout());
-        buttonPanel.add(Box.createHorizontalStrut(150), SOUTH);
-        return buttonPanel;
-    }
+    private void initButtons(List<ExitTo> exitLinks) {
+        for (JButton btn : currentButtons) {
+            panelOfButtons.remove(btn);
+        }
+        currentButtons.clear();
 
-    private void buildLinkButtons(List<ExitTo> exitLinks) {
-        buttonContainer.removeAll();
-        buttonPanel.removeAll();
-        buttonPanel.add(Box.createHorizontalStrut(150), SOUTH);        
         for (ExitTo exit : exitLinks) {
             JButton button = new JButton(new ExitLinkAction(exit.description(), remoteGameServer, exit.href()));
-            log.debug("Adding new button %s", button);
-            buttonContainer.add(button);
+            log.debug("Adding new button %s", button.getAction().toString());
+            panelOfButtons.add(button);
+            currentButtons.add(button);
         }
-        SwingUtilities.invokeLater(new Runnable(){
 
+        refreshView();
+    }
+
+    private void refreshView() {
+        SwingUtilities.invokeLater(new Runnable() {
             @Override public void run() {
-                invalidate();
-                repaint();
+                panelOfButtons.doLayout();
+                panelOfButtons.invalidate();
+                panelOfButtons.repaint();
             }
         });
+    }
 
+
+    public void setExitLinks(List<ExitTo> exitLinks) {
+        initButtons(exitLinks);
     }
 
     @Override public void propertyChange(final PropertyChangeEvent evt) {
         if (PROPERTY_EXIT_LINKS.equals(evt.getPropertyName())) {
-            buildLinkButtons((List<ExitTo>) evt.getNewValue());
+            setExitLinks((List<ExitTo>) evt.getNewValue());
         }
     }
 }

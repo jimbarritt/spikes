@@ -15,6 +15,7 @@ import java.util.List;
 import static com.jimbarritt.spikes.restfulie.swing.model.ClientGameModel.*;
 import static java.awt.BorderLayout.*;
 import static javax.swing.Box.createHorizontalStrut;
+import static javax.swing.BoxLayout.Y_AXIS;
 
 public class LinkPanel extends JPanel implements PropertyChangeListener {
     private static final StringFormatLogger log = StringFormatLogger.getStringFormatLogger(LinkPanel.class);
@@ -30,9 +31,9 @@ public class LinkPanel extends JPanel implements PropertyChangeListener {
         this.remoteGameServer = remoteGameServer;
         buttonPanel = new JPanel(new BorderLayout());
         panelOfButtons = new JPanel();
-        panelOfButtons.setLayout(new BoxLayout(panelOfButtons, BoxLayout.Y_AXIS));
+        panelOfButtons.setLayout(new BoxLayout(panelOfButtons, Y_AXIS));
         buttonPanel.add(createHorizontalStrut(100), NORTH);
-        super.add(panelOfButtons, CENTER);
+        buttonPanel.add(panelOfButtons, CENTER);
         super.add(buttonPanel, EAST);
 
         initButtons(new ArrayList<ExitTo>());

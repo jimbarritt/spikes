@@ -17,6 +17,9 @@ public class MainFrame extends JFrame {
         try {
             MainFrame frame = new MainFrame();
             frame.setVisible(true);
+
+            DiceFrame diceFrame = new DiceFrame();
+            diceFrame.setVisible(true);
         } catch (Throwable t) {
             log.error("A problem occured", t);
         }
@@ -27,7 +30,7 @@ public class MainFrame extends JFrame {
 
         super.setSize(900, 800);
         super.setLocation(200, 60);
-        super.setTitle("Restfulie Spike");
+        super.setTitle("Hyper Fantasy v1.0");
         super.setLayout(new BorderLayout());
         super.setDefaultCloseOperation(EXIT_ON_CLOSE);
 

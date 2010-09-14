@@ -30,7 +30,7 @@ public class LocationRepository {
         }
         return location;
     }
-
+    // There is a problem with apostrohies for some reason, like wasn't
     private static class LocationDefinitionParser {
         private final String locationDefinition;
         private final Pattern pattern = Pattern.compile("\\{[0-9]*\\}");

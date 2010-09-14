@@ -23,9 +23,10 @@ public class ServerPanel extends JPanel implements PropertyChangeListener {
     public ServerPanel(RemoteGameServer remoteGameServer, ClientGameModel clientGameModel, LinkPanel linkPanel) {
         super(new BorderLayout());
 
-        serverUrl = new JTextField("http://localhost:8080/restfulie-spike/locations/1");
+        HomeAction homeAction = new HomeAction(remoteGameServer, linkPanel);
+        serverUrl = new JTextField(homeAction.href());
         connectButton = new JButton(new GoToLocationAction(remoteGameServer, this, linkPanel));
-        homeButton = new JButton(new HomeAction(remoteGameServer, linkPanel));
+        homeButton = new JButton(homeAction);
 
         JPanel container = new JPanel(new BorderLayout());
 

@@ -1,4 +1,4 @@
-BeeTest = TestCase("BeeTest", {
+BeeTest = jstestdriver.TestCase("BeeTest", {
 
     setUp : function() {
     },
@@ -14,4 +14,4 @@ BeeTest = TestCase("BeeTest", {
 
         assertEquals(9, numberOfWaggles);
     }
-})
+});

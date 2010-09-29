@@ -1,0 +1,3 @@
+Copy the url into the browser:
+
+http://coco-2.local:9876/capture

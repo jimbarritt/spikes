@@ -1,6 +1,6 @@
-jstestdriver.TestCase("BeeTest", {
+TestCase("BeeTest", {
 
-    setUp : function() {
+    setUp : function() {        
     },
 
     tearDown : function(){

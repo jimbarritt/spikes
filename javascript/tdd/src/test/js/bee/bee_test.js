@@ -1,4 +1,4 @@
-BeeTest = jstestdriver.TestCase("BeeTest", {
+jstestdriver.TestCase("BeeTest", {
 
     setUp : function() {
     },
@@ -6,7 +6,7 @@ BeeTest = jstestdriver.TestCase("BeeTest", {
     tearDown : function(){
     },
 
-    canWaggle : function () {
+    testCanWaggle : function () {
         var console = io.Console();
         var bee = bee.Bee(console);
 

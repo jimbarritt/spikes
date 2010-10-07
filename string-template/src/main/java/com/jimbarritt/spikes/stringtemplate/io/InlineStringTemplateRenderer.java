@@ -8,19 +8,31 @@ import java.util.*;
 public class InlineStringTemplateRenderer {
     private String template;
     private AttributeList attributes;
-  
+    private List<AttributeRendererOf> attributeRenderers = new ArrayList<AttributeRendererOf>();
+
     public InlineStringTemplateRenderer template(String template) {
         this.template = template;
         return this;
     }
 
     String renderTemplate() {
-        StringTemplate stringTemplate = new StringTemplate(template);       
+        StringTemplate stringTemplate = new StringTemplate(template);
         stringTemplate.registerRenderer(Volume.class, new VolumeAttributeRenderer());
+        for (AttributeRendererOf renderer : attributeRenderers) {
+            renderer.registerWith(stringTemplate);
+        }
         for (Attribute attribute : attributes) {
             attribute.registerIn(stringTemplate);
         }
         return stringTemplate.toString();
+    }
+
+    public AttributeRendererOf format(Class<?> classToRender) {
+        return new AttributeRendererOf(classToRender, this);
+    }
+
+    private void addAttributeRenderer(AttributeRendererOf attributeRendererOf) {
+        attributeRenderers.add(attributeRendererOf);
     }
 
     public AttributeList with() {
@@ -63,4 +75,27 @@ public class InlineStringTemplateRenderer {
             stringTemplate.setAttribute(key, value);
         }
     }
+
+    public class AttributeRendererOf {
+        private final InlineStringTemplateRenderer parent;
+        private final Class<?> classToRender;
+        private AttributeRenderer attributeRenderer;
+
+        public AttributeRendererOf(Class<?> classToRender, InlineStringTemplateRenderer parent) {
+            this.classToRender = classToRender;
+            this.parent = parent;
+        }
+
+        public InlineStringTemplateRenderer with(AttributeRenderer attributeRenderer) {
+            this.attributeRenderer = attributeRenderer;
+            parent.addAttributeRenderer(this);
+            return parent;
+        }
+
+        public void registerWith(StringTemplate stringTemplate) {
+            stringTemplate.registerRenderer(classToRender, attributeRenderer);
+        }
+    }
+
+
 }

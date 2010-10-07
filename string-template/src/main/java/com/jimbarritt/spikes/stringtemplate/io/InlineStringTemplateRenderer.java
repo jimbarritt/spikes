@@ -3,6 +3,7 @@ package com.jimbarritt.spikes.stringtemplate.io;
 import com.jimbarritt.spikes.stringtemplate.volume.*;
 import org.antlr.stringtemplate.*;
 
+import java.io.*;
 import java.util.*;
 
 public class InlineStringTemplateRenderer {
@@ -25,6 +26,8 @@ public class InlineStringTemplateRenderer {
             attribute.registerIn(stringTemplate);
         }
         return stringTemplate.toString();
+
+
     }
 
     public AttributeRendererOf format(Class<?> classToRender) {

@@ -43,9 +43,29 @@ public class CustomFormatTest {
         assertThat(representation, is("This is a title cased value : [Something To Title-case]"));
     }
 
+    @Test
+    public void canRenderFromWithinItself() {
+        StringTemplate st = new StringTemplate("This is a title cased value : [$value;format=\"title\"$]");
+
+        st.registerRenderer(String.class, new FormatAttributeRenderer(st));
+        st.setAttribute("value", "something to title-case");
+
+        String representation = st.toString();
+
+        assertThat(representation, is("This is a title cased value : [Something To Title-case]"));
+    }
 
 
     public static class FormatAttributeRenderer implements AttributeRenderer {
+        private StringTemplate st;
+        boolean isRenderingSelf = false;
+
+        public FormatAttributeRenderer() {
+        }
+
+        public FormatAttributeRenderer(StringTemplate st) {
+            this.st = st;
+        }
 
         @Override
         public String toString(Object o) {
@@ -54,6 +74,12 @@ public class CustomFormatTest {
 
         @Override
         public String toString(Object o, String formatName) {
+            if (st !=null && !isRenderingSelf) {
+                isRenderingSelf = true;
+                log.debug(format("The string template rendering me is [%s]", st.toString()));
+                isRenderingSelf = false;
+            }
+
             log.debug(format("toString(Object %s, String %s)", o, formatName));
             if (o == null) {
                 return null;

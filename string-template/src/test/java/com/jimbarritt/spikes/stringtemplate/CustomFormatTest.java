@@ -2,13 +2,19 @@ package com.jimbarritt.spikes.stringtemplate;
 
 import com.jimbarritt.spikes.stringtemplate.io.*;
 import org.antlr.stringtemplate.*;
+import org.apache.log4j.*;
 import org.junit.*;
 
+import static com.jimbarritt.spikes.stringtemplate.CustomFormatTest.FormatAttributeRenderer.titleCase;
+import static java.lang.String.format;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
 public class CustomFormatTest {
+    private static final Logger log = Logger.getLogger(CustomFormatTest.class);
+
     private InlineStringTemplateRenderer render;
+
 
     @Before
     public void setUp() {
@@ -17,11 +23,11 @@ public class CustomFormatTest {
 
     @Test
     public void titleCaseAString() {
-        String input = "this will be a title-cased sentance";
+        String input = "this will be a title-cased sentence";
 
-        String output = FormatAttributeRenderer.titleCase(input);
+        String output = titleCase(input);
 
-        assertThat(output, is("This Will Be A Title-cased Sentance"));
+        assertThat(output, is("This Will Be A Title-cased Sentence"));
     }
 
     @Test
@@ -35,19 +41,25 @@ public class CustomFormatTest {
 
 
         assertThat(representation, is("This is a title cased value : [Something To Title-case]"));
-
     }
 
 
 
-    private static class FormatAttributeRenderer implements AttributeRenderer {
-        @Override public String toString(Object o) {
+    public static class FormatAttributeRenderer implements AttributeRenderer {
+
+        @Override
+        public String toString(Object o) {
             return (o == null) ? null : o.toString();
         }
 
-        @Override public String toString(Object o, String formatName) {
+        @Override
+        public String toString(Object o, String formatName) {
+            log.debug(format("toString(Object %s, String %s)", o, formatName));
             if (o == null) {
                 return null;
+            }
+            if ("Title".equals(formatName)) {
+                throw new IllegalArgumentException("Somehow we title-cased the format name!");
             }
             if ("title".equals(formatName)) {
                 return titleCase(o.toString());
@@ -68,7 +80,9 @@ public class CustomFormatTest {
                     sb.append(" ");
                 }
             }
-            return sb.toString();
+            String output = sb.toString();
+            log.debug(format("Title-cased [%s] to [%s]", input, output));
+            return output;
         }
     }
 }

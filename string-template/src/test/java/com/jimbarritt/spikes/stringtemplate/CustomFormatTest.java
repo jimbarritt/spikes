@@ -69,6 +69,42 @@ public class CustomFormatTest {
 
     }
 
+    @Test
+    public void worksOkIfUseSpecialText() {
+        final int NUM_THREADS = 10;
+        final int NUM_RENDERS = 50;
+        ThreadGroup tg = new ThreadGroup("test-st");
+
+        StringTemplate st = new StringTemplate("This is a title cased value : [$value;format=\"title\"$]");
+        st.registerRenderer(SpecialText.class, new FormatAttributeRenderer());
+        st.setAttribute("value", new SpecialText("something to title-case"));
+
+        for (int i = 0; i < NUM_THREADS; ++i) {
+            new Thread(tg, new RenderStringTemplate(NUM_RENDERS, st), format("thread-%d", i)).start();
+        }
+
+        while (tg.activeCount() > 0) {
+            try {
+                Thread.sleep(10);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+    }
+
+
+    public static class SpecialText {
+        private final String value;
+
+        public SpecialText(String value) {
+            this.value = value;
+        }
+
+        public String toString() {
+            return value;
+        }
+    }
 
     public static class FormatAttributeRenderer implements AttributeRenderer {
         public FormatAttributeRenderer() {

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="build.module">
+
+    <property name="base.dir" value="${basedir}"/>
+    <property name="target.dir" value="${base.dir}/target"/>
+
+    <target name="clean">
+        <delete dir="${target.dir}"/>
+        <mkdir dir="${target.dir}"/>
+    </target>
+
+    <target name="build.import.jar" depends="clean">
+        <jar file="${target.dir}/import-from-here.jar">
+            <fileset dir="${base.dir}">
+                <include name="module-to-import.xml"/>
+            </fileset>
+        </jar>
+        <copy file="${base.dir}/import-to-here.xml" todir="${target.dir}" />
+    </target>
+
+</project>

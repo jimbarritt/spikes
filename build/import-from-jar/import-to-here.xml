@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="build.import.module">
+    <property name="base.dir" value="${basedir}"/>
+    
+    <import>
+        <javaresource name="import-to-here.xml">
+            <classpath location="${base.dir}/import-from-here.jar"/>
+        </javaresource>
+    </import>
+
+    <target name="base.target" depends="import.this.target">
+        <echo message="now we are in the base build" />
+    </target>
+
+</project>

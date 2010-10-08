@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="build.main">
-	
+
+    <description>
+        Demonstrates how to import build files from a jar
+        (c) Jim Barritt 2010
+    </description>
+
 	<property name="base.dir" value="${basedir}" />
 	
 	<target name="info">

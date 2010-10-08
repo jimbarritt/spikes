@@ -53,7 +53,6 @@ public class CustomFormatTest {
 
         StringTemplate st = new StringTemplate("This is a title cased value : [$value;format=\"title\"$]");
         st.registerRenderer(String.class, new FormatAttributeRenderer());
-        st.setAttribute("value", "something to title-case");
 
         for (int i = 0; i < NUM_THREADS; ++i) {
             new Thread(tg, new RenderStringTemplate(NUM_RENDERS, st), format("thread-%d", i)).start();
@@ -104,8 +103,8 @@ public class CustomFormatTest {
 
                 @Override public void run() {
                     StringTemplate st = new StringTemplate("This is a title cased value : [$value;format=\"title\"$]");
-                    st.registerRenderer(SpecialText.class, new FormatAttributeRenderer());
-                    st.setAttribute("value", new SpecialText("something to title-case"));
+                    st.registerRenderer(String.class, new FormatAttributeRenderer());
+                    st.setAttribute("value", "something to title-case");
                     for (int i = 0; i < NUM_RENDERS; ++i) {
                         new StringTemplateRenderer().render(st);
                     }
@@ -197,7 +196,7 @@ public class CustomFormatTest {
         @Override
         public void run() {
             for (int i = 0; i < numberOfRenders; ++i) {
-                new StringTemplateRenderer().render(st);
+                st.toString();
                 try {
                     Thread.sleep((long) (100 * random.nextFloat()));
                 } catch (InterruptedException e) {

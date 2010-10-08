@@ -93,6 +93,37 @@ public class CustomFormatTest {
 
     }
 
+    @Test
+    public void worksOkIfNotSharingThreads() {
+        final int NUM_THREADS = 10;
+        final int NUM_RENDERS = 50;
+        ThreadGroup tg = new ThreadGroup("test-st");
+
+        for (int i = 0; i < NUM_THREADS; ++i) {
+            new Thread(tg, new Runnable() {
+
+                @Override public void run() {
+                    StringTemplate st = new StringTemplate("This is a title cased value : [$value;format=\"title\"$]");
+                    st.registerRenderer(SpecialText.class, new FormatAttributeRenderer());
+                    st.setAttribute("value", new SpecialText("something to title-case"));
+                    for (int i = 0; i < NUM_RENDERS; ++i) {
+                        new StringTemplateRenderer().render(st);
+                    }
+
+                }
+            }, format("thread-%d", i)).start();
+        }
+
+        while (tg.activeCount() > 0) {
+            try {
+                Thread.sleep(10);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+    }
+
 
     public static class SpecialText {
         private final String value;
@@ -122,7 +153,7 @@ public class CustomFormatTest {
                 return null;
             }
             if ("Title".equals(formatName)) {
-                log.warn("TitleCasing ourselves!!");
+                log.warn("!!!!! Being called with title cased format!");
             }
             if ("title".equals(formatName)) {
                 return titleCase(o.toString());
@@ -132,6 +163,9 @@ public class CustomFormatTest {
 
 
         public static String titleCase(String input) {
+            if ("title".equals(input)) {
+                log.warn("Title-casing 'title'!!");
+            }
             String[] words = input.split(" ");
             StringBuilder sb = new StringBuilder();
             for (String word : words) {
@@ -163,7 +197,7 @@ public class CustomFormatTest {
         @Override
         public void run() {
             for (int i = 0; i < numberOfRenders; ++i) {
-                st.toString();
+                new StringTemplateRenderer().render(st);
                 try {
                     Thread.sleep((long) (100 * random.nextFloat()));
                 } catch (InterruptedException e) {

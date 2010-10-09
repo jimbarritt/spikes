@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="build.import.module">
+<project name="build.base.module" default="base.target">
     <property name="base.dir" value="${basedir}"/>
     
     <import>
-        <javaresource name="import-to-here.xml">
+        <javaresource name="module-to-import.xml">
             <classpath location="${base.dir}/import-from-here.jar"/>
         </javaresource>
     </import>

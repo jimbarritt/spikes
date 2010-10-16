@@ -18,6 +18,7 @@
       <maximumStackSize value="2" />
       <properties />
     </buildFile>
+    <contextMapping url="file://$PROJECT_DIR$/../../import-from-jar/import-to-here.xml" context="file://$PROJECT_DIR$/../../import-from-jar/target/import-to-here.xml" />
   </component>
   <component name="BSFConsole">
     <option name="searchOptions">

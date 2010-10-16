@@ -33,7 +33,7 @@ public class JsonLocationTest {
 
 	@Test
 	public void canGetALocationRepresentation() throws Exception {
-        Response response = restfulie.at(remoteApplication.uriForPath("/locations/666"))
+        Response response = restfulie.at(remoteApplication.uriForPath("/locations/1"))
                                      .accept("application/json")
                                      .get();
 		Location location = response.getResource();

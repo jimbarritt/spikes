@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="16f113ca-cbdf-4342-978d-698e8ddceb3f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/regex-spike.iws" afterPath="$PROJECT_DIR$/regex-spike.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/FindMultipleMatchesTest.java" afterPath="$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/FindMultipleMatchesTest.java" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="$USER_HOME_GRAILS$/" />
@@ -120,19 +119,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MatchUpToTest.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MatchUpToTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/MatchUpToTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="9" selection-start="576" selection-end="576" vertical-scroll-proportion="0.0">
+            <state line="8" column="13" selection-start="158" selection-end="158" vertical-scroll-proportion="0.18791947">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FindMultipleMatchesTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="FindMultipleMatchesTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/FindMultipleMatchesTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="48" selection-start="1173" selection-end="1187" vertical-scroll-proportion="0.37583894">
+            <state line="42" column="51" selection-start="1442" selection-end="1485" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -893,7 +892,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24946082" sideWeight="0.61025643" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38076922" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38076922" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Cycles" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Dataflow to this" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -921,7 +920,7 @@
     <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added test for hyphenated strings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working out how to pick out parenthesese" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -942,6 +941,7 @@
     <MESSAGE value="Renamed to be more explanatory" />
     <MESSAGE value="Renamed test method" />
     <MESSAGE value="Added test for hyphenated strings" />
+    <MESSAGE value="Working out how to pick out parenthesese" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -978,16 +978,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/MatchUpToTest.java">
+    <entry file="file://$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/FindMultipleMatchesTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="9" selection-start="576" selection-end="576" vertical-scroll-proportion="0.0">
+        <state line="42" column="51" selection-start="1442" selection-end="1485" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/FindMultipleMatchesTest.java">
+    <entry file="file://$PROJECT_DIR$/../../src/test/unit/java/com/jimbarritt/spikes/regex/MatchUpToTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="48" selection-start="1173" selection-end="1187" vertical-scroll-proportion="0.37583894">
+        <state line="8" column="13" selection-start="158" selection-end="158" vertical-scroll-proportion="0.18791947">
           <folding />
         </state>
       </provider>

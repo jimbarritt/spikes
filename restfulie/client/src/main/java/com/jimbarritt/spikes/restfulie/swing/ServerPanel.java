@@ -15,7 +15,7 @@ import static java.awt.BorderLayout.*;
 import static javax.swing.Box.*;
 
 public class ServerPanel extends JPanel implements PropertyChangeListener {
-    private JTextField serverUrl;
+    private JLabel serverUrl;
     private JButton connectButton;
     private JButton homeButton;
 
@@ -24,7 +24,7 @@ public class ServerPanel extends JPanel implements PropertyChangeListener {
         super(new BorderLayout());
 
         HomeAction homeAction = new HomeAction(remoteGameServer, linkPanel);
-        serverUrl = new JTextField(homeAction.href());
+        serverUrl = new JLabel(homeAction.href());
         connectButton = new JButton(new GoToLocationAction(remoteGameServer, this, linkPanel));
         homeButton = new JButton(homeAction);
 

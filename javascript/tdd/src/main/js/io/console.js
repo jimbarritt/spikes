@@ -1,13 +1,16 @@
 var io = {};
 
-io.Console = function() {
 
-    var external = function() {
 
-        writeln : function(message) {
-              
-        }
+io.NullConsole = function() {
 
+    log : function(message) {
+        // do nothing as console is not defined
     }
-
 }
+
+io.NullConsole.init = function() {
+    if (lang.isNotDefined(console)) {
+        
+    }
+};

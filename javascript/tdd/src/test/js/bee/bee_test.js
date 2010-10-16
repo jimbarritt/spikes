@@ -7,8 +7,7 @@ TestCase("BeeTest", {
     },
 
     testCanWaggle : function () {
-        var console = io.Console();
-        var bee = bee.Bee(console);
+        var bee = bee.Bee();
 
         var numberOfWaggles = bee.waggle();
 

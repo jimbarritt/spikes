@@ -47,7 +47,9 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>on run {input, parameters}		tell application "GrowlHelperApp"		-- Make a list of all the notification types 		-- that this script will ever send:		set the allNotificationsList to ¬			{"Test Notification", "Another Test Notification"}				-- Make a list of the notifications 		-- that will be enabled by default.      		-- Those not enabled by default can be enabled later 		-- in the 'Applications' tab of the growl prefpane.		set the enabledNotificationsList to ¬			{"Test Notification"}				-- Register our script with growl.		-- You can optionally (as here) set a default icon 		-- for this script's notifications.		register as application ¬			"Growl AppleScript Sample" all notifications allNotificationsList ¬			default notifications enabledNotificationsList ¬			icon of application "Script Editor"				--	Send a Notification...						notify with name ¬			"Another Test Notification" title ¬			"Another Test Notification :) " description ¬			"My Parameters are..." &amp; parameters application name "Growl AppleScript Sample"			end tell			return inputend run</string>
+					<string>on run {input, parameters}		tell application "GrowlHelperApp"		--	Send a Notification...						notify with name ¬			"Another Test Notification" title ¬			"Another Test Notification :) " description ¬			"On run" application name "Growl AppleScript Sample"			end tell			return inputend runon open location localURL	
+	tell application "GrowlHelperApp"		--	Send a Notification...						notify with name ¬			"Another Test Notification" title ¬			"Another Test Notification :) " description ¬			"On open location" application name "Growl AppleScript Sample"			end tell
+	end open location</string>
 				</dict>
 				<key>Application</key>
 				<array>

@@ -1,0 +1,26 @@
+To get this to work:
+
+Install more internet (http://www.monkeyfood.com/software/moreInternet/)
+
+YOu get a preference pane which allows you to specify a custom protocol.
+
+this didnt work for me so i used:
+
+http://www.rubicode.com/Software/RCDefaultApp/
+
+Create a symbolic link to the "launch-page-in-multiple-broswers.sh" file :
+
+sudo ln -s ~/work/code/github/spikes/browser-test/src/bash/launch-page-in-multiple-browsers.sh /usr/bin/browser-test
+
+Add "btp" and link it to the app (browser-test)
+
+Use the Automator in osx to create an application with the "Run shell script action"
+
+Need to set up a couple of things:
+http://hublog.hubmed.org/archives/001154.html
+
+Need to update both info.plist and PkgInfo!
+
+None of that worked so I tried:
+
+http://www.xmldatabases.org/WK/blog/1154_Handling_URL_schemes_in_Cocoa.item

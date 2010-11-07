@@ -5,3 +5,11 @@ You need the following gems installed:
 gem install gherkin
 sudo gem install cucumber
 gem install rspec
+
+This guy shows how to get the whole setup running
+http://gamutworks.net/posts/4
+
+sudo gem install ZenTest
+sudo gem install hoe
+sudo gem install redgreen
+

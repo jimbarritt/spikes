@@ -4,6 +4,7 @@ require "RubyDemo/hello"
 
 describe RubyDemo::Hello do
 
+
   # Called before each example.
   before(:each) do
     # Do nothing

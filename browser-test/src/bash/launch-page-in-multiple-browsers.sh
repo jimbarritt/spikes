@@ -1,7 +1,7 @@
 #!/bin/bash
 
 TEST_THIS_URL=$1
-REAL_URL=$(echo $TEST_THIS_URL | sed 's/dtp/http/g')
+REAL_URL=$(echo $TEST_THIS_URL | sed 's/btp/http/g')
 echo "Launching [$REAL_URL] in multiple browsers"
 
 open -a /Applications/Google\ Chrome.app/ $REAL_URL

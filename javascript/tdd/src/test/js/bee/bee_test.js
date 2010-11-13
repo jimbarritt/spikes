@@ -1,4 +1,4 @@
-TestCase("Bee Behaviour", {
+TestCase("bee behaviours", {
 
     setUp : function() {},
 

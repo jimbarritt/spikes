@@ -1,6 +1,7 @@
-reeterTest = TestCase("GreeterTest");
+TestCase("GreeterTest", {
 
-GreeterTest.prototype.testGreet = function() {
-  
-  assertEquals("Hello World!", "World");
-};
+    test_something_simple : function() {
+        assertEquals("Hello World!", "World");
+    }
+
+});

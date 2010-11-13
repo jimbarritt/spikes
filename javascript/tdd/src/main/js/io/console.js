@@ -1,7 +1,5 @@
 var io = {};
 
-
-
 io.NullConsole = function() {
 
     log : function(message) {

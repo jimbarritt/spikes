@@ -1,15 +1,14 @@
-TestCase("BeeTest", {
+TestCase("Bee Behaviour", {
 
-    setUp : function() {        
-    },
+    setUp : function() {},
 
-    tearDown : function(){
-    },
+    tearDown : function() {},
 
-    testCanWaggle : function () {
-        var bee = bee.Bee();
+    test_waggles : function () {
+        assertEquals(true, lang.isDefined(bee));        
+        var aBee = bee.Bee();
 
-        var numberOfWaggles = bee.waggle();
+        var numberOfWaggles = aBee.waggle();
 
         assertEquals(9, numberOfWaggles);
     }

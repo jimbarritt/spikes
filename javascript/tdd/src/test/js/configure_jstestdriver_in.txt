@@ -2,4 +2,4 @@ Copy the url into the browser:
 
 http://coco-2.local:9876/capture
 
-Need to have the jstestdriver.conf in the src root of your project for some reason
+Need to make sure you get the paths relative in JsTestDriver.conf

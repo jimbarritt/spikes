@@ -11,6 +11,7 @@ import java.util.*;
 import static com.jimbarritt.spikes.stringtemplate.ComponentAttributeMap.*;
 import static com.jimbarritt.spikes.stringtemplate.io.StringTemplateRootPath.*;
 import static com.jimbarritt.spikes.stringtemplate.reflect.StringTemplateIntrospector.*;
+import static java.lang.String.format;
 import static org.junit.Assert.*;
 import static org.junit.internal.matchers.StringContains.*;
 
@@ -25,6 +26,15 @@ public class ManyComponentsTest {
     public void onceBeforeEachTest() {
         errorListener = new Log4jStringTemplateErrorListener();
         factory = new StandardStringTemplateGroupFactory();
+    }
+
+    @Test
+    public void printTemplateStructure() {
+        StringTemplateGroup group = factory.createGroupFromRootPath(getPathFor("/st/htmlcomponent"), errorListener);
+        StringTemplate imageComponent = group.getInstanceOf("components/imageComponent");
+
+        String syntaxTree = new StringTemplateTreePrinter().printTreeOf(imageComponent);
+        log.debug(format("Syntax Tree:\n%s", syntaxTree));
     }
 
     @Test

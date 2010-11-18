@@ -58,7 +58,7 @@ public class ManyComponentsTest {
 
         log.info("ManyComponents:\n" + representation);
 
-        assertThat(representation, containsString("<strong>Some default text</strong>"));
+        assertThat(representation, containsString("<strong>Some default text $StringTemplate$ </strong>"));
         assertThat(representation, containsString("A New About Message"));
     }
 }

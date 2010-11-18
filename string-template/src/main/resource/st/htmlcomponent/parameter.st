@@ -1,1 +1,1 @@
-$componentParameters.(componentId + "_" + parameterName)$
+$componentParameters.(id + "_" + name)$

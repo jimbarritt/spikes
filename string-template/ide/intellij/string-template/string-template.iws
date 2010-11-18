@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="7c78a37a-a004-48ab-a00e-abc3a36783cc" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/main/resource/st/htmlcomponent/parameter.st" afterPath="$PROJECT_DIR$/../../../src/main/resource/st/htmlcomponent/parameter.st" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/string-template.iws" afterPath="$PROJECT_DIR$/string-template.iws" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../../../src/main/resource/st/htmlcomponent/components/parameter.st" afterPath="$PROJECT_DIR$/../../../src/main/resource/st/htmlcomponent/parameter.st" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/main/resource/st/htmlcomponent/components/textComponent.st" afterPath="$PROJECT_DIR$/../../../src/main/resource/st/htmlcomponent/components/textComponent.st" />
     </list>
     <ignored path="$USER_HOME_GRAILS$/" />
@@ -135,7 +135,7 @@
       <file leaf-file-name="parameter.st" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/htmlcomponent/parameter.st">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="18" selection-start="18" selection-end="18" vertical-scroll-proportion="-0.0">
+            <state line="0" column="37" selection-start="37" selection-end="37" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -144,7 +144,7 @@
       <file leaf-file-name="textComponent.st" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/htmlcomponent/components/textComponent.st">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="48" selection-start="72" selection-end="86" vertical-scroll-proportion="0.061032865">
+            <state line="2" column="25" selection-start="80" selection-end="80" vertical-scroll-proportion="0.12206573">
               <folding />
             </state>
           </provider>
@@ -185,6 +185,7 @@
         <option value="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/FormatMultiThreadedTest.java" />
         <option value="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/reflect/ManyComponentsTest.java" />
         <option value="$PROJECT_DIR$/../../../src/main/resource/st/htmlcomponent/manyComponents.st" />
+        <option value="$PROJECT_DIR$/../../../src/main/resource/st/htmlcomponent/parameter.st" />
         <option value="$PROJECT_DIR$/../../../src/main/resource/st/htmlcomponent/components/textComponent.st" />
       </list>
     </option>
@@ -1236,7 +1237,7 @@
     <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Checking that we can load up defaults which have string templates embedded in them" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moving parameter.st up a level" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1264,6 +1265,7 @@
     <MESSAGE value="Got it to work if new up string template each time" />
     <MESSAGE value="Added special test case" />
     <MESSAGE value="Checking that we can load up defaults which have string templates embedded in them" />
+    <MESSAGE value="Moving parameter.st up a level" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1363,14 +1365,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/htmlcomponent/parameter.st">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="18" selection-start="18" selection-end="18" vertical-scroll-proportion="-0.0">
+        <state line="0" column="37" selection-start="37" selection-end="37" vertical-scroll-proportion="-0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/htmlcomponent/components/textComponent.st">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="48" selection-start="72" selection-end="86" vertical-scroll-proportion="0.061032865">
+        <state line="2" column="25" selection-start="80" selection-end="80" vertical-scroll-proportion="0.12206573">
           <folding />
         </state>
       </provider>

@@ -1,0 +1,27 @@
+body {
+    text-align: center;
+    background-image: url("../images/1624x108-banner.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+#page {
+    text-align: left;    
+    width: 50em;
+    margin : auto;
+}
+
+#header {
+    width: 100%;
+    border: none;
+    display: block;
+    height: 4em;
+    padding-top: 52px;
+}
+
+#footer {
+    width: 100%;
+    height: 2em;
+}
+
+

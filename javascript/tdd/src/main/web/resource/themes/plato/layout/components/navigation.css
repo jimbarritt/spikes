@@ -1,0 +1,25 @@
+.navigation.component * {
+    padding: 0;
+    margin: 0;
+}
+
+div.navigation.component {
+    width : 100%;
+    height: 3em;
+}
+
+.navigation.component ul {
+    padding-top: .5em;
+    margin-left: 10px;
+}
+
+.navigation.component li {
+    display: block;
+    float: left;
+    padding-right: 20px;
+}
+
+.navigation.component li a {
+    text-decoration: none;
+    font-size:x-large;
+}

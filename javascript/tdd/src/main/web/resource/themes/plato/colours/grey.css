@@ -1,0 +1,13 @@
+body {
+    border-color : green;
+}
+
+div {
+    border-color : blue;
+}
+
+#footer,
+div.navigation.component {
+    background-color: #778899 /*lightslategrey*/;
+}
+

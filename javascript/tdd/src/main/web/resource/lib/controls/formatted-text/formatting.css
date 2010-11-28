@@ -2,6 +2,10 @@
 
 }
 
+.text.component .strikeout {
+    text-decoration: line-through;
+}
+
 .text.component ul.square.bullet {
     list-style-type: square;
 }

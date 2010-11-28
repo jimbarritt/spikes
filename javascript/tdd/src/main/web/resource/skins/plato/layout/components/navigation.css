@@ -6,6 +6,7 @@
 div.navigation.component {
     width: 100%;
     height : 3em;
+    clear : both;
 }
 
 .navigation.component ul {

@@ -1,0 +1,20 @@
+.logo.component * {
+    padding: 0;
+    margin: 0;
+}
+
+div.logo.component {
+    height: 5em;   
+}
+
+.logo.component img {
+    float: left;
+}
+
+.logo.component h1 {
+    float: left;    
+    height : 60px;    
+    padding-top:20px;
+    padding-left:1em;
+    padding-right:1em;
+}

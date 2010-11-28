@@ -1,5 +1,6 @@
 body {
     border-color: green;
+    background-image: url("../images/1624x108-banner.png");
 }
 
 div {
@@ -19,6 +20,15 @@ div.navigation.component {
 .navigation.component a:hover {
     color: #ee82ee; /*violet*/
     background-color: #f0f8ff; /*alice blue*/
+}
+
+div.logo.component {
+    background-color: rgb(23, 23, 45);
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.logo.component h1 {
+    color: #8a2be2 /*blue violet*/;
 }
 
 

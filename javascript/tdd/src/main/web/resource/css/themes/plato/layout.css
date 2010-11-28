@@ -9,10 +9,12 @@ body {
 
 #header {
     width: 100%;
-    background: #778899 /*lightslategrey*/;
+    margin: 0;
+    padding: 0;
+    height: 8em;
 }
 
 #footer {
     width: 100%;
-    background: #778899 /*lightslategrey*/;
+    height: 2em;
 }

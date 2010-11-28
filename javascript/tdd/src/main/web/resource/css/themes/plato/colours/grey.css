@@ -1,0 +1,11 @@
+body {
+    border-color : green;
+}
+
+div {
+    border-color : blue;
+}
+
+#header, #footer {
+    background: #778899 /*lightslategrey*/;
+}

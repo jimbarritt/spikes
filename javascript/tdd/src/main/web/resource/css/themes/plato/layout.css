@@ -8,10 +8,9 @@ body {
 }
 
 #header {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    height: 8em;
+    width: 100%;    
+    border : none;
+    background-image: url("images/1624x186-banner.png");
 }
 
 #footer {

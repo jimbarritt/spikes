@@ -7,6 +7,10 @@ div {
     border-color: blue;
 }
 
+#page {
+    border-color : gray;
+}
+
 #footer,
 div.navigation.component {
     background-color: #778899 /*light slate grey*/;

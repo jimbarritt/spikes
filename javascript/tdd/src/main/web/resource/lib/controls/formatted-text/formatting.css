@@ -1,0 +1,11 @@
+.text.component ul.circle.bullet {
+
+}
+
+.text.component ul.square.bullet {
+    list-style-type: square;
+}
+
+.text.component ul.decimal {
+    list-style-type: decimal;
+}

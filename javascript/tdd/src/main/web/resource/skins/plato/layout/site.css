@@ -8,7 +8,7 @@ body {
 #page {
     text-align: left;
     width: 50em;
-    margin: auto;
+    margin: auto;        
 }
 
 #header {
@@ -16,7 +16,7 @@ body {
     border: none;
     display: block;
     height: 5em;
-    padding-top: 5px;   
+    padding-top: 5px;
 }
 
 #main-content {

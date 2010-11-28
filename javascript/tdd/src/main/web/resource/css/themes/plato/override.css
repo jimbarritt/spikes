@@ -1,0 +1,18 @@
+body {
+    font-family: Verdana, serif;
+    text-align: center;
+}
+
+#page {
+    text-align: left;
+}
+
+#header {
+    width: 100%;
+    background: #778899 /*lightslategrey*/;
+}
+
+#footer {
+    width: 100%;
+    background: #778899 /*lightslategrey*/;
+}

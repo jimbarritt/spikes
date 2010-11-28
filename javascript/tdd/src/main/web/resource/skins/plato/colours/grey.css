@@ -1,13 +1,24 @@
 body {
-    border-color : green;
+    border-color: green;
 }
 
 div {
-    border-color : blue;
+    border-color: blue;
 }
 
 #footer,
 div.navigation.component {
-    background-color: #778899 /*lightslategrey*/;
+    background-color: #778899 /*light slate grey*/;
 }
+
+.navigation.component a,
+.navigation.component a:visited {
+    color: #fff0f5; /*lavender blush*/
+}
+
+.navigation.component a:hover {
+    color: #ee82ee; /*violet*/
+    background-color: #f0f8ff; /*alice blue*/
+}
+
 

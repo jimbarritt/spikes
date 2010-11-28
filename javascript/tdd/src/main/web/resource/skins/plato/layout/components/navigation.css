@@ -4,22 +4,23 @@
 }
 
 div.navigation.component {
-    width : 100%;
-    height: 3em;
+    width: 100%;
+    height : 3em;
 }
 
 .navigation.component ul {
-    padding-top: .5em;
-    margin-left: 10px;
-}
-
-.navigation.component li {
-    display: block;
-    float: left;
-    padding-right: 20px;
+    list-style: none;
 }
 
 .navigation.component li a {
+    display: block;
+    float: left;
+    text-align: center;
     text-decoration: none;
-    font-size:x-large;
+    font-size: x-large;
+
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
 }

@@ -29,7 +29,8 @@ class TC_HelloTest < Test::Unit::TestCase
     count = @hello.numberOfTimesCalled
 
     assert_equal 3,  count
-
+    
+    @hello.speakTo "Jobby"
   end
 end
 

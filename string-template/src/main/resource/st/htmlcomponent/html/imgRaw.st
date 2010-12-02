@@ -1,0 +1,1 @@
+<img src='$parameter(name="image.src")' alt="$altText$" />

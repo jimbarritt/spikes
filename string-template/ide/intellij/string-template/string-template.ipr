@@ -45,6 +45,9 @@
     <option name="DEPRECATION" value="false" />
   </component>
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" />
+  <component name="EntryPointsManager">
+    <entry_points version="2.0" />
+  </component>
   <component name="FireworksProject">
     <option name="expectedTestCaseNameRegex" />
     <option name="maxMemory" />
@@ -62,7 +65,7 @@
       <profile version="1.0" is_locked="false">
         <option name="myName" value="Project Default" />
         <option name="myLocal" value="false" />
-        <inspection_tool class="EmptyWebServiceClass" level="WARNING" enabled="false" />
+        <inspection_tool class="EmptyWebServiceClass" enabled="false" level="WARNING" enabled_by_default="false" />
         <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
           <option name="myValues">
             <value>
@@ -78,7 +81,7 @@
           </option>
           <option name="myCustomValuesEnabled" value="true" />
         </inspection_tool>
-        <inspection_tool class="ImplicitlyExposedWebServiceMethods" level="INFO" enabled="false" />
+        <inspection_tool class="ImplicitlyExposedWebServiceMethods" enabled="false" level="INFO" enabled_by_default="false" />
         <inspection_tool class="JavaDoc" enabled="true" level="WARNING" enabled_by_default="true">
           <option name="TOP_LEVEL_CLASS_OPTIONS">
             <value>
@@ -107,15 +110,16 @@
           <option name="IGNORE_DEPRECATED" value="false" />
           <option name="IGNORE_JAVADOC_PERIOD" value="true" />
           <option name="IGNORE_DUPLICATED_THROWS" value="false" />
+          <option name="IGNORE_POINT_TO_ITSELF" value="false" />
           <option name="myAdditionalJavadocTags" value="" />
         </inspection_tool>
         <inspection_tool class="LocalCanBeFinal" enabled="true" level="WARNING" enabled_by_default="true">
           <option name="REPORT_VARIABLES" value="false" />
           <option name="REPORT_PARAMETERS" value="false" />
         </inspection_tool>
-        <inspection_tool class="NonJaxWsWebServices" level="WARNING" enabled="false" />
-        <inspection_tool class="OneWayWebMethod" level="ERROR" enabled="false" />
-        <inspection_tool class="ValidExternallyBoundObject" level="ERROR" enabled="false" />
+        <inspection_tool class="NonJaxWsWebServices" enabled="false" level="WARNING" enabled_by_default="false" />
+        <inspection_tool class="OneWayWebMethod" enabled="false" level="ERROR" enabled_by_default="false" />
+        <inspection_tool class="ValidExternallyBoundObject" enabled="false" level="ERROR" enabled_by_default="false" />
       </profile>
     </profiles>
     <option name="PROJECT_PROFILE" value="Project Default" />
@@ -282,6 +286,9 @@
       <module fileurl="file://$PROJECT_DIR$/string-template.iml" filepath="$PROJECT_DIR$/string-template.iml" />
     </modules>
   </component>
+  <component name="ProjectResources">
+    <default-html-doctype>http://www.w3.org/1999/xhtml</default-html-doctype>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true" project-jdk-name="1.6" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
@@ -300,8 +307,9 @@
     <option name="deletePackageOccurrences" value="true" />
   </component>
   <component name="VcsDirectoryMappings">
-    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../.." vcs="Git" />
   </component>
+  <component name="WebServicesPlugin" addRequiredLibraries="true" />
   <component name="com.sixrr.metrics.MetricsReloaded">
     <option name="selectedProfile" value="Default" />
     <option name="autoscroll" value="false" />

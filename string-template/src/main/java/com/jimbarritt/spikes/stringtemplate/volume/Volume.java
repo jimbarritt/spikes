@@ -5,10 +5,10 @@ import java.text.*;
 import static java.lang.String.format;
 
 public class Volume {
-    private float value;
+    private final double value;
     private final UnitOfMeasure unitOfMeasure;
 
-    public Volume(float value, UnitOfMeasure unitOfMeasure) {
+    public Volume(double value, UnitOfMeasure unitOfMeasure) {
         this.value = value;
         this.unitOfMeasure = unitOfMeasure;
     }
@@ -33,7 +33,7 @@ public class Volume {
             this.shortName = shortName;
         }
 
-        public abstract Volume convert(float value, UnitOfMeasure originalUnitOfMeasure);
+        public abstract Volume convert(double value, UnitOfMeasure originalUnitOfMeasure);
 
         public String toString(Volume volume) {
             return decimalFormat.format(volume.value);
@@ -48,19 +48,19 @@ public class Volume {
         }
 
         public static UnitOfMeasure LITRES = new UnitOfMeasure(new DecimalFormat("0.00"), "litres", "l") {
-            @Override public Volume convert(float value, UnitOfMeasure originalUnitOfMeasure) {
+            @Override public Volume convert(double value, UnitOfMeasure originalUnitOfMeasure) {
                 if (LITRES == originalUnitOfMeasure) {
                     return new Volume(value, originalUnitOfMeasure);
                 }
                 if (CC == originalUnitOfMeasure) {
-                    return new Volume(value / 1000, CC);
+                    return new Volume((value * 0.001), CC);
                 }
                 throw new VolumeConversionException(value, this);
             }
         };
 
         public static UnitOfMeasure CC = new UnitOfMeasure(new DecimalFormat("0"), "cubic centimetres", "cc") {
-            @Override public Volume convert(float value, UnitOfMeasure originalUnitOfMeasure) {
+            @Override public Volume convert(double value, UnitOfMeasure originalUnitOfMeasure) {
                 if (CC == originalUnitOfMeasure) {
                     return new Volume(value, originalUnitOfMeasure);
                 }
@@ -72,7 +72,7 @@ public class Volume {
         };
 
         private static class VolumeConversionException extends RuntimeException {
-            public VolumeConversionException(float value, UnitOfMeasure unitOfMeasure) {
+            public VolumeConversionException(double value, UnitOfMeasure unitOfMeasure) {
                 super(format("Cannot Convert Volume %0.00f to units %s", value, unitOfMeasure.shortName()));
             }
         }

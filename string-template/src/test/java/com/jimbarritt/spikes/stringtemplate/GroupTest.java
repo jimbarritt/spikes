@@ -5,6 +5,8 @@ import org.antlr.stringtemplate.*;
 import org.apache.log4j.*;
 import org.junit.*;
 
+import java.awt.*;
+import java.awt.geom.*;
 import java.util.*;
 
 import static com.jimbarritt.spikes.stringtemplate.io.StringTemplateLoader.mergeGroups;
@@ -29,6 +31,7 @@ public class GroupTest {
         String result = new StringTemplateRenderer().render(template);
 
         log.info("Result\n" + result);
+
     }
 
     @Test

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AntConfiguration">
+    <defaultAnt bundledAnt="true" />
+  </component>
   <component name="BSFConsole">
     <option name="searchOptions">
       <BSFConsoleSearchOptions />
@@ -48,6 +51,9 @@
     <option name="DEPRECATION" value="false" />
   </component>
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" />
+  <component name="EntryPointsManager">
+    <entry_points version="2.0" />
+  </component>
   <component name="FireworksProject">
     <option name="expectedTestCaseNameRegex" />
     <option name="maxMemory" />
@@ -324,6 +330,26 @@
     <option name="flattenInnerClasses" value="true" />
     <option name="cycleTableSpecificationString" value="" />
     <option name="shortCycleTableSpecificationString" value="" />
+  </component>
+  <component name="libraryTable">
+    <library name="development">
+      <CLASSES>
+        <root url="file://$PROJECT_DIR$/../../lib/development" />
+        <root url="file://$PROJECT_DIR$/../../lib/development" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+      <jarDirectory url="file://$PROJECT_DIR$/../../lib/development" recursive="false" />
+    </library>
+    <library name="production">
+      <CLASSES>
+        <root url="file://$PROJECT_DIR$/../../lib/production" />
+        <root url="file://$PROJECT_DIR$/../../lib/production" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+      <jarDirectory url="file://$PROJECT_DIR$/../../lib/production" recursive="false" />
+    </library>
   </component>
 </project>
 

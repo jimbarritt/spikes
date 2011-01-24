@@ -16,14 +16,14 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>java</name>
+			<name>main-java</name>
 			<type>2</type>
-			<location>/Users/jim/work/code/spikes/twist/src/main/java</location>
+			<location>/Users/jim/work/code/github/spikes/twist/src/main/java</location>
 		</link>
 		<link>
-			<name>unit</name>
+			<name>shared-tests</name>
 			<type>2</type>
-			<location>/Users/jim/work/code/spikes/twist/src/test/unit</location>
+			<location>/Users/jim/work/code/github/spikes/twist/src/test/shared</location>
 		</link>
 	</linkedResources>
 </projectDescription>

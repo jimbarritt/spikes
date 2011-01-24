@@ -12,10 +12,11 @@
       <sourceFolder url="file://$MODULE_DIR$/../../../src/test/unit" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../../src/test/shared" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../../twist-tests/functional-tests/src/test/twist/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../../../twist-tests/functional-tests/src/test/twist/config" isTestSource="true" />
     </content>
     <orderEntry type="jdk" jdkName="1.6" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="development" level="project" />
+    <orderEntry type="library" name="production" level="project" />
   </component>
 </module>
 

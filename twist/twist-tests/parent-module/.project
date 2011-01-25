@@ -16,6 +16,11 @@
 	</natures>
 	<linkedResources>
 		<link>
+			<name>lib</name>
+			<type>2</type>
+			<locationURI>PARENT-2-PROJECT_LOC/lib</locationURI>
+		</link>
+		<link>
 			<name>main-java</name>
 			<type>2</type>
 			<location>/Users/jim/work/code/github/spikes/twist/src/main/java</location>

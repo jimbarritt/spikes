@@ -11,5 +11,5 @@
 	<classpathentry kind="lib" path="/Users/jim/work/code/github/spikes/twist/lib/development/junit-dep-4.8.2.jar"/>
 	<classpathentry kind="lib" path="/Users/jim/work/code/github/spikes/twist/lib/development/mockito-all-1.8.4.jar"/>
 	<classpathentry kind="lib" path="/Users/jim/work/code/github/spikes/twist/lib/production/log4j-1.2.15.jar"/>
-	<classpathentry kind="output" path="target/twist/out"/>
+	<classpathentry kind="output" path="twist-ide/out"/>
 </classpath>

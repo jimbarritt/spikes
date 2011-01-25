@@ -20,4 +20,11 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>com.thoughtworks.twist.eclipse.core.twistNatureID</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>twist-ide</name>
+			<type>2</type>
+			<location>/Users/jim/work/code/github/spikes/twist/ide/twist</location>
+		</link>
+	</linkedResources>
 </projectDescription>

@@ -7,9 +7,9 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="con" path="com.thoughtworks.twist.language.JAVA"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/parent-module"/>
-	<classpathentry kind="lib" path="/Users/jim/work/code/github/spikes/twist/lib/development/hamcrest-all-1.3RC0.jar"/>
-	<classpathentry kind="lib" path="/Users/jim/work/code/github/spikes/twist/lib/development/junit-dep-4.8.2.jar"/>
-	<classpathentry kind="lib" path="/Users/jim/work/code/github/spikes/twist/lib/development/mockito-all-1.8.4.jar"/>
-	<classpathentry kind="lib" path="/Users/jim/work/code/github/spikes/twist/lib/production/log4j-1.2.15.jar"/>
+	<classpathentry kind="lib" path="lib/development/hamcrest-all-1.3RC0.jar"/>
+	<classpathentry kind="lib" path="lib/development/junit-dep-4.8.2.jar"/>
+	<classpathentry kind="lib" path="lib/development/mockito-all-1.8.4.jar"/>
+	<classpathentry kind="lib" path="lib/production/log4j-1.2.15.jar"/>
 	<classpathentry kind="output" path="twist-ide/out"/>
 </classpath>

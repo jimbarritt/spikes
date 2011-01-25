@@ -22,6 +22,11 @@
 	</natures>
 	<linkedResources>
 		<link>
+			<name>lib</name>
+			<type>2</type>
+			<locationURI>PARENT-2-PROJECT_LOC/lib</locationURI>
+		</link>
+		<link>
 			<name>twist-ide</name>
 			<type>2</type>
 			<location>/Users/jim/work/code/github/spikes/twist/ide/twist</location>

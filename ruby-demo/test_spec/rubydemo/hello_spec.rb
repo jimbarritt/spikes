@@ -1,4 +1,4 @@
-require "spec"
+require "rspec"
 require "RubyDemo/hello"
 
 

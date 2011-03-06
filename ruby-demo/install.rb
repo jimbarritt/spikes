@@ -7,18 +7,37 @@ end
 def red(text); colorize(text, "\033[31m"); end
 def green(text); colorize(text, "\033[32m"); end
 
-def install
-  puts green("\nHi, I am going to install everything that this app needs for you, above and beyond ruby\n")
-
-  system("sudo gem install gherkin")
-  system("sudo gem install cucumber")
+def is_installed?(gemName) 
+  gemName = %x(gem list --local | grep #{gemName})
+  gemName != ""  
 end
 
-cucumberGemName = %x(gem list --local | grep cucumber)
-
-if cucumberGemName == ""
-  install
-else
-  puts green("\nCucmber is already installed, carry on!\n")
+def install_cucumber
+  system "sudo gem install gherkin"
+  system "sudo gem install cucumber"
 end
+
+def install_ZenTest
+  system "sudo gem install hoe"
+  system "sudo gem install ZenTest"
+  system "sudo gem install redgreen"  
+end
+
+def install_rspec
+  system "sudo gem install rspec"
+end
+
+def install(gemName) 
+  if is_installed? gemName
+    puts green "\n#{gemName} is already installed, carry on!\n"  
+  else
+    puts green "\nInstalling #{gemName}...\n"
+    send "install_#{gemName}"
+  end
+end
+
+
+install "cucumber"
+install "ZenTest"
+install "rspec"
 

@@ -1,0 +1,6 @@
+Sahi:
+	class: net.sf.sahi.client.Browser
+	fieldName: browser
+	project_path: /Users/jim/work/code/github/spikes/twist/twist-tests/sahi-tests
+language:
+	class: com.thoughtworks.twist.language.java.Java

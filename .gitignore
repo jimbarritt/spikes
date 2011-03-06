@@ -1,6 +1,8 @@
 target
 out
 .metadata
+bin
+logs
 projectFilesBackup*
 *~
 *#*

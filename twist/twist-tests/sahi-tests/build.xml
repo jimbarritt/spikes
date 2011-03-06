@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. -->
+<project basedir="." default="build" name="sahi-tests">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../../../../../../../../Applications/twist-2-1"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.6"/>
+    <property name="source" value="1.6"/>
+    <path id="Twist Core Libraries.libraryclasspath">
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.apache.commons.lang_2.3.0.v201005080501.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.apache.log4j_1.2.13.v200903072027.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.apache.commons.codec_1.3.0.v20100518-1140.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.apache.commons.logging_1.0.4.v201005080501.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.thoughtworks.ognl_2.7.3.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.thoughtworks.org.jboss.javassist_3.7.0.GA.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.springframework_2.5.4.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.apache.mina.core_2.0.0.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.slf4j_1.5.0.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.apache.commons.collections_3.2.0.v200803061811.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.thoughtworks.org.apache.ecs_1.4.2.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.thoughtworks.org.apache.commons.jexl_1.1.0.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.apache.velocity_1.5.0.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.thoughtworks.twist.core_2.1.0.9411.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.apache.ant_1.7.1.v20100518-1145/lib/ant.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.apache.ant_1.7.1.v20100518-1145/lib/ant-junit.jar"/>
+    </path>
+    <path id="JUnit 4.libraryclasspath">
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.junit_4.8.1.v4_8_1_v20100427-1100/junit.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.hamcrest.core_1.1.0.v20090501071000.jar"/>
+    </path>
+    <path id="Java Language Support.libraryclasspath">
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.thoughtworks.ognl_2.7.3.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.slf4j_1.5.0.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.apache.commons.lang_2.3.0.v201005080501.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.thoughtworks.twist.language.java_2.1.0.9411.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.thoughtworks.twist.language.common_2.1.0.9411.jar"/>
+    </path>
+    <path id="Sahi.libraryclasspath">
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.thoughtworks.twist.driver.sahi_3.0.0.9411/sahi/lib/ant-sahi.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.thoughtworks.twist.driver.sahi_3.0.0.9411/sahi/lib/sahi.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.thoughtworks.twist.driver.sahi_3.0.0.9411"/>
+    </path>
+    <path id="sahi-tests.classpath">
+        <pathelement location="bin"/>
+        <path refid="Twist Core Libraries.libraryclasspath"/>
+        <path refid="JUnit 4.libraryclasspath"/>
+        <path refid="Java Language Support.libraryclasspath"/>
+        <path refid="Sahi.libraryclasspath"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="sahi-tests.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+	
+        
+    <target name="execute-scenarios" description="Executes scenarios">
+    	<path id="scenarios.classpath">
+			<path refid="${ant.project.name}.classpath" />
+			<fileset dir="${ant.library.dir}" includes="*.jar" />
+		</path>
+
+        <taskdef classname="com.thoughtworks.twist.core.execution.ant.ExecuteScenariosTask" classpathref="scenarios.classpath" name="twist.runner" />
+        <property name="test-reports" value="${basedir}/reports/ant-reports" />
+        <property name="twist-config" value="${basedir}/twist-conf"/>
+        <delete dir="${test-reports}" />
+        <mkdir dir="${test-reports}" />
+        <mkdir dir="${test-reports}/html" />
+
+		<twist.runner
+			scenarioDir="${basedir}/scenarios" reportsDir="${test-reports}" confDir="${twist-config}"
+			failureproperty="twist.scenarios.failed"
+			classpathref="scenarios.classpath" tags="!in-progress" threads="1" >
+			<fileset dir="${basedir}/scenarios" includes="*"/>
+		</twist.runner>
+
+        <fail if="twist.scenarios.failed" message="One or more scenarios failed during execution" />
+    </target>
+        
+	</project>

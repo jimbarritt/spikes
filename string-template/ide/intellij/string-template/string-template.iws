@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c78a37a-a004-48ab-a00e-abc3a36783cc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../javascript/tdd/ide/intellij/tdd/tdd.ipr" afterPath="$PROJECT_DIR$/../../../../javascript/tdd/ide/intellij/tdd/tdd.ipr" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/test.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/string-template.ipr" afterPath="$PROJECT_DIR$/string-template.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/string-template.iws" afterPath="$PROJECT_DIR$/string-template.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/GroupTest.java" afterPath="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/GroupTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../twist/twist-tests/functional-tests/.classpath" afterPath="$PROJECT_DIR$/../../../../twist/twist-tests/functional-tests/.classpath" />
     </list>
     <ignored path="$USER_HOME$/.grails/" />
     <ignored path="$USER_HOME$/.griffon/" />
@@ -104,55 +105,57 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="VolumeAttributeRendererTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/volume/VolumeAttributeRendererTest.java">
+      <file leaf-file-name="StringTemplateLoader.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/io/StringTemplateLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="12" selection-start="280" selection-end="2400" vertical-scroll-proportion="0.0">
+            <state line="39" column="12" selection-start="1399" selection-end="1399" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SayHello.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/SayHello.java">
+      <file leaf-file-name="StandardStringTemplateGroupFactory.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/io/StandardStringTemplateGroupFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="13" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0">
+            <state line="16" column="90" selection-start="694" selection-end="765" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="htmlElements.stg" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/htmlpages/site_definition/htmlElements.stg">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GroupTest.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/GroupTest.java">
+      <file leaf-file-name="contactPage.st" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/htmlpages/site_definition/contactPage.st">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="0" selection-start="656" selection-end="656" vertical-scroll-proportion="0.24468085">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Point2D.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/awt/geom/Point2D.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="22" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="textComponent.st" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/htmlcomponent/components/textComponent.st">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="29" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="footerComponent.st" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/htmlcomponent/components/footerComponent.st">
+      <file leaf-file-name="page.stg" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/htmlpages/site_definition/page.stg">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SafeReader.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/io/SafeReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="13" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -172,7 +175,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/reflect/StringTemplateDefinition.java" />
         <option value="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/reflect/StringTemplateAttribute.java" />
         <option value="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/reflect/StringTemplateIntrospectorTest.java" />
         <option value="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/reflect/StringTemplateIntrospector.java" />
@@ -188,6 +190,7 @@
         <option value="$PROJECT_DIR$/../../../src/main/resource/st/htmlcomponent/html/imgRaw.st" />
         <option value="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/volume/Volume.java" />
         <option value="$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/GroupTest.java" />
+        <option value="$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/test.xml" />
       </list>
     </option>
   </component>
@@ -494,6 +497,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Favorites" />
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -538,15 +542,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="awt" />
+              <option name="myItemId" value="st" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -560,19 +556,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
+              <option name="myItemId" value="st" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="awt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="geom" />
+              <option name="myItemId" value="solarsystem" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -586,24 +574,34 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
+              <option name="myItemId" value="st" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="awt" />
+              <option name="myItemId" value="htmlpages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="geom" />
+              <option name="myItemId" value="site_definition" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="string-template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="string-template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="st" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Point2D" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
+              <option name="myItemId" value="htmlpages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -662,11 +660,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="volume" />
+              <option name="myItemId" value="io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="string-template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="string-template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.jimbarritt.spikes.stringtemplate" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="VolumeAttributeRendererTest" />
+              <option name="myItemId" value="io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StringTemplateLoader" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -684,13 +700,60 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="volume" />
+              <option name="myItemId" value="io" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StandardStringTemplateGroupFactory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="string-template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="string-template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.jimbarritt.spikes.stringtemplate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SafeReader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="string-template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="string-template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.jimbarritt.spikes.stringtemplate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StringTemplateGroupFactory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Favorites" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -723,6 +786,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.HTML" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -927,6 +991,14 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" adl_options="" air_descriptor_path="" air_program_params="" air_publisher_id="" air_root_dir_path="" air_run_mode="AppDescriptor" browser_family="FIREFOX" class_name="" debugger_sdk="Module SDK" html_or_swf_file_path="" launcher_type="OSDefault" main_class_name="" method_name="" module_name="" output_log_level="" package_name="" player_path="/Applications/Flash Player.app/Contents/MacOS/Flash Player" port="0" run_mode="HtmlOrSwfFile" run_trusted="false" scope="Class" socket_policy_port="0" url_to_launch="http://">
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" />
       <module name="" />
@@ -1072,8 +1144,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1680" height="1024" extended-state="0" />
-    <editor active="false" />
+    <frame x="0" y="22" width="1680" height="1024" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1089,7 +1161,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15238096" sideWeight="0.6707441" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15178572" sideWeight="0.6707441" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41013268" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Code explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Fireworks" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18076923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1098,7 +1170,7 @@
       <window_info id="Dependency Cycles" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293124" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32925585" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Code Graph" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33541667" sideWeight="0.6615385" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925585" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Metrics" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1162,54 +1234,29 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/htmlcomponent/manyComponents.st">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="104" selection-start="211" selection-end="211" vertical-scroll-proportion="-6.740741" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/htmlcomponent/homepage.st">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/htmlcomponent/parameter.st">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="36" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/htmlcomponent/html/link.st">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="7" selection-start="7" selection-end="7" vertical-scroll-proportion="-0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/htmlcomponent/components/imageComponent.st">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="16" selection-start="45" selection-end="45" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/reflect/ManyComponentsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="37" selection-start="1259" selection-end="1259" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/htmlcomponent/html/img.st">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="35" selection-start="0" selection-end="35" vertical-scroll-proportion="-0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/htmlcomponent/html/imgRaw.st">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="25" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/volume/Volume.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="24" selection-start="0" selection-end="2790" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/volume/VolumeAttributeRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="94" column="1" selection-start="330" selection-end="3553" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/volume/VolumeAttributeRendererTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="12" selection-start="280" selection-end="2400" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/SayHello.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="13" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/test.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="54" selection-start="2787" selection-end="2787" vertical-scroll-proportion="0.024468085" />
+      </provider>
+    </entry>
+    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/awt/geom/Point2D.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="22" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/htmlcomponent/components/textComponent.st">
@@ -1217,35 +1264,70 @@
         <state line="1" column="29" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/GroupTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="72" selection-start="801" selection-end="801" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/io/StringTemplateGroupFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="23" selection-start="172" selection-end="172" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/solarsystem/simpleGroup.stg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/htmlcomponent/components/footerComponent.st">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/volume/VolumeAttributeRendererTest.java">
+    <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/io/StringTemplateLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="12" selection-start="280" selection-end="2400" vertical-scroll-proportion="0.0">
+        <state line="39" column="12" selection-start="1399" selection-end="1399" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/SayHello.java">
+    <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/io/SafeReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="13" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0">
+        <state line="4" column="13" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/awt/geom/Point2D.class">
+    <entry file="file://$PROJECT_DIR$/../../../src/main/java/com/jimbarritt/spikes/stringtemplate/io/StandardStringTemplateGroupFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="22" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0">
+        <state line="16" column="90" selection-start="694" selection-end="765" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/htmlpages/site_definition/htmlElements.stg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../src/test/java/com/jimbarritt/spikes/stringtemplate/GroupTest.java">
+    <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/htmlpages/site_definition/contactPage.st">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="656" selection-end="656" vertical-scroll-proportion="0.24468085">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../src/main/resource/st/htmlpages/site_definition/page.stg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1253,12 +1335,7 @@
   </component>
   <component name="masterDetails">
     <states>
-      <state key="Copyright.UI">
-        <settings>
-          <splitter-proportions />
-        </settings>
-      </state>
-      <state key="ScopeChooserConfigurable.UI">
+      <state key="ModuleStructureConfigurable.UI">
         <settings>
           <splitter-proportions />
         </settings>

@@ -1,0 +1,1001 @@
+<?xml version="1.0" encoding="UTF-8"?>  <!-- -*- xml -*- -->
+<!DOCTYPE chapter SYSTEM "local/xml/markup.dtd">
+
+<chapter>
+    <title>Encapsulation</title>
+    <epigraph>
+        <name>Edsger W. Dijkstra</name>
+        <epitext>
+            <p>
+                Summarizing: as a slow-witted human being I have a very small head and I had better learn to live with
+                it and respect my limitations and give them full credit, rather than try to ignore them, for the latter
+                vain effort will be punished by failure.
+            </p>
+        </epitext>
+    </epigraph>
+    <sect1 id="sect.complexity-and-change">
+        <title>Complexity and change</title>
+        <p>
+            How are you able to reason about the complex and ever-changing world around you?
+        </p>
+        <p>
+            Think of the way we classify the multitude of species found in our world; Fungi, Plants, Animals, Reptiles,
+            Birds, Fish, Mammals. We group related species together, creating sets which share common attributes and
+            allow us to communicate and reason about them easily. Once we have grouping, we can make<firstuse>
+            generalisations</firstuse>. For example, we know that all Mammals produce live offspring and all reptiles
+            and birds lay eggs. Grouping and generalisation help reduce the level of detail on which we are
+            concentrating at any one time, and therefore allow our small heads to process and have useful thoughts about
+            the world around us, which is part of our massive evolutionary advantage as human beings; Conscious,
+            rational thought.
+        </p>
+
+        <p>
+            The complexity of the world is not static. The world, both natural and that of ideas, is constantly
+            changing;<firstuse>evolving</firstuse>. Life on earth began with very simple raw materials; chemical
+            compounds such as proteins and hydro-carbons. A major leap forward in the evolution of life was the
+            development of complex cells. From cells, multicellular organisms developed, leading eventually to human
+            beings. You can read more about this fascinating topic in<bookname cite="Lane2009">Life Ascending : the ten
+            great inventions of evolution</bookname>.
+        </p>
+        <p>
+            The twin themes of change and complexity are properties of all dynamic systems, not least
+            <firstuse>software</firstuse>
+            systems. The fundamental principle we have to help us reason about these is<firstuse>
+            encapsulation</firstuse>.
+        </p>
+        <figure id="fig.encapsulation.definition.overview">
+            <title>Concepts in encapsulation</title>
+            <imagedata fileref="images/eps/Encapsulation/definition-overview.eps" center="yes" width="natural"/>
+        </figure>
+
+        <p>
+            The goal of this chapter is to describe encapsulation as we refer to it when writing software and how it
+            helps us to deal with change and complexity. We will use code examples to explore in fine detail what
+            encapsulation means to the structure of programs. If you are a veteran practitioner, the journey will be
+            familiar but worth re-visiting for a fresh perspective. If you are new to the topic then you will gain
+            insight and will have some pointers in the references to continue your journey.
+        </p>
+
+        <story id="joy.of.encapsulation">
+            <title>The joy of encapsulation</title>
+            <person>
+                <name>Jim</name>
+                <jobtitle>Javascript Cleaner</jobtitle>
+            </person>
+            <p>
+                Some years ago, I was working on a large codebase, refactoring an area of Javascript. It was not a
+                pleasant experience as there were many global functions and very little encapsulation. As
+                <bookname cite="Freeman2009">Freeman and Pryce</bookname>
+                note, &lquot;We're most aware of encapsulation when we haven't got it.&rquot;, and this was certainly
+                true in my context. One thing in particular struck me. A rather obvious fact that (I thought) I had
+                known since beginning my journey into the world of
+                <firstuse>Object Oriented</firstuse>
+                programming. The fact is, that if I have a local(or private) unit of code then I can change it with some
+                guarantee
+                <footnote>
+                    <p>Languages such as Java and C# allow change by reflection, and so this is not strictly true, but
+                        from a point of view of design it is a declaration to that effect.
+                    </p>
+                </footnote>
+                that I will not affect any other part of the code outside the local context, or in other words, outside
+                the<firstuse>capsule</firstuse>. It was this experience which led me to begin to think more deeply about
+                encapsulation as the fundamental principle which we employ when building software, not only when
+                building objects, although these are a very apparent demonstration of the principle.
+            </p>
+        </story>
+
+
+    </sect1>
+
+    <sect1 id="sect.definition">
+        <title>Definition</title>
+        <p>
+            Before we read some code, let's explore the term encapsulation. Whilst researching this chapter, I found
+            many definitions. Here we will see a few highlights.
+            <pref linkend="fig.encapsulation.definition.overview"/>
+            visualises the concepts that emerged during the research and then the writing of the chapter.
+        </p>
+        <sect2 id="sect2.capsule">
+            <title>The capsule</title>
+            <p>
+                Take a look at
+                <pref linkend="fig.encapsulation.introduction.cellstructure"/>
+                <footnote>
+                    <p>Re-created from
+                        <url>http://commons.wikimedia.org/wiki/File:Cell_structure_large.png</url>
+                    </p>
+                </footnote>
+                , a representation of the human cell. There is an obvious boundary (<bookname
+                    cite="MobileReference2006">membrane</bookname>) surrounding the inner elements (<firstuse>
+                organelles</firstuse>). The membrane is said to be<firstuse>semi-permeable</firstuse>, meaning that it
+                may or may not allow molecules or ions to pass across, depending on the cell type. Cells such as the red
+                blood cells have extremely porous membranes which allow oxygen and carbon dioxide to pass in and out and
+                thus be transported from the lungs to the muscles. Inside the cell we find different types of organelle
+                such as mitochondria and ribosomes. The cell
+                <firstuse>composes</firstuse>
+                these to form a larger scale construct. Zooming out from the cell, our bodies are composed of tissues
+                which form into organs which are surrounded by an outer skin. Any part of our bodies can be de-composed
+                into smaller and smaller units. Encapsulation is a natural phenomenon and can be seen everywhere we look
+                around and within us.
+            </p>
+
+            <figure id="fig.encapsulation.introduction.cellstructure">
+                <title>An animal cell</title>
+                <imagedata fileref="images/eps/Encapsulation/cell-structure.eps" center="yes" width="natural"/>
+            </figure>
+            <p>
+                Reading the dictionary definition of encapsulation (<pref linkend="encapsulation.sidebar.definition"/>)
+                <footnote>
+                    <p>Also referred to by
+                        <bookname cite="Henny2008">Henney</bookname>
+                    </p>
+                </footnote>
+                , we find &lquot;enclose (something) in or as if in a capsule&rquot;. We shall begin the story of
+                encapsulation in software systems with Edsger W. Dijkstra. In the<bookname cite="O'Regan2008">
+                60's</bookname>, ideas were emerging about how increasingly large and complex programs could be
+                structured in order to deal with them effectively. In<bookname cite="Dahl1972">Structured
+                programming</bookname>, Dijkstra writes: &lquot;One of the metaphors in which I find myself thinking
+                about the program structure envisaged regards the program as a necklace, strung from individual pearls&rquot;.
+                This wonderful metaphor suggests that each &lquot;pearl&rquot; as a
+                <firstuse>capsule</firstuse>
+                of functionality. The necklace as a whole represents a composed structure, much like our bodies are
+                composed of many cells. Encapsulation in software can exist at many levels; methods, functions, classes
+                or objects, packages, modules. Kevlin Henney discusses this in more detail in the article
+                <bookname cite="2003">Encapsulation</bookname>
+            </p>
+
+        </sect2>
+        <sect2 id="sect2.information.hiding">
+            <title>Information hiding</title>
+
+            <p>
+                In software, as with cell membranes, the walls of the capsule may be more or less opaque.
+                <bookname cite="Berard?">Edward Berard</bookname>
+                remarks that encapsulation as a concept doesn't say anything about &lquot;'the walls of the enclosure.'
+                Specifically, they may be 'transparent', 'translucent', or even 'opaque.'&rquot;
+            </p>
+
+            <p>
+                Further to that we have the idea of hiding implementation details from the outside of the capsule. When
+                we talk about details, we can mean data, or logic, or more importantly, design decisions. Beyond that we
+                can think of composing entities together. For example we might compose one method from several other
+                methods (<bookname cite="Beck1997">Composed Method</bookname>), or one object may compose several
+                others. As we hide complexity we also increase our level of abstraction and generality. This leads us to
+                think of code operating at different levels of abstraction. Code tends to be easier to read when it
+                operates at the same level of abstraction, because we have less context to keep in our minds at the time
+                of reading.
+            </p>
+
+            <p>
+                An article which helped inspire one of the code examples here and also follows up the theme of
+                distinguishing encapsulation from information hiding is
+                <bookname cite="Rogers2001">Encapsulation is not information hiding</bookname>
+                by Paul rogers, he highlights the distinction that information hiding being not only about hiding data,
+                but also about hiding design decisions, or insulating the clients from those decisions which reduces the
+                coupling between classes and makes our systems more resilient to change. he also refers back to
+                <bookname cite="Parnas1972">Parnas'</bookname>
+                comments as reported above.
+            </p>
+
+            <sidebar id="encapsulation.sidebar.definition">
+                <title>The dictionary definition of encapsulation</title>
+                <p>
+                    <emph>encapsulate</emph>
+                    :
+                </p>
+                <p>
+                    1. enclose [something] in or as if in a capsule.
+                </p>
+                <p>
+                    [Computing] :
+                </p>
+                <ul>
+                    <li>
+                        <p>enclose [a message or signal] in a set of codes which allow transfer across networks.</p>
+                    </li>
+                    <li>
+                        <p>provide an interface for (a piece of software or hardware) to allow or simplify access for
+                            the user.
+                        </p>
+                    </li>
+                </ul>
+                <p>
+                    2. express the essential features of [something] succinctly
+                </p>
+                <p>
+                    -- Taken from the<bookname cite="Oxford2010">Oxford english dictionary</bookname>.
+                </p>
+
+            </sidebar>
+
+            <p>
+                Encapsulation helps our software systems survive change. When we talk about changing software modules,
+                one measure above all holds us back, that of<firstuse>Coupling</firstuse>. By increasing encapsulation
+                and introducing abstractions which hide details, we also present narrower interfaces and reduce the
+                coupling between objects or components, allowing them to be re-composed more easily. Encapsulation
+                reduces coupling. By grouping common concepts together, we also increase<firstuse>Cohesion</firstuse>.
+                <bookname cite="Booch2007">Coupling and cohesion</bookname>
+                are well known as the fundamental properties of software systems. Coupling makes it hard for us to
+                change systems. Cohesion helps us to understand them, by grouping related concepts together.
+            </p>
+
+
+            <p>
+                I'd like to take us back in time to the 60's; the decade of invention for computer languages, the days
+                of<bookname cite="O'Regan2008">ALGOL and SIMULA</bookname>. During the 60's, Edsger W. Dijkstra
+                wrote &lquot;One of the metaphors in which I find myself thinking about the program structure envisaged
+                regards the program as a necklace, strung from individual pearls.&rquot; (<bookname cite="Dahl1972">
+                Structured programming</bookname>). This is a wonderful metaphor which describes small, encapsulated
+                units chained together. Dijkstra and his contemporaries were discovering techniques to add structure to
+                increasingly large and complex programs.
+            </p>
+            <p>
+                Moving forwards into the 70s, we meet David Parnas. He wrote a couple of seminal papers, one of which is
+                generally credited with coining the term<firstuse>Information Hiding</firstuse>, A key point in what
+                Parnas is saying is that it is about hiding &lquot;difficult design decisions or design decisions which
+                are likely to change. &rquot; (<bookname cite="Parnas1972">On the criteria to be used when decomposing
+                systems into modules</bookname>). This is important because it summarises very succinctly the twin
+                themes of this essay, we want to hide things that are complicated and difficult, to allow us to work at
+                a higher level of abstraction, and also we want to hide things which we want to be able to change
+                easily. It also introduces us to the idea that it is not only algorithms and data which we are hiding,
+                but design choices, helping us to adapt to change later.
+            </p>
+        </sect2>
+
+        <sect2 id="sect2.abstraction">
+            <title>Abstraction</title>
+
+
+            <p>
+                In<bookname cite="Liskov1988">Data abstraction and hierarchy</bookname>, Barbara Liskov says: &lquot;For
+                abstraction to work, implementations must be encapsulated.&rquot;
+            </p>
+            <p>
+                Fowler, in<bookname cite="fowler:refactor">Refactoring: Improving the Design of Existing Code</bookname>
+                , emphasises the utility of encapsulation in helping the code to be more responsive to change: &lquot;One
+                of the keys, if not the key, to objects is encapsulation. Encapsulation means that objects need to know
+                less about other parts of the system. Then when things change, fewer objects need to be told about the
+                change - which makes the change easier to make.&rquot;
+            </p>
+
+
+        </sect2>
+
+        <p>
+            Encapsulation is a fundamental principle of Software development (Not limited to Object-Oriented design) and
+            a great deal has been written about it. We will explore the subject using some Ruby and Java.
+        </p>
+        <p>
+            Objects vs classes vs object and class encapsulation vs methods We can think of Javascript for example as
+            being purely object based as it has no concept of class. So let's create a class.
+        </p>
+        <p>
+            There are two scenarios which I would like to use to explore the topic. The first we shall see now to
+            explore varying degrees of encapsulation and demonstrate how encapsulation helps us to deal with change in
+            the codebase, and then later we will look at a second scenario to see how encapsulation helps us to reduce
+            complexity in the codebase by operating at varying levels of abstraction.
+        </p>
+    </sect1>
+    <sect1 id="sect.responding-to-change">
+        <title>Responding to change</title>
+
+        <p>
+            Taken as property of a system and thus some continuous measure, I like Henneys' description of &lquot;a
+            matter of degree and sensibility&rquot;(from<bookname cite="Henney2008">Encapsulation</bookname>). Taking
+            this further, I think it is possible to see varying<firstuse>degrees of encapsulation</firstuse>. Here we
+            will read some code which demonstrates these degrees.
+        </p>
+
+
+        <p>
+            For the first example, imagine that we are working on part of a system which needs to deal with geometric
+            points. Perhaps its a drawing package of some kind. Right now our requirement is to be able to take two
+            points in 2D space, and calculate the distance between them.
+        </p>
+        <p>
+            We are going to represent our points as cartesian coordinates, having an X and a Y value. We can use the
+            standard calculation for the hypotenuse to calculate the distance between the points
+            <footnote>
+                <p>
+                    <url>http://mathworld.wolfram.com/Distance.html</url>
+                </p>
+            </footnote>
+            .
+        </p>
+
+        <p>
+            If we want to start with the truly global, we need to use a language like Ruby or Javascript which allows us
+            to define global variables. Say in Ruby :
+        </p>
+        <code file="code/Encapsulation/ruby/distance_between_two_points.rb"/>
+        <p>
+            This might work well if we have exactly two points, or perhaps if we are writing a very simple script which
+            is designed only to accept the four coordinates and print the result.
+            <pref linkend="fig.encapsulation.degree.global"/>
+            is a visualisation of this code. While this example is relatively trivial it would soon become unwieldy as
+            we try to add more functionality. For example, what if we want to calculate the distances between three
+            points? Or join the points together to make a line?
+        </p>
+        <figure id="fig.encapsulation.degree.global">
+            <title>Global elements</title>
+            <imagedata fileref="images/eps/Encapsulation/encapsulation_degree_global.eps" center="yes" width="natural"/>
+        </figure>
+        <p>
+            I'm going to switch to Java now because it tends to make very explicit some of the elements of encapsulation
+            we are discussing. Languages such as C# and Ruby provide us with some convenience syntax to avoid being so
+            explicit (e.g. providing a property syntax so we don't have to write accessors and mutators). Bear in mind
+            that what we are about to do we could do in many OO languages.
+        </p>
+
+        <p>
+            Given that we need to increase the degree of encapsulation from totally global variables, let's introduce
+            some level of encapsulation. In Java, the basic building block of structure is the class. The least
+            encapsulated class we can make might look something like this:
+        </p>
+        <code file="code/Encapsulation/java/src/main/java/com/jimbarritt/encapsulation/point_0/Point.java"
+              part="point_0_point"/>
+
+        <p>
+            Something to note here is that even though we are far away from what our OO sensibilities might think of as
+            encapsulation, we have the genesis of encapsulation occurring. We are creating a new concept, we've given it
+            a name, Point and we have determined that it is composed of two attributes, X and Y. We can see even this as
+            a small increase in the degree of encapsulation, and it is visualised in<pref
+                linkend="fig.encapsulation.degree.grouping"/>.
+        </p>
+        <figure id="fig.encapsulation.degree.grouping">
+            <title>Grouping of elements</title>
+            <imagedata fileref="images/eps/Encapsulation/encapsulation_degree_grouping.eps" center="yes"
+                       width="natural"/>
+        </figure>
+
+        <p>
+            My OO instincts would shudder at such a naked object but let's not discount the possibility that there is a
+            design context in which this might be effective. Here we would be talking about more of a Struct kind of
+            object, akin to the C++ concept. It very much is a data structure. In order to do something useful with it,
+            we need some behaviour. Remember that the goal of our software is to calculate the distance between points.
+            In this case, we are speaking the language of Java, so we must declare a function within a class. The least
+            encapsulated way we can do this is to use a static, class method. Let's call the class<classname>
+            Plane</classname>:
+        </p>
+        <code file="code/Encapsulation/java/src/main/java/com/jimbarritt/encapsulation/point_0/Plane.java"
+              part="point_0_plane"/>
+
+        <p>
+            Now we have two levels of encapsulation. Firstly we are grouping our attributes together in a concept called
+            <classname>Point</classname>, so we are providing a Data Abstraction, and secondly we have created some
+            encapsulation of action or procedure in a concept called<classname>Plane</classname>, the procedural
+            abstraction. We are indeed following the footsteps of Gannon (see<pref linkend="sect.definition"/>). Good
+            stuff.
+        </p>
+
+        <p>
+            These classes don't look very object oriented, or encapsulated. Although the
+            <classname>Point</classname>
+            class contains the attributes, theres no sense of an Encasement, clients may interact with the attributes
+            directly. Let's rectify that.
+            <bookname cite="Beck1997">Kent Beck</bookname>
+            calls this<firstuse>Getting method</firstuse>.
+        </p>
+
+        <code file="code/Encapsulation/java/src/main/java/com/jimbarritt/encapsulation/point_1/Point.java"
+              part="point_1_point"/>
+
+        <p>
+            We have provided an encasement around the member variables. This means that clients of the
+            <classname>Point</classname>
+            now depend on operations rather than data. this is visualised in<pref
+                linkend="fig.encapsulation.degree.encapsulating"/>.
+        </p>
+
+        <figure id="fig.encapsulation.degree.encapsulating">
+            <title>Encapsulating elements</title>
+            <imagedata fileref="images/eps/Encapsulation/encapsulation_degree_encapsulating.eps" center="yes"
+                       width="natural"/>
+        </figure>
+
+        <p>
+            The advantage here is that to some extent we are isolating the representation of the data. For example, we
+            could change the internal representation (member variables and constructor) from
+            <classname>int</classname>
+            to
+            <classname>float</classname>
+            without affecting the clients. Encapsulation is insulating us from change. Another change might be to use
+            <bookname cite="Beck2007">Lazy initialisation</bookname>
+            to initialise the values. However, let us remember what
+            <bookname cite="Beck1997">Beck</bookname>
+            has to say on the topic of getter methods: &lquot;... make them private at first. I cannot stress this
+            enough&rquot; and when it comes to their counterpart,<firstuse>Setting methods</firstuse>; &lquot;Everything
+            I said once about Getting Methods, I'd like to say twice about Setting Methods&rquot;.
+        </p>
+        <p>
+            Something to bear in mind is that at least in Java, if we want to migrate from raw attributes to those
+            encapsulated with accessors, the syntax of the client will need to change from:
+        </p>
+
+        <code language="java">
+            int a = p2.x - p1.x;
+        </code>
+
+        <p>
+            To this:
+        </p>
+
+        <code language="java">
+            int a = p2.getX() - p1.getX();
+        </code>
+
+        <p>
+            If the
+            <classname>Point</classname>
+            class is ubiquitous across the system this could be a costly change. Languages such as Ruby and C# provide a
+            property based syntax which removes this cost because we no longer need to refer to operation
+            <inlinecode>getX()</inlinecode>
+            and the syntax remains as in the first example
+            <footnote>
+                <p>Although a recompilation would be required in C# as it generates the accessors behind the scenes.</p>
+            </footnote>
+            .
+        </p>
+        <p>
+            We are not only providing a boundary around our data here, notice that we are also using a constructor to
+            initialise the values, which are then<firstuse>immutable</firstuse>, clients may not modify them and are
+            therefore insulated further from the implementation.
+        </p>
+        <p>
+            The use of public getters has provided many interesting discussions. Some argue that they are the work of
+            some dark power. In other regions, such as the
+            <bookname cite="O'Neil1998">JavaBeans</bookname>
+            specification, where they are embraced wholeheartedly. The argument against follows the line that by
+            exposing our getters, we are encouraging coupling to the data within our object. Rather we should be
+            telling, not asking
+            <footnote>
+                <p>
+                    <url>http://www.pragprog.com/articles/tell-dont-ask</url>
+                </p>
+            </footnote>
+            . Martin Fowler represents the discussion in his article Getter Eradicator
+            <footnote>
+                <p>
+                    <url>http://martinfowler.com/bliki/GetterEradicator.html</url>
+                </p>
+            </footnote>
+            . Kevlin Henney presents an interesting metaphor in his
+            <bookname cite="Henny2008">Encapsulation and Vampires</bookname>
+            in which he likens getters to asking a vampire to &lquot;Bite me&rquot;.
+        </p>
+        <p>
+            There is also an argument that associations also break encapsulation, particularly if I simply expose for
+            example<methodname>public List getListOfAssociatedObjects</methodname>. Fowler talks more about this in
+            <bookname cite="fowler:analysis">Analysis Patterns</bookname>
+            where he describes the importance of thinking about the responsibilities of the objects. For example, an
+            <classname>Order</classname>
+            object might contain
+            <classname>OrderLine</classname>
+            objects. It is the responsibility of the
+            <classname>Order</classname>
+            object to manage these sub-objects. In terms of encapsulation, perhaps we might want to add manipulation
+            methods on the
+            <classname>Order</classname>
+            so that we don't have to directly expose the underlying collection
+            <footnote>
+                <p>Also known as the Primitive Obsession code smell in
+                    <bookname cite="fowler:refactor">Refactoring</bookname>
+                </p>
+            </footnote>
+            .
+        </p>
+
+        <p>
+            One of the things we all know about OO is that we should put our behaviour close to the data. In our
+            example, our behaviour is to calculate the distance between two points. Lets remove the
+            <classname>Plane</classname>
+            class and
+            <bookname cite="fowler:refactor">move method</bookname>
+            to the
+            <classname>Point</classname>
+            class:
+        </p>
+
+        <code file="code/Encapsulation/java/src/main/java/com/jimbarritt/encapsulation/point_2/Point.java"
+              part="point_2_point"/>
+
+        <p>
+            Something interesting is happening here. In the context of our application as it stands, the only facet we
+            care about with points is to calculate the distance between them. This means that our accessors disappear
+            from our public interface. We are increasing the degree to which encapsulation is applied. Now our clients
+            have no idea how the point is implemented, or how the distance is calculated, only that it is possible; the
+            what, not the how. Our boundary becomes more solid and our implementation more free to change. In another
+            context, it is possible that we might still want accessors. It would also be possible to maintain private
+            accessors for the reasons stated previously, but here the extra noise in the source file didn't feel like it
+            was worth it. We can visualise this in<pref linkend="fig.encapsulation.degree.hiding"/>, where we can no
+            longer see the "shape" of the internals of the object, and have a different external interface, represented
+            by the diamond on the outer boundary.
+        </p>
+        <figure id="fig.encapsulation.degree.hiding">
+            <title>Hiding reperesentation</title>
+            <imagedata fileref="images/eps/Encapsulation/encapsulation_degree_hiding.eps" center="yes" width="natural"/>
+        </figure>
+
+        <p>
+            Happy with our work so far, and safe in the knowledge that we fully understand our domain and everything is
+            under control, we turn up to work the next morning to learn that the world has changed! The input to our
+            part of the system must now support not only points defined in terms of
+            <inlinecode>X</inlinecode>
+            and<inlinecode>Y</inlinecode>, but also in
+            <firstuse>Polar</firstuse>
+            coordinates, defined by an angle and distance from the origin<inlinecode>(0, 0)</inlinecode>. Luckily for us
+            we have already taken a step which will help us. By focusing only on the abstraction we required
+            (calculating the distance between the points) we already have a good foundation for this change. There are
+            probably other ways we could implement this functionality but for the purposes of demonstrating the degrees
+            of abstraction, let's say we want to now have two classes,
+            <classname>CartesianPoint</classname>
+            representing the
+            <inlinecode>X, Y</inlinecode>
+            version and
+            <classname>PolarPoint</classname>
+            representing the angle / distance version. The thing that these two classes have in common is that we want
+            to be able to calculate the distance between them. In Java, one way we can implement this is to create an
+            <firstuse>interface</firstuse>
+            containing the method. A UML representation might look like this:
+        </p>
+
+        <figure id="fig.encapsulation.point.interface">
+            <title>Extracting a
+                <classname>Point</classname>
+                interface
+            </title>
+            <imagedata fileref="images/eps/Encapsulation/point_interface.eps" center="yes" width="natural"/>
+        </figure>
+
+        <p>
+            We can now write code like this:
+        </p>
+
+        <code file="code/Encapsulation/java/src/test/java/com/jimbarritt/encapsulation/point_3/PointTest.java"
+              part="point_3_point_test"/>
+
+        <p>
+            Here we are concealing the implementation behind an interface. Our boundary has increased in strength, we
+            are becoming ever more encapsulated. Notice that we are also becoming more abstract. The separation between
+            what and how is increasing. There is also a tradeoff. Adding an interface has cost us extra complexity, the
+            reward is ability to change the underlying implementation. Like all good design decisions, introducing an
+            interface will be context specific, speculatively adding an interface just because we think we might need a
+            different implementation later is a cost that is not worth bearing. Our tools and our tests, free us to
+            mutate the code as we discover new changes to the environment in which it lives. More of this later.
+        </p>
+
+        <figure id="fig.encapsulation.degree.abstraction">
+            <title>Creating a higher level of abstraction</title>
+            <imagedata fileref="images/eps/Encapsulation/encapsulation_degree_abstraction.eps" center="yes"
+                       width="natural"/>
+        </figure>
+
+        <p>
+            So far so good, we have evolved the structure of our code to meet the demands on it. We have introduced more
+            encapsulation in response, and are heading towards thinking more in terms of abstracting the what from the
+            how. What's the next twist in the story? We realise that our software will be more useful if we can not only
+            deal with individual points, but if we can join points together to form a line, and calculate the length of
+            the line. So let's introduce a
+            <classname>Line</classname>
+            object...
+        </p>
+
+
+        <code file="code/Encapsulation/java/src/main/java/com/jimbarritt/encapsulation/point_6/Line.java"
+              part="point_6_line"/>
+
+        <p>
+            Now we have a completely new abstraction, the<classname>Line</classname>. It aggregates lower level
+            abstractions and provides some other conceptual use, of which the individual points are completely unaware.
+            This is the essence of the power of encapsulation. By providing well-defined boundaries and focusing our
+            abstractions toward our domain, we are give ourselves an advantage when we want to respond to change. We can
+            visualise this in
+            <pref linkend="fig.encapsulation.degree.abstraction"/>
+            where now we see a completely different shape and can see that the outer shape is actually composed of
+            smaller units within, much like our human bodies are composed of increasing levels of granularity down to
+            the organelles within the cells.
+        </p>
+
+
+        <p>
+            We can go further, and introduce more abstractions, pushing the implementation details away from the code
+            that is doing the work. For example, in one iteration of the code I attempted to extract the responsibility
+            of converting between points, into a
+            <classname>PointConverter</classname>
+            using the visitor pattern (<bookname cite="GangOfFour">Design Patterns</bookname>). The visitor pattern is
+            specifically designed to reduce coupling between classes. Whilst extra levels of encapsulation allow a
+            design to be increasingly insulated from change, they come at a cost, most noticeably in comprehension by a
+            human reader. By adding more abstractions we naturally add complexity to the design. We should be sure we
+            understand what we are buying when we introduce additional levels of abstraction.
+        </p>
+
+        <p>
+            <pref linkend="fig.encapsulation.degrees"/>
+            attempts to visually summarise what we have been coding here. With a very low degree of encapsulation, we
+            have<firstuse>Global</firstuse>. Increasing to a high degree, the code becomes so encapsulated that a client
+            of the code sees a completely different shape from the outside of the capsule and is unaware of the inner
+            workings. It towards this level where the idea of
+            <bookname cite="Parnas1972">Information hiding</bookname>
+            (and therefore abstraction
+            <footnote>
+                <p>
+                    <bookname cite="Liskov1988">Liskov</bookname>
+                    says that &lquot;For abstraction to work, implementations must be encapsulated&rquot;
+                </p>
+            </footnote>
+            ) becomes evident. Increase further and we begin to compose objects, creating higher levels of abstraction,
+            which leads us to see how encapsulation helps us to deal with the complexity of our software systems.
+        </p>
+
+        <figure id="fig.encapsulation.degrees">
+            <title>Degrees of encapsulation</title>
+            <imagedata fileref="images/eps/Encapsulation/encapsulation_degrees.eps" width="full"/>
+        </figure>
+
+        <sidebar id="encapsulation.sidebar.fluiddesign">
+            <title>Techniques for a fluid design</title>
+            <p>
+                If change is a key factor in our design, it is important that we see our design as dynamic. We should
+                allow it to flow, changing shape as the context in which it operates changes. I like to think of this as
+                <firstuse>Fluid design</firstuse>.
+            </p>
+            <p>
+                There are two well known practices which allow this to happen.
+                <bookname cite="Beck2002">Test Driven Development</bookname>
+                and (<bookname cite="fowler:refactor">Refactoring</bookname>). They go hand in hand. TDD gives us the
+                confidence to make changes, and Refactoring gives us the tools to make changes in a disciplined,
+                repeatable way.
+            </p>
+
+            <p>
+                &lquot;Refactoring gives you the freedom to change your mind&rquot;
+                &lquot;Often in early stages of development you make decisions about representing simple facts as simple
+                data items. As development proceeds you realize that those simple items aren't so simple anymore.&rquot;
+                <bookname cite="fowler:refactor">Refactoring</bookname>
+            </p>
+            <p>
+                Kent Beck provides many design tools in both
+                <bookname cite="Beck1997">Smalltalk Best Practice Patterns</bookname>
+                and
+                <bookname cite="Beck2007">Implementation Patterns</bookname>
+                , such as composed method (which we will re-visit later). Martin Fowler's book "Refactoring" introduced
+                the idea of being able to change the shape of code in a safe and disciplined manner.
+                <bookname cite="Martin2008">Clean Code</bookname>
+                has much to say on techniques which can help us to vary the degree of encapsulation.
+            </p>
+            <p>
+                As this chapter is focused on encapsulation, I'd like to mention a couple of refactorings which are
+                particularly related to encapsulation. Extract Method and Extract Class. These are well documented
+                elsewhere but provide the basic building blocks by which we can mutate code to create the kinds of
+                levels of encapsulation we have been discussing.
+            </p>
+
+            <p>
+                Following the idea of the codebase being constantly in motion, its also important to remember that most
+                refactorings have an inverse refactoring. For example, for Extract method, we also have Inline method,
+                for Extract class, Inline class.Two other complementary refactorings particularly related to
+                encapsulation are Hide delegate and Remove middleman. By using these inverse refactorings, we can both
+                introduce and reduce encapsulation as needed.
+            </p>
+            <p>
+                The idea of simply writing out what we want the code to do and then worrying about the implementation
+                later was coined as design by &lquot;wishful thinking&rquot; by Harold Ableson et al in
+                <bookname cite="Ableson1996">Structure and Interpretation of Computer Programs</bookname>
+            </p>
+
+        </sidebar>
+
+
+    </sect1>
+
+    <sect1 id="sect.reducing.complexity">
+        <title>Reducing complexity</title>
+        <p>
+            Encapsulating concepts helps our
+            <bookname cite="Miller1956">limited minds</bookname>
+            deal with the complexity inherent in modern software systems. Like our bodies, a complex computer system can
+            be decomposed into subsystems, compressed archive files, modules, package, object methods, functions code
+            blocks and statements. The programming languages we use insulate us from the lower level details which are
+            ultimately represented as machine instructions stored as chains of simple zeros and ones.
+        </p>
+
+        <p>
+            In<bookname cite="Booch2007">Object-Oriented Analysis and Design</bookname>, Grady Booch makes the
+            observation that &lquot;The maximum number of chunks of information that an individual can simultaneously
+            comprehend is on the order of seven, plus or minus two... processing speed is also a factor: It takes the
+            mind about five seconds to accept a new chunk of information&rquot;<footnote>
+            <p>See
+                <bookname cite="Miller1956">The Magical Number Seven</bookname>
+                <bookname cite="Simon1996">The Sciences Of the Artificial</bookname>
+            </p>
+        </footnote>
+        </p>
+        <p>
+            A big part of this is readability, we are trying to present the code in a way that the reader can
+            understand, communicating to them through the code, beginning at high level and then breaking down into the
+            details.
+        </p>
+        <ul>
+            <li>
+                <p>Keeping it simple -
+                    <bookname cite="Beck2007">Implementation Patterns</bookname>
+                </p>
+            </li>
+        </ul>
+
+        <p>Aggregate root is an example of higher level abstraction
+            <bookname cite="Evans2004">Domain Driven Design</bookname>
+        </p>
+        <p>
+            Whilst classes packages and modules provide us with a high level encapsulation of our code, it is the
+            methods or functions which actually perform the work for us. We can apply encapsulation within these units
+            of code aswell. Generally, longer methods performing many tasks are harder to understand. We can follow the
+            single responsibility principle
+            <bookname cite="Martin2002">Agile software development</bookname>
+            within methods aswell as at the higher level of classes. Its important to note that "doing one thing" might
+            mean being responsible for coordinating a sequence of actions, rather than a single action.
+        </p>
+
+        <p>
+            A part of what we are doing here is separating concerns (<bookname cite="Dijkstra1982">Selected writings on
+            computing: A personal perspective</bookname>). We focus each method on a particular job. I tend to find that
+            there are certain constructs which particularly lend themselves to this kind of thinking. Catching
+            Exceptions, Loops and Conditionals. Hmmm... thats most of the control structures we commonly use in
+            imperative programming. One way to look at these levels of abstraction is in terms of separating the control
+            flow from the implementation. So the focus of a method might be to describe the overall steps in a process,
+            calling individual methods to do the work for us. These might in turn be using collaborating objects and so
+            on until a hierarchy of abstraction exists. In theory this allows us to package up or factor our code into
+            smaller units, leading us back to Dijkstra's metaphor of the pearl necklace.
+        </p>
+
+        <p>
+            <bookname cite="Ford2008">The Productive programmer</bookname>
+            Suggests that we keep the public methods of our objects simple to read, and at a higher level of
+            abstraction, allowing the private methods to encapsulate the complexity.
+        </p>
+
+        <p><bookname cite="Martin2008">CleanCode</bookname>Talks about this in terms of being able to read the code from
+            top to bottom, like a narrative.
+        </p>
+
+        <p>
+            Particularly we might decide to break a long method into several, Intentionally named, Composed methods (
+            <bookname cite="Beck1997">Smalltalk Best practice patterns</bookname>). Each time we extract a method,
+            hiding some implementation details, we are increasing our level of abstraction to some extent.
+        </p>
+
+        <p>As we decompose methods in this way, we might also find that some of the methods we extract have less to do
+            with the local context (member state) of our objects than others, potentially hinting to us to that they
+            actually live in a seperate object entirely.
+        </p>
+
+        <p>
+            In another part of our organisation, someone would like to be able to print out a list of files contained
+            within a compressed zip file. Java makes this pretty easy for us with a built in class
+            <classname>ZipFile</classname>
+            class, but it doesn't quite do what we want. This example is a little hypothetical, but should suffice to
+            exemplify our conversation. We are going to follow a similar journey to the previous example and mutate our
+            code through several levels of abstraction. When test-driving code, one option is to write a set of tests
+            and simply write out the code to make the test pass, not worrying too much about the structure of the
+            algorithm. One of the great things about TDD is that you tend to find that you are already focused on a
+            smaller task, and so the job which the algorithm must accomplish is already relatively well constrained. in
+            this case, let's look at the test we wrote for our zip file utility....
+        </p>
+
+        <code file="code/Encapsulation/java/src/test/java/com/jimbarritt/encapsulation/levels_of_abstraction_0/ZipContentsIntegrationTest.java"
+              part="abstraction_0_integration_test"/>
+
+        <p>
+            Note that we already created the abstraction of a
+            <classname>ZipContentsEntry</classname>
+            to represent each item in the zip file. Let's look at how we might implement this class:
+        </p>
+
+        <code file="code/Encapsulation/java/src/main/java/com/jimbarritt/encapsulation/levels_of_abstraction_0/ZipContents.java"
+              part="abstraction_0_zipcontents"/>
+
+        <p>
+            Whilst the interface to this object is quite clean (<inlinecode>open(), entries() and close()</inlinecode>),
+            the implementation of the
+            <inlinecode>entries</inlinecode>
+            method is rather long-winded and has quite a few low-level statements in it, working with string
+            manipulation and the like. There are also quite a few comments in the code, a
+            <bookname cite="Martin2008">smell</bookname>
+            which can be removed by creating intentionally named methods. Breaking this method down into smaller steps
+            will do two things for us, it will shorten the method and at the same time, increase the level of
+            abstraction. We can think of this as procedural encapsulation.
+        </p>
+
+        <p>
+            After some refactoring, the main part of our class looks like this...
+        </p>
+        <code file="code/Encapsulation/java/src/main/java/com/jimbarritt/encapsulation/levels_of_abstraction_1/ZipContents.java"
+              part="abstraction_1_interface"/>
+
+        <p>
+            The methods now reflect a similar conceptual level to the client interface, when we open the file, we read
+            some entries into our state and then simply return them when required. In some cases this might be seen as
+            breaking encapsulation , but sometimes classes do need to interact, as
+            <bookname cite="fowler:analysis">Fowler</bookname>
+            suggests, it is more about Responsibilities, and keeping those separate.
+        </p>
+        <p>
+            This point about operating at a similar conceptual level is important. What we are striving for is not just
+            simply breaking a long method down into smaller steps. this might have some immediate benefit with an
+            enormous (say 200 lines) method, it may be ok to have a reasonably (say 10-15 lines) sized method, if it
+            remains at the same level of abstraction. Infact, composing many smaller methods may even make the code less
+            comprehensible.
+        </p>
+
+        <code file="code/Encapsulation/java/src/main/java/com/jimbarritt/encapsulation/levels_of_abstraction_1/ZipContents.java"
+              part="abstraction_1_control"/>
+
+        <code file="code/Encapsulation/java/src/main/java/com/jimbarritt/encapsulation/levels_of_abstraction_1/ZipContents.java"
+              part="abstraction_1_implementation"/>
+
+    </sect1>
+
+    <sect1>
+        <title>It's not just Objects</title>
+
+        <p>
+            As we have discussed, encapsulation is not just limited to Object-oriented programming. Indeed, we've seen
+            from
+            <pref linkend="sect.definition"/>
+            that some of the seminal papers were concerned with modules, before classes and object were commonplace. To
+            help us appreciate the wider context, I'd like us to take a quick diversion into some non-OO contexts.
+        </p>
+
+        <sect2>
+            <title>Ant</title>
+            <p>
+                Ant has two mechanisms for encapsulation; we can split out modules, and we can create<firstuse>
+                macrodef's</firstuse>. Let's see how we might use modules:
+            </p>
+            <code file="code/Encapsulation/java/build.xml" part="ant_modules"/>
+            <p>
+                Here we import modules which deal with the various activities like compiling and testing, and simply
+                invoke them. The target
+                <inlinecode>compile:production</inlinecode>
+                actually lives in the
+            </p>
+            <p>
+                Macrodef's enable us to encapsulate repeating parts of our build scripts. In version 1.8, we can even
+                declare properties to have some kind of local scope (Although the syntax is a little clunky). Here is a
+                simple example of a macrodef which compiles java code:
+            </p>
+
+            <code file="code/Encapsulation/java/build/compile.xml" part="ant_macrodef_definition"/>
+
+            <p>
+                We can use this macrodef as follows:
+            </p>
+
+            <code file="code/Encapsulation/java/build/compile.xml" part="ant_macrodef_usage"/>
+
+        </sect2>
+        <sect2>
+            <title>Shell scripts</title>
+            <p>
+                We can also get encapsulation inside shell scripts, an often overlooked feature which can really help to
+                improve our readability and flexibility, for all the same good reasons we want to use it in our code.
+                Here is a very simple bash script which executes ant and prints out a message to tell you what time the
+                script completed at:
+            </p>
+            <code file="code/Encapsulation/java/go.sh"/>
+        </sect2>
+        <sect2>
+            <title>Application architecture</title>
+            <p>
+                In<bookname cite="Buschmann2007">Pattern-Oriented Software architecture volume 4</bookname>, many
+                references are made to levels of encapsulation, specifically in terms of
+                <firstuse>Baseline architecture</firstuse>
+                (p. 313) the authors describe at the component level of an architecture an<firstuse>Encapsulated
+                Implementation</firstuse>, which is a core part of several other patterns. &lquot;Thus a component
+                implementation is often subject to assumptions, considerations, and constraints that cannot be exposed
+                through its interface.&rquot;.
+            </p>
+            <p>
+                This might apply within an application or in a distributed application. One could look at
+                <bookname cite="Webber2010">REST based services</bookname>
+                in a similar way, the
+                <firstuse>Media type</firstuse>
+                plus the verbs of HTTP provide an interface behind which the details of how the contract is fulfilled
+                are hidden from the client.
+            </p>
+            <p>
+                It is important to broaden our perception of where we might find encapsulation at play. We also see the
+                description of the LAYERS pattern, the foundation for layered application architecture, where for
+                example database access is separated from UI logic.
+            </p>
+        </sect2>
+
+        <sidebar id="encapsulation.sidebar.measuring">
+            <title>Measuring and visualising encapsulation</title>
+            <p>
+                There are several metrics available to us which are based on the common code smells which are introduced
+                in<bookname cite="fowler:refactor">Refactoring</bookname>. These are described well in<bookname
+                    cite="Lanza2006">Object-oriented metrics in practice</bookname>. Many of the metrics and
+                visualisations are available in the analysis tool
+                <firstuse>Moose</firstuse>
+                <footnote>
+                    <p>
+                        <url>http://moosetechnology.org/</url>
+                    </p>
+                </footnote>
+                . Other useful metrics tools include
+                <firstuse>inFusion</firstuse>
+                <footnote>
+                    <p>
+                        <url>http://www.intooitus.com/inFusion.html</url>
+                    </p>
+                </footnote>
+                and
+                <firstuse>Structure101</firstuse>
+                <footnote>
+                    <p>
+                        <url>http://www.headwaysoftware.com/products/</url>
+                    </p>
+                </footnote>
+            </p>
+            <p>
+                Some common smells associated with encapsulation are<firstuse>Feature Envy</firstuse>,
+                <firstuse>God class</firstuse>
+                and<firstuse>Shotgun surgery</firstuse>.
+            </p>
+            <p>
+                When thinking about the structure of the code, particularly levels of abstraction,
+                <bookname cite="Lanza2006">Lanza, et al</bookname>
+                developed the
+                <firstuse>Class blueprint</firstuse>
+                diagram, which visualises the interface of an object and its access internally to member methods and
+                variables.
+            </p>
+
+        </sidebar>
+
+    </sect1>
+
+
+    <sect1 id="sect.summary">
+        <title>Summary</title>
+
+        <p>
+            I hope you have enjoyed our brief journey through the code of encapsulation. We have seen that the forces
+            which govern the world of software design are complexity and change. By reducing the coupling between design
+            decisions, we allow them to be more easily changed later. By grouping information together in cohesive
+            units, with higher level interfaces, we build a conceptual structure which helps us to comprehend the
+            functionality of the system. Encapsulation is the core design principle which brings these together. By
+            operating at a single level of abstraction, we can create a clear, progressive reading experience.
+        </p>
+        <p>
+            We have seen that encapsulation is not a discrete state, it is a continuous degree. By using TDD and
+            bi-directional refactoring we can increase or decrease our degree of encapsulation as we need to. This leads
+            us to thinking of the design of the codebase as being more fluid, continually evolving and adapting to the
+            changing requirements around it.
+        </p>
+        <p>
+            Encapsulation is a powerful tool for dealing with both complexity and change. By grouping concepts together,
+            and building layers of abstraction, we make it easier to understand a system, because we do not need to deal
+            with all of the complexity at the same time, and can be led through it in a process of discovery. By hiding
+            design decisions from clients, particularly those that are changeable, we make the design more fluid, and
+            allow change to occur.
+        </p>
+        <p>
+            Our understanding of writing software programs and the field in general evolves at such a high pace, it is
+            often the case that ideas appear which seem to be new but have been documented for many years. An
+            interesting essay on the topic has been written by Glenn Vanderburg entitled<bookname cite="Ford2006">Buried
+            Treasure</bookname>. In researching this chapter, I followed an interesting historical journey and encourage
+            you, the reader to seek out the source material and read first hand what those who have come before have
+            written, many of the concepts are still relevant today and it makes our understanding deeper to know where
+            we came from.
+        </p>
+
+        <p>
+            I leave you to continue the journey, to discover where you might see encapsulation all around you and
+            throughout your code, wether it be build scripts, OO applications or functional algorithms and data
+            structures. Bon voyage!
+        </p>
+    </sect1>
+
+</chapter>

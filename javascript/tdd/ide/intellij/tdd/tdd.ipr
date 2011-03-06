@@ -45,6 +45,9 @@
     <option name="DEPRECATION" value="false" />
   </component>
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" />
+  <component name="EntryPointsManager">
+    <entry_points version="2.0" />
+  </component>
   <component name="FireworksProject">
     <option name="expectedTestCaseNameRegex" />
     <option name="maxMemory" />
@@ -124,12 +127,13 @@
     <option name="PROJECT_PROFILE" value="Project Default" />
     <option name="USE_PROJECT_PROFILE" value="true" />
     <version value="1.0" />
-    <list size="5">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="SERVER PROBLEM" />
-      <item index="1" class="java.lang.String" itemvalue="INFO" />
-      <item index="2" class="java.lang.String" itemvalue="TYPO" />
-      <item index="3" class="java.lang.String" itemvalue="WARNING" />
-      <item index="4" class="java.lang.String" itemvalue="ERROR" />
+      <item index="1" class="java.lang.String" itemvalue="WEAK WARNING" />
+      <item index="2" class="java.lang.String" itemvalue="INFO" />
+      <item index="3" class="java.lang.String" itemvalue="TYPO" />
+      <item index="4" class="java.lang.String" itemvalue="WARNING" />
+      <item index="5" class="java.lang.String" itemvalue="ERROR" />
     </list>
   </component>
   <component name="JavadocGenerationManager">
@@ -308,7 +312,7 @@
     <option name="deletePackageOccurrences" value="true" />
   </component>
   <component name="VcsDirectoryMappings">
-    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../../.." vcs="Git" />
   </component>
   <component name="WebServicesPlugin" addRequiredLibraries="true" />
   <component name="com.sixrr.metrics.MetricsReloaded">

@@ -4,7 +4,6 @@
 	<classpathentry kind="src" path="src/test/twist/config"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="com.thoughtworks.twist.CORE"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="con" path="com.thoughtworks.twist.language.JAVA"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/parent-module"/>
 	<classpathentry kind="lib" path="lib/development/hamcrest-all-1.3RC0.jar"/>

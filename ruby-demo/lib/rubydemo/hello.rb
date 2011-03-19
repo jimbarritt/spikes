@@ -1,6 +1,5 @@
 module RubyDemo
 
-
 class Hello
 
   def initialize

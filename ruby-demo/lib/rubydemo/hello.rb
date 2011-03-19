@@ -1,12 +1,13 @@
 module RubyDemo
 
+
 class Hello
 
   def initialize
     @count = 0
   end
 
-  def speak    
+  def speak
     return true
   end
 
@@ -18,7 +19,7 @@ class Hello
   def numberOfTimesCalled
     return @count
   end
-  
+
 end
 
 end 

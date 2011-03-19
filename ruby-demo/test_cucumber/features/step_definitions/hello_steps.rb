@@ -12,6 +12,9 @@ When /^I ask it to speak$/ do
 end
 
 Then /^It should return "([^\"]*)"$/ do |value|
-  @result.should == true  
-  value.should == "true"
+  @result.should == object_to_boolean(value)
+end
+
+def object_to_boolean(value)
+  return [true, "true", 1, "1", "T", "t"].include?(value.class == String ? value.downcase : value)
 end

@@ -10,6 +10,8 @@ end
 When /^I ask it to speak$/ do
   @result = @hello.speak
 end
-Then /^It should return "([^\"]*)"$/ do |returnValue|
+
+Then /^It should return "([^\"]*)"$/ do |value|
   @result.should == true  
+  value.should == "true"
 end

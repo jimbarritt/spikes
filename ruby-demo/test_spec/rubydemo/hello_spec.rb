@@ -18,7 +18,7 @@ describe RubyDemo::Hello do
 
   it "should say hello" do
     hello = RubyDemo::Hello.new
-    result = hello.speakTo "Jim"
+    result = hello.speak_to "Jim"
     result.should == "Hello Jim"
   end
 end

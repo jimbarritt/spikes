@@ -10,8 +10,8 @@ class Hello
     return true
   end
 
-  def speakTo name
-    @count = @count += 1
+  def speak_to name
+    @count += 1
     return "Hello #{name}"
   end
 

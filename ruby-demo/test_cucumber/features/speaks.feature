@@ -4,4 +4,3 @@ Feature: System speaks
     Given I have created a Hello object
     When I ask it to speak
     Then It should return "true"
-    And It should return "false"

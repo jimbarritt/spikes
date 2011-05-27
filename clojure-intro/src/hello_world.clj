@@ -1,1 +1,7 @@
-(def jim "Hello)"
+(def jim "Hello")
+
+(defn hello-world
+  []
+  (println "Hello"
+	   "World"))
+

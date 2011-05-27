@@ -4,6 +4,7 @@ require "rubydemo/hello"
 @result = false
 
 Given /^I have created a Hello object$/ do
+  puts "Hello"
   @hello = RubyDemo::Hello.new
 end
 
